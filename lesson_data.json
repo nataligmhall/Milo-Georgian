@@ -1539,12 +1539,61 @@
     "8": {
       "title": "Schedule, Seasons, Shopping",
       "grammar": {
-        "en": "Motion verbs: მიდის (goes away), მოდის (comes), შედის (enters), გადის (goes out). Superlative: ყველაზე + adj. Date: X რიცხვია.",
-        "ru": "Глаголы движения: მიდის (идёт отсюда), მოდის (идёт сюда), შედის (входит), გადის (выходит). Превосходная степень: ყველაზე + прил. Дата: X რიცხვია = «X-е число».",
-        "example_ge": "ის მოდის. ყველაზე იაფი.",
-        "example_en": "He/she is coming. The cheapest."
+        "en": "Motion verbs: მიდის (goes away), მოდის (comes), შედის (enters), გადის (goes out). Superlative: ყველაზე + adj. Date: X რიცხვია. Dative -ს for places: მაღაზიაში = in the shop.",
+        "ru": "Глаголы движения: მიდის (идёт отсюда), მოდის (идёт сюда), შედის (входит), გადის (выходит). Превосходная степень: ყველაზე + прил. Дата: X რიცხვია = «X-е число». Место: датив + -ში (მაღაზიაში = в магазине).",
+        "example_ge": "ის მოდის მაღაზიაში. ყველაზე იაფი პურია. დღეს მეხუთე რიცხვია.",
+        "example_en": "He/she is coming into the shop. Bread is the cheapest. Today is the fifth.",
+        "bullets": [
+          "მიდის · მოდის · შედის · გადის — direction matters",
+          "Ordinals: პირველი, მეორე, მესამე… (or მე+number+ე)",
+          "ყველაზე იაფი = the cheapest · ძვირი / იაფი",
+          "X რიცხვია = today is the Xth",
+          "Noun dative (-ს): მაღაზია → მაღაზიას → მაღაზიაში"
+        ]
       },
       "easier_than_russian": "Ordinals are regular: მე+number+ე (like «двадцатый» but more predictable).",
+      "phrases": [
+        {
+          "ge": "რა ღირს?",
+          "en": "How much does it cost?",
+          "ru": "Сколько стоит?"
+        },
+        {
+          "ge": "ძალიან ძვირია.",
+          "en": "It's very expensive.",
+          "ru": "Очень дорого."
+        },
+        {
+          "ge": "ეს ყველაზე იაფია.",
+          "en": "This is the cheapest.",
+          "ru": "Это самое дешёвое."
+        },
+        {
+          "ge": "ერთი კილო, გთხოვ.",
+          "en": "One kilo, please.",
+          "ru": "Один килограмм, пожалуйста."
+        },
+        {
+          "ge": "ის მოდის ბაზარზე.",
+          "en": "He/she is coming to the market.",
+          "ru": "Он/она идёт на рынок."
+        },
+        {
+          "ge": "გაზაფხულში ყვითელი ყვავილებია.",
+          "en": "In spring there are yellow flowers.",
+          "ru": "Весной жёлтые цветы."
+        },
+        {
+          "ge": "დღეს რა რიცხვია?",
+          "en": "What date is it today?",
+          "ru": "Какое сегодня число?"
+        },
+        {
+          "ge": "ხვალ მოდი!",
+          "en": "Come tomorrow!",
+          "ru": "Приходи завтра!"
+        }
+      ],
       "vocab": [
         {
           "ge": "გაზაფხული",
@@ -1575,6 +1624,54 @@
           "en": "season / year cycle",
           "ru": "время года / год",
           "group": "Seasons"
+        },
+        {
+          "ge": "ცხელა",
+          "en": "hot",
+          "ru": "жарко",
+          "group": "Weather"
+        },
+        {
+          "ge": "ცივი",
+          "en": "cold",
+          "ru": "холодно",
+          "group": "Weather"
+        },
+        {
+          "ge": "ქარი",
+          "en": "wind",
+          "ru": "ветер",
+          "group": "Weather"
+        },
+        {
+          "ge": "წვიმა",
+          "en": "rain",
+          "ru": "дождь",
+          "group": "Weather"
+        },
+        {
+          "ge": "მზე",
+          "en": "sun",
+          "ru": "солнце",
+          "group": "Weather"
+        },
+        {
+          "ge": "მაღაზია",
+          "en": "shop / store",
+          "ru": "магазин",
+          "group": "Shopping"
+        },
+        {
+          "ge": "ბაზარი",
+          "en": "market",
+          "ru": "рынок",
+          "group": "Shopping"
+        },
+        {
+          "ge": "სუპერმარკეტი",
+          "en": "supermarket",
+          "ru": "супермаркет",
+          "group": "Shopping"
         },
         {
           "ge": "ფასი",
@@ -1625,6 +1722,18 @@
           "group": "Shopping"
         },
         {
+          "ge": "ყიდულობ",
+          "en": "I buy",
+          "ru": "я покупаю",
+          "group": "Shopping"
+        },
+        {
+          "ge": "რა ღირს",
+          "en": "how much does it cost?",
+          "ru": "сколько стоит?",
+          "group": "Shopping"
+        },
+        {
           "ge": "პირველი",
           "en": "first",
           "ru": "первый",
@@ -1655,9 +1764,45 @@
           "group": "Ordinals"
         },
         {
+          "ge": "მეათე",
+          "en": "tenth",
+          "ru": "десятый",
+          "group": "Ordinals"
+        },
+        {
+          "ge": "მეოცე",
+          "en": "twentieth",
+          "ru": "двадцатый",
+          "group": "Ordinals"
+        },
+        {
           "ge": "რიცხვი",
           "en": "date / number",
           "ru": "число",
+          "group": "Schedule"
+        },
+        {
+          "ge": "დღეს",
+          "en": "today",
+          "ru": "сегодня",
+          "group": "Schedule"
+        },
+        {
+          "ge": "ხვალ",
+          "en": "tomorrow",
+          "ru": "завтра",
+          "group": "Schedule"
+        },
+        {
+          "ge": "გუშინ",
+          "en": "yesterday",
+          "ru": "вчера",
+          "group": "Schedule"
+        },
+        {
+          "ge": "გრაფიკი",
+          "en": "schedule / timetable",
+          "ru": "расписание",
           "group": "Schedule"
         },
         {
@@ -1683,18 +1828,79 @@
           "en": "goes out / crosses",
           "ru": "выходит / переходит",
           "group": "Motion verbs"
+        },
+        {
+          "ge": "მოვდივარ",
+          "en": "I am coming",
+          "ru": "я иду (сюда)",
+          "group": "Motion verbs"
+        },
+        {
+          "ge": "მივდივარ",
+          "en": "I am going (away)",
+          "ru": "я иду (отсюда)",
+          "group": "Motion verbs"
         }
       ]
     },
     "9": {
       "title": "Hobbies, Leisure, Nature",
       "grammar": {
-        "en": "შემიძლია = I can. მომწონს = I like (lit. 'it pleases me'). Past: წავედი (I went), მოვედი (I came).",
-        "ru": "შემიძლია = «я могу». მომწონს = «мне нравится» (дативный подлежащее + глагол!). Прошедшее: წავედი (я ушёл), მოვედი (я пришёл).",
-        "example_ge": "შემიძლია კითხვა. მომწონს ფილმი.",
-        "example_en": "I can read. I like the film."
+        "en": "შემიძლია = I can. მომწონს = I like (lit. 'it pleases me'). Past: წავედი (I went), მოვედი (I came). Location: dative + -ში (მუზეუმში), -ზე (ზღვაზე).",
+        "ru": "შემიძლია = «я могу». მომწონს = «мне нравится» (дативный подлежащее + глагол!). Прошедшее: წავედი (я ушёл), მოვედი (я пришёл). Место: датив + -ში / -ზე.",
+        "example_ge": "შემიძლია კითხვა. მომწონს ფილმი. გუშინ წავედი მუზეუმში.",
+        "example_en": "I can read. I like the film. Yesterday I went to the museum.",
+        "bullets": [
+          "შემიძლია / არ შემიძლია = I can / can't",
+          "მომწონს / არ მომწონს = I like / don't like",
+          "Experiencer in dative — like მინდა (L3)",
+          "წავედი = I went away · მოვედი = I came here",
+          "მუზეუმში · ტყეში · ზღვაზე = in/at/on (dative + postposition)"
+        ]
       },
       "easier_than_russian": "No perfective/imperfective pair to choose for წავედი — one past form.",
+      "phrases": [
+        {
+          "ge": "შემიძლია კითხვა და წერა.",
+          "en": "I can read and write.",
+          "ru": "Я умею читать и писать."
+        },
+        {
+          "ge": "მომწონს ფილმი.",
+          "en": "I like the film.",
+          "ru": "Мне нравится фильм."
+        },
+        {
+          "ge": "არ მომწონს ეს სპექტაკლი.",
+          "en": "I don't like this play.",
+          "ru": "Мне не нравится этот спектакль."
+        },
+        {
+          "ge": "გუშინ წავედი პარკში.",
+          "en": "Yesterday I went to the park.",
+          "ru": "Вчера я ходил(а) в парк."
+        },
+        {
+          "ge": "ხშირად ვსეირნობ ტყეში.",
+          "en": "I often walk in the forest.",
+          "ru": "Я часто гуляю в лесу."
+        },
+        {
+          "ge": "ზღვა და მთა ძალიან ლამაზია.",
+          "en": "The sea and mountains are very beautiful.",
+          "ru": "Море и горы очень красивые."
+        },
+        {
+          "ge": "რა მოგწონს?",
+          "en": "What do you like?",
+          "ru": "Что тебе нравится?"
+        },
+        {
+          "ge": "შეგიძლია ქართულად საუბარი?",
+          "en": "Can you speak Georgian?",
+          "ru": "Ты умеешь говорить по-грузински?"
+        }
+      ],
       "vocab": [
         {
           "ge": "ფილმი",
@@ -1733,6 +1939,18 @@
           "group": "Leisure"
         },
         {
+          "ge": "მუსიკა",
+          "en": "music",
+          "ru": "музыка",
+          "group": "Leisure"
+        },
+        {
+          "ge": "სპორტი",
+          "en": "sport",
+          "ru": "спорт",
+          "group": "Leisure"
+        },
+        {
           "ge": "კითხვა",
           "en": "reading",
           "ru": "чтение",
@@ -1751,9 +1969,27 @@
           "group": "Hobbies"
         },
         {
+          "ge": "სეირნობა",
+          "en": "stroll / walk",
+          "ru": "прогулка",
+          "group": "Hobbies"
+        },
+        {
+          "ge": "ფოტოგრაფია",
+          "en": "photography",
+          "ru": "фотография",
+          "group": "Hobbies"
+        },
+        {
           "ge": "ბაღი",
           "en": "garden / park",
           "ru": "сад / парк",
+          "group": "Nature"
+        },
+        {
+          "ge": "პარკი",
+          "en": "park",
+          "ru": "парк",
           "group": "Nature"
         },
         {
@@ -1787,9 +2023,33 @@
           "group": "Nature"
         },
         {
+          "ge": "ყვავილი",
+          "en": "flower",
+          "ru": "цветок",
+          "group": "Nature"
+        },
+        {
+          "ge": "გუშინ",
+          "en": "yesterday",
+          "ru": "вчера",
+          "group": "Time"
+        },
+        {
+          "ge": "ხშირად",
+          "en": "often",
+          "ru": "часто",
+          "group": "Frequency"
+        },
+        {
           "ge": "შემიძლია",
           "en": "I can",
           "ru": "я могу",
+          "group": "Useful phrases"
+        },
+        {
+          "ge": "არ შემიძლია",
+          "en": "I can't",
+          "ru": "я не могу",
           "group": "Useful phrases"
         },
         {
@@ -1805,6 +2065,12 @@
           "group": "Useful phrases"
         },
         {
+          "ge": "რა მოგწონს",
+          "en": "what do you like?",
+          "ru": "что тебе нравится?",
+          "group": "Useful phrases"
+        },
+        {
           "ge": "წავედი",
           "en": "I went",
           "ru": "я ушёл / пошёл",
@@ -1815,18 +2081,79 @@
           "en": "I came",
           "ru": "я пришёл",
           "group": "Past tense"
+        },
+        {
+          "ge": "ვსეირნობ",
+          "en": "I walk / stroll",
+          "ru": "я гуляю",
+          "group": "Past tense"
+        },
+        {
+          "ge": "ვსეირნობდი",
+          "en": "I was walking",
+          "ru": "я гулял(а)",
+          "group": "Past tense"
         }
       ]
     },
     "10": {
       "title": "City & Transport",
       "grammar": {
-        "en": "Locative postpositions: -ში (in), -ზე (on), -თან (near). Transport: instrumental -ით (ავტობუსით = by bus).",
-        "ru": "ПОСТПОЗИЦИИ (после слова!): -ში = «в», -ზე = «на», -თან = «у/около». Транспорт: творительный -ით = «на» (ავტობუსით = на автобусе).",
-        "example_ge": "სახლში ვარ. ავტობუსით მივდივარ.",
-        "example_en": "I am at home. I go by bus."
+        "en": "Locative postpositions: -ში (in), -ზე (on), -თან (near). Transport: instrumental -ით (ავტობუსით = by bus). Noun → dative (-ს) before postposition: სახლი → სახლში.",
+        "ru": "ПОСТПОЗИЦИИ (после слова!): -ში = «в», -ზე = «на», -თან = «у/около». Транспорт: творительный -ით = «на» (ავტობუსით = на автобусе). Сущ. → датив (-ს) + постпозиция.",
+        "example_ge": "სახლში ვარ. ავტობუსით მივდივარ. ბანკი ახლოსაა, სადგური შორსაა.",
+        "example_en": "I am at home. I go by bus. The bank is near, the station is far.",
+        "bullets": [
+          "-ში = in/at · -ზე = on · -თან = near/by",
+          "Postpositions glue to dative form: სახლი → სახლში",
+          "Transport: -ით instrumental — ავტობუსით, ფეხით",
+          "მარჯვნივ · მარცხნივ · პირდაპირ = directions",
+          "ახლოს · შორს = near · far"
+        ]
       },
       "easier_than_russian": "Postpositions are glued to the word — no separate preposition to memorize separately from case.",
+      "phrases": [
+        {
+          "ge": "სად არის ბანკი?",
+          "en": "Where is the bank?",
+          "ru": "Где банк?"
+        },
+        {
+          "ge": "სახლში ვარ.",
+          "en": "I am at home.",
+          "ru": "Я дома."
+        },
+        {
+          "ge": "ავტობუსით მივდივარ.",
+          "en": "I go by bus.",
+          "ru": "Я еду на автобусе."
+        },
+        {
+          "ge": "მეტროთი უფრო სწრაფია.",
+          "en": "By metro it's faster.",
+          "ru": "На метро быстрее."
+        },
+        {
+          "ge": "ფეხით მარჯვნივ, შემდეგ პირდაპირ.",
+          "en": "On foot to the right, then straight.",
+          "ru": "Пешком направо, потом прямо."
+        },
+        {
+          "ge": "ბანკი ახლოსაა.",
+          "en": "The bank is nearby.",
+          "ru": "Банк рядом."
+        },
+        {
+          "ge": "სადგური შორსაა.",
+          "en": "The station is far.",
+          "ru": "Станция далеко."
+        },
+        {
+          "ge": "ეს ქუჩა ძალიან ვიწროა.",
+          "en": "This street is very narrow.",
+          "ru": "Эта улица очень узкая."
+        }
+      ],
       "vocab": [
         {
           "ge": "ქუჩა",
@@ -1871,9 +2198,33 @@
           "group": "City"
         },
         {
+          "ge": "ფოსტა",
+          "en": "post office",
+          "ru": "почта",
+          "group": "City"
+        },
+        {
+          "ge": "აფთიაქი",
+          "en": "pharmacy",
+          "ru": "аптека",
+          "group": "City"
+        },
+        {
+          "ge": "საავადმყოფო",
+          "en": "hospital",
+          "ru": "больница",
+          "group": "City"
+        },
+        {
           "ge": "სადგური",
           "en": "station",
           "ru": "станция",
+          "group": "Transport"
+        },
+        {
+          "ge": "გაჩერება",
+          "en": "bus stop",
+          "ru": "остановка",
           "group": "Transport"
         },
         {
@@ -1904,6 +2255,12 @@
           "ge": "ტრანსპორტი",
           "en": "transport",
           "ru": "транспорт",
+          "group": "Transport"
+        },
+        {
+          "ge": "ბილეთი",
+          "en": "ticket",
+          "ru": "билет",
           "group": "Transport"
         },
         {
@@ -1953,18 +2310,97 @@
           "en": "far",
           "ru": "далеко",
           "group": "Directions"
+        },
+        {
+          "ge": "ვიწრო",
+          "en": "narrow",
+          "ru": "узкий",
+          "group": "City adjectives"
+        },
+        {
+          "ge": "ფართო",
+          "en": "wide / spacious",
+          "ru": "широкий",
+          "group": "City adjectives"
+        },
+        {
+          "ge": "ცენტრი",
+          "en": "centre / downtown",
+          "ru": "центр",
+          "group": "City"
+        },
+        {
+          "ge": "ქალაქი",
+          "en": "city",
+          "ru": "город",
+          "group": "City"
+        },
+        {
+          "ge": "მივდივარ",
+          "en": "I go / I am going",
+          "ru": "я иду / еду",
+          "group": "Motion"
         }
       ]
     },
     "11": {
       "title": "Home & Apartment",
       "grammar": {
-        "en": "მაქვს = I have (things). მყავს = I have (people/animals). Dative subject — like Russian «у меня есть».",
-        "ru": "მაქვს = «у меня есть» (вещь). მყავს = «у меня есть» (человек/животное). Подлежащее в дательном — как «у меня»!",
-        "example_ge": "მაქვს ბინა. მყავს კატა.",
-        "example_en": "I have an apartment. I have a cat."
+        "en": "მაქვს = I have (things). მყავს = I have (people/animals). Dative subject — like Russian «у меня есть». Full paradigm: მაქვს/გაქვს/აქვს/გვაქვს/გაქვთ/აქვთ.",
+        "ru": "მაქვს = «у меня есть» (вещь). მყავს = «у меня есть» (человек/животное). Подлежащее в дательном — как «у меня»! Полная парадигма: მაქვს/გაქვს/აქვს/გვაქვს/გაქვთ/აქვთ.",
+        "example_ge": "მაქვს ბინა. მყავს კატა. სამზარეულოში დიდი მაგიდაა.",
+        "example_en": "I have an apartment. I have a cat. There is a big table in the kitchen.",
+        "bullets": [
+          "მაქვს = I have (things) · მყავს = I have (living)",
+          "მე is dative — «to me there is»",
+          "გაქვს · აქვს · გვაქვს · გაქვთ · აქვთ",
+          "Past: მქონდა · Future: მექნება",
+          "Room names: -ში for location — სამზარეულოში"
+        ]
       },
       "easier_than_russian": "Two verbs for 'have' but the rule is simple: things vs. living beings.",
+      "phrases": [
+        {
+          "ge": "მაქვს ბინა თბილისში.",
+          "en": "I have an apartment in Tbilisi.",
+          "ru": "У меня квартира в Тбилиси."
+        },
+        {
+          "ge": "მყავს კატა და ძაღლი.",
+          "en": "I have a cat and a dog.",
+          "ru": "У меня кошка и собака."
+        },
+        {
+          "ge": "გაქვს ტელევიზორი?",
+          "en": "Do you have a TV?",
+          "ru": "У тебя есть телевизор?"
+        },
+        {
+          "ge": "სამზარეულოში დიდი მაგიდაა.",
+          "en": "There is a big table in the kitchen.",
+          "ru": "На кухне большой стол."
+        },
+        {
+          "ge": "საძინებელში საწოლი და კარადა.",
+          "en": "A bed and wardrobe in the bedroom.",
+          "ru": "В спальне кровать и шкаф."
+        },
+        {
+          "ge": "ბალკონზე ყვავილებია.",
+          "en": "There are flowers on the balcony.",
+          "ru": "На балконе цветы."
+        },
+        {
+          "ge": "მაცივარი და გაზქურა მაქვს.",
+          "en": "I have a fridge and a stove.",
+          "ru": "У меня холодильник и плита."
+        },
+        {
+          "ge": "ჩვენ გვაქვს ფართო ბინა.",
+          "en": "We have a spacious apartment.",
+          "ru": "У нас просторная квартира."
+        }
+      ],
       "vocab": [
         {
           "ge": "ბინა",
@@ -2009,6 +2445,24 @@
           "group": "Rooms"
         },
         {
+          "ge": "სადარბაზო",
+          "en": "entrance hall / stairwell",
+          "ru": "подъезд",
+          "group": "Rooms"
+        },
+        {
+          "ge": "კარი",
+          "en": "door",
+          "ru": "дверь",
+          "group": "Rooms"
+        },
+        {
+          "ge": "ფანჯარა",
+          "en": "window",
+          "ru": "окно",
+          "group": "Rooms"
+        },
+        {
           "ge": "მაგიდა",
           "en": "table",
           "ru": "стол",
@@ -2039,6 +2493,12 @@
           "group": "Furniture"
         },
         {
+          "ge": "საწმენდა",
+          "en": "sofa / couch",
+          "ru": "диван",
+          "group": "Furniture"
+        },
+        {
           "ge": "მაცივარი",
           "en": "fridge",
           "ru": "холодильник",
@@ -2057,15 +2517,63 @@
           "group": "Appliances"
         },
         {
+          "ge": "გათბობა",
+          "en": "heating",
+          "ru": "отопление",
+          "group": "Appliances"
+        },
+        {
           "ge": "მაქვს",
           "en": "I have (thing)",
           "ru": "у меня есть (вещь)",
           "group": "To have"
         },
         {
+          "ge": "გაქვს",
+          "en": "you have (thing)",
+          "ru": "у тебя есть (вещь)",
+          "group": "To have"
+        },
+        {
+          "ge": "აქვს",
+          "en": "he/she has (thing)",
+          "ru": "у него/неё есть",
+          "group": "To have"
+        },
+        {
+          "ge": "გვაქვს",
+          "en": "we have (thing)",
+          "ru": "у нас есть",
+          "group": "To have"
+        },
+        {
           "ge": "მყავს",
           "en": "I have (person/animal)",
           "ru": "у меня есть (живое)",
+          "group": "To have"
+        },
+        {
+          "ge": "გყავს",
+          "en": "you have (person/animal)",
+          "ru": "у тебя есть (живое)",
+          "group": "To have"
+        },
+        {
+          "ge": "ყავს",
+          "en": "he/she has (person/animal)",
+          "ru": "у него/неё есть (живое)",
+          "group": "To have"
+        },
+        {
+          "ge": "მქონდა",
+          "en": "I had (thing)",
+          "ru": "у меня было",
+          "group": "To have"
+        },
+        {
+          "ge": "მექნება",
+          "en": "I will have",
+          "ru": "у меня будет",
           "group": "To have"
         },
         {
@@ -2079,18 +2587,79 @@
           "en": "dog",
           "ru": "собака",
           "group": "Living things"
+        },
+        {
+          "ge": "ფართო",
+          "en": "spacious / wide",
+          "ru": "просторный",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "დიდი",
+          "en": "big",
+          "ru": "большой",
+          "group": "Adjectives"
         }
       ]
     },
     "12": {
       "title": "Review + Letter Writing",
       "grammar": {
-        "en": "Past tense review. Duration: X წელია ვსწავლობ = I've been studying for X years. Polite phrases for real conversation.",
-        "ru": "Повторение прошедшего времени. Длительность: X წელია ვსწავლობ = «я учу уже X лет». Вежливые фразы для разговора.",
-        "example_ge": "ორი წელია ვსწავლობ ქართულს. გმადლობ!",
-        "example_en": "I've been studying Georgian for two years. Thank you!"
+        "en": "Past tense review. Duration: X წელია ვსწავლობ = I've been studying for X years. Letter openers: ძვირფასო …, closers: პატივისცემით. Polite phrases for real conversation.",
+        "ru": "Повторение прошедшего времени. Длительность: X წელია ვსწავლობ = «я учу уже X лет». Письмо: ძვირფასო … (дорогой/ая), პატივისცემით (с уважением). Вежливые фразы.",
+        "example_ge": "ძვირფასო ნინო! ორი წელია ვსწავლობ ქართულს. პატივისცემით, გიორგი.",
+        "example_en": "Dear Nino! I've been studying Georgian for two years. Respectfully, Giorgi.",
+        "bullets": [
+          "Present · past · future review: ვარ/ვიყავი/ვიქნები",
+          "მაქვს → მქონდა → მექნება",
+          "X წელია ვსწავლობ = I've studied for X years",
+          "ძვირფასო + name = Dear …",
+          "პატივისცემით = Yours sincerely / Respectfully"
+        ]
       },
       "easier_than_russian": "გმადლობ works for thank you — no gendered «спасиба/спасибо» distinction needed.",
+      "phrases": [
+        {
+          "ge": "ძვირფასო ნინო!",
+          "en": "Dear Nino!",
+          "ru": "Дорогая Нино!"
+        },
+        {
+          "ge": "ორი წელია ვსწავლობ ქართულს.",
+          "en": "I've been studying Georgian for two years.",
+          "ru": "Я учу грузинский уже два года."
+        },
+        {
+          "ge": "გმადლობ დახმარებისთვის!",
+          "en": "Thank you for your help!",
+          "ru": "Спасибо за помощь!"
+        },
+        {
+          "ge": "პატივისცემით, გიორგი.",
+          "en": "Respectfully, Giorgi.",
+          "ru": "С уважением, Гиорги."
+        },
+        {
+          "ge": "გთხოვთ, დამიკავშირდეთ.",
+          "en": "Please contact me.",
+          "ru": "Пожалуйста, свяжитесь со мной."
+        },
+        {
+          "ge": "გმადლობთ ყურადღებისთვის.",
+          "en": "Thank you for your attention.",
+          "ru": "Спасибо за внимание."
+        },
+        {
+          "ge": "უკაცრავად, სად არის ფოსტა?",
+          "en": "Excuse me, where is the post office?",
+          "ru": "Извините, где почта?"
+        },
+        {
+          "ge": "არაფრის, გთხოვ.",
+          "en": "You're welcome, please.",
+          "ru": "Не за что, пожалуйста."
+        }
+      ],
       "vocab": [
         {
           "ge": "წერილი",
@@ -2121,6 +2690,36 @@
           "en": "form / questionnaire",
           "ru": "анкета",
           "group": "Writing"
+        },
+        {
+          "ge": "ძვირფასო",
+          "en": "dear (letter salutation)",
+          "ru": "дорогой / дорогая",
+          "group": "Letter phrases"
+        },
+        {
+          "ge": "პატივისცემით",
+          "en": "respectfully / yours sincerely",
+          "ru": "с уважением",
+          "group": "Letter phrases"
+        },
+        {
+          "ge": "დახმარება",
+          "en": "help",
+          "ru": "помощь",
+          "group": "Letter phrases"
+        },
+        {
+          "ge": "ყურადღება",
+          "en": "attention",
+          "ru": "внимание",
+          "group": "Letter phrases"
+        },
+        {
+          "ge": "კავშირი",
+          "en": "contact / connection",
+          "ru": "связь",
+          "group": "Letter phrases"
         },
         {
           "ge": "გმადლობ",
@@ -2168,25 +2767,73 @@
           "ge": "ვსწავლობ",
           "en": "I study / I am learning",
           "ru": "я учу / изучаю",
-          "group": "Review"
+          "group": "Review verbs"
         },
         {
           "ge": "ვიყავი",
           "en": "I was",
           "ru": "я был / была",
-          "group": "Review"
+          "group": "Review verbs"
+        },
+        {
+          "ge": "ვიქნები",
+          "en": "I will be",
+          "ru": "я буду",
+          "group": "Review verbs"
         },
         {
           "ge": "მქონდა",
           "en": "I had (thing)",
           "ru": "у меня было",
-          "group": "Review"
+          "group": "Review verbs"
         },
         {
           "ge": "მექნება",
           "en": "I will have",
           "ru": "у меня будет",
-          "group": "Review"
+          "group": "Review verbs"
+        },
+        {
+          "ge": "ვისწავლი",
+          "en": "I will study / learn",
+          "ru": "я буду учить",
+          "group": "Review verbs"
+        },
+        {
+          "ge": "ვსწავლობდი",
+          "en": "I was studying",
+          "ru": "я учил(а)",
+          "group": "Review verbs"
+        },
+        {
+          "ge": "წელია",
+          "en": "for (duration) — X years",
+          "ru": "уже (длительность)",
+          "group": "Duration"
+        },
+        {
+          "ge": "ახლა",
+          "en": "now",
+          "ru": "сейчас",
+          "group": "Time"
+        },
+        {
+          "ge": "ადრე",
+          "en": "before / earlier",
+          "ru": "раньше",
+          "group": "Time"
+        },
+        {
+          "ge": "მუშაობ",
+          "en": "I work",
+          "ru": "я работаю",
+          "group": "Review verbs"
+        },
+        {
+          "ge": "ვმუშაობდი",
+          "en": "I was working",
+          "ru": "я работал(а)",
+          "group": "Review verbs"
         }
       ]
     }
@@ -2198,7 +2845,13 @@
         "en": "Genitive possession review: ანა-ს ოჯახი (Ana's family). Vowel-ending names take +ს, consonant-ending names take +ის. Compound words: და+ძმა → და-ძმა, დედა+მამა → დედ-მამა. Time range: X-იდან Y-ამდე = from X to Y.",
         "ru": "Повторение родительного: ანა-ს ოჯახი. Имена на гласную получают +ს, на согласную +ის. Сложные слова: და-ძმა, დედ-მამა. Интервал времени: X-იდან Y-ამდე = с X до Y.",
         "example_ge": "ორშაბათიდან პარასკევამდე უნივერსიტეტში ვარ.",
-        "example_en": "From Monday to Friday I am at the university."
+        "example_en": "From Monday to Friday I am at the university.",
+        "bullets": [
+          "Genitive of names: vowel endings usually take -ს, consonant endings take -ის.",
+          "Compound kinship words are common: და-ძმა, დედ-მამა, ბებია-ბაბუა.",
+          "Time span uses -იდან ... -ამდე to show from and to.",
+          "Possession phrases stay compact: noun+noun often replaces long relative clauses."
+        ]
       },
       "easier_than_russian": "Georgian compounds are very transparent: და-ძმა literally means sister-brother (siblings).",
       "vocab": [
@@ -2345,6 +2998,74 @@
           "en": "until (o'clock)",
           "ru": "до (часа)",
           "group": "Time"
+        },
+        {
+          "ge": "ნათლია",
+          "en": "godparent",
+          "ru": "крестный/крестная",
+          "group": "Family"
+        },
+        {
+          "ge": "ნათესაობა",
+          "en": "kinship",
+          "ru": "родство",
+          "group": "Family"
+        },
+        {
+          "ge": "საოჯახო",
+          "en": "family-related",
+          "ru": "семейный",
+          "group": "Family"
+        },
+        {
+          "ge": "ურთიერთობა",
+          "en": "relationship",
+          "ru": "отношения",
+          "group": "Social life"
+        },
+        {
+          "ge": "დროის მონაკვეთი",
+          "en": "time period",
+          "ru": "период времени",
+          "group": "Time"
+        },
+        {
+          "ge": "დღის რეჟიმი",
+          "en": "daily routine",
+          "ru": "режим дня",
+          "group": "Life"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "გიორგის და უნივერსიტეტში სწავლობს.",
+          "en": "Giorgi's sister studies at university.",
+          "ru": "Сестра Георгия учится в университете."
+        },
+        {
+          "ge": "ორშაბათიდან პარასკევამდე სამსახურში ვარ.",
+          "en": "From Monday to Friday I am at work.",
+          "ru": "С понедельника до пятницы я на работе."
+        },
+        {
+          "ge": "ეს ანას ბიძაშვილია.",
+          "en": "This is Ana's cousin.",
+          "ru": "Это двоюродный брат/сестра Аны."
+        },
+        {
+          "ge": "ჩვენი ოჯახი ძალიან მეგობრულია.",
+          "en": "Our family is very friendly.",
+          "ru": "Наша семья очень дружная."
+        },
+        {
+          "ge": "შაბათს სტუმრები გვყავს.",
+          "en": "On Saturday we have guests.",
+          "ru": "В субботу у нас гости."
+        },
+        {
+          "ge": "მარტო არ ვცხოვრობ, ძმასთან ერთად ვარ.",
+          "en": "I do not live alone, I live with my brother.",
+          "ru": "Я не живу один, я живу с братом."
         }
       ]
     },
@@ -2354,7 +3075,13 @@
         "en": "Instrumental case (-ით): means/instrument/material (ავტობუსით by bus, ქვებით with stones). Adjectives from nouns with -იანი: მზე → მზიანი, წვიმა → წვიმიანი.",
         "ru": "Творительный падеж (-ით): средство, инструмент, материал (ავტობუსით, ქვებით). Прилагательные на -იანი: მზე → მზიანი, წვიმა → წვიმიანი.",
         "example_ge": "საქართველო მთიანი და მზიანი ქვეყანაა.",
-        "example_en": "Georgia is a mountainous and sunny country."
+        "example_en": "Georgia is a mountainous and sunny country.",
+        "bullets": [
+          "Instrumental -ით answers how/with what/by what means.",
+          "Adjectives with -იანი often describe weather, quality, or surface traits.",
+          "Geographic description often stacks adjectives before the noun.",
+          "Cardinal direction nouns behave like regular nouns in phrases."
+        ]
       },
       "easier_than_russian": "Adjectives do not change for gender: მზიანი works with any noun.",
       "vocab": [
@@ -2525,6 +3252,74 @@
           "en": "neighbor",
           "ru": "сосед",
           "group": "People"
+        },
+        {
+          "ge": "ველი",
+          "en": "plain/field",
+          "ru": "равнина/поле",
+          "group": "Geography"
+        },
+        {
+          "ge": "ხეობა",
+          "en": "valley",
+          "ru": "долина",
+          "group": "Geography"
+        },
+        {
+          "ge": "კლიმატი",
+          "en": "climate",
+          "ru": "климат",
+          "group": "Weather"
+        },
+        {
+          "ge": "ნოტიო",
+          "en": "humid",
+          "ru": "влажный",
+          "group": "Weather"
+        },
+        {
+          "ge": "მშრალი ჰავა",
+          "en": "dry climate",
+          "ru": "сухой климат",
+          "group": "Weather"
+        },
+        {
+          "ge": "სიმაღლე",
+          "en": "altitude/height",
+          "ru": "высота",
+          "group": "Geography"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "საქართველო მთიანი და ტყიანი ქვეყანაა.",
+          "en": "Georgia is a mountainous and forested country.",
+          "ru": "Грузия — горная и лесистая страна."
+        },
+        {
+          "ge": "ზაფხულში ზღვისპირა ქალაქები ძალიან ცხელია.",
+          "en": "In summer seaside cities are very hot.",
+          "ru": "Летом приморские города очень жаркие."
+        },
+        {
+          "ge": "ზამთარში თოვლიანი ამინდია კავკასიაში.",
+          "en": "In winter the weather is snowy in the Caucasus.",
+          "ru": "Зимой на Кавказе снежная погода."
+        },
+        {
+          "ge": "ავტობუსით წავედით დასავლეთ საქართველოში.",
+          "en": "We went to western Georgia by bus.",
+          "ru": "Мы поехали на автобусе в западную Грузию."
+        },
+        {
+          "ge": "ეს მხარე ძალიან მწვანეა.",
+          "en": "This region is very green.",
+          "ru": "Этот край очень зеленый."
+        },
+        {
+          "ge": "ჩრდილოეთით მაღალი მთებია.",
+          "en": "There are high mountains in the north.",
+          "ru": "На севере высокие горы."
         }
       ]
     },
@@ -2534,7 +3329,13 @@
         "en": "Modifier + noun: adjective always comes before noun (დიდი სახლი). Time expressions: დილით in the morning, საღამოთი in the evening, ღამით at night, X-ჯერ X times.",
         "ru": "Определение + существительное: прилагательное всегда перед существительным (დიდი სახლი). Время: დილით утром, საღამოთი вечером, ღამით ночью, X-ჯერ X раз.",
         "example_ge": "დილით ნათელ ოთახში ვკითხულობ.",
-        "example_en": "In the morning I read in a bright room."
+        "example_en": "In the morning I read in a bright room.",
+        "bullets": [
+          "Adjective comes before noun in neutral word order.",
+          "Time adverbs like დილით/საღამოს often stand first for emphasis.",
+          "Frequency with -ჯერ gives clear count expressions.",
+          "Household and lifestyle descriptions often use parallel adjective pairs."
+        ]
       },
       "easier_than_russian": "No gender agreement on adjectives: დიდი and ნათელი keep one form.",
       "vocab": [
@@ -2687,6 +3488,74 @@
           "en": "each other",
           "ru": "друг друга",
           "group": "Useful words"
+        },
+        {
+          "ge": "მისაღები ოთახი",
+          "en": "living room",
+          "ru": "гостиная",
+          "group": "Home"
+        },
+        {
+          "ge": "ყოველკვირა",
+          "en": "every week",
+          "ru": "каждую неделю",
+          "group": "Time"
+        },
+        {
+          "ge": "ჩვეულება",
+          "en": "habit/custom",
+          "ru": "привычка",
+          "group": "Lifestyle"
+        },
+        {
+          "ge": "დაძინება",
+          "en": "to fall asleep",
+          "ru": "засыпать",
+          "group": "Daily routine"
+        },
+        {
+          "ge": "გაღვიძება",
+          "en": "to wake up",
+          "ru": "просыпаться",
+          "group": "Daily routine"
+        },
+        {
+          "ge": "მოწესრიგებული",
+          "en": "organized/tidy",
+          "ru": "организованный",
+          "group": "Descriptions"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "დილით ადრე ვდგები და ყავას ვსვამ.",
+          "en": "I get up early in the morning and drink coffee.",
+          "ru": "Утром я рано встаю и пью кофе."
+        },
+        {
+          "ge": "საღამოს ოჯახთან ერთად ვვახშმობ.",
+          "en": "In the evening I have dinner with my family.",
+          "ru": "Вечером я ужинаю с семьей."
+        },
+        {
+          "ge": "კვირაში ორჯერ სპორტდარბაზში დავდივარ.",
+          "en": "I go to the gym twice a week.",
+          "ru": "Два раза в неделю я хожу в спортзал."
+        },
+        {
+          "ge": "ჩვენს სახლში ნათელი მისაღები ოთახია.",
+          "en": "Our house has a bright living room.",
+          "ru": "В нашем доме светлая гостиная."
+        },
+        {
+          "ge": "ღამით მალე ვიძინებ.",
+          "en": "At night I go to sleep quickly.",
+          "ru": "Ночью я быстро засыпаю."
+        },
+        {
+          "ge": "მეზობლები ძალიან წყნარები არიან.",
+          "en": "The neighbors are very calm.",
+          "ru": "Соседи очень спокойные."
         }
       ]
     },
@@ -2696,7 +3565,13 @@
         "en": "Ordinal numbers: მე+cardinal+ე (მეორე, მესამე), first is პირველი. Past review: იყო was, ჰყავდა had (person), ჰქონდა had (thing). Reported speech uses -ო.",
         "ru": "Порядковые числительные: მე+числительное+ე (მეორე, მესამე), первый = პირველი. Повторение прошедшего: იყო, ჰყავდა, ჰქონდა. В косвенной речи часто используется -ო.",
         "example_ge": "ის ცნობილი ფეხბურთელი იყო და ყველა ყოჩაღო ეუბნებოდა.",
-        "example_en": "He was a famous footballer and everyone told him 'bravo'."
+        "example_en": "He was a famous footballer and everyone told him 'bravo'.",
+        "bullets": [
+          "Ordinals after პირველი are mostly predictable in form.",
+          "იყო/ჰქონდა/ჰყავდა are core past narration verbs.",
+          "Reported speech marker -ო appears in storytelling and hearsay.",
+          "Character descriptions combine profession + adjective naturally."
+        ]
       },
       "easier_than_russian": "Ordinal formation is regular after პირველი, so fewer irregular patterns to memorize.",
       "vocab": [
@@ -2855,6 +3730,74 @@
           "en": "well done! / bravo!",
           "ru": "молодец!",
           "group": "Useful words"
+        },
+        {
+          "ge": "ხასიათის აღწერა",
+          "en": "character description",
+          "ru": "описание характера",
+          "group": "People"
+        },
+        {
+          "ge": "ნიჭიერი",
+          "en": "talented",
+          "ru": "талантливый",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "თავმდაბალი",
+          "en": "modest",
+          "ru": "скромный",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "გულწრფელი",
+          "en": "sincere",
+          "ru": "искренний",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "შრომისმოყვარე",
+          "en": "hardworking",
+          "ru": "трудолюбивый",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "ბავშვობიდან",
+          "en": "since childhood",
+          "ru": "с детства",
+          "group": "Time"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ჩემი მეორე მეზობელი ექიმი იყო.",
+          "en": "My second neighbor was a doctor.",
+          "ru": "Мой второй сосед был врачом."
+        },
+        {
+          "ge": "მას დიდი გამოცდილება ჰქონდა.",
+          "en": "He/she had great experience.",
+          "ru": "У него/неё был большой опыт."
+        },
+        {
+          "ge": "მეგობარს ძაღლი ჰყავდა.",
+          "en": "My friend had a dog.",
+          "ru": "У друга была собака."
+        },
+        {
+          "ge": "ყველა ამბობდა, ძალიან კეთილიაო.",
+          "en": "Everyone said that he/she is very kind.",
+          "ru": "Все говорили, что он/она очень добрый(ая)."
+        },
+        {
+          "ge": "მესამე სართულზე ახალი ოჯახი გადმოვიდა.",
+          "en": "A new family moved to the third floor.",
+          "ru": "На третий этаж переехала новая семья."
+        },
+        {
+          "ge": "ის ძალიან მხიარული ადამიანი იყო.",
+          "en": "He/she was a very cheerful person.",
+          "ru": "Это был очень веселый человек."
         }
       ]
     },
@@ -2864,7 +3807,13 @@
         "en": "Adjective degrees: comparative with უფრო...ვიდრე and superlative with ყველაზე + adjective. Indefinite pronouns: რამე, ვინმე, სადმე, არავინ, არაფერი.",
         "ru": "Степени сравнения: сравнительная უფრო...ვიდრე, превосходная ყველაზე + прилагательное. Неопределенные местоимения: რამე, ვინმე, სადმე, არავინ, არაფერი.",
         "example_ge": "ეს ყველაზე საინტერესო ხიდია ქალაქში.",
-        "example_en": "This is the most interesting bridge in the city."
+        "example_en": "This is the most interesting bridge in the city.",
+        "bullets": [
+          "Comparative pattern: უფრო + adjective + ვიდრე.",
+          "Superlative pattern: ყველაზე + adjective.",
+          "Indefinite pronouns help keep speech flexible and polite.",
+          "City-tour speech often chains location words with comparisons."
+        ]
       },
       "easier_than_russian": "One stable superlative marker (ყველაზე) replaces many Russian adjective endings.",
       "vocab": [
@@ -3011,6 +3960,74 @@
           "en": "nothing",
           "ru": "ничего",
           "group": "Pronouns"
+        },
+        {
+          "ge": "საექსკურსიო",
+          "en": "for excursions",
+          "ru": "экскурсионный",
+          "group": "Travel"
+        },
+        {
+          "ge": "მონუმენტი",
+          "en": "monument",
+          "ru": "монумент",
+          "group": "Sightseeing"
+        },
+        {
+          "ge": "ღირსშესანიშნაობა",
+          "en": "landmark",
+          "ru": "достопримечательность",
+          "group": "Sightseeing"
+        },
+        {
+          "ge": "ძეგლი",
+          "en": "statue/memorial",
+          "ru": "памятник",
+          "group": "Sightseeing"
+        },
+        {
+          "ge": "პანორამა",
+          "en": "panorama",
+          "ru": "панорама",
+          "group": "Sightseeing"
+        },
+        {
+          "ge": "გასეირნება",
+          "en": "walk/stroll",
+          "ru": "прогулка",
+          "group": "Travel"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ეს მუზეუმი უფრო საინტერესოა, ვიდრე ის.",
+          "en": "This museum is more interesting than that one.",
+          "ru": "Этот музей интереснее, чем тот."
+        },
+        {
+          "ge": "თბილისში ვინმე კარგი გიდი ხომ არ იცი?",
+          "en": "Do you know any good guide in Tbilisi?",
+          "ru": "Ты не знаешь хорошего гида в Тбилиси?"
+        },
+        {
+          "ge": "სადმე ძველ უბანში წავიდეთ.",
+          "en": "Let's go somewhere in the old district.",
+          "ru": "Пойдем куда-нибудь в старый район."
+        },
+        {
+          "ge": "არაფერი განსაკუთრებული არ გვინახავს.",
+          "en": "We did not see anything special.",
+          "ru": "Мы ничего особенного не увидели."
+        },
+        {
+          "ge": "ეს ხიდი ყველაზე ლამაზია საღამოს.",
+          "en": "This bridge is the most beautiful in the evening.",
+          "ru": "Этот мост самый красивый вечером."
+        },
+        {
+          "ge": "რამდენიმე საათი ქალაქში ვიარეთ.",
+          "en": "We walked around the city for several hours.",
+          "ru": "Мы гуляли по городу несколько часов."
         }
       ]
     },
@@ -3020,7 +4037,13 @@
         "en": "Comparative: უფრო...ვიდრე (more...than). Equality: ისეთივე...როგორც (as...as). Daily adverbs: ჩვეულებრივ usually, ხანდახან sometimes, თითქმის almost.",
         "ru": "Сравнение: უფრო...ვიდრე (более...чем). Равенство: ისეთივე...როგორც (такой же...как). Наречия: ჩვეულებრივ обычно, ხანდახან иногда, თითქმის почти.",
         "example_ge": "ჩემი დილა უფრო სწრაფია, ვიდრე ჩემი საღამო.",
-        "example_en": "My morning is faster-paced than my evening."
+        "example_en": "My morning is faster-paced than my evening.",
+        "bullets": [
+          "Comparative and equality patterns can appear in one sentence.",
+          "Routine adverbs often stand before the main verb.",
+          "Daily-sequence narration benefits from clear time anchors.",
+          "Kitchen/home routines naturally combine action + object chunks."
+        ]
       },
       "easier_than_russian": "Daily routine phrases are straightforward: no aspect pairs like делать/сделать.",
       "vocab": [
@@ -3167,6 +4190,74 @@
           "en": "mainly",
           "ru": "в основном",
           "group": "Adverbs"
+        },
+        {
+          "ge": "საუზმე",
+          "en": "breakfast",
+          "ru": "завтрак",
+          "group": "Meals"
+        },
+        {
+          "ge": "სადილი",
+          "en": "lunch",
+          "ru": "обед",
+          "group": "Meals"
+        },
+        {
+          "ge": "ვახშამი",
+          "en": "dinner",
+          "ru": "ужин",
+          "group": "Meals"
+        },
+        {
+          "ge": "სამუშაო დღე",
+          "en": "workday",
+          "ru": "рабочий день",
+          "group": "Routine"
+        },
+        {
+          "ge": "დასვენების დღე",
+          "en": "day off",
+          "ru": "выходной",
+          "group": "Routine"
+        },
+        {
+          "ge": "გეგმა",
+          "en": "plan",
+          "ru": "план",
+          "group": "Time"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ჩვეულებრივ შვიდ საათზე ვიღვიძებ.",
+          "en": "I usually wake up at seven o'clock.",
+          "ru": "Обычно я просыпаюсь в семь часов."
+        },
+        {
+          "ge": "ხანდახან სახლში ვსაუზმობ.",
+          "en": "Sometimes I have breakfast at home.",
+          "ru": "Иногда я завтракаю дома."
+        },
+        {
+          "ge": "ჩემი დღე უფრო დატვირთულია, ვიდრე ადრე.",
+          "en": "My day is busier than before.",
+          "ru": "Мой день более загружен, чем раньше."
+        },
+        {
+          "ge": "ჩემი საღამო ისეთივე მშვიდია, როგორც შაბათი.",
+          "en": "My evening is as calm as Saturday.",
+          "ru": "Мой вечер такой же спокойный, как суббота."
+        },
+        {
+          "ge": "თითქმის ყოველდღე თვითონ ვამზადებ სადილს.",
+          "en": "Almost every day I cook lunch myself.",
+          "ru": "Почти каждый день я сам(а) готовлю обед."
+        },
+        {
+          "ge": "საღამოს სამზარეულოს ვალაგებ.",
+          "en": "In the evening I tidy the kitchen.",
+          "ru": "Вечером я прибираю кухню."
         }
       ]
     },
@@ -3176,7 +4267,13 @@
         "en": "Subjunctive/reported speech patterns often use -ო in indirect speech. Conjunctions: და, მაგრამ, ან, თუ, რომ, იმიტომ რომ, თუმცა. A2 word-building suffixes: -ად, -ური, -იანი.",
         "ru": "Косвенная речь и сослагательные конструкции часто используют -ო. Союзы: და, მაგრამ, ან, თუ, რომ, იმიტომ რომ, თუმცა. Словообразование: -ად, -ური, -იანი.",
         "example_ge": "ვიცი, რომ ბაზარში დიდი არჩევანია, მაგრამ ყველაფერი იაფი არ არის.",
-        "example_en": "I know that there is a big selection at the market, but not everything is cheap."
+        "example_en": "I know that there is a big selection at the market, but not everything is cheap.",
+        "bullets": [
+          "Conjunctions build longer natural speech: და, მაგრამ, თუმცა, იმიტომ რომ.",
+          "Reported meaning with -ო is common in stories and retellings.",
+          "Word-building suffixes add nuance without changing core meaning.",
+          "Weekend narration often alternates plans vs actual outcomes."
+        ]
       },
       "easier_than_russian": "Conjunctions are fixed words and do not trigger case changes like many Russian prepositions.",
       "vocab": [
@@ -3341,6 +4438,74 @@
           "en": "market",
           "ru": "рынок",
           "group": "Market"
+        },
+        {
+          "ge": "შესყიდვა",
+          "en": "purchase",
+          "ru": "покупка",
+          "group": "Shopping"
+        },
+        {
+          "ge": "სათადარიგო",
+          "en": "spare/additional",
+          "ru": "запасной",
+          "group": "Shopping"
+        },
+        {
+          "ge": "სასურსათო",
+          "en": "grocery",
+          "ru": "продуктовый",
+          "group": "Shopping"
+        },
+        {
+          "ge": "მთლიანი",
+          "en": "whole/entire",
+          "ru": "целый",
+          "group": "Quantities"
+        },
+        {
+          "ge": "კილო ნახევარი",
+          "en": "half a kilo",
+          "ru": "полкило",
+          "group": "Quantities"
+        },
+        {
+          "ge": "გამყიდველი",
+          "en": "seller",
+          "ru": "продавец",
+          "group": "People"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "შაბათს ბაზარში წავედი, მაგრამ ყველაფერი ვერ ვიყიდე.",
+          "en": "On Saturday I went to the market, but I could not buy everything.",
+          "ru": "В субботу я пошел(шла) на рынок, но не все купил(а)."
+        },
+        {
+          "ge": "კვირას სახლში დავრჩით, იმიტომ რომ წვიმდა.",
+          "en": "On Sunday we stayed home because it was raining.",
+          "ru": "В воскресенье мы остались дома, потому что шел дождь."
+        },
+        {
+          "ge": "თუ დრო გვექნება, პარკში გავისეირნებთ.",
+          "en": "If we have time, we will walk in the park.",
+          "ru": "Если у нас будет время, погуляем в парке."
+        },
+        {
+          "ge": "მეგობარმა თქვა, იაფი ხილიო.",
+          "en": "My friend said the fruit was cheap.",
+          "ru": "Друг сказал, что фрукты дешевые."
+        },
+        {
+          "ge": "ბაზარში დიდი არჩევანია და ფასიც კარგია.",
+          "en": "There is a big choice at the market and the price is good too.",
+          "ru": "На рынке большой выбор и цена тоже хорошая."
+        },
+        {
+          "ge": "ხილი ვიყიდე, თუმცა ბოსტნეული აღარ იყო.",
+          "en": "I bought fruit, although there were no vegetables left.",
+          "ru": "Я купил(а) фрукты, хотя овощей уже не было."
         }
       ]
     },
@@ -3350,7 +4515,13 @@
         "en": "Purpose nouns: სა- + stem + -ო/-ელი (საძინებელი, სასადილო, სამზარეულო). Postpositions follow genitive: კრედიტის შესახებ, კრიზისის გამო, ბანკის მიმართ.",
         "ru": "Существительные назначения: სა- + основа + -ო/-ელი (საძინებელი, სასადილო, სამზარეულო). Послелоги требуют родительного: კრედიტის შესახებ, კრიზისის გამო, ბანკის მიმართ.",
         "example_ge": "კრედიტის შესახებ კონსულტანტს დაველაპარაკები.",
-        "example_en": "I will speak with a consultant about the loan."
+        "example_en": "I will speak with a consultant about the loan.",
+        "bullets": [
+          "Purpose/place nouns with სა- often denote functional spaces.",
+          "Postpositions usually require genitive before them in formal language.",
+          "Bank communication favors polite imperatives and service formulas.",
+          "Financial topics rely on fixed collocations (interest rate, term, form)."
+        ]
       },
       "easier_than_russian": "Key polite service phrases are fixed and reusable in many formal situations.",
       "vocab": [
@@ -3509,6 +4680,74 @@
           "en": "approximately",
           "ru": "примерно",
           "group": "Polite phrases"
+        },
+        {
+          "ge": "ბალანსი",
+          "en": "balance",
+          "ru": "баланс",
+          "group": "Banking"
+        },
+        {
+          "ge": "ვალდებულება",
+          "en": "obligation",
+          "ru": "обязательство",
+          "group": "Banking"
+        },
+        {
+          "ge": "სესხი",
+          "en": "loan",
+          "ru": "заем",
+          "group": "Banking"
+        },
+        {
+          "ge": "განაცხადის ნომერი",
+          "en": "application number",
+          "ru": "номер заявки",
+          "group": "Documents"
+        },
+        {
+          "ge": "დოკუმენტაცია",
+          "en": "documentation",
+          "ru": "документация",
+          "group": "Documents"
+        },
+        {
+          "ge": "შეთანხმება",
+          "en": "agreement",
+          "ru": "соглашение",
+          "group": "Legal"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "კრედიტის პირობების შესახებ ინფორმაცია მინდა.",
+          "en": "I want information about loan conditions.",
+          "ru": "Мне нужна информация об условиях кредита."
+        },
+        {
+          "ge": "გთხოვთ, ანკეტა სრულად შეავსეთ.",
+          "en": "Please fill in the form completely.",
+          "ru": "Пожалуйста, заполните анкету полностью."
+        },
+        {
+          "ge": "საპროცენტო განაკვეთი რამდენია?",
+          "en": "What is the interest rate?",
+          "ru": "Какая процентная ставка?"
+        },
+        {
+          "ge": "ანგარიშზე თანხა უკვე ჩაირიცხა.",
+          "en": "The money has already been deposited to the account.",
+          "ru": "Деньги уже зачислены на счет."
+        },
+        {
+          "ge": "დაელოდეთ, კონსულტანტს ახლავე მოგიხმობთ.",
+          "en": "Please wait, I will call the consultant right away.",
+          "ru": "Подождите, сейчас позову консультанта."
+        },
+        {
+          "ge": "მობრძანდით სალაროსთან.",
+          "en": "Please come to the cash desk.",
+          "ru": "Подойдите, пожалуйста, к кассе."
         }
       ]
     },
@@ -3518,7 +4757,13 @@
         "en": "Modal verbs: მინდა (I want), უნდა (must/should), შეიძლება (may/possible), არ შეიძლება (not allowed), შემიძლია (I can). Obligation pattern: უნდა + verb.",
         "ru": "Модальные глаголы: მინდა (хочу), უნდა (должен), შეიძლება (можно), არ შეიძლება (нельзя), შემიძლია (могу). Обязанность: უნდა + глагол.",
         "example_ge": "სიცხე მაქვს და წამალი უნდა მივიღო.",
-        "example_en": "I have a fever and I must take medicine."
+        "example_en": "I have a fever and I must take medicine.",
+        "bullets": [
+          "Modal markers (უნდა, შეიძლება, შემიძლია) shape advice and rules.",
+          "Health complaints often use მაქვს / მტკივა constructions.",
+          "Doctor-patient speech uses polite imperative and reassurance.",
+          "Modal chains help explain what is possible vs necessary."
+        ]
       },
       "easier_than_russian": "Modal words are highly reusable and do not inflect by gender.",
       "vocab": [
@@ -3665,6 +4910,74 @@
           "en": "I cannot",
           "ru": "я не могу",
           "group": "Modal verbs"
+        },
+        {
+          "ge": "დიაგნოზი",
+          "en": "diagnosis",
+          "ru": "диагноз",
+          "group": "Medical care"
+        },
+        {
+          "ge": "რეცეპტი",
+          "en": "prescription",
+          "ru": "рецепт",
+          "group": "Medical care"
+        },
+        {
+          "ge": "დოზა",
+          "en": "dose",
+          "ru": "доза",
+          "group": "Medical care"
+        },
+        {
+          "ge": "გვერდითი ეფექტი",
+          "en": "side effect",
+          "ru": "побочный эффект",
+          "group": "Medical care"
+        },
+        {
+          "ge": "აღდგენა",
+          "en": "recovery",
+          "ru": "восстановление",
+          "group": "Health"
+        },
+        {
+          "ge": "პრევენცია",
+          "en": "prevention",
+          "ru": "профилактика",
+          "group": "Health"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ორი დღეა თავი მტკივა.",
+          "en": "I have had a headache for two days.",
+          "ru": "У меня два дня болит голова."
+        },
+        {
+          "ge": "ექიმმა მითხრა, მეტი წყალი უნდა დალიო.",
+          "en": "The doctor told me you should drink more water.",
+          "ru": "Врач сказал, что нужно пить больше воды."
+        },
+        {
+          "ge": "შეიძლება ეს წამალი დღეში ორჯერ მივიღო?",
+          "en": "May I take this medicine twice a day?",
+          "ru": "Можно принимать это лекарство два раза в день?"
+        },
+        {
+          "ge": "არ შეიძლება სიცხით გარეთ გასვლა.",
+          "en": "You must not go outside with a fever.",
+          "ru": "Нельзя выходить на улицу с температурой."
+        },
+        {
+          "ge": "შემიძლია ხვალ ანალიზის ჩაბარება?",
+          "en": "Can I do the test tomorrow?",
+          "ru": "Могу я сдать анализ завтра?"
+        },
+        {
+          "ge": "გთხოვთ, პაციენტი ჯერ გასინჯეთ.",
+          "en": "Please examine the patient first.",
+          "ru": "Пожалуйста, сначала осмотрите пациента."
         }
       ]
     },
@@ -3674,7 +4987,13 @@
         "en": "Imperative mood: informal (შენ) vs formal (თქვენ, often -ეთ). Contracted nouns in oblique cases: მეგობარი → მეგობრის, კალამი → კალმის.",
         "ru": "Повелительное наклонение: неформальное (შენ) и формальное (თქვენ, часто -ეთ). Сжатые основы в косвенных падежах: მეგობარი → მეგობრის, კალამი → კალმის.",
         "example_ge": "მობრძანდით, ინებეთ და დაწერეთ თქვენი მისამართი.",
-        "example_en": "Please come in, here you are, and write your address."
+        "example_en": "Please come in, here you are, and write your address.",
+        "bullets": [
+          "Formal imperative often takes -ეთ endings.",
+          "Stem contraction appears in oblique forms of many nouns.",
+          "Service interactions combine command + politeness markers.",
+          "Home-shopping talk mixes color, size, and function adjectives."
+        ]
       },
       "easier_than_russian": "Formal imperative is usually predictable with -ეთ, which makes polite commands easy to build.",
       "vocab": [
@@ -3821,6 +5140,74 @@
           "en": "please come in",
           "ru": "проходите, пожалуйста",
           "group": "Imperative"
+        },
+        {
+          "ge": "ავეჯი",
+          "en": "furniture",
+          "ru": "мебель",
+          "group": "Home"
+        },
+        {
+          "ge": "ინტერიერი",
+          "en": "interior",
+          "ru": "интерьер",
+          "group": "Home"
+        },
+        {
+          "ge": "რემონტი",
+          "en": "renovation",
+          "ru": "ремонт",
+          "group": "Home"
+        },
+        {
+          "ge": "ზომა",
+          "en": "size/measurement",
+          "ru": "размер",
+          "group": "Shopping"
+        },
+        {
+          "ge": "განლაგება",
+          "en": "layout/placement",
+          "ru": "расположение",
+          "group": "Home"
+        },
+        {
+          "ge": "შეკვეთის მიწოდება",
+          "en": "order delivery",
+          "ru": "доставка заказа",
+          "group": "Shopping"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "გთხოვთ, მისამართი სწორად დაწერეთ.",
+          "en": "Please write the address correctly.",
+          "ru": "Пожалуйста, правильно напишите адрес."
+        },
+        {
+          "ge": "ინებეთ, ეს ახალი კატალოგია.",
+          "en": "Here you are, this is the new catalog.",
+          "ru": "Вот, пожалуйста, это новый каталог."
+        },
+        {
+          "ge": "მობრძანდით და ავეჯი ადგილზე ნახეთ.",
+          "en": "Please come and see the furniture on site.",
+          "ru": "Приходите и посмотрите мебель на месте."
+        },
+        {
+          "ge": "ეს თარო უფრო პრაქტიკულია პატარა ბინისთვის.",
+          "en": "This shelf is more practical for a small apartment.",
+          "ru": "Эта полка практичнее для маленькой квартиры."
+        },
+        {
+          "ge": "ფარდა ღია ფერის ავარჩიოთ.",
+          "en": "Let's choose light-colored curtains.",
+          "ru": "Давайте выберем шторы светлого цвета."
+        },
+        {
+          "ge": "სარეცხი მანქანა ხვალ მოიტანეთ.",
+          "en": "Please bring the washing machine tomorrow.",
+          "ru": "Привезите стиральную машину завтра."
         }
       ]
     },
@@ -3830,7 +5217,13 @@
         "en": "Diminutive/slight degree: მო- prefix (მოტკბო, მომჟავო). Location expressions with postpositions and local markers: -ში, -ზე, -თან, წინ, უკან, გვერდით.",
         "ru": "Ослабленная степень качества: префикс მო- (მოტკბო, მომჟავო). Локация через послелоги и локативы: -ში, -ზე, -თან, წინ, უკან, გვერდით.",
         "example_ge": "ეს ღვინო მოტკბოა და სასიამოვნო სუნი აქვს.",
-        "example_en": "This wine is slightly sweet and has a pleasant aroma."
+        "example_en": "This wine is slightly sweet and has a pleasant aroma.",
+        "bullets": [
+          "Prefix მო- can soften taste adjectives: slightly sweet/sour.",
+          "Wine descriptions often combine taste + aroma + finish.",
+          "Location markers help navigate festival spaces precisely.",
+          "Cultural vocabulary around wine is often metaphorical and fixed."
+        ]
       },
       "easier_than_russian": "Wine descriptors are productive: adding მო- often gives a natural 'slightly' meaning.",
       "vocab": [
@@ -3977,6 +5370,74 @@
           "en": "above",
           "ru": "сверху",
           "group": "Location"
+        },
+        {
+          "ge": "დეგუსტაცია",
+          "en": "tasting",
+          "ru": "дегустация",
+          "group": "Wine culture"
+        },
+        {
+          "ge": "არომატი",
+          "en": "aroma",
+          "ru": "аромат",
+          "group": "Wine culture"
+        },
+        {
+          "ge": "დაყენება",
+          "en": "fermentation/aging setup",
+          "ru": "выдержка/настаивание",
+          "group": "Wine production"
+        },
+        {
+          "ge": "რთველი",
+          "en": "grape harvest",
+          "ru": "ртвели/сбор винограда",
+          "group": "Wine production"
+        },
+        {
+          "ge": "ვენახი",
+          "en": "vineyard",
+          "ru": "виноградник",
+          "group": "Wine production"
+        },
+        {
+          "ge": "ქვევრი",
+          "en": "qvevri clay vessel",
+          "ru": "квеври",
+          "group": "Wine production"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ეს ღვინო ოდნავ მომჟავოა, მაგრამ სასიამოვნოა.",
+          "en": "This wine is slightly sour, but pleasant.",
+          "ru": "Это вино слегка кислое, но приятное."
+        },
+        {
+          "ge": "რომელი კუთხის ღვინოა ეს?",
+          "en": "From which region is this wine?",
+          "ru": "Из какого региона это вино?"
+        },
+        {
+          "ge": "დეგუსტაციის ზონა შესასვლელთანაა.",
+          "en": "The tasting area is near the entrance.",
+          "ru": "Зона дегустации находится у входа."
+        },
+        {
+          "ge": "გვერდით დგას ადგილობრივი მწარმოებელი.",
+          "en": "A local producer is standing nearby.",
+          "ru": "Рядом стоит местный производитель."
+        },
+        {
+          "ge": "სუნი ძალიან ხილისებრია.",
+          "en": "The aroma is very fruity.",
+          "ru": "Аромат очень фруктовый."
+        },
+        {
+          "ge": "ყანწით დალევა ტრადიციად ითვლება.",
+          "en": "Drinking from a horn is considered a tradition.",
+          "ru": "Пить из рога считается традицией."
         }
       ]
     },
@@ -3986,7 +5447,13 @@
         "en": "Similative comparison: X-ის მსგავსი (similar to X), X-ივით (like X), ისეთი...როგორც (such...as). Advanced contracted stems continue in oblique forms.",
         "ru": "Сравнение по сходству: X-ის მსგავსი (похожий на X), X-ივით (как X), ისეთი...როგორც (такой...как). Продолжается тема сжатых основ в косвенных формах.",
         "example_ge": "სტუმარი ღვთისაა და მასპინძელი გულით ხვდება.",
-        "example_en": "A guest is from God, and the host welcomes them warmly."
+        "example_en": "A guest is from God, and the host welcomes them warmly.",
+        "bullets": [
+          "Similarity can be expressed with -ის მსგავსი and -ივით.",
+          "Host-guest formulas are culturally fixed and widely reused.",
+          "Comparison structures help discuss traditions and manners.",
+          "Hospitality speech often blends respect and warmth markers."
+        ]
       },
       "easier_than_russian": "Pattern -ივით is very direct for 'like/as', without separate case prepositions.",
       "vocab": [
@@ -4133,6 +5600,74 @@
           "en": "like a child",
           "ru": "как ребенок",
           "group": "Comparison"
+        },
+        {
+          "ge": "სტუმართმოყვარეობა",
+          "en": "hospitality",
+          "ru": "гостеприимство",
+          "group": "Culture"
+        },
+        {
+          "ge": "პატივისცემა",
+          "en": "respect",
+          "ru": "уважение",
+          "group": "Culture"
+        },
+        {
+          "ge": "წესი",
+          "en": "custom/rule",
+          "ru": "обычай/правило",
+          "group": "Culture"
+        },
+        {
+          "ge": "მოსაწვევი",
+          "en": "invitation",
+          "ru": "приглашение",
+          "group": "Social life"
+        },
+        {
+          "ge": "მისალმება",
+          "en": "greeting",
+          "ru": "приветствие",
+          "group": "Social life"
+        },
+        {
+          "ge": "გამასპინძლება",
+          "en": "to host/treat guests",
+          "ru": "угощать/принимать гостей",
+          "group": "Social life"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "მასპინძელი სტუმარს სიხარულით ხვდება.",
+          "en": "The host welcomes the guest with joy.",
+          "ru": "Хозяин встречает гостя с радостью."
+        },
+        {
+          "ge": "ეს კერძი ქართლურის მსგავსია.",
+          "en": "This dish is similar to a Kartlian one.",
+          "ru": "Это блюдо похоже на картлийское."
+        },
+        {
+          "ge": "ბავშვივით გახარებული იყო სტუმარი.",
+          "en": "The guest was happy like a child.",
+          "ru": "Гость был рад как ребенок."
+        },
+        {
+          "ge": "ისეთი სუფრა იყო, როგორც დღესასწაულზე.",
+          "en": "The table was such as at a holiday feast.",
+          "ru": "Стол был как на празднике."
+        },
+        {
+          "ge": "თამადამ საინტერესო სადღეგრძელო თქვა.",
+          "en": "The toastmaster made an interesting toast.",
+          "ru": "Тамада сказал интересный тост."
+        },
+        {
+          "ge": "ქართულ ოჯახში სტუმარს დიდ პატივს სცემენ.",
+          "en": "In a Georgian family guests are greatly respected.",
+          "ru": "В грузинской семье гостя очень уважают."
         }
       ]
     }
@@ -4144,7 +5679,13 @@
         "en": "Passive voice (მიმღეობა): stem + -ებ-ა/ებ-ს — ძლიერდება (strengthens), საქმდება (jobs are created), იზრდება (grows). Export: ექსპორტი / ექსპორტირება. Import: იმპორტი.",
         "ru": "Пассив: основа + -ებ-а/ებ-ს — ძლიერდება (укрепляется), საქმდება (создаются рабочие места), იზრდება (растет). Экспорт/импорт.",
         "example_ge": "საქართველოდან ღვინო ათეულობით ქვეყანაში ექსპორტირებულია.",
-        "example_en": "Wine from Georgia is exported to dozens of countries."
+        "example_en": "Wine from Georgia is exported to dozens of countries.",
+        "bullets": [
+          "Passive-style economic reporting keeps focus on process, not person.",
+          "Trend verbs like იზრდება/ძლიერდება are key for statistics language.",
+          "Trade contexts often pair export and import as contrast.",
+          "Economic discussion uses fixed noun collocations (market demand, revenue growth)."
+        ]
       },
       "easier_than_russian": "Passive is formed with -ებ- like a regular suffix — no auxiliary 'to be' needed.",
       "vocab": [
@@ -4279,6 +5820,74 @@
           "en": "foreign market",
           "ru": "внешний рынок",
           "group": "trade"
+        },
+        {
+          "ge": "სავაჭრო ბალანსი",
+          "en": "trade balance",
+          "ru": "торговый баланс",
+          "group": "Trade"
+        },
+        {
+          "ge": "გაყიდვების ზრდა",
+          "en": "sales growth",
+          "ru": "рост продаж",
+          "group": "Market"
+        },
+        {
+          "ge": "ბაზრის წილი",
+          "en": "market share",
+          "ru": "доля рынка",
+          "group": "Market"
+        },
+        {
+          "ge": "კონტრაქტი",
+          "en": "contract",
+          "ru": "контракт",
+          "group": "Trade"
+        },
+        {
+          "ge": "მიმწოდებელი",
+          "en": "supplier",
+          "ru": "поставщик",
+          "group": "Trade"
+        },
+        {
+          "ge": "მოგების მარჟა",
+          "en": "profit margin",
+          "ru": "маржа прибыли",
+          "group": "Finance"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ქართული ღვინის ექსპორტი წლიდან წლამდე იზრდება.",
+          "en": "The export of Georgian wine grows year by year.",
+          "ru": "Экспорт грузинского вина растет из года в год."
+        },
+        {
+          "ge": "ადგილობრივი წარმოება საერთაშორისო ბაზარზე ძლიერდება.",
+          "en": "Local production is strengthening in the international market.",
+          "ru": "Местное производство укрепляется на международном рынке."
+        },
+        {
+          "ge": "იმპორტის შემცირება ბიუჯეტს ეხმარება.",
+          "en": "Reducing imports helps the budget.",
+          "ru": "Сокращение импорта помогает бюджету."
+        },
+        {
+          "ge": "მაღალი მოთხოვნის გამო საწარმო ფართოვდება.",
+          "en": "Because of high demand, the enterprise is expanding.",
+          "ru": "Из-за высокого спроса предприятие расширяется."
+        },
+        {
+          "ge": "საგარეო ბაზარზე ახალი კონტრაქტები დაიდო.",
+          "en": "New contracts were made on the foreign market.",
+          "ru": "На внешнем рынке заключены новые контракты."
+        },
+        {
+          "ge": "ექსპორტით ქვეყანაში მეტი შემოსავალი შემოდის.",
+          "en": "More revenue enters the country through exports.",
+          "ru": "Через экспорт в страну поступает больше дохода."
         }
       ]
     },
@@ -4288,7 +5897,13 @@
         "en": "Adjectives from nouns: -იანი (quality), -ური (origin). Genitive + postposition: პროდუქტის შესახებ (about the product), ვადის გამო (because of expiry).",
         "ru": "Прилагательные: -იანი (качество), -ური (происхождение). Родительный + послелог: შესახებ (о), გამო (из-за).",
         "example_ge": "ეტიკეტზე პროდუქტის შემადგენლობა და ვადაა მითითებული.",
-        "example_en": "The label shows the product ingredients and expiry date."
+        "example_en": "The label shows the product ingredients and expiry date.",
+        "bullets": [
+          "Product labels rely on short noun chains for key data.",
+          "Genitive + postposition gives formal packaging information.",
+          "Quality adjectives (-იანი, -ური) help classify goods quickly.",
+          "Comparing natural vs artificial is central in label reading."
+        ]
       },
       "easier_than_russian": "Label vocabulary is mostly international loanwords — ორგანული, კალორია, ეკოლოგიური.",
       "vocab": [
@@ -4423,6 +6038,74 @@
           "en": "priced / costly",
           "ru": "стоимостной",
           "group": "retail"
+        },
+        {
+          "ge": "კვებითი ღირებულება",
+          "en": "nutritional value",
+          "ru": "пищевая ценность",
+          "group": "Nutrition"
+        },
+        {
+          "ge": "ენერგეტიკული ღირებულება",
+          "en": "energy value",
+          "ru": "энергетическая ценность",
+          "group": "Nutrition"
+        },
+        {
+          "ge": "ალერგენი",
+          "en": "allergen",
+          "ru": "аллерген",
+          "group": "Health"
+        },
+        {
+          "ge": "შენახვის პირობები",
+          "en": "storage conditions",
+          "ru": "условия хранения",
+          "group": "Labeling"
+        },
+        {
+          "ge": "გახსნის შემდეგ",
+          "en": "after opening",
+          "ru": "после открытия",
+          "group": "Labeling"
+        },
+        {
+          "ge": "საკვები დანამატი",
+          "en": "food additive",
+          "ru": "пищевая добавка",
+          "group": "Labeling"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ეტიკეტზე პროდუქტის შემადგენლობა დეტალურად წერია.",
+          "en": "The product composition is written in detail on the label.",
+          "ru": "Состав продукта подробно указан на этикетке."
+        },
+        {
+          "ge": "ვადის გასვლის თარიღი აუცილებლად შეამოწმეთ.",
+          "en": "Always check the expiration date.",
+          "ru": "Обязательно проверяйте срок годности."
+        },
+        {
+          "ge": "ეს პროდუქტი ორგანულია და სერტიფიკატი აქვს.",
+          "en": "This product is organic and has a certificate.",
+          "ru": "Этот продукт органический и имеет сертификат."
+        },
+        {
+          "ge": "ხელნაკეთი ყველი უფრო ძვირია, მაგრამ ხარისხიანია.",
+          "en": "Handmade cheese is more expensive, but high-quality.",
+          "ru": "Ручной сыр дороже, но качественнее."
+        },
+        {
+          "ge": "შეფუთვაზე წონა და მოცულობა მითითებულია.",
+          "en": "Weight and volume are indicated on the packaging.",
+          "ru": "На упаковке указаны вес и объем."
+        },
+        {
+          "ge": "ფასდაკლება მხოლოდ ამ კვირაში მოქმედებს.",
+          "en": "The discount is valid only this week.",
+          "ru": "Скидка действует только на этой неделе."
         }
       ]
     },
@@ -4432,7 +6115,13 @@
         "en": "Obligation: აუცილებელია + verb. Instruction language uses polite imperative forms. Question particle ხომ softens urgent questions.",
         "ru": "Обязанность: აუცილებელია + глагол. Инструкции: вежливый императив. Частица ხომ смягчает вопрос.",
         "example_ge": "თუ საფრთხეა, აუცილებელია დაუყოვნებლივ დარეკოთ 112-ზე.",
-        "example_en": "If there is danger, you must call 112 immediately."
+        "example_en": "If there is danger, you must call 112 immediately.",
+        "bullets": [
+          "Emergency instructions prioritize necessity and sequence.",
+          "Formal imperative is preferred in urgent public communication.",
+          "Accurate location and symptom details are essential.",
+          "Short direct sentences improve response speed in emergencies."
+        ]
       },
       "easier_than_russian": "112 is 'ას თორმეტი' — same emergency number logic as 911.",
       "vocab": [
@@ -4567,6 +6256,74 @@
           "en": "wait! (formal)",
           "ru": "подождите",
           "group": "instruction"
+        },
+        {
+          "ge": "მაშველი",
+          "en": "rescuer",
+          "ru": "спасатель",
+          "group": "Emergency"
+        },
+        {
+          "ge": "ევაკუაცია",
+          "en": "evacuation",
+          "ru": "эвакуация",
+          "group": "Emergency"
+        },
+        {
+          "ge": "პირველი დახმარება",
+          "en": "first aid",
+          "ru": "первая помощь",
+          "group": "Medical"
+        },
+        {
+          "ge": "სუნთქვის გაძნელება",
+          "en": "breathing difficulty",
+          "ru": "затрудненное дыхание",
+          "group": "Medical"
+        },
+        {
+          "ge": "გონების დაკარგვა",
+          "en": "loss of consciousness",
+          "ru": "потеря сознания",
+          "group": "Medical"
+        },
+        {
+          "ge": "შემთხვევის ადგილი",
+          "en": "incident scene",
+          "ru": "место происшествия",
+          "group": "Reporting"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "სასწრაფოდ დარეკეთ 112-ზე.",
+          "en": "Call 112 immediately.",
+          "ru": "Срочно позвоните на 112."
+        },
+        {
+          "ge": "დაშავებული უგონოდაა და სუნთქვა უჭირს.",
+          "en": "The injured person is unconscious and has difficulty breathing.",
+          "ru": "Пострадавший без сознания и ему трудно дышать."
+        },
+        {
+          "ge": "მისამართი ზუსტად გვითხარით.",
+          "en": "Tell us the address precisely.",
+          "ru": "Точно скажите адрес."
+        },
+        {
+          "ge": "ოპერატორის ინსტრუქციას აუცილებლად მიჰყევით.",
+          "en": "Follow the operator's instructions without fail.",
+          "ru": "Обязательно следуйте инструкциям оператора."
+        },
+        {
+          "ge": "ხანძარია, შენობაში ხალხი დარჩა.",
+          "en": "There is a fire, people remained in the building.",
+          "ru": "Пожар, в здании остались люди."
+        },
+        {
+          "ge": "დაელოდეთ ადგილზე მაშველებს.",
+          "en": "Wait for rescuers at the location.",
+          "ru": "Дождитесь спасателей на месте."
         }
       ]
     },
@@ -4576,7 +6333,13 @@
         "en": "Describing lost items: დაკარგული, დამეკარგა, მქონდა. Identification: პირადობის მოწმობა. Phone phrases: შეიძლება გკითხოთ?",
         "ru": "Потеря: დაკარგული, დამეკარგა. Идентификация: პირადობის მოწმობა. Вежливый вопрос: შეიძლება გკითხოთ?",
         "example_ge": "დაკარგული ნივთის აღწერა პოლიციაში გავაკეთე.",
-        "example_en": "I gave a description of the lost item at the police station."
+        "example_en": "I gave a description of the lost item at the police station.",
+        "bullets": [
+          "Lost-item reports need clear object description + time + place.",
+          "Formulas like დამეკარგა express accidental loss naturally.",
+          "Police interaction requires polite question structures.",
+          "Identity and ownership terms are central to reports."
+        ]
       },
       "easier_than_russian": "დაკარგული is transparent — 'lost' from the same base as დაკარგვა.",
       "vocab": [
@@ -4711,6 +6474,74 @@
           "en": "document",
           "ru": "документ",
           "group": "identification"
+        },
+        {
+          "ge": "ძებნა",
+          "en": "search",
+          "ru": "поиск",
+          "group": "Recovery"
+        },
+        {
+          "ge": "მფლობელობა",
+          "en": "ownership",
+          "ru": "владение",
+          "group": "Legal"
+        },
+        {
+          "ge": "აღმოჩენა",
+          "en": "discovery/finding",
+          "ru": "обнаружение",
+          "group": "Recovery"
+        },
+        {
+          "ge": "დაკარგვის ადგილი",
+          "en": "place of loss",
+          "ru": "место утери",
+          "group": "Reporting"
+        },
+        {
+          "ge": "დროითი მონაკვეთი",
+          "en": "time interval",
+          "ru": "временной промежуток",
+          "group": "Reporting"
+        },
+        {
+          "ge": "საგამოძიებო",
+          "en": "investigative",
+          "ru": "следственный",
+          "group": "Police"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "გუშინ მეტროში საფულე დამეკარგა.",
+          "en": "Yesterday I lost my wallet in the metro.",
+          "ru": "Вчера в метро я потерял(а) кошелек."
+        },
+        {
+          "ge": "ნივთის ფერი და ზომა ზუსტად აღვწერე.",
+          "en": "I described the item's color and size precisely.",
+          "ru": "Я точно описал(а) цвет и размер вещи."
+        },
+        {
+          "ge": "შეიძლება გკითხოთ, სად უნდა დავწერო განცხადება?",
+          "en": "May I ask where I should write the statement?",
+          "ru": "Можно спросить, где мне написать заявление?"
+        },
+        {
+          "ge": "პოლიციელმა ოქმი შეადგინა.",
+          "en": "The police officer drafted a report.",
+          "ru": "Полицейский составил протокол."
+        },
+        {
+          "ge": "ნაპოვნი დოკუმენტები განყოფილებაშია.",
+          "en": "The found documents are in the department.",
+          "ru": "Найденные документы в отделении."
+        },
+        {
+          "ge": "მფლობელის პოვნის შემდეგ ნივთი დავაბრუნეთ.",
+          "en": "After finding the owner, we returned the item.",
+          "ru": "После нахождения владельца мы вернули вещь."
         }
       ]
     },
@@ -4720,7 +6551,13 @@
         "en": "Tour descriptions use X-დან Y-მდე and X-დღიანი forms. შედის marks what is included; comparison uses უფრო + adjective.",
         "ru": "Описание тура: X-დან Y-მდე, X-დღიანი. შედის = входит. Сравнение: უფრო + прилагательное.",
         "example_ge": "ხუთდღიანი ტურის ღირებულებაში სასტუმრო და საუზმე შედის.",
-        "example_en": "The five-day tour price includes hotel and breakfast."
+        "example_en": "The five-day tour price includes hotel and breakfast.",
+        "bullets": [
+          "Tour offers rely on duration and inclusion structures.",
+          "Forms with -დღიანი quickly encode trip length.",
+          "Comparative language helps evaluate alternatives.",
+          "Pricing expressions often combine what is included/excluded."
+        ]
       },
       "easier_than_russian": "Tour words are international: ტური, მარშრუტი, ექსკურსია, ორგანიზატორი.",
       "vocab": [
@@ -4855,6 +6692,74 @@
           "en": "-day (duration suffix)",
           "ru": "дневный",
           "group": "grammar"
+        },
+        {
+          "ge": "მგზავრობის გეგმა",
+          "en": "travel plan",
+          "ru": "план поездки",
+          "group": "Planning"
+        },
+        {
+          "ge": "გეგმის ცვლილება",
+          "en": "plan change",
+          "ru": "изменение плана",
+          "group": "Planning"
+        },
+        {
+          "ge": "საექსკურსიო პროგრამა",
+          "en": "excursion program",
+          "ru": "экскурсионная программа",
+          "group": "Tours"
+        },
+        {
+          "ge": "ღამისთევა",
+          "en": "overnight stay",
+          "ru": "ночевка",
+          "group": "Accommodation"
+        },
+        {
+          "ge": "შეხვედრის ადგილი",
+          "en": "meeting point",
+          "ru": "место встречи",
+          "group": "Logistics"
+        },
+        {
+          "ge": "გაუქმების პირობა",
+          "en": "cancellation condition",
+          "ru": "условие отмены",
+          "group": "Booking"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "სამდღიანი ტური მთაში ძალიან პოპულარულია.",
+          "en": "A three-day mountain tour is very popular.",
+          "ru": "Трехдневный тур в горы очень популярен."
+        },
+        {
+          "ge": "ტურის ფასში ტრანსფერი და გიდი შედის.",
+          "en": "Transfer and guide are included in the tour price.",
+          "ru": "В стоимость тура входят трансфер и гид."
+        },
+        {
+          "ge": "ეს მარშრუტი უფრო კომფორტულია ოჯახებისთვის.",
+          "en": "This route is more comfortable for families.",
+          "ru": "Этот маршрут более комфортный для семей."
+        },
+        {
+          "ge": "დაჯავშნა გამგზავრებამდე ერთი კვირით ადრე გავაკეთეთ.",
+          "en": "We booked one week before departure.",
+          "ru": "Мы забронировали за неделю до выезда."
+        },
+        {
+          "ge": "დაბრუნების თარიღი უკვე დადასტურებულია.",
+          "en": "The return date is already confirmed.",
+          "ru": "Дата возвращения уже подтверждена."
+        },
+        {
+          "ge": "სვანეთის ტური ყველაზე მოთხოვნადია ზაფხულში.",
+          "en": "The Svaneti tour is the most in-demand in summer.",
+          "ru": "Тур в Сванетию самый востребованный летом."
         }
       ]
     },
@@ -4864,7 +6769,13 @@
         "en": "Room-type compounds: ერთადგილიანი, ორადგილიანი, ორთოლიანი. Service and location vocabulary combines with nouns naturally.",
         "ru": "Сложные слова о номерах: ერთადგილიანი, ორადგილიანი, ორთოლიანი. Услуги и локация формируются прозрачно.",
         "example_ge": "ორადგილიანი ნომერი ზღვის ხედით თავისუფალია.",
-        "example_en": "A twin room with a sea view is available."
+        "example_en": "A twin room with a sea view is available.",
+        "bullets": [
+          "Hotel compounds describe capacity and bed type efficiently.",
+          "Availability status phrases are frequent in booking dialogue.",
+          "Price per night is a fixed formula with ღამეში.",
+          "Amenity vocabulary supports precise room requests."
+        ]
       },
       "easier_than_russian": "Hotel compound words are logical: სასტუმრო literally means a place for guests.",
       "vocab": [
@@ -4999,6 +6910,74 @@
           "en": "internet / wi-fi",
           "ru": "интернет",
           "group": "amenity"
+        },
+        {
+          "ge": "ჯავშნის ნომერი",
+          "en": "booking number",
+          "ru": "номер брони",
+          "group": "Booking"
+        },
+        {
+          "ge": "სტანდარტული ნომერი",
+          "en": "standard room",
+          "ru": "стандартный номер",
+          "group": "Room types"
+        },
+        {
+          "ge": "ლუქსი",
+          "en": "suite",
+          "ru": "люкс",
+          "group": "Room types"
+        },
+        {
+          "ge": "გაუქმება",
+          "en": "cancellation",
+          "ru": "отмена",
+          "group": "Booking"
+        },
+        {
+          "ge": "ადრეული ჩექ-ინი",
+          "en": "early check-in",
+          "ru": "ранний заезд",
+          "group": "Service"
+        },
+        {
+          "ge": "დაგვიანებული ჩექ-აუთი",
+          "en": "late check-out",
+          "ru": "поздний выезд",
+          "group": "Service"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ერთადგილიანი ნომერი ორი ღამით მინდა.",
+          "en": "I want a single room for two nights.",
+          "ru": "Мне нужен одноместный номер на две ночи."
+        },
+        {
+          "ge": "საუზმე ფასში შედის?",
+          "en": "Is breakfast included in the price?",
+          "ru": "Завтрак входит в цену?"
+        },
+        {
+          "ge": "ორადგილიანი ნომერი ზღვის ხედით თავისუფალია.",
+          "en": "A twin room with sea view is available.",
+          "ru": "Двухместный номер с видом на море свободен."
+        },
+        {
+          "ge": "ჩექ-ინი სამ საათზეა, ჩექ-აუთი თორმეტზე.",
+          "en": "Check-in is at 3, check-out at 12.",
+          "ru": "Заселение в 3, выезд в 12."
+        },
+        {
+          "ge": "დაჯავშნა ელფოსტით დავადასტურეთ.",
+          "en": "We confirmed the booking by email.",
+          "ru": "Мы подтвердили бронь по электронной почте."
+        },
+        {
+          "ge": "კონდიციონერი და ინტერნეტი აუცილებელია.",
+          "en": "Air conditioning and internet are necessary.",
+          "ru": "Кондиционер и интернет обязательны."
         }
       ]
     },
@@ -5008,7 +6987,13 @@
         "en": "Preference verbs მიყვარს / მომწონს are central. Profile language uses ჩემ შესახებ and private/public contrast.",
         "ru": "Глаголы предпочтения: მიყვარს / მომწონს. Язык профиля: ჩემ შესახებ, приватность.",
         "example_ge": "ჩემ შესახებ ვწერ, რა მუსიკა მომწონს.",
-        "example_en": "In my profile I write what music I like."
+        "example_en": "In my profile I write what music I like.",
+        "bullets": [
+          "Profile speech often alternates private and public information.",
+          "Preference verbs (მიყვარს/მომწონს) shape self-description.",
+          "Social media actions use productive loanword verbs/nouns.",
+          "Polite online interaction uses concise message formulas."
+        ]
       },
       "easier_than_russian": "Social media terms are mostly direct loans: ფეისბუქი, პროფილი, ექაუნთი.",
       "vocab": [
@@ -5143,6 +7128,74 @@
           "en": "news / update",
           "ru": "новость",
           "group": "content"
+        },
+        {
+          "ge": "ანგარიშის უსაფრთხოება",
+          "en": "account security",
+          "ru": "безопасность аккаунта",
+          "group": "Security"
+        },
+        {
+          "ge": "ორეტაპიანი დაცვა",
+          "en": "two-step verification",
+          "ru": "двухэтапная защита",
+          "group": "Security"
+        },
+        {
+          "ge": "მომხმარებლის სახელი",
+          "en": "username",
+          "ru": "имя пользователя",
+          "group": "Account"
+        },
+        {
+          "ge": "ავატარი",
+          "en": "avatar",
+          "ru": "аватар",
+          "group": "Profile"
+        },
+        {
+          "ge": "პოსტის ნახვები",
+          "en": "post views",
+          "ru": "просмотры поста",
+          "group": "Analytics"
+        },
+        {
+          "ge": "ბლოკირება",
+          "en": "blocking",
+          "ru": "блокировка",
+          "group": "Moderation"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ჩემ პროფილში პირადი ინფორმაცია მხოლოდ მეგობრებისთვისაა.",
+          "en": "In my profile personal information is only for friends.",
+          "ru": "В моем профиле личная информация только для друзей."
+        },
+        {
+          "ge": "მუსიკა ძალიან მიყვარს და ხშირად ვაზიარებ პოსტებს.",
+          "en": "I love music and often share posts.",
+          "ru": "Я очень люблю музыку и часто делюсь постами."
+        },
+        {
+          "ge": "საჯარო გვერდზე ახალი ფოტო ავტვირთე.",
+          "en": "I uploaded a new photo on the public page.",
+          "ru": "Я загрузил(а) новое фото на публичную страницу."
+        },
+        {
+          "ge": "შეტყობინება მომივიდა ახალი გამომწერისგან.",
+          "en": "I received a message from a new follower.",
+          "ru": "Мне пришло сообщение от нового подписчика."
+        },
+        {
+          "ge": "პაროლი რეგულარულად უნდა შეცვალო.",
+          "en": "You should change your password regularly.",
+          "ru": "Пароль нужно регулярно менять."
+        },
+        {
+          "ge": "ჩემ შესახებ მოკლე ტექსტი დავწერე.",
+          "en": "I wrote a short text about myself.",
+          "ru": "Я написал(а) короткий текст о себе."
         }
       ]
     },
@@ -5152,7 +7205,13 @@
         "en": "Opinion and reaction phrases: ჩემი აზრით, მომწონს / არ მომწონს. Sharing verbs describe online audience interaction.",
         "ru": "Мнение и реакция: ჩემი აზრით, მომწონს / არ მომწონს. Глаголы обмена для онлайн-аудитории.",
         "example_ge": "ჩემი აზრით, ეს ვლოგი ძალიან საინტერესოა.",
-        "example_en": "In my opinion, this vlog is very interesting."
+        "example_en": "In my opinion, this vlog is very interesting.",
+        "bullets": [
+          "Opinion markers structure reviews: ჩემი აზრით, ვფიქრობ, მგონია.",
+          "Reaction language balances positive and negative tone.",
+          "Content creation verbs track production workflow clearly.",
+          "Audience terms support discussion of reach and engagement."
+        ]
       },
       "easier_than_russian": "ბლოგი and ვლოგი are familiar international words.",
       "vocab": [
@@ -5287,6 +7346,74 @@
           "en": "description",
           "ru": "описание",
           "group": "content"
+        },
+        {
+          "ge": "კონტენტი",
+          "en": "content",
+          "ru": "контент",
+          "group": "Media"
+        },
+        {
+          "ge": "გადაღება",
+          "en": "shooting/filming",
+          "ru": "съемка",
+          "group": "Production"
+        },
+        {
+          "ge": "მონტაჟი",
+          "en": "editing/montage",
+          "ru": "монтаж",
+          "group": "Production"
+        },
+        {
+          "ge": "გამოქვეყნება",
+          "en": "publishing",
+          "ru": "публикация",
+          "group": "Media"
+        },
+        {
+          "ge": "ჩართულობა",
+          "en": "engagement",
+          "ru": "вовлеченность",
+          "group": "Analytics"
+        },
+        {
+          "ge": "გამოხმაურება",
+          "en": "feedback/reaction",
+          "ru": "отклик",
+          "group": "Communication"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ჩემი აზრით, ეს ვლოგი ძალიან ინფორმაციულია.",
+          "en": "In my opinion, this vlog is very informative.",
+          "ru": "По-моему, этот влог очень информативный."
+        },
+        {
+          "ge": "ავტორმა ვიდეო კარგად დაარედაქტირა.",
+          "en": "The author edited the video well.",
+          "ru": "Автор хорошо отредактировал видео."
+        },
+        {
+          "ge": "მაყურებლებმა დადებითი კომენტარები დატოვეს.",
+          "en": "Viewers left positive comments.",
+          "ru": "Зрители оставили положительные комментарии."
+        },
+        {
+          "ge": "უარყოფითი რეაქციაც იყო, მაგრამ ცოტა.",
+          "en": "There was also some negative reaction, but little.",
+          "ru": "Была и негативная реакция, но немного."
+        },
+        {
+          "ge": "არხზე ახალი ჩანაწერი ყოველ კვირას იდება.",
+          "en": "A new entry is posted on the channel every week.",
+          "ru": "На канале каждую неделю публикуется новая запись."
+        },
+        {
+          "ge": "სათაური უფრო მოკლე რომ იყოს, უკეთესი იქნებოდა.",
+          "en": "If the title were shorter, it would be better.",
+          "ru": "Было бы лучше, если бы заголовок был короче."
         }
       ]
     },
@@ -5296,7 +7423,13 @@
         "en": "Invitations use მოდი ერთად წავიდეთ. Future plans are made with present-future verbs and explicit date/time.",
         "ru": "Приглашения: მოდი ერთად წავიდეთ. Планы на будущее: формы будущего + дата/время.",
         "example_ge": "მოდი, პრემიერაზე ერთად წავიდეთ და ბილეთები წინასწარ ვიყიდოთ.",
-        "example_en": "Let's go to the premiere together and buy tickets in advance."
+        "example_en": "Let's go to the premiere together and buy tickets in advance.",
+        "bullets": [
+          "Invitation formulas often use მოდი + together-action construction.",
+          "Premiere planning combines time, ticketing, and coordination phrases.",
+          "Future intention can be expressed with present-future forms.",
+          "Cultural-event talk mixes logistics with emotional reactions."
+        ]
       },
       "easier_than_russian": "Cinema words follow international patterns: პრემიერა, რეჟისორი, სპექტაკლი.",
       "vocab": [
@@ -5431,6 +7564,74 @@
           "en": "applause",
           "ru": "аплодисменты",
           "group": "event"
+        },
+        {
+          "ge": "სეანსი",
+          "en": "screening/session",
+          "ru": "сеанс",
+          "group": "Cinema"
+        },
+        {
+          "ge": "ბილეთების ჯავშანი",
+          "en": "ticket reservation",
+          "ru": "бронирование билетов",
+          "group": "Ticketing"
+        },
+        {
+          "ge": "რიგი",
+          "en": "row",
+          "ru": "ряд",
+          "group": "Venue"
+        },
+        {
+          "ge": "ადგილის ნომერი",
+          "en": "seat number",
+          "ru": "номер места",
+          "group": "Venue"
+        },
+        {
+          "ge": "პრემიერის თარიღი",
+          "en": "premiere date",
+          "ru": "дата премьеры",
+          "group": "Planning"
+        },
+        {
+          "ge": "მოსაწვევი ბარათი",
+          "en": "invitation card",
+          "ru": "пригласительный билет",
+          "group": "Event"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "მოდი, პრემიერაზე პარასკევს წავიდეთ.",
+          "en": "Come on, let's go to the premiere on Friday.",
+          "ru": "Давай в пятницу пойдем на премьеру."
+        },
+        {
+          "ge": "ბილეთები წინასწარ ონლაინ ვიყიდოთ.",
+          "en": "Let's buy tickets online in advance.",
+          "ru": "Давайте заранее купим билеты онлайн."
+        },
+        {
+          "ge": "სპექტაკლი რვა საათზე იწყება.",
+          "en": "The performance starts at eight.",
+          "ru": "Спектакль начинается в восемь."
+        },
+        {
+          "ge": "რეჟისორთან შეხვედრაც იქნება პრემიერის შემდეგ.",
+          "en": "There will also be a meeting with the director after the premiere.",
+          "ru": "После премьеры будет встреча с режиссером."
+        },
+        {
+          "ge": "დარბაზში ადგილები სწრაფად ივსება.",
+          "en": "Seats in the hall fill quickly.",
+          "ru": "Места в зале быстро заполняются."
+        },
+        {
+          "ge": "ფილმის პოსტერი უკვე ქალაქში ყველგანაა.",
+          "en": "The film poster is already everywhere in the city.",
+          "ru": "Постер фильма уже по всему городу."
         }
       ]
     },
@@ -5440,7 +7641,13 @@
         "en": "Relative clause marker რომელიც links descriptions. Review language uses გირჩევთ, შეფასება, and genre labels.",
         "ru": "Связка რომელიც вводит определительные придаточные. Лексика рецензии: გირჩევთ, შეფასება, жанры.",
         "example_ge": "ფილმი, რომელიც გუშინ ვნახე, საინტერესო სიუჟეტით გამოირჩევა.",
-        "example_en": "The film I watched yesterday stands out for its interesting storyline."
+        "example_en": "The film I watched yesterday stands out for its interesting storyline.",
+        "bullets": [
+          "რომელიც introduces descriptive clauses for plot summaries.",
+          "Review language balances evaluation and recommendation.",
+          "Genre labels help frame reader expectations quickly.",
+          "Critical comments often use contrast markers (თუმცა, მაგრამ)."
+        ]
       },
       "easier_than_russian": "რომელიც does not require gender agreement like Russian relative pronouns.",
       "vocab": [
@@ -5575,6 +7782,74 @@
           "en": "leading role",
           "ru": "главная роль",
           "group": "people"
+        },
+        {
+          "ge": "კადრი",
+          "en": "frame/shot",
+          "ru": "кадр",
+          "group": "Cinema"
+        },
+        {
+          "ge": "დიალოგი",
+          "en": "dialogue",
+          "ru": "диалог",
+          "group": "Narrative"
+        },
+        {
+          "ge": "ტემპი",
+          "en": "pace",
+          "ru": "темп",
+          "group": "Review"
+        },
+        {
+          "ge": "ფინალი",
+          "en": "finale",
+          "ru": "финал",
+          "group": "Narrative"
+        },
+        {
+          "ge": "შთაბეჭდილება",
+          "en": "impression",
+          "ru": "впечатление",
+          "group": "Review"
+        },
+        {
+          "ge": "შემფასებელი",
+          "en": "reviewer/evaluator",
+          "ru": "обозреватель",
+          "group": "Review"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ფილმი, რომელიც გუშინ ვნახე, დრამაა.",
+          "en": "The film I watched yesterday is a drama.",
+          "ru": "Фильм, который я вчера посмотрел(а), — драма."
+        },
+        {
+          "ge": "სიუჟეტი თავიდან ნელია, მაგრამ ბოლოს საინტერესო ხდება.",
+          "en": "The plot is slow at first, but becomes interesting at the end.",
+          "ru": "Сюжет сначала медленный, но в конце становится интересным."
+        },
+        {
+          "ge": "ამ ფილმს ყველას ვურჩევ, ვისაც კომედია უყვარს.",
+          "en": "I recommend this film to everyone who loves comedy.",
+          "ru": "Рекомендую этот фильм всем, кто любит комедию."
+        },
+        {
+          "ge": "მთავარი პერსონაჟი კარგად არის განვითარებული.",
+          "en": "The main character is well developed.",
+          "ru": "Главный персонаж хорошо раскрыт."
+        },
+        {
+          "ge": "რეცენზიაში დადებითი და უარყოფითი მხარეები ავღნიშნე.",
+          "en": "In the review I noted positive and negative sides.",
+          "ru": "В рецензии я отметил(а) плюсы и минусы."
+        },
+        {
+          "ge": "შეფასება საბოლოოდ შვიდი ქულაა ათიდან.",
+          "en": "The final rating is seven out of ten.",
+          "ru": "Итоговая оценка — семь из десяти."
         }
       ]
     },
@@ -5584,7 +7859,13 @@
         "en": "Culture topics use იმიტომ რომ for reasons and adverbs like პირველად / ხშირად for experience frequency.",
         "ru": "Культурная тема: იმიტომ რომ для причин, პირველად / ხშირად для частоты опыта.",
         "example_ge": "უცხოელებს თავიდან კულტურული შოკი აქვთ, მაგრამ შემდეგ ადაპტირდებიან.",
-        "example_en": "Foreigners often have culture shock at first, but later they adapt."
+        "example_en": "Foreigners often have culture shock at first, but later they adapt.",
+        "bullets": [
+          "Cause connectors like იმიტომ რომ structure adaptation stories.",
+          "Experience adverbs (პირველად, ხშირად, ბოლოს) anchor timeline.",
+          "Culture-shock narratives benefit from contrastive clauses.",
+          "Integration vocabulary mixes language, habits, and social norms."
+        ]
       },
       "easier_than_russian": "ქართველოლოგი is transparent as a compound around Georgian language and studies.",
       "vocab": [
@@ -5719,6 +8000,74 @@
           "en": "getting used to",
           "ru": "привыкание",
           "group": "integration"
+        },
+        {
+          "ge": "ენის ბარიერი",
+          "en": "language barrier",
+          "ru": "языковой барьер",
+          "group": "Integration"
+        },
+        {
+          "ge": "ადაპტირება",
+          "en": "to adapt",
+          "ru": "адаптироваться",
+          "group": "Integration"
+        },
+        {
+          "ge": "სოციალური ჩვევა",
+          "en": "social habit",
+          "ru": "социальная привычка",
+          "group": "Culture"
+        },
+        {
+          "ge": "ადგილობრივი წესები",
+          "en": "local rules",
+          "ru": "местные правила",
+          "group": "Culture"
+        },
+        {
+          "ge": "კულტურული განსხვავება",
+          "en": "cultural difference",
+          "ru": "культурное различие",
+          "group": "Culture"
+        },
+        {
+          "ge": "თვითგამოხატვა",
+          "en": "self-expression",
+          "ru": "самовыражение",
+          "group": "Communication"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "უცხოელებს თავიდან ენის ბარიერი აქვთ.",
+          "en": "Foreigners initially have a language barrier.",
+          "ru": "У иностранцев сначала есть языковой барьер."
+        },
+        {
+          "ge": "პირველად სუფრის ტრადიციები გაუკვირდათ.",
+          "en": "At first, table traditions surprised them.",
+          "ru": "Сначала их удивили застольные традиции."
+        },
+        {
+          "ge": "შემდეგ ნელ-ნელა ქართულ გარემოს შეეჩვივნენ.",
+          "en": "Then they gradually got used to the Georgian environment.",
+          "ru": "Потом они постепенно привыкли к грузинской среде."
+        },
+        {
+          "ge": "ინტერვიუში თქვეს, რომ ხალხი ძალიან სტუმართმოყვარეა.",
+          "en": "In the interview they said people are very hospitable.",
+          "ru": "В интервью они сказали, что люди очень гостеприимные."
+        },
+        {
+          "ge": "ხშირად იმიტომ რჩებიან, რომ აქ თავს უსაფრთხოდ გრძნობენ.",
+          "en": "They often stay because they feel safe here.",
+          "ru": "Они часто остаются, потому что чувствуют себя здесь в безопасности."
+        },
+        {
+          "ge": "ქართველოლოგები ქართულ დიალექტებსაც სწავლობენ.",
+          "en": "Georgianists also study Georgian dialects.",
+          "ru": "Картвелологи также изучают грузинские диалекты."
         }
       ]
     },
@@ -5728,7 +8077,13 @@
         "en": "Learning verbs: ვსწავლობ, ვიცი, ვცდილობ. Purpose uses რათა / -ისთვის; advice uses უნდა + verb.",
         "ru": "Глаголы обучения: ვსწავლობ, ვიცი, ვცდილობ. Цель: რათა / -ისთვის. Совет: უნდა + глагол.",
         "example_ge": "ენა რომ კარგად ისწავლო, ყოველდღე უნდა ივარჯიშო.",
-        "example_en": "To learn a language well, you should practice every day."
+        "example_en": "To learn a language well, you should practice every day.",
+        "bullets": [
+          "Learning advice often uses უნდა + infinitive/verb stem.",
+          "Purpose connectors (რათა, რომ) link method and goal.",
+          "Habit markers (ყოველდღე, რეგულარულად) are essential in study plans.",
+          "Skill-building language often groups four domains: reading, writing, listening, speaking."
+        ]
       },
       "easier_than_russian": "Language-learning vocabulary is largely international: გრამატიკა, ლექსიკა, პრაქტიკა.",
       "vocab": [
@@ -5863,6 +8218,74 @@
           "en": "goal",
           "ru": "цель",
           "group": "habit"
+        },
+        {
+          "ge": "სასწავლო გეგმა",
+          "en": "study plan",
+          "ru": "учебный план",
+          "group": "Learning"
+        },
+        {
+          "ge": "დავალება",
+          "en": "assignment",
+          "ru": "задание",
+          "group": "Learning"
+        },
+        {
+          "ge": "თვითსწავლება",
+          "en": "self-study",
+          "ru": "самообучение",
+          "group": "Learning"
+        },
+        {
+          "ge": "გამეორების ციკლი",
+          "en": "revision cycle",
+          "ru": "цикл повторения",
+          "group": "Learning"
+        },
+        {
+          "ge": "განმარტება",
+          "en": "explanation",
+          "ru": "объяснение",
+          "group": "Learning"
+        },
+        {
+          "ge": "მეტყველების უნარი",
+          "en": "speaking skill",
+          "ru": "навык речи",
+          "group": "Skills"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ენა რომ კარგად ისწავლო, ყოველდღე ივარჯიშე.",
+          "en": "To learn a language well, practice every day.",
+          "ru": "Чтобы хорошо выучить язык, тренируйся каждый день."
+        },
+        {
+          "ge": "გრამატიკა მნიშვნელოვანია, მაგრამ პრაქტიკა უფრო მნიშვნელოვანია.",
+          "en": "Grammar is important, but practice is even more important.",
+          "ru": "Грамматика важна, но практика еще важнее."
+        },
+        {
+          "ge": "ახალი სიტყვები კონტექსტში დაიმახსოვრე.",
+          "en": "Memorize new words in context.",
+          "ru": "Запоминай новые слова в контексте."
+        },
+        {
+          "ge": "მიზანი რომ გქონდეს, მოტივაციაც მარტივად შენარჩუნდება.",
+          "en": "If you have a goal, motivation is easier to maintain.",
+          "ru": "Если есть цель, мотивацию легче сохранить."
+        },
+        {
+          "ge": "კვირაში ერთხელ მასწავლებელთან სასაუბრო პრაქტიკა გააკეთე.",
+          "en": "Do speaking practice with a teacher once a week.",
+          "ru": "Раз в неделю практикуй разговор с преподавателем."
+        },
+        {
+          "ge": "რაც არ გესმის, მაშინვე ჩაინიშნე.",
+          "en": "Write down what you do not understand immediately.",
+          "ru": "То, что не понимаешь, сразу записывай."
         }
       ]
     }
@@ -5874,7 +8297,13 @@
         "en": "Imperfect tense for past habits/narrative: იბადებოდა (was being born), მიდიოდა (was going), აღწევდა (was reaching). Biographical questions: როდის დაიბადე? სად?",
         "ru": "Имперфект для прошлого: იბადებოდა, მიდიოდა. Биография: როდის დაიბადე?",
         "example_ge": "გზაზე დავიბადე, გზაზე.",
-        "example_en": "I was born on the road, on the road."
+        "example_en": "I was born on the road, on the road.",
+        "bullets": [
+          "Imperfect forms present ongoing or habitual past background.",
+          "Biographical narration often alternates dates and life events.",
+          "First-person storytelling can shift between factual and poetic tone.",
+          "Place-of-birth and family origin phrases are high-frequency."
+        ]
       },
       "easier_than_russian": "Georgian imperfect uses -დ- infix — one pattern, no aspect pairs like Russian.",
       "vocab": [
@@ -6009,6 +8438,74 @@
           "en": "was reaching (impf.)",
           "ru": "достигал",
           "group": "grammar"
+        },
+        {
+          "ge": "სიცოცხლის გზა",
+          "en": "life path",
+          "ru": "жизненный путь",
+          "group": "Biography"
+        },
+        {
+          "ge": "ადრეული წლები",
+          "en": "early years",
+          "ru": "ранние годы",
+          "group": "Biography"
+        },
+        {
+          "ge": "მოსწავლის ასაკი",
+          "en": "school age",
+          "ru": "школьный возраст",
+          "group": "Life stage"
+        },
+        {
+          "ge": "გარდატეხა",
+          "en": "turning point",
+          "ru": "переломный момент",
+          "group": "Narrative"
+        },
+        {
+          "ge": "შთაგონება",
+          "en": "inspiration",
+          "ru": "вдохновение",
+          "group": "Narrative"
+        },
+        {
+          "ge": "პიროვნული განვითარება",
+          "en": "personal development",
+          "ru": "личностное развитие",
+          "group": "Biography"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ბავშვობაში პატარა სოფელში ვიზრდებოდი.",
+          "en": "In childhood I grew up in a small village.",
+          "ru": "В детстве я рос(ла) в маленькой деревне."
+        },
+        {
+          "ge": "ჩემი ოჯახი ხშირად გადაადგილდებოდა.",
+          "en": "My family moved often.",
+          "ru": "Моя семья часто переезжала."
+        },
+        {
+          "ge": "მამა სკოლაში მუშაობდა, დედა კი სახლში იყო.",
+          "en": "My father worked at school, while my mother stayed at home.",
+          "ru": "Отец работал в школе, а мама была дома."
+        },
+        {
+          "ge": "მაშინ ბევრი რამ არ მესმოდა, მაგრამ ვსწავლობდი.",
+          "en": "Back then I did not understand many things, but I was learning.",
+          "ru": "Тогда я многого не понимал(а), но учился(лась)."
+        },
+        {
+          "ge": "მოგონებებში ის წლები ძალიან ნათლად დარჩა.",
+          "en": "In my memories those years remained very vivid.",
+          "ru": "В воспоминаниях те годы остались очень яркими."
+        },
+        {
+          "ge": "როდის დაიბადეთ და სად გაიზარდეთ?",
+          "en": "When were you born and where did you grow up?",
+          "ru": "Когда вы родились и где выросли?"
         }
       ]
     },
@@ -6018,7 +8515,13 @@
         "en": "Formal biography: მე, X, დავიბადე... (I, X, was born...). CV sections: განათლება, გამოცდილება, უნარ-ჩვევები. Dates: 2011 წელს, 2012 წლიდან – დღემდე.",
         "ru": "Формальная биография: მე, X, დავიბადე. CV: განათლება, გამოცდილება.",
         "example_ge": "2011 წელს დავამთავრე სკოლა.",
-        "example_en": "In 2011 I finished school."
+        "example_en": "In 2011 I finished school.",
+        "bullets": [
+          "CV language favors concise noun-heavy structures.",
+          "Date ranges are essential for education and work timelines.",
+          "Section headers in Georgian often mirror international CV style.",
+          "Formal register requires consistent factual phrasing."
+        ]
       },
       "easier_than_russian": "CV structure matches international format — same sections, Georgian labels.",
       "vocab": [
@@ -6153,6 +8656,74 @@
           "en": "motivation letter",
           "ru": "мотивационное письмо",
           "group": "document"
+        },
+        {
+          "ge": "სამუშაო ისტორია",
+          "en": "employment history",
+          "ru": "трудовая история",
+          "group": "CV"
+        },
+        {
+          "ge": "პროფესიული მიზანი",
+          "en": "professional objective",
+          "ru": "профессиональная цель",
+          "group": "CV"
+        },
+        {
+          "ge": "სარეკომენდაციო წერილი",
+          "en": "recommendation letter",
+          "ru": "рекомендательное письмо",
+          "group": "Documents"
+        },
+        {
+          "ge": "საკონტაქტო პირი",
+          "en": "contact person",
+          "ru": "контактное лицо",
+          "group": "Contact"
+        },
+        {
+          "ge": "განაცხადის ვადა",
+          "en": "application deadline",
+          "ru": "срок подачи заявки",
+          "group": "Employment"
+        },
+        {
+          "ge": "ინტერვიუს ეტაპი",
+          "en": "interview stage",
+          "ru": "этап интервью",
+          "group": "Employment"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "რეზიუმეში სამუშაო გამოცდილება ქრონოლოგიურად ჩამოვწერე.",
+          "en": "In the resume I listed work experience chronologically.",
+          "ru": "В резюме я перечислил(а) опыт работы хронологически."
+        },
+        {
+          "ge": "2018 წლიდან დღემდე კომპანიაში ვმუშაობ.",
+          "en": "I have worked in the company from 2018 to present.",
+          "ru": "С 2018 года по настоящее время работаю в компании."
+        },
+        {
+          "ge": "განაცხადს სამოტივაციო წერილიც დავურთე.",
+          "en": "I also attached a motivation letter to the application.",
+          "ru": "К заявке я также приложил(а) мотивационное письмо."
+        },
+        {
+          "ge": "ხელფასის მოლოდინი ვაკანსიაში მითითებულია.",
+          "en": "Salary expectations are indicated in the vacancy.",
+          "ru": "Ожидания по зарплате указаны в вакансии."
+        },
+        {
+          "ge": "უნარ-ჩვევების სექციაში კომპიუტერული პროგრამები ჩავწერე.",
+          "en": "In the skills section I included computer programs.",
+          "ru": "В разделе навыков я указал(а) компьютерные программы."
+        },
+        {
+          "ge": "კანდიდატი გასაუბრებაზე შემდეგ კვირას დაიბარეს.",
+          "en": "The candidate was invited to an interview next week.",
+          "ru": "Кандидата пригласили на собеседование на следующей неделе."
         }
       ]
     },
@@ -6162,7 +8733,13 @@
         "en": "Interview traits: პუნქტუალური (punctual), პასუხისმგებელი (responsible), შემოქმედებითი (creative). Modal: შეუძლია (can), აქვს (has). Preparation: მოვემზადოთ გასაუბრებისთვის.",
         "ru": "Собеседование: პუნქტუალური, პასუხისმგებელი. Модальные: შეუძლია, აქვს.",
         "example_ge": "მას აქვს თარჯიმნობის გამოცდილება.",
-        "example_en": "He/she has translation experience."
+        "example_en": "He/she has translation experience.",
+        "bullets": [
+          "Interview answers should combine skill evidence and examples.",
+          "Quality adjectives work best when tied to real experience.",
+          "Modal patterns (can/have) support confident self-presentation.",
+          "Preparation language includes predicted questions and rehearsed answers."
+        ]
       },
       "easier_than_russian": "გასაუბრება is transparent — 'for-conversation' = interview.",
       "vocab": [
@@ -6297,6 +8874,74 @@
           "en": "he/she has",
           "ru": "имеет / у него есть",
           "group": "grammar"
+        },
+        {
+          "ge": "პრეზენტაბელური",
+          "en": "presentable",
+          "ru": "презентабельный",
+          "group": "Qualities"
+        },
+        {
+          "ge": "დროის მართვა",
+          "en": "time management",
+          "ru": "управление временем",
+          "group": "Skills"
+        },
+        {
+          "ge": "პრობლემის გადაჭრა",
+          "en": "problem solving",
+          "ru": "решение проблем",
+          "group": "Skills"
+        },
+        {
+          "ge": "მოტივირებული",
+          "en": "motivated",
+          "ru": "мотивированный",
+          "group": "Qualities"
+        },
+        {
+          "ge": "შედეგზე ორიენტირებული",
+          "en": "result-oriented",
+          "ru": "ориентированный на результат",
+          "group": "Qualities"
+        },
+        {
+          "ge": "დასაქმების შეთავაზება",
+          "en": "job offer",
+          "ru": "предложение о работе",
+          "group": "Employment"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "გასაუბრებისთვის წინასწარ მოვემზადე.",
+          "en": "I prepared in advance for the interview.",
+          "ru": "Я заранее подготовился(лась) к собеседованию."
+        },
+        {
+          "ge": "ჩემი ძლიერი მხარე პასუხისმგებლობაა.",
+          "en": "My strong side is responsibility.",
+          "ru": "Моя сильная сторона — ответственность."
+        },
+        {
+          "ge": "კომუნიკაბელური ვარ და გუნდში მუშაობა შემიძლია.",
+          "en": "I am communicative and can work in a team.",
+          "ru": "Я коммуникабельный(ая) и могу работать в команде."
+        },
+        {
+          "ge": "სამუშაო გამოცდილება მომხმარებელთან ურთიერთობაში მაქვს.",
+          "en": "I have work experience in customer interaction.",
+          "ru": "У меня есть опыт работы с клиентами."
+        },
+        {
+          "ge": "სუსტი მხარის გაუმჯობესებაზე აქტიურად ვმუშაობ.",
+          "en": "I actively work on improving my weak side.",
+          "ru": "Я активно работаю над улучшением слабой стороны."
+        },
+        {
+          "ge": "დამსაქმებელმა მკითხა, რატომ მინდა ეს პოზიცია.",
+          "en": "The employer asked me why I want this position.",
+          "ru": "Работодатель спросил, почему я хочу эту позицию."
         }
       ]
     },
@@ -6306,7 +8951,13 @@
         "en": "Profession nouns with -ობა suffix: პროფესია → პროფესიონალობა. Descriptive relative clauses: რომელიც... Reported speech in journalism: გაზეთის რეპორტიორი.",
         "ru": "Профессии с -ობა. Придаточные с რომელიც.",
         "example_ge": "ის მუშაობს ფერმაზე.",
-        "example_en": "He/she works on a farm."
+        "example_en": "He/she works on a farm.",
+        "bullets": [
+          "Unusual profession descriptions need role + environment + duty.",
+          "Relative clauses help define non-standard jobs clearly.",
+          "Professional nouns often come from international roots.",
+          "Workplace vocabulary adds realism to profession narratives."
+        ]
       },
       "easier_than_russian": "Many profession words are international: ინჟინერი, რეპორტიორი, ფერმერი.",
       "vocab": [
@@ -6441,6 +9092,74 @@
           "en": "which / who",
           "ru": "который",
           "group": "grammar"
+        },
+        {
+          "ge": "არასტანდარტული",
+          "en": "non-standard",
+          "ru": "нестандартный",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "მოთხოვნადი",
+          "en": "in demand",
+          "ru": "востребованный",
+          "group": "Employment"
+        },
+        {
+          "ge": "პროფესიული გზა",
+          "en": "career path",
+          "ru": "профессиональный путь",
+          "group": "Career"
+        },
+        {
+          "ge": "გამოცდის პერიოდი",
+          "en": "trial period",
+          "ru": "испытательный срок",
+          "group": "Employment"
+        },
+        {
+          "ge": "შრომითი პირობები",
+          "en": "working conditions",
+          "ru": "условия труда",
+          "group": "Employment"
+        },
+        {
+          "ge": "სამუშაო გარემო",
+          "en": "work environment",
+          "ru": "рабочая среда",
+          "group": "Employment"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ეს პროფესია უჩვეულოა, მაგრამ ძალიან საინტერესო.",
+          "en": "This profession is unusual but very interesting.",
+          "ru": "Эта профессия необычная, но очень интересная."
+        },
+        {
+          "ge": "ფერმერი, რომელიც მთაში მუშაობს, დიდ პასუხისმგებლობას იღებს.",
+          "en": "A farmer who works in the mountains takes great responsibility.",
+          "ru": "Фермер, который работает в горах, берет на себя большую ответственность."
+        },
+        {
+          "ge": "რეპორტიორი ყოველდღე სხვადასხვა ადგილას დადის.",
+          "en": "A reporter goes to different places every day.",
+          "ru": "Репортер каждый день ходит в разные места."
+        },
+        {
+          "ge": "მყვინთავის სამუშაო რისკიანი, მაგრამ მოთხოვნადია.",
+          "en": "A diver's job is risky but in demand.",
+          "ru": "Работа дайвера рискованная, но востребованная."
+        },
+        {
+          "ge": "სამუშაო გრაფიკი ხშირად არასტანდარტულია.",
+          "en": "The work schedule is often non-standard.",
+          "ru": "Рабочий график часто нестандартный."
+        },
+        {
+          "ge": "პროფესიის აღწერაში მოვალეობები დეტალურად ჩავწერეთ.",
+          "en": "We described duties in detail in the profession description.",
+          "ru": "В описании профессии мы подробно указали обязанности."
         }
       ]
     },
@@ -6450,7 +9169,13 @@
         "en": "Conditional markings on maps: მწვერვალი (peak), ნაპრალი (canyon), ქვათაცვენა (rockfall zone). Imperative instructions: დაიცავით (observe!), არ გადაინაცვლოთ (don't move!).",
         "ru": "Альпинизм: მწვერვალი, ნაპრალი. Повелительное: დაიცავით.",
         "example_ge": "აქ საშიში ადგილია.",
-        "example_en": "This is a dangerous place here."
+        "example_en": "This is a dangerous place here.",
+        "bullets": [
+          "Instruction language prefers concise command chains.",
+          "Safety warnings combine hazard noun + action prohibition.",
+          "Map-symbol vocabulary needs precise noun control.",
+          "Formal imperative is standard in technical directions."
+        ]
       },
       "easier_than_russian": "Mountain vocabulary is vivid compounds: ქვათაცვენა = stone-fall-place.",
       "vocab": [
@@ -6585,6 +9310,74 @@
           "en": "do not move",
           "ru": "не перемещайтесь",
           "group": "grammar"
+        },
+        {
+          "ge": "უსაფრთხოების წესები",
+          "en": "safety rules",
+          "ru": "правила безопасности",
+          "group": "Safety"
+        },
+        {
+          "ge": "საფრთხის ზონა",
+          "en": "danger zone",
+          "ru": "опасная зона",
+          "group": "Safety"
+        },
+        {
+          "ge": "აღჭურვილობა",
+          "en": "equipment",
+          "ru": "снаряжение",
+          "group": "Mountaineering"
+        },
+        {
+          "ge": "გადარჩენა",
+          "en": "rescue/survival",
+          "ru": "спасение",
+          "group": "Safety"
+        },
+        {
+          "ge": "აღმართი",
+          "en": "ascent",
+          "ru": "подъем",
+          "group": "Terrain"
+        },
+        {
+          "ge": "დაშვება",
+          "en": "descent",
+          "ru": "спуск",
+          "group": "Terrain"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "მარშრუტს ყურადღებით მიჰყევით.",
+          "en": "Follow the route carefully.",
+          "ru": "Внимательно следуйте маршруту."
+        },
+        {
+          "ge": "ამ მონაკვეთზე ქვათაცვენის საფრთხეა.",
+          "en": "There is a risk of rockfall on this section.",
+          "ru": "На этом участке есть опасность камнепада."
+        },
+        {
+          "ge": "დაიცავით უსაფრთხოების ინსტრუქცია.",
+          "en": "Follow the safety instruction.",
+          "ru": "Соблюдайте инструкцию безопасности."
+        },
+        {
+          "ge": "თოკი სწორად დაამაგრეთ ჩასვლამდე.",
+          "en": "Secure the rope correctly before descending.",
+          "ru": "Правильно закрепите веревку перед спуском."
+        },
+        {
+          "ge": "საშიშ ზონაში არ გადაინაცვლოთ.",
+          "en": "Do not move into the dangerous zone.",
+          "ru": "Не перемещайтесь в опасную зону."
+        },
+        {
+          "ge": "რუკაზე პირობითი ნიშნები წინასწარ შეისწავლეთ.",
+          "en": "Study map symbols in advance.",
+          "ru": "Заранее изучите условные обозначения на карте."
         }
       ]
     },
@@ -6594,7 +9387,13 @@
         "en": "Past narrative: დაიწყო (began), გაიმარჯვა (won). Sports types: ექსტრემალური სპორტი. Purpose clauses: რათა (so that) — რათა თაყვანი ეცათ.",
         "ru": "Прошедшее: დაიწყო, გაიმარჯვა. Цель: რათა.",
         "example_ge": "ოლიმპიური თამაშები ოთხ წელიწადში ერთხელ იმართება.",
-        "example_en": "The Olympic Games are held once every four years."
+        "example_en": "The Olympic Games are held once every four years.",
+        "bullets": [
+          "Sports narratives often alternate event timeline and results.",
+          "Past verbs mark key moments: start, win, finish.",
+          "Olympic descriptions mix history, ritual, and competition terms.",
+          "Frequency phrases (every four years) are fixed and useful."
+        ]
       },
       "easier_than_russian": "Olympic vocabulary is international: ოლიმპიადა, მედალი, ჩემპიონი.",
       "vocab": [
@@ -6729,6 +9528,74 @@
           "en": "rafting / kayaking",
           "ru": "гребля / рафтинг",
           "group": "sport"
+        },
+        {
+          "ge": "სპორტსმენი",
+          "en": "athlete",
+          "ru": "спортсмен",
+          "group": "Sport"
+        },
+        {
+          "ge": "ფინალი",
+          "en": "final",
+          "ru": "финал",
+          "group": "Sport event"
+        },
+        {
+          "ge": "ნახევარფინალი",
+          "en": "semi-final",
+          "ru": "полуфинал",
+          "group": "Sport event"
+        },
+        {
+          "ge": "ტაქტიკა",
+          "en": "tactics",
+          "ru": "тактика",
+          "group": "Sport"
+        },
+        {
+          "ge": "ვარჯიშის პროცესი",
+          "en": "training process",
+          "ru": "тренировочный процесс",
+          "group": "Sport"
+        },
+        {
+          "ge": "დამსახურებული გამარჯვება",
+          "en": "deserved victory",
+          "ru": "заслуженная победа",
+          "group": "Result"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ოლიმპიური თამაშები ოთხ წელიწადში ერთხელ ტარდება.",
+          "en": "The Olympic Games are held every four years.",
+          "ru": "Олимпийские игры проводятся раз в четыре года."
+        },
+        {
+          "ge": "ქართველმა სპორტსმენმა ოქროს მედალი მოიგო.",
+          "en": "A Georgian athlete won a gold medal.",
+          "ru": "Грузинский спортсмен выиграл золотую медаль."
+        },
+        {
+          "ge": "შეჯიბრება საზეიმოდ დაიწყო.",
+          "en": "The competition began ceremonially.",
+          "ru": "Соревнование началось торжественно."
+        },
+        {
+          "ge": "გუნდმა ფინალში დამაჯერებლად გაიმარჯვა.",
+          "en": "The team won convincingly in the final.",
+          "ru": "Команда уверенно победила в финале."
+        },
+        {
+          "ge": "მწვრთნელმა ტაქტიკა ზუსტად შეარჩია.",
+          "en": "The coach chose the strategy precisely.",
+          "ru": "Тренер точно выбрал тактику."
+        },
+        {
+          "ge": "ახალი რეკორდი დამყარდა შეჯიბრზე.",
+          "en": "A new record was set at the competition.",
+          "ru": "На соревновании установлен новый рекорд."
         }
       ]
     },
@@ -6738,7 +9605,13 @@
         "en": "Free time: თავისუფალი დრო, როგორ ატარებ? Music verbs: მოსმენა (listening), კონცერტი. Suggestions: კარგი იქნებოდა თუ... (it would be good if...).",
         "ru": "Досуг: თავისუფალი დრო. Музыка: მოსმენა, კონცერტი.",
         "example_ge": "თავისუფალ დროს მუსიკას ვუსმენ.",
-        "example_en": "In my free time I listen to music."
+        "example_en": "In my free time I listen to music.",
+        "bullets": [
+          "Free-time topics combine habit verbs with preference structures.",
+          "Music discussions often use genre and emotion vocabulary.",
+          "Suggestion forms soften invitations and plans.",
+          "Time-spending verb patterns are central: როგორ ატარებ დროს."
+        ]
       },
       "easier_than_russian": "Music loanwords: კონცერტი, ორკესტრი, მელოდია.",
       "vocab": [
@@ -6873,6 +9746,74 @@
           "en": "I like",
           "ru": "мне нравится",
           "group": "grammar"
+        },
+        {
+          "ge": "მუსიკალური ჟანრი",
+          "en": "music genre",
+          "ru": "музыкальный жанр",
+          "group": "Music"
+        },
+        {
+          "ge": "ალბომი",
+          "en": "album",
+          "ru": "альбом",
+          "group": "Music"
+        },
+        {
+          "ge": "რეპეტიცია",
+          "en": "rehearsal",
+          "ru": "репетиция",
+          "group": "Music"
+        },
+        {
+          "ge": "დაკვრა",
+          "en": "playing an instrument",
+          "ru": "игра на инструменте",
+          "group": "Music"
+        },
+        {
+          "ge": "დირიჟორი",
+          "en": "conductor",
+          "ru": "дирижер",
+          "group": "Music"
+        },
+        {
+          "ge": "შემსრულებელი",
+          "en": "performer",
+          "ru": "исполнитель",
+          "group": "Music"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "თავისუფალ დროს ჯაზს ვუსმენ.",
+          "en": "In my free time I listen to jazz.",
+          "ru": "В свободное время я слушаю джаз."
+        },
+        {
+          "ge": "მეგობრებთან ერთად კონცერტზე ხშირად დავდივარ.",
+          "en": "I often go to concerts with friends.",
+          "ru": "Я часто хожу на концерты с друзьями."
+        },
+        {
+          "ge": "კარგი იქნებოდა თუ შაბათს ფესტივალზე წავიდოდით.",
+          "en": "It would be good if we went to the festival on Saturday.",
+          "ru": "Было бы хорошо, если бы в субботу мы пошли на фестиваль."
+        },
+        {
+          "ge": "სიმღერის მელოდია ძალიან მშვიდია.",
+          "en": "The song melody is very calm.",
+          "ru": "Мелодия песни очень спокойная."
+        },
+        {
+          "ge": "დასვენებისთვის კითხვა და მუსიკა საუკეთესოა.",
+          "en": "For relaxation, reading and music are the best.",
+          "ru": "Для отдыха лучше всего чтение и музыка."
+        },
+        {
+          "ge": "ახალი ალბომი უკვე მოვისმინე.",
+          "en": "I have already listened to the new album.",
+          "ru": "Я уже послушал(а) новый альбом."
         }
       ]
     },
@@ -6882,7 +9823,13 @@
         "en": "Relative clauses with რომელიც (which/who) — agrees in number. Connecting sentences: მაკავშირებელი სიტყვა. Flash mob as social phenomenon vocabulary.",
         "ru": "Придаточные с რომელიც. Связующие слова.",
         "example_ge": "ფლეშმობი, რომელიც ქუჩაში ჩანს, გართობისთვისაა.",
-        "example_en": "The flash mob that appears in the street is for fun."
+        "example_en": "The flash mob that appears in the street is for fun.",
+        "bullets": [
+          "Relative clause marker რომელიც is key in event descriptions.",
+          "Social-phenomena writing needs clear cause and effect links.",
+          "Flash mob language balances planning and spontaneity.",
+          "Linking words improve coherence in B1-level explanations."
+        ]
       },
       "easier_than_russian": "ფლეშმობი is a direct loan — same word, Georgian plural ending.",
       "vocab": [
@@ -7017,6 +9964,74 @@
           "en": "society",
           "ru": "общество",
           "group": "concept"
+        },
+        {
+          "ge": "საზოგადოებრივი სივრცე",
+          "en": "public space",
+          "ru": "общественное пространство",
+          "group": "Society"
+        },
+        {
+          "ge": "საზოგადოებრივი რეაქცია",
+          "en": "public reaction",
+          "ru": "общественная реакция",
+          "group": "Society"
+        },
+        {
+          "ge": "ინიციატივა",
+          "en": "initiative",
+          "ru": "инициатива",
+          "group": "Society"
+        },
+        {
+          "ge": "დაგეგმვა",
+          "en": "planning",
+          "ru": "планирование",
+          "group": "Process"
+        },
+        {
+          "ge": "კოორდინაცია",
+          "en": "coordination",
+          "ru": "координация",
+          "group": "Process"
+        },
+        {
+          "ge": "გავრცელება",
+          "en": "spread/dissemination",
+          "ru": "распространение",
+          "group": "Media"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ფლეშმობი, რომელიც ცენტრში გაიმართა, ბევრს მოეწონა.",
+          "en": "The flash mob that took place downtown was liked by many.",
+          "ru": "Флешмоб, который прошел в центре, многим понравился."
+        },
+        {
+          "ge": "ორგანიზატორებმა მონაწილეები წინასწარ გააფრთხილეს.",
+          "en": "The organizers warned participants in advance.",
+          "ru": "Организаторы заранее предупредили участников."
+        },
+        {
+          "ge": "გამვლელები ჯერ გაკვირვებულები იყვნენ, შემდეგ შეუერთდნენ.",
+          "en": "Passersby were surprised at first, then joined.",
+          "ru": "Прохожие сначала удивились, потом присоединились."
+        },
+        {
+          "ge": "ვიდეოჩანაწერი სოციალურ ქსელებში სწრაფად გავრცელდა.",
+          "en": "The video recording spread quickly on social networks.",
+          "ru": "Видеозапись быстро распространилась в соцсетях."
+        },
+        {
+          "ge": "ეს ფენომენი საზოგადოებრივ აქტიურობას ზრდის.",
+          "en": "This phenomenon increases civic activity.",
+          "ru": "Это явление повышает общественную активность."
+        },
+        {
+          "ge": "რაც უკეთ დაგეგმავ, მით მშვიდად ჩაივლის ღონისძიება.",
+          "en": "The better you plan, the smoother the event goes.",
+          "ru": "Чем лучше спланируешь, тем спокойнее пройдет мероприятие."
         }
       ]
     },
@@ -7026,7 +10041,13 @@
         "en": "Future tense: მომავალი დრო. Modal particle უნდა for advice/instructions in shopping context. Onomatopoeia: ონეომანია. Imperative: წართქმითი და უკუთქმითი ბრძანებითი.",
         "ru": "Будущее время. უნდა в контексте покупок. Ономатопея: ონეომანია.",
         "example_ge": "ონლაინ შეგიძლიათ განვადებით იყიდოთ.",
-        "example_en": "You can buy online in installments."
+        "example_en": "You can buy online in installments.",
+        "bullets": [
+          "Online shopping language combines future, advice, and commands.",
+          "Payment and delivery are usually expressed in fixed collocations.",
+          "Consumer actions are step-by-step and sequence-based.",
+          "Modal უნდა often signals recommendation in instructions."
+        ]
       },
       "easier_than_russian": "E-commerce terms are international: ონლაინშოპინგი, განვადება, ბანკომატი.",
       "vocab": [
@@ -7161,6 +10182,74 @@
           "en": "consumer / customer",
           "ru": "покупатель",
           "group": "people"
+        },
+        {
+          "ge": "ტრეკინგის ნომერი",
+          "en": "tracking number",
+          "ru": "трек-номер",
+          "group": "Delivery"
+        },
+        {
+          "ge": "კურიერი",
+          "en": "courier",
+          "ru": "курьер",
+          "group": "Delivery"
+        },
+        {
+          "ge": "საფასური",
+          "en": "fee/charge",
+          "ru": "сбор/плата",
+          "group": "Payment"
+        },
+        {
+          "ge": "გადახდის დადასტურება",
+          "en": "payment confirmation",
+          "ru": "подтверждение оплаты",
+          "group": "Payment"
+        },
+        {
+          "ge": "მომხმარებლის შეფასება",
+          "en": "customer review",
+          "ru": "отзыв покупателя",
+          "group": "E-commerce"
+        },
+        {
+          "ge": "პროდუქტის რეიტინგი",
+          "en": "product rating",
+          "ru": "рейтинг товара",
+          "group": "E-commerce"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ონლაინმაღაზიაში შეკვეთას დღეს გავაფორმებ.",
+          "en": "I will place the order in the online store today.",
+          "ru": "Сегодня я оформлю заказ в интернет-магазине."
+        },
+        {
+          "ge": "მიწოდების მისამართი სწორად უნდა შეიყვანო.",
+          "en": "You should enter the delivery address correctly.",
+          "ru": "Адрес доставки нужно ввести правильно."
+        },
+        {
+          "ge": "საბანკო ბარათით გადახდა ყველაზე სწრაფია.",
+          "en": "Paying by bank card is the fastest.",
+          "ru": "Оплата банковской картой самая быстрая."
+        },
+        {
+          "ge": "ფასდაკლება მოქმედებს მხოლოდ ონლაინ შეკვეთებზე.",
+          "en": "The discount applies only to online orders.",
+          "ru": "Скидка действует только на онлайн-заказы."
+        },
+        {
+          "ge": "თუ პროდუქტი არ მოგეწონება, დაბრუნება შეგიძლია.",
+          "en": "If you do not like the product, you can return it.",
+          "ru": "Если товар не понравится, его можно вернуть."
+        },
+        {
+          "ge": "განვადებით ყიდვა უფრო მოსახერხებელია დიდი ტექნიკისთვის.",
+          "en": "Buying in installments is more convenient for large electronics.",
+          "ru": "Покупка в рассрочку удобнее для крупной техники."
         }
       ]
     },
@@ -7170,7 +10259,13 @@
         "en": "Complaint letter vocabulary. Direct/indirect imperative. Subject case with -ენიანი participles. Compound words: ორცნებიანი კომპოზიტები.",
         "ru": "Жалоба: საჩივარი. Повелительное прямое/косвенное. Сложные слова.",
         "example_ge": "საჩივარი უნდა დაწეროთ ოფიციალურ ენაზე.",
-        "example_en": "The complaint must be written in official language."
+        "example_en": "The complaint must be written in official language.",
+        "bullets": [
+          "Complaint writing needs formal register and clear structure.",
+          "Consumer-rights arguments require evidence (receipt, contract, date).",
+          "Imperative forms can express legal requests politely.",
+          "Tax and rights vocabulary overlaps in formal documents."
+        ]
       },
       "easier_than_russian": "Consumer rights terms mirror EU-style vocabulary — familiar concepts.",
       "vocab": [
@@ -7305,6 +10400,74 @@
           "en": "supervision / oversight",
           "ru": "надзор",
           "group": "law"
+        },
+        {
+          "ge": "იურიდიული კონსულტაცია",
+          "en": "legal consultation",
+          "ru": "юридическая консультация",
+          "group": "Law"
+        },
+        {
+          "ge": "სარჩელი",
+          "en": "claim/lawsuit",
+          "ru": "иск",
+          "group": "Law"
+        },
+        {
+          "ge": "მტკიცებულება",
+          "en": "evidence",
+          "ru": "доказательство",
+          "group": "Law"
+        },
+        {
+          "ge": "დარღვევა",
+          "en": "violation",
+          "ru": "нарушение",
+          "group": "Law"
+        },
+        {
+          "ge": "საგადასახადო ორგანო",
+          "en": "tax authority",
+          "ru": "налоговый орган",
+          "group": "Tax"
+        },
+        {
+          "ge": "განხილვის ვადა",
+          "en": "review period",
+          "ru": "срок рассмотрения",
+          "group": "Documents"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ოფიციალური საჩივარი მომხმარებელთა დაცვის სამსახურში გავაგზავნე.",
+          "en": "I sent an official complaint to the consumer protection service.",
+          "ru": "Я отправил(а) официальную жалобу в службу защиты потребителей."
+        },
+        {
+          "ge": "ჩეკის გარეშე დაბრუნება ვერ მოხერხდა.",
+          "en": "Return was not possible without a receipt.",
+          "ru": "Возврат без чека оказался невозможен."
+        },
+        {
+          "ge": "კონტრაქტის პირობები არ იყო სრულად შესრულებული.",
+          "en": "The contract terms were not fully met.",
+          "ru": "Условия контракта были выполнены не полностью."
+        },
+        {
+          "ge": "მომხმარებელს ხარისხიანი მომსახურების მიღების უფლება აქვს.",
+          "en": "The consumer has the right to receive quality service.",
+          "ru": "Потребитель имеет право получать качественную услугу."
+        },
+        {
+          "ge": "ანაზღაურება კანონის საფუძველზე მოვითხოვეთ.",
+          "en": "We requested compensation on legal grounds.",
+          "ru": "Мы потребовали компенсацию на основании закона."
+        },
+        {
+          "ge": "განცხადებაში ფაქტები და თარიღები ზუსტად მივუთითე.",
+          "en": "I indicated facts and dates precisely in the statement.",
+          "ru": "В заявлении я точно указал(а) факты и даты."
         }
       ]
     },
@@ -7314,7 +10477,13 @@
         "en": "Regional food descriptions: სვანური, იმერული, კახური. Hospitality dialogue: სტუმარმასპინძლობა. Recipe language: ინგრედიენტი, მომზადება.",
         "ru": "Региональная кухня: სვანური, კახური. Гостеприимство: სტუმარმასპინძლობა.",
         "example_ge": "სვანეთში ტრადიციული კერძი ჩურჩხელაა.",
-        "example_en": "In Svaneti the traditional dish is churchkhela."
+        "example_en": "In Svaneti the traditional dish is churchkhela.",
+        "bullets": [
+          "Regional adjectives identify culinary origin precisely.",
+          "Recipe discourse uses sequence verbs and ingredient nouns.",
+          "Hospitality contexts combine food vocabulary and etiquette.",
+          "Cuisine comparison often uses taste and preparation contrast."
+        ]
       },
       "easier_than_russian": "Georgian food names are the same in every language — learn once, use forever.",
       "vocab": [
@@ -7449,6 +10618,74 @@
           "en": "food establishment",
           "ru": "заведение питания",
           "group": "place"
+        },
+        {
+          "ge": "სუფრის კულტურა",
+          "en": "table culture",
+          "ru": "культура застолья",
+          "group": "Culture"
+        },
+        {
+          "ge": "სამზარეულოს ტრადიცია",
+          "en": "culinary tradition",
+          "ru": "кулинарная традиция",
+          "group": "Cuisine"
+        },
+        {
+          "ge": "ნოყიერი",
+          "en": "hearty/nutritious",
+          "ru": "сытный",
+          "group": "Food descriptions"
+        },
+        {
+          "ge": "სურნელოვანი",
+          "en": "aromatic",
+          "ru": "ароматный",
+          "group": "Food descriptions"
+        },
+        {
+          "ge": "გარნირი",
+          "en": "side dish/garnish",
+          "ru": "гарнир",
+          "group": "Cuisine"
+        },
+        {
+          "ge": "მთავარი კერძი",
+          "en": "main course",
+          "ru": "основное блюдо",
+          "group": "Cuisine"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "იმერული ხაჭაპური უფრო რბილია, ვიდრე აჭარული.",
+          "en": "Imeretian khachapuri is softer than Adjarian.",
+          "ru": "Имеретинский хачапури мягче, чем аджарский."
+        },
+        {
+          "ge": "რეცეპტში ყველა ინგრედიენტი ზუსტადაა მითითებული.",
+          "en": "All ingredients are listed precisely in the recipe.",
+          "ru": "В рецепте точно указаны все ингредиенты."
+        },
+        {
+          "ge": "სვანური მარილი კერძს განსაკუთრებულ გემოს აძლევს.",
+          "en": "Svan salt gives the dish a special flavor.",
+          "ru": "Сванская соль придает блюду особый вкус."
+        },
+        {
+          "ge": "ტრადიციულ სუფრაზე სტუმარმასპინძლობა მნიშვნელოვანია.",
+          "en": "Hospitality is important at a traditional feast table.",
+          "ru": "На традиционном застолье важно гостеприимство."
+        },
+        {
+          "ge": "ჩიხირთმა ზამთარში განსაკუთრებით პოპულარულია.",
+          "en": "Chikhirtma is especially popular in winter.",
+          "ru": "Чихиртма особенно популярна зимой."
+        },
+        {
+          "ge": "რესტორნის მენიუში რეგიონული კერძების ცალკე სექციაა.",
+          "en": "The restaurant menu has a separate section for regional dishes.",
+          "ru": "В меню ресторана есть отдельный раздел региональных блюд."
         }
       ]
     },
@@ -7458,7 +10695,13 @@
         "en": "Diet & health: ჯანსაღი ცხოვრების წესი, დიეტა. Argumentation: საკუთარი აზრის არგუმენტირება. Geographic names: კავკასია, კავკასიელი. Dialect note: დიალექტური ფორმები.",
         "ru": "Здоровье: ჯანსაღი ცხოვრება, დიეტა. География: კავკასია.",
         "example_ge": "ჯანსაღი კვება ძალიან მნიშვნელოვანია.",
-        "example_en": "Healthy eating is very important."
+        "example_en": "Healthy eating is very important.",
+        "bullets": [
+          "Healthy-lifestyle arguments rely on cause and consequence links.",
+          "Advice language uses modal and recommendation structures.",
+          "Nutrition terms often pair beneficial vs harmful contrasts.",
+          "Geographic context (Caucasus) enriches cultural discussion."
+        ]
       },
       "easier_than_russian": "Caucasus geography uses clear suffixes: კავკასიელი (Caucasian person), -ელი for nationality.",
       "vocab": [
@@ -7593,6 +10836,74 @@
           "en": "dialect",
           "ru": "диалект",
           "group": "language"
+        },
+        {
+          "ge": "იმუნიტეტი",
+          "en": "immunity",
+          "ru": "иммунитет",
+          "group": "Health"
+        },
+        {
+          "ge": "წყლის ბალანსი",
+          "en": "water balance",
+          "ru": "водный баланс",
+          "group": "Health"
+        },
+        {
+          "ge": "კვებითი რეჟიმი",
+          "en": "dietary regimen",
+          "ru": "режим питания",
+          "group": "Nutrition"
+        },
+        {
+          "ge": "ფიზიკური აქტივობა",
+          "en": "physical activity",
+          "ru": "физическая активность",
+          "group": "Health"
+        },
+        {
+          "ge": "გულისხმიერი დამოკიდებულება",
+          "en": "mindful attitude",
+          "ru": "осознанный подход",
+          "group": "Lifestyle"
+        },
+        {
+          "ge": "პროფილაქტიკური შემოწმება",
+          "en": "preventive check-up",
+          "ru": "профилактический осмотр",
+          "group": "Medical care"
+        }
+      ],
+      "phrases": [
+        {
+          "ge": "ჯანსაღი კვება და რეგულარული ვარჯიში აუცილებელია.",
+          "en": "Healthy eating and regular exercise are essential.",
+          "ru": "Здоровое питание и регулярные упражнения необходимы."
+        },
+        {
+          "ge": "სწრაფი კვება ხშირ შემთხვევაში მავნეა.",
+          "en": "Fast food is harmful in many cases.",
+          "ru": "Фастфуд во многих случаях вреден."
+        },
+        {
+          "ge": "დაბალანსებული დიეტა ენერგიას გაძლევს.",
+          "en": "A balanced diet gives you energy.",
+          "ru": "Сбалансированная диета дает энергию."
+        },
+        {
+          "ge": "კავკასიის რეგიონში ტრადიციული კვება განსხვავებულია.",
+          "en": "Traditional nutrition differs in the Caucasus region.",
+          "ru": "Традиционное питание в Кавказском регионе отличается."
+        },
+        {
+          "ge": "ექიმის რეკომენდაციები ყოველთვის უნდა გაითვალისწინო.",
+          "en": "You should always take a doctor's recommendations into account.",
+          "ru": "Рекомендации врача всегда нужно учитывать."
+        },
+        {
+          "ge": "ჯანსაღი ძილი და სეირნობა სტრესს ამცირებს.",
+          "en": "Healthy sleep and walking reduce stress.",
+          "ru": "Здоровый сон и прогулки снижают стресс."
         }
       ]
     }

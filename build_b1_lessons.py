@@ -418,19 +418,23 @@ B1 = {
 
 
 def main():
+    from lesson_enrichments import apply_enrichments
+
+    enriched = {k: apply_enrichments(v, "b1", int(k)) for k, v in B1.items()}
     with open(LESSON_DATA, encoding="utf-8") as f:
         data = json.load(f)
 
-    data["b1"] = B1
+    data["b1"] = enriched
 
     with open(LESSON_DATA, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ Added B1 with {len(B1)} lessons to {LESSON_DATA}")
-    print("B1 vocab counts per lesson:")
-    for lesson_id in sorted(B1, key=int):
-        count = len(B1[lesson_id]["vocab"])
-        print(f"  Lesson {lesson_id}: {count} words")
+    print(f"✅ Updated B1 with {len(enriched)} lessons in {LESSON_DATA}")
+    for lesson_id in sorted(enriched, key=int):
+        lesson = enriched[lesson_id]
+        count = len(lesson["vocab"])
+        n_phr = len(lesson.get("phrases", []))
+        print(f"   L{lesson_id}: {count} words, {n_phr} phrases — {lesson['title']}")
 
 
 if __name__ == "__main__":

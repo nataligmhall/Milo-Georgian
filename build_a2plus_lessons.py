@@ -418,21 +418,25 @@ A2PLUS = {
 
 
 def main():
+    from lesson_enrichments import apply_enrichments
+
+    enriched = {k: apply_enrichments(v, "a2plus", int(k)) for k, v in A2PLUS.items()}
     with open(LESSON_DATA, encoding="utf-8") as f:
         data = json.load(f)
 
-    data["a2plus"] = A2PLUS
+    data["a2plus"] = enriched
 
     with open(LESSON_DATA, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"Added A2+ ({len(A2PLUS)} lessons) to {LESSON_DATA}")
+    print(f"✅ Updated A2+ with {len(enriched)} lessons in {LESSON_DATA}")
     total = 0
-    for lesson_id in sorted(A2PLUS, key=int):
-        lesson = A2PLUS[lesson_id]
+    for lesson_id in sorted(enriched, key=int):
+        lesson = enriched[lesson_id]
         count = len(lesson["vocab"])
         total += count
-        print(f"Lesson {lesson_id:>2} | {lesson['title']}: {count} words")
+        n_phr = len(lesson.get("phrases", []))
+        print(f"   L{lesson_id}: {count} words, {n_phr} phrases — {lesson['title']}")
     print(f"Total A2+ vocab words: {total}")
 
 

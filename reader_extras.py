@@ -45,6 +45,30 @@ READER_EXTRAS = {
                     ],
                     "After nouns ending in -ი, drop არის and add -ა: კაფე → კაფეა.",
                 ),
+                _tbl(
+                    "Georgian alphabet (33 letters)",
+                    ["Letter", "Sound", "Letter", "Sound"],
+                    [
+                        ["ა", "a", "ბ", "b"],
+                        ["გ", "g", "დ", "d"],
+                        ["ე", "e", "ვ", "v"],
+                        ["ზ", "z", "თ", "t"],
+                        ["ი", "i", "კ", "k'"],
+                        ["ლ", "l", "მ", "m"],
+                        ["ნ", "n", "ო", "o"],
+                        ["პ", "p'", "ჟ", "zh"],
+                        ["რ", "r", "ს", "s"],
+                        ["ტ", "t'", "უ", "u"],
+                        ["ფ", "p", "ქ", "k"],
+                        ["ღ", "gh", "ყ", "q"],
+                        ["შ", "sh", "ჩ", "ch"],
+                        ["ც", "ts", "ძ", "dz"],
+                        ["წ", "ts'", "ჭ", "ch'"],
+                        ["ხ", "kh", "ჯ", "j"],
+                        ["ჰ", "h", "", ""],
+                    ],
+                    "Ejectives (კ პ ტ წ ჭ) are puffed consonants — unique to Georgian!",
+                ),
             ],
         ),
         "2": _ex(
@@ -222,8 +246,8 @@ READER_EXTRAS = {
                 "Use motion verbs: მიდის, მოდის, შედის, გადის",
                 "Say dates with ordinals",
             ],
-            "გაზაფხულში ყვითელი ყვავილებია. ზაფხულში ცხელა. ბაზარზე ხილი იაფია, მაგრამ ყველაზე იაფი პურია. ის მოდის მაღაზიაში. დღეს მეხუთე რიცხვია.",
-            "In spring there are yellow flowers. In summer it's hot. At the market fruit is cheap, but bread is the cheapest. He/she is coming into the shop. Today is the fifth.",
+            "გაზაფხულში ყვითელი ყვავილებია. ზაფხულში ცხელა, ზამთარში კი ცივი. ბაზარზე ხილი იაფია. — რა ღირს ეს ყვავილი? — ხუთი ლარი. პური ყველაზე იაფია. ის მოდის სუპერმარკეტში. დღეს მეხუთე რიცხვია. ხვალ ის მოდის ბაზარზე.",
+            "In spring there are yellow flowers. In summer it's hot, in winter it's cold. At the market fruit is cheap. — How much does this flower cost? — Five lari. Bread is the cheapest. He/she is coming into the supermarket. Today is the fifth. Tomorrow he/she is coming to the market.",
             [
                 _tbl(
                     "Motion verbs (3rd person)",
@@ -255,8 +279,8 @@ READER_EXTRAS = {
                 "Talk about hobbies and nature",
                 "Use simple past: წავედი / მოვედი",
             ],
-            "შემიძლია კითხვა და წერა. მომწონს ფილმი და თეატრი. ხშირად ვსეირნობ ტყეში. გუშინ წავედი მუზეუმში და მოვედი საღამოს. ზღვა და მთა ძალიან ლამაზია.",
-            "I can read and write. I like films and the theatre. I often walk in the forest. Yesterday I went to the museum and came back in the evening. The sea and mountains are very beautiful.",
+            "შემიძლია კითხვა და წერა. მომწონს ფილმი და თეატრი, მაგრამ არ მომწონს ეს სპექტაკლი. ხშირად ვსეირნობ ტყეში და პარკში. გუშინ წავედი მუზეუმში და მოვედი საღამოს. ზღვაზე და მთაზე ძალიან ლამაზია. — რა მოგწონს? — მომწონს მუსიკა და ფოტოგრაფია.",
+            "I can read and write. I like films and the theatre, but I don't like this play. I often walk in the forest and the park. Yesterday I went to the museum and came back in the evening. At the sea and in the mountains it's very beautiful. — What do you like? — I like music and photography.",
             [
                 _tbl(
                     "Can / like / past",
@@ -278,8 +302,8 @@ READER_EXTRAS = {
                 "Name transport and say how you travel: ავტობუსით",
                 "Describe city places",
             ],
-            "სახლში ვარ. ბანკი ახლოსაა, მაგრამ სადგური შორსაა. მეტროთი მივდივარ ქალაქში. ფეხით მარჯვნივ, შემდეგ პირდაპირ. ეს ქუჩა ძალიან ვიწროა.",
-            "I am at home. The bank is near, but the station is far. I go to the city by metro. On foot to the right, then straight ahead. This street is very narrow.",
+            "სახლში ვარ. ბანკი ახლოსაა, მაგრამ სადგური შორსაა. მეტროთი მივდივარ ქალაქის ცენტში. ფეხით მარჯვნივ, შემდეგ პირდაპირ — ეს ქუჩა ძალიან ვიწროა. — სად არის ფოსტა? — ფოსტა ბანკთანაა. ავტობუსით უფრო იაფია, ტაქსით კი სწრაფი.",
+            "I am at home. The bank is near, but the station is far. I go to the city centre by metro. On foot to the right, then straight ahead — this street is very narrow. — Where is the post office? — The post office is near the bank. By bus it's cheaper, by taxi it's faster.",
             [
                 _tbl(
                     "Postpositions (locative)",
@@ -310,8 +334,8 @@ READER_EXTRAS = {
                 "Describe rooms and furniture",
                 "Distinguish things (მაქვს) vs. living beings (მყავს)",
             ],
-            "მაქვს ბინა სამი ოთახით. მყავს კატა და ძაღლი. სამზარეულოში დიდი მაგიდაა. საძინებელში საწოლი და კარადა. მაცივარი და ტელევიზორი მაქვს.",
-            "I have an apartment with three rooms. I have a cat and a dog. There is a big table in the kitchen. A bed and wardrobe in the bedroom. I have a fridge and a TV.",
+            "მაქვს ბინა სამი ოთახით თბილისში. მყავს კატა და ძაღლი. სამზარეულოში დიდი მაგიდაა, საძინებელში საწოლი და კარადა. ბალკონზე ყვავილებია. — გაქვს ტელევიზორი? — დიახ, მაქვს ტელევიზორი და მაცივარი. ჩვენ გვაქვს ფართო ბინა, მათ კი პატარა.",
+            "I have an apartment with three rooms in Tbilisi. I have a cat and a dog. There is a big table in the kitchen, a bed and wardrobe in the bedroom. There are flowers on the balcony. — Do you have a TV? — Yes, I have a TV and a fridge. We have a spacious apartment, they have a small one.",
             [
                 _tbl(
                     "მაქვს vs. მყავს — to have",
@@ -332,8 +356,8 @@ READER_EXTRAS = {
                 "Say how long you've studied: X წელია ვსწავლობ",
                 "Review A1 grammar across all 12 lessons",
             ],
-            "გამარჯობა, ნინო! ორი წელია ვსწავლობ ქართულს. ვიყავი სტუდენტი, ახლა ვმუშაობ ოფისში. მაქვს ბინა თბილისში. გმადლობ დახმარებისთვის! ნახვამდის.",
-            "Hello, Nino! I've been studying Georgian for two years. I was a student, now I work in an office. I have an apartment in Tbilisi. Thank you for your help! Goodbye.",
+            "ძვირფასო ნინო! ორი წელია ვსწავლობ ქართულს. ადრე სტუდენტი ვიყავი, ახლა ოფისში ვმუშაობ. მაქვს ბინა თბილისში — სამი ოთახი და ბალკონი. გმადლობ დახმარებისთვის! გთხოვ, დამიკავშირდი ელ-ფოსტით. პატივისცემით, გიორგი. ნახვამდის!",
+            "Dear Nino! I've been studying Georgian for two years. Before I was a student, now I work in an office. I have an apartment in Tbilisi — three rooms and a balcony. Thank you for your help! Please contact me by email. Respectfully, Giorgi. Goodbye!",
             [
                 _tbl(
                     "A1 review — key verbs",
@@ -406,25 +430,61 @@ READER_EXTRAS = {
         ),
         "10": _ex(
             ["Shop for a new apartment", "Compare apartments: bigger, cheaper, brighter", "Name household items and repairs", "Negotiate with a seller"],
-            "ახალი ბინა ვეძებ. ეს უფრო ფართოა, ვიდრე ჩემი ძველი. მაგრამ ძვირია. ფანჯრები დიდია, აივანიც კარგია. გადავწყვიტე, რომ ვიყიდო.",
-            "I'm looking for a new apartment. This one is more spacious than my old one. But it's expensive. The windows are big, the balcony is good too. I decided to buy it.",
+            "ახალი ბინა ვეძებ. ეს უფრო ფართოა, ვიდრე ჩემი ძველი. მაგრამ ძვირია. — ფანჯრები დიდია? — დიახ, და აივანიც კარგია. გადავწყვიტე, რომ ვიყიდო. მობრძანდით, გთხოვთ, კატალოგი ნახოთ.",
+            "I'm looking for a new apartment. This one is more spacious than my old one. But it's expensive. — Are the windows big? — Yes, and the balcony is good too. I decided to buy it. Please come in and look at the catalog.",
+            [
+                _tbl(
+                    "Formal imperative (-ეთ)",
+                    ["Georgian", "English"],
+                    [
+                        ["მობრძანდით", "please come in"],
+                        ["დაწერეთ", "write!"],
+                        ["წაიკითხეთ", "read!"],
+                        ["ინებეთ", "here you are"],
+                    ],
+                ),
+            ],
         ),
         "11": _ex(
             ["Talk about Georgian wine and toasts", "Describe a festival atmosphere", "Use festival and vineyard vocabulary", "Participate in a wine tasting conversation"],
-            "ღვინის ფესტივალზე ვარ. ქართული ღვინო ძალიან ცნობილია. მეგობარი მიმიყვანს ჯარიმაში. ვცდი თეთრ და წითელ ღვინოს. ყველას გამარჯობა ვუთხრა!",
-            "I'm at the wine festival. Georgian wine is very famous. A friend took me to the cellar. I try white and red wine. I said hello to everyone!",
+            "ღვინის ფესტივალზე ვარ. ქართული ღვინო ძალიან ცნობილია. მეგობარმა მიმიყვანს ჯარიმაში. ვცდი თეთრ და წითელ ღვინოს. — რომელი კუთხის ღვინოა ეს? — კახური. ყველას გამარჯობა ვუთხრა!",
+            "I'm at the wine festival. Georgian wine is very famous. A friend took me to the cellar. I try white and red wine. — Which region is this wine from? — Kakhetian. I said hello to everyone!",
+            [
+                _tbl(
+                    "Wine taste adjectives",
+                    ["Georgian", "English"],
+                    [
+                        ["მშრალი", "dry"],
+                        ["მოტკბო", "slightly sweet"],
+                        ["მომჟავო", "slightly sour"],
+                        ["ნახევრად ტკბილი", "semi-sweet"],
+                    ],
+                ),
+            ],
         ),
         "12": _ex(
             ["Be a guest in a Georgian family", "Use hospitality phrases and toasts", "Describe a supra and traditions", "Thank hosts warmly"],
-            "სტუმრად ვარ ქართულ ოჯახში. მასპინძელი ძალიან კეთილია. მაგიდა სავსეა — ხაჭაპური, ხინკალი, ღვინო. გამარჯობა ვთქვი და გმადლობთ ვუთხარი. ნამდვილი ქართული სტუმართმოფრთხილებაა!",
-            "I'm a guest in a Georgian family. The host is very kind. The table is full — khachapuri, khinkali, wine. I said hello and thanked them. Real Georgian hospitality!",
+            "სტუმრად ვარ ქართულ ოჯახში. მასპინძელი ძალიან კეთილია. მაგიდა სავსეა — ხაჭაპური, ხინკალი, ღვინო. თამადამ საინტერესო სადღეგრძელო თქვა. გამარჯობა ვთქვი და გმადლობთ ვუთხარი. ნამდვილი ქართული სტუმართმოფრთხილებაა!",
+            "I'm a guest in a Georgian family. The host is very kind. The table is full — khachapuri, khinkali, wine. The toastmaster made an interesting toast. I said hello and thanked them. Real Georgian hospitality!",
+            [
+                _tbl(
+                    "Similative comparison",
+                    ["Pattern", "Example", "English"],
+                    [
+                        ["X-ის მსგავსი", "ანას მსგავსი", "similar to Ana"],
+                        ["X-ივით", "ბავშვივით", "like a child"],
+                        ["ისეთი … როგორც", "ისეთი სუფრა, როგორც", "such a table as"],
+                    ],
+                ),
+            ],
         ),
     },
     "a2plus": {
         "1": _ex(
             ["Discuss Georgian exports and products", "Talk about business and trade", "Describe what a country produces", "Use formal register for economics"],
-            "საქართველოს ეროვნული პროდუქტი ცნობილია. ღვინო და ჩაი ექსპორტზეა. ბიზნესმენები ახალ ბაზრებს ეძებენ. ჩვენი პროდუქცია ხარისხიანია.",
-            "Georgia's national product is well known. Wine and tea are for export. Businessmen are looking for new markets. Our production is high quality.",
+            "საქართველოს ეროვნული პროდუქტი ცნობილია. ღვინო და ჩაი ექსპორტზეა. ბიზნესმენები ახალ ბაზრებს ეძებენ. — რა იზრდება? — ექსპორტი წლიდან წლამდე. ჩვენი პროდუქცია ხარისხიანია.",
+            "Georgia's national product is well known. Wine and tea are for export. Businessmen are looking for new markets. — What is growing? — Export year by year. Our production is high quality.",
+            [_tbl("Passive trend verbs", ["Georgian", "English"], [["იზრდება", "is growing"], ["ძლიერდება", "is strengthening"], ["საქმდება", "jobs are created"]])],
         ),
         "2": _ex(
             ["Read product labels in Georgian", "Talk about organic and local food", "Discuss Agrohub and farming", "Compare product quality"],
@@ -433,8 +493,9 @@ READER_EXTRAS = {
         ),
         "3": _ex(
             ["Call or talk about emergency 112", "Describe an emergency clearly", "Follow instructions from operators", "Stay calm and give location"],
-            "ავარია მოხდა! დავურეკე 112-ს. ოპერატორმა კითხვები დამისვა: სად ხარ? რა მოხდა? მისამართი ვთქვი და დახმარება მალე მოვიდა.",
-            "An accident happened! I called 112. The operator asked questions: where are you? what happened? I gave the address and help came quickly.",
+            "ავარია მოხდა! დავურეკე 112-ს. — სად ხარ? — რუსთავის გზაზე. — რა მოხდა? — ავტობუსი და მანქანა შეეჯახა. ოპერატორმა თქვა, დაელოდე ადგილზე. მაშველებმა მალე მოვიდნენ.",
+            "An accident happened! I called 112. — Where are you? — On Rustavi highway. — What happened? — A bus and a car collided. The operator said wait on site. Rescuers came quickly.",
+            [_tbl("Emergency phrases", ["Georgian", "English"], [["დარეკეთ 112-ზე", "call 112"], ["აუცილებელია", "it is necessary"], ["დაელოდეთ", "please wait"]])],
         ),
         "4": _ex(
             ["Report lost items to police", "Describe what you lost and where", "Fill in basic forms at a station", "Use past tense for what happened"],
@@ -492,8 +553,9 @@ READER_EXTRAS = {
         ),
         "2": _ex(
             ["Write or talk about your CV", "Describe work experience and skills", "Read job vacancies in Georgian", "Apply for a position"],
-            "ჩემი CV ასე გამოიყურება: ორწლიანი გამოცდილება მაქვს ჟურნალისტიკაში. ვსწავლობდი უნივერსიტეტში. ვაკანსიაზე ვწერ, რადგან ახალი სამუშაო მინდა.",
-            "My CV looks like this: I have two years of experience in journalism. I studied at university. I'm applying for the vacancy because I want a new job.",
+            "ჩემი CV ასე გამოიყურება: ორწლიანი გამოცდილება მაქვს ჟურნალისტიკაში. 2018 წლიდან დღემდე ვმუშაობ. — რატომ გინდათ ეს პოზიცია? — ახალი გამოწვევა მინდა. ვაკანსიაზე ვწერ.",
+            "My CV looks like this: I have two years of experience in journalism. I work from 2018 to present. — Why do you want this position? — I want a new challenge. I'm applying for the vacancy.",
+            [_tbl("CV date patterns", ["Pattern", "Example"], [["X წელს", "2011 წელს"], ["X წლიდან – დღემდე", "2018 წლიდან – დღემდე"]])],
         ),
         "3": _ex(
             ["Prepare for a job interview", "Answer questions about experience and skills", "Use formal register", "Ask questions back to the interviewer"],
@@ -520,8 +582,9 @@ READER_EXTRAS = {
         ),
         "7": _ex(
             ["Talk about free time and music", "Say how you spend evenings", "Express likes with მომწონს", "Discuss concerts and hobbies"],
-            "თავისუფალ დროს მუსიკას ვსმენ. მომწონს ქართული და კლასიკური მუსიკა. ხშირად კონცერტზე ვდივარ. კვირანდელს ვატარებ მეგობრებთან.",
-            "In my free time I listen to music. I like Georgian and classical music. I often go to concerts. I spend the weekend with friends.",
+            "თავისუფალ დროს მუსიკას ვსმენ. მომწონს ქართული და კლასიკური მუსიკა. — რა ჟანრი გიყვარს? — ჯაზი. ხშირად კონცერტზე ვდივარ. კვირანდელს მეგობრებთან ვატარებ.",
+            "In my free time I listen to music. I like Georgian and classical music. — What genre do you love? — Jazz. I often go to concerts. I spend the weekend with friends.",
+            [_tbl("Free time", ["Georgian", "English"], [["თავისუფალი დრო", "free time"], ["ვატარებ", "I spend (time)"], ["მოსმენა", "listening"]])],
         ),
         "8": _ex(
             ["Discuss flash mobs and social phenomena", "Describe a crowd event", "Use linking words in longer sentences", "Give your opinion on trends"],
@@ -537,13 +600,15 @@ READER_EXTRAS = {
         ),
         "10": _ex(
             ["Discuss taxes and consumer rights", "Talk about receipts and refunds", "Understand basic legal vocabulary", "Assert your rights as a consumer"],
-            "მომხმარებელს უფლება აქვს ხარისხიანი პროდუქტის. გადასახადი ყველას უნდა გადავიხადოს. ქვითარი შეინახეთ. თუ პრობლემაა, საჩივრის დაწერა შეგიძლიათ.",
-            "The consumer has the right to quality product. Everyone must pay tax. Keep the receipt. If there's a problem, you can file a complaint.",
+            "მომხმარებელს უფლება აქვს ხარისხიანი პროდუქტის. გადასახადი ყველას უნდა გადავიხადოს. — ქვითარი გაქვთ? — დიახ. თუ პრობლემაა, საჩივრის დაწერა შეგიძლიათ.",
+            "The consumer has the right to quality product. Everyone must pay tax. — Do you have a receipt? — Yes. If there's a problem, you can file a complaint.",
+            [_tbl("Consumer rights", ["Georgian", "English"], [["მომხმარებლის უფლება", "consumer right"], ["საჩივარი", "complaint"], ["ქვითარი", "receipt"]])],
         ),
         "11": _ex(
             ["Talk about regional Georgian cuisine", "Name dishes from different regions", "Describe cooking methods and ingredients", "Recommend food to visitors"],
-            "ყველა რეგიონს საკუთარი სამზარეულო აქვს. კახეთში ხინკალი და ღვინო, სვანეთში კუბდარი. იმერეთში ყველის პური ცნობილია. ყველაფერი ძალიან გემრიელია!",
-            "Every region has its own cuisine. In Kakheti khinkali and wine, in Svaneti kubdari. Imereti is famous for cheese bread. Everything is very tasty!",
+            "ყველა რეგიონს საკუთარი სამზარეულო აქვს. კახეთში ხინკალი და ღვინო, სვანეთში კუბდარი. — რა გირჩევთ? — იმერული ყველის პური. ყველაფერი ძალიან გემრიელია!",
+            "Every region has its own cuisine. In Kakheti khinkali and wine, in Svaneti kubdari. — What do you recommend? — Imeretian cheese bread. Everything is very tasty!",
+            [_tbl("Regional adjectives (-ური)", ["Region", "Adjective", "Dish"], [["სვანეთი", "სვანური", "კუბდარი"], ["კახეთი", "კახური", "ღვინო"], ["იმერეთი", "იმერული", "ხაჭაპური"]])],
         ),
         "12": _ex(
             ["Discuss healthy living in the Caucasus", "Talk about diet, sport, and nature", "Compare city and mountain life", "Give advice on wellness"],
@@ -569,7 +634,13 @@ def merge_reader_extras(lesson, book, num):
         out["reading"] = extra["reading"]
     if extra.get("grammar_tables"):
         g = out.setdefault("grammar", {})
-        g["tables"] = extra["grammar_tables"]
+        g["tables"] = list(extra["grammar_tables"])
+
+    from reader_cases import get_case_tables
+    case_tbls = get_case_tables(book, num)
+    if case_tbls:
+        g = out.setdefault("grammar", {})
+        g["tables"] = list(g.get("tables") or []) + case_tbls
 
     verb = FOCUS_VERBS.get(book, {}).get(str(num))
     if verb:
