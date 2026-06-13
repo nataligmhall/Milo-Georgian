@@ -93,10 +93,33 @@ h2 { font-size: 1rem; color: var(--accent); margin: 0 0 0.75rem; }
   font-size: 0.88rem;
   color: var(--green);
 }
-.vocab-ge { font-size: 1.35rem; font-weight: 700; letter-spacing: 0.01em; }
-.vocab-rom { color: var(--gold); font-style: italic; font-size: 0.88rem; }
-.vocab-en { font-size: 0.95rem; margin-top: 0.15rem; }
-.vocab-ru { color: var(--ru); font-size: 0.85rem; }
+.vocab-group { margin-bottom: 1.5rem; }
+.vocab-group h3 {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.65rem;
+  font-weight: 700;
+}
+.vocab-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+@media (min-width: 480px) {
+  .vocab-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.vocab-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+}
+.vocab-ge { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.01em; line-height: 1.3; }
+.vocab-rom { color: var(--gold); font-style: italic; font-size: 0.86rem; margin-top: 0.1rem; }
+.vocab-en { font-size: 0.94rem; margin-top: 0.25rem; line-height: 1.35; }
+.vocab-ru { color: var(--ru); font-size: 0.84rem; margin-top: 0.15rem; }
 details.work {
   background: var(--card);
   border: 1px solid var(--line);
@@ -160,18 +183,38 @@ def nav_links(book, num, lessons):
     return "".join(parts)
 
 
-def vocab_cards(vocab):
+def vocab_card(v):
+    rom = v.get("rom") or romanize(v["ge"])
+    ru = f'<div class="vocab-ru">🇷🇺 {esc(v.get("ru", ""))}</div>' if v.get("ru") else ""
+    return (
+        f'<div class="vocab-card">'
+        f'<div class="vocab-ge">{esc(v["ge"])}</div>'
+        f'<div class="vocab-rom">{esc(rom)}</div>'
+        f'<div class="vocab-en">{esc(v["en"])}</div>{ru}</div>'
+    )
+
+
+def vocab_sections(vocab):
+    groups = []
+    current = None
     cards = []
-    for i, v in enumerate(vocab, 1):
-        rom = v.get("rom") or romanize(v["ge"])
-        ru = f'<div class="vocab-ru">🇷🇺 {esc(v.get("ru", ""))}</div>' if v.get("ru") else ""
-        cards.append(
-            f'<div class="card">'
-            f'<div class="vocab-ge">{esc(v["ge"])}</div>'
-            f'<div class="vocab-rom">{esc(rom)}</div>'
-            f'<div class="vocab-en">{esc(v["en"])}</div>{ru}</div>'
+    for v in vocab:
+        group = v.get("group") or "Vocabulary"
+        if group != current:
+            if cards:
+                groups.append(
+                    f'<div class="vocab-group"><h3>{esc(current)}</h3>'
+                    f'<div class="vocab-grid">{"".join(cards)}</div></div>'
+                )
+            current = group
+            cards = []
+        cards.append(vocab_card(v))
+    if cards:
+        groups.append(
+            f'<div class="vocab-group"><h3>{esc(current)}</h3>'
+            f'<div class="vocab-grid">{"".join(cards)}</div></div>'
         )
-    return "\n".join(cards)
+    return "\n".join(groups)
 
 
 def worksheet_html(lesson, vocab):
@@ -224,7 +267,7 @@ def lesson_page(book, num, lesson, lessons):
 </section>
 <section>
   <h2>📚 Vocabulary</h2>
-  {vocab_cards(vocab)}
+  {vocab_sections(vocab)}
 </section>
 {worksheet_html(lesson, vocab)}
 <p class="sub" style="margin-top:1.5rem">🎧 Audio &amp; quizzes in Telegram · /audio · /quiz</p>
