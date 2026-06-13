@@ -10,6 +10,7 @@ Output: docs/  (enable Pages → Deploy from branch main, folder /docs)
 
 import html
 import json
+import random
 import shutil
 from pathlib import Path
 
@@ -284,18 +285,110 @@ details.gram-table[open] summary { border-bottom: 1px solid var(--line); }
 .audio-clip-card audio { width: 100%; margin-bottom: 0.65rem; }
 .audio-ge { font-size: 1.05rem; font-weight: 600; line-height: 1.55; }
 .audio-rom { color: var(--gold); font-style: italic; font-size: 0.86rem; margin-top: 0.2rem; }
-.audio-en-toggle {
-  margin-top: 0.55rem;
-  font-size: 0.82rem;
-  color: var(--accent);
-  cursor: pointer;
-  font-weight: 600;
-  border: none;
-  background: none;
-  padding: 0;
+.audio-en { font-size: 0.88rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.45; }
+.sentence-builder { margin: 1.5rem 0; }
+.sb-exercise {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.65rem;
 }
-.audio-en { font-size: 0.88rem; color: var(--muted); margin-top: 0.4rem; }
-.audio-en.hidden { display: none; }
+.sb-prompt { font-size: 0.9rem; margin: 0 0 0.45rem; color: var(--muted); }
+.sb-template {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.65rem;
+  letter-spacing: 0.02em;
+}
+.sb-gap { color: var(--accent); border-bottom: 2px dashed var(--gold); }
+.sb-choices { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.sb-choice {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 2px solid var(--line);
+  background: var(--bg);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sb-choice:hover { border-color: var(--gold); }
+.sb-choice.sb-right { border-color: var(--green); background: rgba(45,90,61,.12); color: var(--green); }
+.sb-choice.sb-wrong { border-color: #c45c26; background: rgba(196,92,38,.1); color: #c45c26; }
+.sb-choice:disabled { opacity: 0.55; cursor: default; }
+.sb-feedback { margin: 0.55rem 0 0; font-size: 0.88rem; }
+.sb-feedback.hidden { display: none; }
+.sb-feedback.sb-ok { color: var(--green); }
+.sb-feedback.sb-bad { color: #c45c26; }
+.flash-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,.55);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.flash-overlay.open { display: flex; }
+.flash-modal {
+  background: var(--card);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 22rem;
+  padding: 1.1rem 1.2rem 1rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,.2);
+}
+.flash-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+.flash-top span { font-size: 0.8rem; color: var(--muted); }
+.flash-close {
+  border: none; background: none; font-size: 1.25rem; cursor: pointer; color: var(--muted); padding: 0;
+}
+.flash-card {
+  min-height: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 0.85rem;
+}
+.flash-card .fc-ge { font-size: 1.65rem; font-weight: 700; line-height: 1.3; }
+.flash-card .fc-rom { color: var(--gold); font-style: italic; font-size: 0.9rem; margin-top: 0.35rem; }
+.flash-card .fc-en { font-size: 1.05rem; margin-top: 0.5rem; color: var(--ink); }
+.flash-card .fc-meta { font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }
+.flash-card .fc-hint { font-size: 0.78rem; color: var(--muted); margin-top: 0.65rem; }
+.flash-card .fc-back.hidden { display: none; }
+.flash-card .fc-hint.hidden { display: none; }
+.flash-nav { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+.flash-nav button {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--accent);
+}
+.flash-nav button:disabled { opacity: 0.4; cursor: default; }
+.flash-start-btn {
+  margin-top: 0.65rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.flash-start-btn:disabled { opacity: 0.4; cursor: default; border-color: var(--line); background: var(--line); color: var(--muted); }
 .hard-bank {
   background: var(--card);
   border: 1px solid var(--line);
@@ -426,27 +519,21 @@ footer {
 READING_JS = """\
 document.addEventListener("click", function (e) {
   var btn = e.target.closest("[data-reading-toggle]");
-  if (btn) {
-    var id = btn.dataset.readingToggle;
-    var en = document.getElementById(id + "-en");
-    if (!en) return;
-    var hidden = en.classList.toggle("hidden");
-    btn.textContent = hidden ? "Show translation" : "Hide translation";
-    return;
-  }
-  var audioBtn = e.target.closest("[data-audio-en-toggle]");
-  if (audioBtn) {
-    var en2 = document.getElementById(audioBtn.dataset.audioEnToggle);
-    if (!en2) return;
-    var h = en2.classList.toggle("hidden");
-    audioBtn.textContent = h ? "What does it mean? (not lesson vocab)" : "Hide meaning";
-  }
+  if (!btn) return;
+  var id = btn.dataset.readingToggle;
+  var en = document.getElementById(id + "-en");
+  if (!en) return;
+  var hidden = en.classList.toggle("hidden");
+  btn.textContent = hidden ? "Show translation" : "Hide translation";
 });
 """
 
 HARD_WORDS_JS = """\
 (function () {
   const KEY = "milo-hard-words";
+  var flashKeys = [];
+  var flashIdx = 0;
+  var flashFlipped = false;
 
   function load() {
     try { return JSON.parse(localStorage.getItem(KEY) || "{}"); }
@@ -457,10 +544,16 @@ HARD_WORDS_JS = """\
     localStorage.setItem(KEY, JSON.stringify(data));
     syncFlags(data);
     renderBank(data);
+    updateFlashStart(data);
   }
 
-  function wordKey(book, lesson, ge) {
-    return book + "-" + lesson + "-" + ge;
+  function sortedKeys(data) {
+    return Object.keys(data).filter(function (k) { return data[k]; }).sort(function (a, b) {
+      var da = data[a], db = data[b];
+      if (da.book !== db.book) return da.book < db.book ? -1 : 1;
+      if (da.lesson !== db.lesson) return parseInt(da.lesson, 10) - parseInt(db.lesson, 10);
+      return a < b ? -1 : 1;
+    });
   }
 
   function syncFlags(data) {
@@ -474,22 +567,25 @@ HARD_WORDS_JS = """\
     });
   }
 
+  function updateFlashStart(data) {
+    var btn = document.getElementById("flash-start-btn");
+    if (!btn) return;
+    var n = sortedKeys(data).length;
+    btn.disabled = n === 0;
+    btn.textContent = n ? "Start flashcards (" + n + ")" : "Start flashcards";
+  }
+
   function renderBank(data) {
     var root = document.getElementById("hard-words-bank");
     if (!root) return;
-    var keys = Object.keys(data).filter(function (k) { return data[k]; });
+    var keys = sortedKeys(data);
     var countEl = document.getElementById("hard-bank-count");
     if (countEl) countEl.textContent = keys.length ? keys.length + " word" + (keys.length === 1 ? "" : "s") : "";
+    updateFlashStart(data);
     if (!keys.length) {
       root.innerHTML = '<p class="hard-bank-empty">No flagged words yet. Tap ⚑ on any vocab card in a lesson.</p>';
       return;
     }
-    keys.sort(function (a, b) {
-      var da = data[a], db = data[b];
-      if (da.book !== db.book) return da.book < db.book ? -1 : 1;
-      if (da.lesson !== db.lesson) return parseInt(da.lesson, 10) - parseInt(db.lesson, 10);
-      return a < b ? -1 : 1;
-    });
     var html = '<div class="hard-bank-grid">';
     keys.forEach(function (id) {
       var w = data[id];
@@ -509,6 +605,51 @@ HARD_WORDS_JS = """\
     root.innerHTML = html;
   }
 
+  function renderFlashCard() {
+    var data = load();
+    var card = document.getElementById("flash-card");
+    var counter = document.getElementById("flash-counter");
+    if (!card || !flashKeys.length) return;
+    var w = data[flashKeys[flashIdx]];
+    if (!w) return;
+    flashFlipped = false;
+    if (counter) counter.textContent = (flashIdx + 1) + " / " + flashKeys.length;
+    var ru = w.ru ? '<div class="fc-meta">🇷🇺 ' + w.ru + "</div>" : "";
+    card.innerHTML =
+      '<div class="fc-ge">' + w.ge + '</div>' +
+      '<div class="fc-rom">' + (w.rom || "") + '</div>' +
+      '<div class="fc-hint">Tap to flip</div>' +
+      '<div class="fc-back hidden">' +
+      '<div class="fc-en">' + (w.en || "") + '</div>' + ru +
+      '<div class="fc-meta">' + w.book.toUpperCase() + " L" + w.lesson + '</div></div>';
+    document.getElementById("flash-prev").disabled = flashIdx === 0;
+    document.getElementById("flash-next").disabled = flashIdx >= flashKeys.length - 1;
+  }
+
+  function openFlash() {
+    var data = load();
+    flashKeys = sortedKeys(data);
+    if (!flashKeys.length) return;
+    flashIdx = 0;
+    document.getElementById("flash-overlay").classList.add("open");
+    document.body.style.overflow = "hidden";
+    renderFlashCard();
+  }
+
+  function closeFlash() {
+    document.getElementById("flash-overlay").classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  function flipFlash() {
+    var back = document.querySelector("#flash-card .fc-back");
+    var hint = document.querySelector("#flash-card .fc-hint");
+    if (!back) return;
+    flashFlipped = !flashFlipped;
+    back.classList.toggle("hidden", !flashFlipped);
+    if (hint) hint.classList.toggle("hidden", flashFlipped);
+  }
+
   document.addEventListener("click", function (e) {
     var btn = e.target.closest(".hard-flag-btn");
     if (btn) {
@@ -516,16 +657,12 @@ HARD_WORDS_JS = """\
       var id = btn.dataset.wordId;
       if (!id) return;
       var data = load();
-      if (data[id]) {
-        delete data[id];
-      } else {
+      if (data[id]) delete data[id];
+      else {
         data[id] = {
-          ge: btn.dataset.ge || "",
-          en: btn.dataset.en || "",
-          rom: btn.dataset.rom || "",
-          ru: btn.dataset.ru || "",
-          book: btn.dataset.book || "",
-          lesson: btn.dataset.lesson || ""
+          ge: btn.dataset.ge || "", en: btn.dataset.en || "",
+          rom: btn.dataset.rom || "", ru: btn.dataset.ru || "",
+          book: btn.dataset.book || "", lesson: btn.dataset.lesson || ""
         };
       }
       save(data);
@@ -544,12 +681,68 @@ HARD_WORDS_JS = """\
       if (!el) return;
       var hid = el.classList.toggle("hidden");
       show.textContent = hid ? "Show meaning" : "Hide meaning";
+      return;
     }
+    if (e.target.id === "flash-start-btn") { openFlash(); return; }
+    if (e.target.id === "flash-close") { closeFlash(); return; }
+    if (e.target.id === "flash-overlay") { closeFlash(); return; }
+    if (e.target.closest("#flash-card")) { flipFlash(); return; }
+    if (e.target.id === "flash-prev" && flashIdx > 0) {
+      flashIdx--; renderFlashCard(); return;
+    }
+    if (e.target.id === "flash-next" && flashIdx < flashKeys.length - 1) {
+      flashIdx++; renderFlashCard(); return;
+    }
+    if (e.target.id === "flash-shuffle") {
+      for (var i = flashKeys.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = flashKeys[i]; flashKeys[i] = flashKeys[j]; flashKeys[j] = t;
+      }
+      flashIdx = 0; renderFlashCard();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    var ov = document.getElementById("flash-overlay");
+    if (!ov || !ov.classList.contains("open")) return;
+    if (e.key === "Escape") closeFlash();
+    if (e.key === "ArrowLeft" && flashIdx > 0) { flashIdx--; renderFlashCard(); }
+    if (e.key === "ArrowRight" && flashIdx < flashKeys.length - 1) { flashIdx++; renderFlashCard(); }
+    if (e.key === " ") { e.preventDefault(); flipFlash(); }
   });
 
   var initial = load();
   syncFlags(initial);
   renderBank(initial);
+})();
+"""
+
+SENTENCE_BUILDER_JS = """\
+(function () {
+  document.querySelectorAll(".sb-exercise").forEach(function (ex) {
+    var answered = false;
+    var full = ex.dataset.full || "";
+    ex.querySelectorAll(".sb-choice").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        if (answered) return;
+        answered = true;
+        var ok = btn.dataset.correct === "1";
+        btn.classList.add(ok ? "sb-right" : "sb-wrong");
+        if (!ok) {
+          var right = ex.querySelector('.sb-choice[data-correct="1"]');
+          if (right) right.classList.add("sb-right");
+        }
+        var fb = ex.querySelector(".sb-feedback");
+        if (fb) {
+          fb.textContent = ok ? "✓ " + full : "✗ Correct: " + full;
+          fb.className = "sb-feedback " + (ok ? "sb-ok" : "sb-bad");
+        }
+        ex.querySelectorAll(".sb-choice").forEach(function (b) {
+          if (b.dataset.correct !== "1" && b !== btn) b.disabled = true;
+        });
+      });
+    });
+  });
 })();
 """
 
@@ -769,19 +962,8 @@ def practice_audio_html(lesson):
     audio = lesson.get("practice_audio")
     if not audio or not audio.get("file"):
         return ""
-    aid = f"audio-{lesson.get('_rid', 'x')}"
     en = (audio.get("en") or "").strip()
-    en_block = (
-        f'<div class="audio-en hidden" id="{aid}-en">{esc(en)}</div>'
-        if en
-        else ""
-    )
-    en_btn = (
-        f'<button type="button" class="audio-en-toggle" data-audio-en-toggle="{aid}">'
-        f"What does it mean? (not lesson vocab)</button>{en_block}"
-        if en
-        else ""
-    )
+    en_block = f'<div class="audio-en">→ {esc(en)}</div>' if en else ""
     disclaimer = (
         "This clip is from <b>Mozilla Common Voice</b> — free, royalty-free recordings "
         "by native Georgian speakers. It's here for <b>listening and pronunciation practice only</b>: "
@@ -796,7 +978,41 @@ def practice_audio_html(lesson):
         f'<audio controls preload="none" src="../audio/{esc(audio["file"])}"></audio>'
         f'<div class="audio-ge">{esc(audio.get("ge", ""))}</div>'
         f'<div class="audio-rom">{esc(audio.get("rom", ""))}</div>'
-        f"{en_btn}</div></section>"
+        f"{en_block}</div></section>"
+    )
+
+
+def sentence_builder_html(lesson, book, num):
+    exercises = lesson.get("sentence_builder") or []
+    if not exercises:
+        return ""
+    items = []
+    for i, ex in enumerate(exercises):
+        opts = list(ex["options"])
+        rng = random.Random(f"{book}-{num}-sb-{i}")
+        rng.shuffle(opts)
+        tpl = esc(ex["template"])
+        display = tpl.replace("___", '<span class="sb-gap">___</span>')
+        full = esc(ex["template"].replace("___", ex["answer"]))
+        buttons = []
+        for opt in opts:
+            correct = "1" if opt == ex["answer"] else "0"
+            buttons.append(
+                f'<button type="button" class="sb-choice" data-correct="{correct}">'
+                f"{esc(opt)}</button>"
+            )
+        items.append(
+            f'<div class="sb-exercise" data-full="{full}">'
+            f'<p class="sb-prompt">{esc(ex["en"])}</p>'
+            f'<div class="sb-template">{display}</div>'
+            f'<div class="sb-choices">{"".join(buttons)}</div>'
+            f'<p class="sb-feedback hidden"></p></div>'
+        )
+    return (
+        f'<section class="sentence-builder"><h2>🧩 Sentence builder</h2>'
+        f'<p class="sub" style="margin:-0.35rem 0 0.75rem">'
+        f"Tap the correct word to complete each sentence.</p>"
+        f'{"".join(items)}</section>'
     )
 
 
@@ -931,6 +1147,7 @@ def lesson_page(book, num, lesson, lessons):
   <p class="sub" style="margin:-0.35rem 0 0.75rem">Tap ⚑ to flag hard words — they go to your review bank on the homepage.</p>
   {vocab_sections(vocab, book, num)}
 </section>
+{sentence_builder_html(lesson, book, num)}
 {worksheet_html(lesson, vocab)}
 {practice_audio_html(lesson)}
 <p class="sub" style="margin-top:1.5rem">🎧 More audio &amp; quizzes in Telegram · /audio · /quiz</p>
@@ -938,6 +1155,7 @@ def lesson_page(book, num, lesson, lessons):
 </div>
 <script src="../progress.js"></script>
 <script src="../hard-words.js"></script>
+<script src="../sentence-builder.js"></script>
 <script src="../reading.js"></script>
 </body>
 </html>"""
@@ -989,9 +1207,24 @@ def index_page(lessons):
   <h2>🚩 Hard words bank <span id="hard-bank-count" class="sub-bank"></span></h2>
   <p class="sub-bank">Words you flagged for extra review. Georgian shown first — tap Show meaning to quiz yourself. Stored on this device only.</p>
   <div id="hard-words-bank"><p class="hard-bank-empty">No flagged words yet. Tap ⚑ on any vocab card in a lesson.</p></div>
+  <button type="button" class="flash-start-btn" id="flash-start-btn" disabled>Start flashcards</button>
 </section>
 <div class="book-grid">{"".join(blocks)}</div>
 <footer>Milo Georgian Tutor · <a href="https://www.geofl.ge/">geofl.ge</a></footer>
+</div>
+<div class="flash-overlay" id="flash-overlay">
+  <div class="flash-modal" id="flash-modal">
+    <div class="flash-top">
+      <span id="flash-counter">1 / 1</span>
+      <button type="button" class="flash-close" id="flash-close" aria-label="Close">×</button>
+    </div>
+    <div class="flash-card" id="flash-card"></div>
+    <div class="flash-nav">
+      <button type="button" id="flash-prev">← Prev</button>
+      <button type="button" id="flash-shuffle">Shuffle</button>
+      <button type="button" id="flash-next">Next →</button>
+    </div>
+  </div>
 </div>
 <script src="progress.js"></script>
 <script src="hard-words.js"></script>
@@ -1083,6 +1316,7 @@ def build():
     (READER_DIR / "style.css").write_text(CSS, encoding="utf-8")
     (READER_DIR / "progress.js").write_text(PROGRESS_JS, encoding="utf-8")
     (READER_DIR / "hard-words.js").write_text(HARD_WORDS_JS, encoding="utf-8")
+    (READER_DIR / "sentence-builder.js").write_text(SENTENCE_BUILDER_JS, encoding="utf-8")
     (READER_DIR / "reading.js").write_text(READING_JS, encoding="utf-8")
     (READER_DIR / ".nojekyll").touch()
     (READER_DIR / "index.html").write_text(index_page(lessons), encoding="utf-8")

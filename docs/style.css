@@ -261,18 +261,110 @@ details.gram-table[open] summary { border-bottom: 1px solid var(--line); }
 .audio-clip-card audio { width: 100%; margin-bottom: 0.65rem; }
 .audio-ge { font-size: 1.05rem; font-weight: 600; line-height: 1.55; }
 .audio-rom { color: var(--gold); font-style: italic; font-size: 0.86rem; margin-top: 0.2rem; }
-.audio-en-toggle {
-  margin-top: 0.55rem;
-  font-size: 0.82rem;
-  color: var(--accent);
-  cursor: pointer;
-  font-weight: 600;
-  border: none;
-  background: none;
-  padding: 0;
+.audio-en { font-size: 0.88rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.45; }
+.sentence-builder { margin: 1.5rem 0; }
+.sb-exercise {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.65rem;
 }
-.audio-en { font-size: 0.88rem; color: var(--muted); margin-top: 0.4rem; }
-.audio-en.hidden { display: none; }
+.sb-prompt { font-size: 0.9rem; margin: 0 0 0.45rem; color: var(--muted); }
+.sb-template {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.65rem;
+  letter-spacing: 0.02em;
+}
+.sb-gap { color: var(--accent); border-bottom: 2px dashed var(--gold); }
+.sb-choices { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.sb-choice {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 2px solid var(--line);
+  background: var(--bg);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sb-choice:hover { border-color: var(--gold); }
+.sb-choice.sb-right { border-color: var(--green); background: rgba(45,90,61,.12); color: var(--green); }
+.sb-choice.sb-wrong { border-color: #c45c26; background: rgba(196,92,38,.1); color: #c45c26; }
+.sb-choice:disabled { opacity: 0.55; cursor: default; }
+.sb-feedback { margin: 0.55rem 0 0; font-size: 0.88rem; }
+.sb-feedback.hidden { display: none; }
+.sb-feedback.sb-ok { color: var(--green); }
+.sb-feedback.sb-bad { color: #c45c26; }
+.flash-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,.55);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.flash-overlay.open { display: flex; }
+.flash-modal {
+  background: var(--card);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 22rem;
+  padding: 1.1rem 1.2rem 1rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,.2);
+}
+.flash-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+.flash-top span { font-size: 0.8rem; color: var(--muted); }
+.flash-close {
+  border: none; background: none; font-size: 1.25rem; cursor: pointer; color: var(--muted); padding: 0;
+}
+.flash-card {
+  min-height: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 0.85rem;
+}
+.flash-card .fc-ge { font-size: 1.65rem; font-weight: 700; line-height: 1.3; }
+.flash-card .fc-rom { color: var(--gold); font-style: italic; font-size: 0.9rem; margin-top: 0.35rem; }
+.flash-card .fc-en { font-size: 1.05rem; margin-top: 0.5rem; color: var(--ink); }
+.flash-card .fc-meta { font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }
+.flash-card .fc-hint { font-size: 0.78rem; color: var(--muted); margin-top: 0.65rem; }
+.flash-card .fc-back.hidden { display: none; }
+.flash-card .fc-hint.hidden { display: none; }
+.flash-nav { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+.flash-nav button {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--accent);
+}
+.flash-nav button:disabled { opacity: 0.4; cursor: default; }
+.flash-start-btn {
+  margin-top: 0.65rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.flash-start-btn:disabled { opacity: 0.4; cursor: default; border-color: var(--line); background: var(--line); color: var(--muted); }
 .hard-bank {
   background: var(--card);
   border: 1px solid var(--line);

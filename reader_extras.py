@@ -575,6 +575,11 @@ def merge_reader_extras(lesson, book, num):
     if verb:
         out["focus_verb"] = verb
 
+    from reader_sentences import get_sentence_exercises
+    exercises = get_sentence_exercises(book, num)
+    if exercises:
+        out["sentence_builder"] = exercises
+
     if lesson.get("practice_audio"):
         out["practice_audio"] = lesson["practice_audio"]
 
