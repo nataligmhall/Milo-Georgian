@@ -734,20 +734,27 @@ def copy_collage_assets():
 def culture_strip_html():
     kh = collage_href(COLLAGE["khinkali"])
     wine = collage_href(COLLAGE["wine"])
-    ch = collage_href(COLLAGE["churchkhela"])
+    kha = collage_href(COLLAGE["khachapuri"])
     tags = "".join(f'<span class="culture-tag">{t}</span>' for t in CULTURE_TAGS)
     return f"""<section class="culture-strip" id="culture">
-  <p class="culture-kicker">№ 04 — CULTURE SUPPLEMENT</p>
-  <h2 class="culture-headline">You're not <em>studying.</em><br>You're packing.</h2>
-  <p class="culture-body">Every lesson smuggles in a piece of Georgia — a khinkali fold, a supra toast, a 4&nbsp;a.m. cab driver telling you about his grandmother in Kakheti.</p>
-  <div class="culture-tags">{tags}</div>
-  <div class="culture-deco" aria-hidden="true">
-    <div class="culture-polaroid">
-      <div class="culture-polaroid-img"><img src="{ch}" alt="" loading="lazy" width="200" height="200"></div>
-      <p class="culture-polaroid-cap">churchkhela</p>
+  <div class="culture-strip-inner">
+    <div class="culture-strip-copy">
+      <p class="culture-kicker">№ 04 — CULTURE SUPPLEMENT</p>
+      <h2 class="culture-headline">You're not <em>studying.</em><br>You're packing.</h2>
+      <p class="culture-body">Every lesson smuggles in a piece of Georgia — a khinkali fold, a supra toast, a 4&nbsp;a.m. cab driver telling you about his grandmother in Kakheti.</p>
+      <div class="culture-tags">{tags}</div>
     </div>
-    <img class="culture-cutout culture-cutout--screen culture-khinkali" src="{kh}" alt="" loading="lazy" width="220" height="220">
-    <img class="culture-cutout culture-cutout--screen culture-wine" src="{wine}" alt="" loading="lazy" width="110" height="280">
+    <div class="culture-gallery" aria-hidden="true">
+      <div class="culture-sticker-pad culture-sticker-pad--khachapuri">
+        <img src="{kha}" alt="" loading="lazy" width="170" height="110">
+      </div>
+      <div class="culture-sticker-pad culture-sticker-pad--khinkali">
+        <img src="{kh}" alt="" loading="lazy" width="150" height="150">
+      </div>
+      <div class="culture-sticker-pad culture-sticker-pad--wine">
+        <img src="{wine}" alt="" loading="lazy" width="94" height="240">
+      </div>
+    </div>
   </div>
 </section>"""
 
@@ -799,9 +806,10 @@ def syllabus_block_html(book, lessons):
         f'<section class="syllabus-block" id="syllabus-{book}">'
         f'<p class="syllabus-kicker">№ {issue} — THE SYLLABUS</p>'
         f'<div class="syllabus-head">'
+        f'<div class="syllabus-head-text">'
         f'<h2>{esc(level_code)} — <span class="level-red">{esc(level_name)}</span></h2>'
         f'<p class="syllabus-blurb">{esc(meta.get("blurb", ""))}</p>'
-        f'{polaroid}</div>'
+        f'</div>{polaroid}</div>'
         f'<ul class="lesson-list">{"".join(cards)}</ul></section>'
     )
 
@@ -814,13 +822,6 @@ def index_page(lessons):
             continue
         total += len(lessons[book])
         blocks.append(syllabus_block_html(book, lessons))
-
-    a1 = BOOK_ZINE.get("a1", {})
-    sticker_ge = a1.get("sticker_ge", "გამარჯობა")
-    sticker_en = a1.get("sticker_en", "HELLO · LESSON 01")
-
-    kh = collage_href(COLLAGE["khachapuri"])
-    wine = collage_href(COLLAGE["wine"])
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -861,18 +862,6 @@ def index_page(lessons):
     <a class="btn-primary" href="#lessons">Start speaking →</a>
     <a class="btn-secondary" href="#word-bank">Flip flashcards ★</a>
     <span class="hero-aside">— no PDFs, no nonsense.</span>
-  </div>
-  <div class="hero-collage" aria-hidden="true">
-    <img class="collage-cutout collage-cutout--screen collage-khachapuri" src="{kh}" alt="" loading="lazy" width="320" height="200">
-    <div class="collage-sticker">
-      <div class="st-ge">{esc(sticker_ge)}</div>
-      <div class="st-en">{esc(sticker_en)}</div>
-    </div>
-    <img class="collage-cutout collage-cutout--screen collage-wine-hero" src="{wine}" alt="" loading="lazy" width="88" height="220">
-    <div class="collage-stamp">
-      <span class="stamp-floral">✿</span>
-      <span>GEORGIA</span>
-    </div>
   </div>
 </section>
 

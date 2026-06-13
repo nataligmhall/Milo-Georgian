@@ -291,99 +291,6 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--muted);
   font-style: italic;
 }
-.hero-collage {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.75rem;
-  justify-content: center;
-}
-.collage-sticker {
-  background: var(--card);
-  border: 1px solid var(--line);
-  padding: 0.75rem 1rem;
-  border-radius: 4px;
-  box-shadow: var(--shadow);
-  transform: rotate(2deg);
-  max-width: 11rem;
-  position: relative;
-}
-.collage-sticker::before {
-  content: "";
-  position: absolute;
-  top: -0.45rem;
-  left: 50%;
-  transform: translateX(-50%) rotate(-2deg);
-  width: 3.5rem;
-  height: 1.1rem;
-  background: var(--tape);
-  opacity: 0.75;
-  border-radius: 2px;
-}
-.collage-sticker .st-ge {
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 400;
-  line-height: 1.2;
-}
-.collage-sticker .st-en {
-  font-family: var(--mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-  margin-top: 0.35rem;
-}
-.collage-stamp {
-  width: 4.5rem;
-  height: 5.5rem;
-  border: 3px dashed var(--red);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--mono);
-  font-size: 0.5rem;
-  letter-spacing: 0.15em;
-  color: var(--red);
-  transform: rotate(-6deg);
-  background: var(--card);
-  padding: 0.35rem;
-  text-align: center;
-}
-.collage-stamp .stamp-floral { font-size: 1.4rem; line-height: 1; }
-.collage-cutout {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  filter: drop-shadow(3px 5px 8px rgba(26, 22, 20, 0.22));
-}
-.collage-cutout--screen {
-  mix-blend-mode: screen;
-}
-.collage-khachapuri {
-  width: min(11rem, 42vw);
-  transform: rotate(-8deg);
-}
-.collage-wine-hero {
-  width: min(3.5rem, 14vw);
-  transform: rotate(6deg);
-  margin-top: 1rem;
-  position: relative;
-}
-.collage-wine-hero::before {
-  content: "";
-  position: absolute;
-  top: -0.35rem;
-  left: 20%;
-  width: 2.5rem;
-  height: 0.85rem;
-  background: var(--tape);
-  opacity: 0.8;
-  transform: rotate(-8deg);
-  border-radius: 2px;
-  z-index: 1;
-}
 .site-footer-bar {
   margin-top: 2.5rem;
   padding-top: 1rem;
@@ -410,7 +317,6 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 1.35rem 1.25rem 1.15rem;
   margin: 0 0 2rem;
   position: relative;
-  overflow: hidden;
 }
 .culture-kicker {
   font-family: var(--serif);
@@ -425,16 +331,60 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 400;
   line-height: 1.15;
   margin: 0 0 0.85rem;
-  max-width: 20rem;
 }
 .culture-headline em { font-style: italic; color: var(--gold); }
 .culture-body {
   font-size: 0.88rem;
   line-height: 1.6;
   opacity: 0.92;
-  max-width: 26rem;
-  margin: 0 0 1.1rem;
+  margin: 0 0 1rem;
 }
+.culture-strip-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.culture-strip-copy { flex: 1 1 14rem; min-width: 0; }
+.culture-gallery {
+  display: flex;
+  flex: 0 1 auto;
+  gap: 0.75rem;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0.15rem;
+}
+.culture-sticker-pad {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 10px;
+  padding: 0.35rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.28);
+  line-height: 0;
+}
+.culture-sticker-pad img {
+  display: block;
+  width: 3.75rem;
+  height: auto;
+}
+.culture-sticker-pad--khachapuri { transform: rotate(-5deg); }
+.culture-sticker-pad--khachapuri img { width: 4.25rem; }
+.culture-sticker-pad--khinkali { transform: rotate(4deg); }
+.culture-sticker-pad--wine { transform: rotate(-3deg); position: relative; }
+.culture-sticker-pad--wine::before {
+  content: "";
+  position: absolute;
+  top: -0.3rem;
+  left: 15%;
+  width: 2.5rem;
+  height: 0.65rem;
+  background: var(--tape);
+  opacity: 0.9;
+  transform: rotate(-10deg);
+  border-radius: 1px;
+  z-index: 1;
+}
+.culture-sticker-pad--wine img { width: 2.35rem; }
 .culture-tags {
   display: flex;
   flex-wrap: wrap;
@@ -449,87 +399,15 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 999px;
   color: #fff;
 }
-.culture-deco {
-  position: absolute;
-  right: 0.25rem;
-  top: 0.75rem;
-  width: 9rem;
-  height: 9.5rem;
-  pointer-events: none;
-}
-.culture-polaroid {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 4.25rem;
-  background: #fff;
-  padding: 0.3rem 0.3rem 0.9rem;
-  box-shadow: 0 4px 14px rgba(0,0,0,.35);
-  transform: rotate(7deg);
-  z-index: 2;
-}
-.culture-polaroid-img {
-  aspect-ratio: 1;
-  overflow: hidden;
-}
-.culture-polaroid-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.culture-polaroid-cap {
-  font-family: var(--script);
-  font-size: 0.62rem;
-  color: var(--burgundy);
-  text-align: center;
-  margin: 0.3rem 0 0;
-  line-height: 1;
-  opacity: 0.9;
-}
-.culture-cutout {
-  position: absolute;
-  display: block;
-  filter: drop-shadow(2px 4px 6px rgba(0,0,0,.35));
-}
-.culture-cutout--screen { mix-blend-mode: screen; }
-.culture-khinkali {
-  width: 5rem;
-  right: 3.75rem;
-  top: 2.25rem;
-  transform: rotate(-6deg);
-}
-.culture-wine {
-  width: 2.5rem;
-  right: 0.15rem;
-  top: 4.75rem;
-  transform: rotate(8deg);
-}
-.culture-wine::before {
-  content: "";
-  position: absolute;
-  top: 0.15rem;
-  left: 10%;
-  width: 2.2rem;
-  height: 0.7rem;
-  background: var(--tape);
-  opacity: 0.85;
-  transform: rotate(-12deg);
-  border-radius: 1px;
-}
-@media (max-width: 520px) {
-  .culture-deco {
-    position: relative;
-    right: auto;
-    top: auto;
-    width: 100%;
-    height: 6.5rem;
-    margin-top: 0.75rem;
-    opacity: 0.95;
+@media (max-width: 480px) {
+  .culture-gallery {
+    flex: 1 1 100%;
+    justify-content: space-around;
+    gap: 0.5rem;
   }
-  .culture-polaroid { right: auto; left: 0; top: 0; width: 3.75rem; }
-  .culture-khinkali { right: auto; left: 50%; top: 0.5rem; width: 4rem; }
-  .culture-wine { right: auto; left: 78%; top: 2rem; width: 2rem; }
+  .culture-sticker-pad img { width: 3.25rem; }
+  .culture-sticker-pad--khachapuri img { width: 3.75rem; }
+  .culture-sticker-pad--wine img { width: 2rem; }
 }
 
 /* ── Syllabus blocks ── */
@@ -543,8 +421,13 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 0 0 0.5rem;
 }
 .syllabus-head {
-  margin-bottom: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 5.75rem;
+  gap: 0.35rem 1rem;
+  align-items: start;
+  margin-bottom: 1rem;
 }
+.syllabus-head-text { min-width: 0; }
 .syllabus-head h2 {
   font-family: var(--serif);
   font-size: clamp(2rem, 8vw, 2.75rem);
@@ -560,18 +443,19 @@ img { max-width: 100%; height: auto; display: block; }
 .syllabus-blurb {
   font-size: 0.9rem;
   color: var(--muted);
-  margin: 0 0 0.85rem;
-  max-width: 26rem;
+  margin: 0;
   line-height: 1.55;
 }
 .syllabus-polaroid {
-  display: inline-block;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  justify-self: end;
   background: #fff;
-  padding: 0.45rem 0.45rem 1.6rem;
+  padding: 0.35rem 0.35rem 1.15rem;
   box-shadow: var(--shadow);
-  transform: rotate(-3deg);
-  max-width: 9rem;
-  margin-bottom: 0.5rem;
+  transform: rotate(3deg);
+  width: 5.75rem;
+  margin: 0;
 }
 .syllabus-polaroid .pol-img {
   width: 100%;
@@ -587,11 +471,18 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .syllabus-polaroid .pol-cap {
   font-family: var(--script);
-  font-size: 0.78rem;
+  font-size: 0.62rem;
   color: var(--muted);
   text-align: center;
-  margin-top: 0.45rem;
-  line-height: 1.2;
+  margin-top: 0.35rem;
+  line-height: 1.15;
+}
+@media (max-width: 380px) {
+  .syllabus-head {
+    grid-template-columns: 1fr 4.75rem;
+    gap: 0.35rem 0.65rem;
+  }
+  .syllabus-polaroid { width: 4.75rem; padding-bottom: 0.95rem; }
 }
 .lesson-card-wrap { list-style: none; margin: 0 0 0.55rem; padding: 0; }
 .lesson-card-wrap.done .lesson-card { opacity: 0.72; }
