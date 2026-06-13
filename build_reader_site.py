@@ -20,6 +20,16 @@ from reader_extras import merge_reader_extras
 from worksheet import build_worksheet_exercises
 
 BOOK_ORDER = ("a1", "a2", "a2plus", "b1")
+GE_DIR = Path(__file__).resolve().parent
+LOGO_SRC = GE_DIR / "assets" / "milo-logo.png"
+
+FAVICON_INDEX = """\
+<link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">"""
+
+FAVICON_LESSON = """\
+<link rel="icon" type="image/png" sizes="512x512" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">"""
 
 CSS = """\
 :root {
@@ -1115,6 +1125,7 @@ def lesson_page(book, num, lesson, lessons):
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>{esc(label)} L{num} — {esc(lesson.get('title', ''))}</title>
+{FAVICON_LESSON}
 <link rel="stylesheet" href="../style.css">
 </head>
 <body data-lesson="{lesson_id}">
@@ -1191,6 +1202,7 @@ def index_page(lessons):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Georgian Lessons — აღმართი Reader</title>
+{FAVICON_INDEX}
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-total-lessons="{total}">
@@ -1312,6 +1324,9 @@ def build():
         lessons = json.load(f)
 
     READER_DIR.mkdir(parents=True, exist_ok=True)
+    if LOGO_SRC.exists():
+        shutil.copy2(LOGO_SRC, READER_DIR / "favicon.png")
+        shutil.copy2(LOGO_SRC, READER_DIR / "apple-touch-icon.png")
     audio_manifest = prepare_lesson_audio(lessons)
     (READER_DIR / "style.css").write_text(CSS, encoding="utf-8")
     (READER_DIR / "progress.js").write_text(PROGRESS_JS, encoding="utf-8")
