@@ -17,6 +17,7 @@ from pathlib import Path
 from config import CLIPS_DIR, DATASET, LESSON_DATA, READER_DIR, TRANSLATIONS, romanize
 from level_placement import BOOK_LABELS
 from reader_extras import merge_reader_extras
+from reader_theme import BOOK_ZINE, CSS, CULTURE_TAGS, FONTS_HEAD
 from worksheet import build_worksheet_exercises
 
 BOOK_ORDER = ("a1", "a2", "a2plus", "b1")
@@ -31,515 +32,7 @@ FAVICON_LESSON = """\
 <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">"""
 
-CSS = """\
-:root {
-  --bg: #f5f0eb;
-  --card: #fff;
-  --ink: #1a1a1a;
-  --muted: #777;
-  --accent: #8b4513;
-  --gold: #c8a96e;
-  --ru: #6b4fa0;
-  --green: #2d5a3d;
-  --line: #e8dfd4;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1a1816;
-    --card: #252220;
-    --ink: #f0ebe4;
-    --muted: #9a9088;
-    --accent: #d4a574;
-    --gold: #c8a96e;
-    --ru: #b09ad4;
-    --green: #7ecf9a;
-    --line: #3a3530;
-  }
-}
-* { box-sizing: border-box; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  margin: 0;
-  padding: 0 0 5rem;
-  line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
-}
-.wrap { max-width: 42rem; margin: 0 auto; padding: 1rem 1rem 2rem; }
-header { margin-bottom: 1.25rem; }
-.brand { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--gold); font-weight: 700; }
-h1 { font-size: 1.35rem; margin: 0.25rem 0 0.35rem; color: var(--accent); line-height: 1.25; }
-.sub { font-size: 0.85rem; color: var(--muted); margin: 0; }
-nav.top { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
-nav.top a, .pill {
-  display: inline-block;
-  padding: 0.45rem 0.75rem;
-  border-radius: 999px;
-  background: var(--card);
-  border: 1px solid var(--line);
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-nav.top a:hover { border-color: var(--gold); }
-.done-btn {
-  flex-shrink: 0;
-  width: 1.75rem;
-  height: 1.75rem;
-  border-radius: 50%;
-  border: 2px solid var(--line);
-  background: var(--card);
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0;
-}
-.done-btn.done { border-color: var(--green); background: rgba(45,90,61,.12); color: var(--green); }
-.progress-bar {
-  margin: 0.75rem 0 1rem;
-  font-size: 0.82rem;
-  color: var(--muted);
-}
-.progress-track {
-  height: 6px;
-  background: var(--line);
-  border-radius: 999px;
-  overflow: hidden;
-  margin-top: 0.35rem;
-}
-.progress-fill { height: 100%; background: var(--green); border-radius: 999px; width: 0%; transition: width .2s; }
-.lesson-row {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin: 0.35rem 0;
-  padding: 0.2rem 0;
-  border-bottom: 1px solid var(--line);
-}
-.lesson-row.done a { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--green); }
-.lesson-row a {
-  flex: 1;
-  color: var(--ink);
-  text-decoration: none;
-  font-size: 0.92rem;
-  padding: 0.2rem 0;
-}
-.lesson-row a:hover { color: var(--accent); }
-.lesson-done-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin-top: 0.5rem;
-  font-size: 0.88rem;
-  color: var(--muted);
-  cursor: pointer;
-  user-select: none;
-}
-.lesson-done-toggle input { width: 1.1rem; height: 1.1rem; accent-color: var(--green); }
-.phrase-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 0.85rem 1rem;
-  margin-bottom: 0.55rem;
-}
-.phrase-ge { font-size: 1.1rem; font-weight: 600; }
-.phrase-en { font-size: 0.9rem; margin-top: 0.2rem; }
-.phrase-ru { color: var(--ru); font-size: 0.84rem; margin-top: 0.1rem; }
-.grammar ul { margin: 0.5rem 0 0; padding-left: 1.1rem; font-size: 0.92rem; }
-.grammar ul li { margin: 0.25rem 0; }
-details.gram-table {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  margin: 0.55rem 0;
-  overflow: hidden;
-}
-details.gram-table summary {
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 700;
-  padding: 0.65rem 0.85rem;
-  color: var(--accent);
-}
-details.gram-table[open] summary { border-bottom: 1px solid var(--line); }
-.table-wrap { overflow-x: auto; padding: 0 0.5rem 0.5rem; }
-.gram-table table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.86rem;
-}
-.gram-table th, .gram-table td {
-  padding: 0.45rem 0.55rem;
-  text-align: left;
-  border-bottom: 1px solid var(--line);
-}
-.gram-table th { color: var(--muted); font-weight: 600; font-size: 0.78rem; }
-.gram-table td:first-child { color: var(--muted); }
-.gram-table .cell-ge { font-weight: 600; font-size: 0.95rem; }
-.table-note {
-  margin: 0 0.85rem 0.65rem;
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-.can-do {
-  background: rgba(200, 169, 110, 0.12);
-  border: 1px solid var(--gold);
-  border-radius: 14px;
-  padding: 1rem 1.1rem;
-  margin: 1.25rem 0;
-}
-.can-do h2 { margin: 0 0 0.55rem; font-size: 0.95rem; }
-.can-do ul { margin: 0; padding-left: 1.15rem; font-size: 0.92rem; }
-.can-do li { margin: 0.3rem 0; }
-.reading-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 1rem 1.1rem;
-}
-.reading-ge {
-  font-size: 1.05rem;
-  line-height: 1.65;
-  font-weight: 500;
-}
-.reading-toggle {
-  margin-top: 0.75rem;
-  font-size: 0.82rem;
-  color: var(--accent);
-  cursor: pointer;
-  font-weight: 600;
-  border: none;
-  background: none;
-  padding: 0;
-}
-.reading-en {
-  margin-top: 0.55rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.55;
-  border-top: 1px dashed var(--line);
-  padding-top: 0.65rem;
-}
-.reading-en.hidden { display: none; }
-.focus-verb {
-  background: var(--card);
-  border: 2px solid var(--accent);
-  border-radius: 14px;
-  padding: 1rem 1.1rem;
-  margin: 1.25rem 0;
-}
-.focus-verb h2 { margin: 0 0 0.35rem; font-size: 1rem; }
-.verb-meta { font-size: 0.88rem; color: var(--muted); margin: 0 0 0.75rem; }
-.verb-meta code { color: var(--gold); font-style: italic; }
-.verb-table-wrap { overflow-x: auto; }
-.verb-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.86rem;
-}
-.verb-table th, .verb-table td {
-  padding: 0.45rem 0.55rem;
-  text-align: left;
-  border-bottom: 1px solid var(--line);
-}
-.verb-table th { color: var(--muted); font-size: 0.78rem; }
-.verb-table .cell-ge { font-weight: 700; font-size: 1rem; }
-.verb-note { font-size: 0.82rem; color: var(--green); margin: 0.65rem 0 0; }
-.vocab-card {
-  position: relative;
-  background: var(--card);
-  border-radius: 12px;
-  padding: 0.9rem 1rem 0.9rem 2.5rem;
-  border: 1px solid var(--line);
-  box-shadow: 0 1px 4px rgba(0,0,0,.04);
-}
-.vocab-card.flagged { border-color: #c45c26; background: rgba(196, 92, 38, 0.06); }
-.hard-flag-btn {
-  position: absolute;
-  left: 0.45rem;
-  top: 0.55rem;
-  width: 1.65rem;
-  height: 1.65rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1;
-  opacity: 0.35;
-  padding: 0;
-}
-.hard-flag-btn:hover { opacity: 0.85; }
-.hard-flag-btn.flagged { opacity: 1; }
-.practice-audio {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 1rem 1.1rem;
-  margin: 1.5rem 0;
-}
-.practice-audio h2 { margin: 0 0 0.65rem; }
-.audio-disclaimer {
-  font-size: 0.82rem;
-  color: var(--muted);
-  line-height: 1.5;
-  margin-bottom: 0.85rem;
-  padding: 0.65rem 0.75rem;
-  background: rgba(107, 79, 160, 0.08);
-  border-radius: 8px;
-  border-left: 3px solid var(--ru);
-}
-.audio-clip-card audio { width: 100%; margin-bottom: 0.65rem; }
-.audio-ge { font-size: 1.05rem; font-weight: 600; line-height: 1.55; }
-.audio-rom { color: var(--gold); font-style: italic; font-size: 0.86rem; margin-top: 0.2rem; }
-.audio-en { font-size: 0.88rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.45; }
-.quiz-section { margin: 1.5rem 0; }
-.sb-prompt strong { color: var(--ink); }
-.sb-ge-inline { font-weight: 600; letter-spacing: 0.02em; }
-.sb-exercise {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 0.9rem 1rem;
-  margin-bottom: 0.65rem;
-}
-.sb-prompt { font-size: 0.9rem; margin: 0 0 0.45rem; color: var(--muted); }
-.sb-template {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin: 0 0 0.65rem;
-  letter-spacing: 0.02em;
-}
-.sb-gap { color: var(--accent); border-bottom: 2px dashed var(--gold); }
-.sb-choices { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-.sb-choice {
-  padding: 0.45rem 0.75rem;
-  border-radius: 999px;
-  border: 2px solid var(--line);
-  background: var(--bg);
-  font-size: 0.92rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-.sb-choice:hover { border-color: var(--gold); }
-.sb-choice.sb-right { border-color: var(--green); background: rgba(45,90,61,.12); color: var(--green); }
-.sb-choice.sb-wrong { border-color: #c45c26; background: rgba(196,92,38,.1); color: #c45c26; }
-.sb-choice:disabled { opacity: 0.55; cursor: default; }
-.sb-feedback { margin: 0.55rem 0 0; font-size: 0.88rem; }
-.sb-feedback.hidden { display: none; }
-.sb-feedback.sb-ok { color: var(--green); }
-.sb-feedback.sb-bad { color: #c45c26; }
-.flash-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: rgba(0,0,0,.55);
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-.flash-overlay.open { display: flex; }
-.flash-modal {
-  background: var(--card);
-  border-radius: 18px;
-  width: 100%;
-  max-width: 22rem;
-  padding: 1.1rem 1.2rem 1rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,.2);
-}
-.flash-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
-.flash-top span { font-size: 0.8rem; color: var(--muted); }
-.flash-close {
-  border: none; background: none; font-size: 1.25rem; cursor: pointer; color: var(--muted); padding: 0;
-}
-.flash-card {
-  min-height: 9rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-  border: 2px solid var(--line);
-  border-radius: 14px;
-  cursor: pointer;
-  user-select: none;
-  margin-bottom: 0.85rem;
-}
-.flash-card .fc-ge { font-size: 1.65rem; font-weight: 700; line-height: 1.3; }
-.flash-card .fc-rom { color: var(--gold); font-style: italic; font-size: 0.9rem; margin-top: 0.35rem; }
-.flash-card .fc-en { font-size: 1.05rem; margin-top: 0.5rem; color: var(--ink); }
-.flash-card .fc-meta { font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }
-.flash-card .fc-hint { font-size: 0.78rem; color: var(--muted); margin-top: 0.65rem; }
-.flash-card .fc-back.hidden { display: none; }
-.flash-card .fc-hint.hidden { display: none; }
-.flash-nav { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
-.flash-nav button {
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--bg);
-  font-weight: 600;
-  font-size: 0.85rem;
-  cursor: pointer;
-  color: var(--accent);
-}
-.flash-nav button:disabled { opacity: 0.4; cursor: default; }
-.flash-start-btn {
-  margin-top: 0.65rem;
-  padding: 0.55rem 1rem;
-  border-radius: 999px;
-  border: 2px solid var(--accent);
-  background: var(--accent);
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.88rem;
-  cursor: pointer;
-}
-.flash-start-btn:disabled { opacity: 0.4; cursor: default; border-color: var(--line); background: var(--line); color: var(--muted); }
-.hard-bank {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 1rem 1.1rem;
-  margin: 1.25rem 0 1.5rem;
-}
-.hard-bank h2 { margin: 0 0 0.35rem; font-size: 1rem; }
-.hard-bank .sub-bank { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.75rem; }
-.hard-bank-empty { font-size: 0.88rem; color: var(--muted); font-style: italic; }
-.hard-bank-hint {
-  font-size: 0.75rem;
-  color: var(--muted);
-  margin: 0 0 0.45rem;
-}
-.hard-bank-scroll {
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x proximity;
-  margin: 0 -0.35rem;
-  padding-bottom: 0.25rem;
-  scrollbar-width: thin;
-}
-.hard-bank-scroll::-webkit-scrollbar { height: 4px; }
-.hard-bank-scroll::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
-.hard-bank-grid {
-  display: flex;
-  flex-direction: row;
-  gap: 0.55rem;
-  width: max-content;
-  min-height: 0;
-  padding: 0.15rem 0.35rem 0.35rem;
-}
-.hard-bank-card {
-  flex: 0 0 8.75rem;
-  scroll-snap-align: start;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 0.6rem 0.65rem;
-  font-size: 0.82rem;
-  background: var(--bg);
-}
-.hard-bank-card .hb-ge { font-weight: 700; font-size: 1rem; line-height: 1.25; }
-.hard-bank-card .hb-meta { font-size: 0.72rem; color: var(--muted); margin-top: 0.2rem; line-height: 1.3; }
-.hard-bank-card .hb-meta code { font-size: 0.72rem; }
-.hard-bank-card .hb-en { font-size: 0.82rem; margin-top: 0.3rem; line-height: 1.3; }
-.hard-bank-card .hb-en.hidden { display: none; }
-.hard-bank-card .hb-show {
-  font-size: 0.72rem;
-  color: var(--accent);
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-weight: 600;
-  margin-top: 0.3rem;
-}
-.hard-bank-card .hb-actions { margin-top: 0.35rem; display: flex; gap: 0.4rem; flex-wrap: wrap; }
-.hard-bank-card a, .hard-bank-card button {
-  font-size: 0.72rem;
-  color: var(--accent);
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-weight: 600;
-  text-decoration: none;
-}
-.hard-bank-card button.hb-remove { color: var(--muted); }
-section { margin: 1.5rem 0; }
-h2 { font-size: 1rem; color: var(--accent); margin: 0 0 0.75rem; }
-.card {
-  background: var(--card);
-  border-radius: 14px;
-  padding: 1rem 1.1rem;
-  margin-bottom: 0.65rem;
-  border: 1px solid var(--line);
-  box-shadow: 0 1px 4px rgba(0,0,0,.04);
-}
-.grammar p { margin: 0.4rem 0; font-size: 0.95rem; }
-.grammar .ru { color: var(--ru); font-style: italic; font-size: 0.9rem; }
-.grammar .ex-ge { font-size: 1.1rem; font-weight: 600; margin-top: 0.6rem; }
-.grammar .ex-en { color: var(--muted); font-size: 0.88rem; }
-.easier {
-  margin-top: 0.75rem;
-  padding: 0.65rem 0.8rem;
-  background: rgba(45,90,61,.08);
-  border-radius: 8px;
-  font-size: 0.88rem;
-  color: var(--green);
-}
-.vocab-group { margin-bottom: 1.5rem; }
-.vocab-group h3 {
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 0.65rem;
-  font-weight: 700;
-}
-.vocab-grid {
-  display: grid;
-  gap: 0.75rem;
-}
-@media (min-width: 480px) {
-  .vocab-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-.vocab-ge { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.01em; line-height: 1.3; }
-.vocab-rom { color: var(--gold); font-style: italic; font-size: 0.86rem; margin-top: 0.1rem; }
-.vocab-en { font-size: 0.94rem; margin-top: 0.25rem; line-height: 1.35; }
-.vocab-ru { color: var(--ru); font-size: 0.84rem; margin-top: 0.15rem; }
-.book-grid { display: grid; gap: 1rem; }
-.book-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 1rem;
-}
-.book-card h2 { margin-top: 0; }
-.lesson-list { list-style: none; padding: 0; margin: 0; }
-.lesson-list li { margin: 0.35rem 0; }
-.lesson-list a {
-  color: var(--ink);
-  text-decoration: none;
-  font-size: 0.92rem;
-  display: block;
-  padding: 0.35rem 0;
-  border-bottom: 1px solid var(--line);
-}
-.lesson-list a:hover { color: var(--accent); }
-footer {
-  text-align: center;
-  font-size: 0.75rem;
-  color: var(--muted);
-  margin-top: 2rem;
-  padding: 1rem;
-}
-"""
+# CSS lives in reader_theme.py — stub removed below
 
 READING_JS = """\
 document.addEventListener("click", function (e) {
@@ -805,7 +298,7 @@ PROGRESS_JS = """\
       const id = el.dataset.lesson;
       if (!id || id.indexOf("-") === -1) return;
       const done = isDone(id, data);
-      if (el.classList.contains("lesson-row")) {
+      if (el.classList.contains("lesson-row") || el.classList.contains("lesson-card-wrap")) {
         el.classList.toggle("done", done);
         const btn = el.querySelector(".done-btn");
         if (btn) {
@@ -824,7 +317,9 @@ PROGRESS_JS = """\
       const pct = Math.round((doneCount / total) * 100);
       const summary = document.getElementById("progress-summary");
       const fill = document.getElementById("progress-fill");
-      if (summary) summary.textContent = "Progress: " + doneCount + " / " + total + " lessons";
+      const pill = document.getElementById("progress-pill");
+      if (summary) summary.textContent = doneCount + " / " + total + " lessons";
+      if (pill) pill.textContent = doneCount + " / " + total;
       if (fill) fill.style.width = pct + "%";
     }
   }
@@ -909,7 +404,7 @@ def phrases_html(lesson):
             f'<div class="phrase-ge">{esc(p["ge"])}</div>'
             f'<div class="phrase-en">{esc(p["en"])}</div>{ru}</div>'
         )
-    return f"<section><h2>💬 Phrases &amp; dialogues</h2>{''.join(items)}</section>"
+    return f"<section><h2>Phrases &amp; dialogues</h2>{''.join(items)}</section>"
 
 
 def grammar_bullets_html(g):
@@ -960,7 +455,7 @@ def can_do_html(lesson):
     if not items:
         return ""
     lis = "".join(f"<li>{esc(x)}</li>" for x in items)
-    return f'<section class="can-do"><h2>🎯 After this lesson you can…</h2><ul>{lis}</ul></section>'
+    return f'<section class="can-do"><h2>After this lesson you can…</h2><ul>{lis}</ul></section>'
 
 
 def focus_verb_html(lesson):
@@ -978,7 +473,7 @@ def focus_verb_html(lesson):
     note_html = f'<p class="verb-note">{esc(note)}</p>' if note else ""
     return (
         f'<section class="focus-verb">'
-        f'<h2>⚡ Verb of the lesson: {esc(v["ge"])}</h2>'
+        f'<h2>Verb focus — {esc(v["ge"])}</h2>'
         f'<p class="verb-meta">{esc(v["en"])} · <b>{esc(tense)}</b> '
         f'— <code>{esc(romanize(v["ge"]))}</code></p>'
         f'<div class="verb-table-wrap"><table class="verb-table">'
@@ -1001,7 +496,7 @@ def practice_audio_html(lesson):
     )
     return (
         f'<section class="practice-audio">'
-        f"<h2>🎧 Pronunciation practice</h2>"
+        f"<h2>Pronunciation practice</h2>"
         f'<div class="audio-disclaimer">{disclaimer}</div>'
         f'<div class="audio-clip-card">'
         f'<audio controls preload="none" src="../audio/{esc(audio["file"])}"></audio>'
@@ -1075,7 +570,7 @@ def quiz_section_html(lesson, book, num, vocab):
 
     n = len(items)
     return (
-        f'<section class="quiz-section"><h2>🧪 Quick test</h2>'
+        f'<section class="quiz-section"><h2>Quick test</h2>'
         f'<p class="sub" style="margin:-0.35rem 0 0.75rem">'
         f"Tap the correct answer — {n} questions.</p>"
         f'{"".join(items)}</section>'
@@ -1100,7 +595,7 @@ def reading_html(lesson):
         else ""
     )
     return (
-        f"<section><h2>📄 Short reading</h2>"
+        f"<section><h2>Short reading</h2>"
         f'<div class="reading-card">'
         f'<div class="reading-ge">{esc(reading["ge"])}</div>'
         f"{toggle}{en_block}</div></section>"
@@ -1168,21 +663,22 @@ def lesson_page(book, num, lesson, lessons):
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>{esc(label)} L{num} — {esc(lesson.get('title', ''))}</title>
 {FAVICON_LESSON}
+{FONTS_HEAD}
 <link rel="stylesheet" href="../style.css">
 </head>
 <body data-lesson="{lesson_id}">
 <div class="wrap">
 {nav_links(book, num, lessons)}
-<header>
-  <div class="brand">აღმართი · Milo reader</div>
-  <h1>{esc(label)} — Lesson {num}</h1>
-  <p class="sub">{esc(lesson.get('title', ''))} · {len(vocab)} words</p>
-  <label class="lesson-done-toggle"><input type="checkbox" class="lesson-done-cb" data-lesson="{lesson_id}"> Mark lesson complete</label>
+<header class="lesson-header">
+  <p class="lesson-kicker">GEO · FL · {esc(book.upper())} · LESSON {int(num):02d}</p>
+  <h1>{esc(lesson.get('title', ''))}</h1>
+  <p class="sub">{esc(label)} · {len(vocab)} words</p>
+  <label class="lesson-done-toggle"><input type="checkbox" class="lesson-done-cb" data-lesson="{lesson_id}"> Mark complete</label>
 </header>
 {can_do_html(lesson)}
 {focus_verb_html(lesson)}
 <section>
-  <h2>📖 Grammar</h2>
+  <h2>Grammar</h2>
   <div class="card grammar">
     <p>{esc(g.get('en', ''))}</p>
     {bullets}
@@ -1196,14 +692,14 @@ def lesson_page(book, num, lesson, lessons):
 {reading_html(lesson)}
 {phrases_html(lesson)}
 <section>
-  <h2>📚 Vocabulary</h2>
-  <p class="sub" style="margin:-0.35rem 0 0.75rem">Tap ⚑ to flag hard words — they go to your review bank on the homepage.</p>
+  <h2>Vocabulary</h2>
+  <p class="sub" style="margin:-0.35rem 0 0.75rem">Tap ⚑ to flag hard words — they land in your word bank on the homepage.</p>
   {vocab_sections(vocab, book, num)}
 </section>
 {quiz_section_html(lesson, book, num, vocab)}
 {practice_audio_html(lesson)}
-<p class="sub" style="margin-top:1.5rem">🎧 More audio &amp; quizzes in Telegram · /audio · /quiz</p>
-<footer>Milo Georgian Tutor · synced from lesson_data.json</footer>
+<p class="sub" style="margin-top:1.5rem;font-family:var(--mono);font-size:0.68rem;letter-spacing:0.06em;text-transform:uppercase">More audio &amp; quizzes in Telegram · /audio · /quiz</p>
+<footer class="page-footer">GEO · FL · აღმართი reader · <a href="https://www.geofl.ge/">geofl.ge</a></footer>
 </div>
 <script src="../progress.js"></script>
 <script src="../hard-words.js"></script>
@@ -1214,56 +710,149 @@ def lesson_page(book, num, lesson, lessons):
     return body
 
 
+def culture_strip_html():
+    tags = "".join(f'<span class="culture-tag">{t}</span>' for t in CULTURE_TAGS)
+    return f"""<section class="culture-strip" id="culture">
+  <p class="culture-kicker">№ 04 — CULTURE SUPPLEMENT</p>
+  <h2 class="culture-headline">You're not <em>studying.</em><br>You're packing.</h2>
+  <p class="culture-body">Every lesson smuggles in a piece of Georgia — a khinkali fold, a supra toast, a 4&nbsp;a.m. cab driver telling you about his grandmother in Kakheti.</p>
+  <div class="culture-tags">{tags}</div>
+  <div class="culture-deco" aria-hidden="true">🥟🍷</div>
+</section>"""
+
+
+def syllabus_block_html(book, lessons):
+    meta = BOOK_ZINE.get(book, {})
+    label = BOOK_LABELS.get(book, book.upper())
+    level_code = label.split("—")[0].strip() if "—" in label else book.upper()
+    level_name = meta.get("short", label.split("—")[-1].strip() + "." if "—" in label else "")
+    issue = meta.get("issue", "01")
+
+    cards = []
+    for num in sorted(lessons[book].keys(), key=int):
+        les = lessons[book][num]
+        href = lesson_href(book, num)
+        lid = f"{book}-{num}"
+        ge_hint = ""
+        phrases = les.get("phrases") or []
+        if phrases:
+            ge_hint = f'<span class="lesson-card-ge">{esc(phrases[0]["ge"])}</span>'
+        cards.append(
+            f'<li class="lesson-card-wrap" data-lesson="{lid}">'
+            f'<div class="lesson-card">'
+            f'<button type="button" class="done-btn" data-lesson="{lid}" '
+            f'aria-label="Mark lesson complete">○</button>'
+            f'<a class="lesson-card-link" href="{href}">'
+            f'<span class="lesson-card-num">L{num}</span>'
+            f'<span class="lesson-card-body">'
+            f'<span class="lesson-card-title">{esc(les.get("title", ""))}</span>'
+            f'{ge_hint}'
+            f'<span class="lesson-card-meta">CHAPTER {int(num):02d}</span>'
+            f'</span>'
+            f'<span class="lesson-card-go" aria-hidden="true">→</span>'
+            f'</a></div></li>'
+        )
+
+    polaroid = (
+        f'<div class="syllabus-polaroid">'
+        f'<div class="pol-img" aria-hidden="true">⛪</div>'
+        f'<p class="pol-cap">{esc(meta.get("polaroid", ""))}</p></div>'
+    )
+    return (
+        f'<section class="syllabus-block" id="syllabus-{book}">'
+        f'<p class="syllabus-kicker">№ {issue} — THE SYLLABUS</p>'
+        f'<div class="syllabus-head">'
+        f'<h2>{esc(level_code)} — <span class="level-red">{esc(level_name)}</span></h2>'
+        f'<p class="syllabus-blurb">{esc(meta.get("blurb", ""))}</p>'
+        f'{polaroid}</div>'
+        f'<ul class="lesson-list">{"".join(cards)}</ul></section>'
+    )
+
+
 def index_page(lessons):
     blocks = []
     total = 0
     for book in BOOK_ORDER:
         if book not in lessons:
             continue
-        label = BOOK_LABELS.get(book, book.upper())
-        items = []
-        for num in sorted(lessons[book].keys(), key=int):
-            les = lessons[book][num]
-            href = lesson_href(book, num)
-            lid = f"{book}-{num}"
-            total += 1
-            items.append(
-                f'<li class="lesson-row" data-lesson="{lid}">'
-                f'<button type="button" class="done-btn" data-lesson="{lid}" aria-label="Mark lesson complete">○</button>'
-                f'<a href="{href}">L{num} — {esc(les.get("title", ""))}</a></li>'
-            )
-        blocks.append(
-            f'<div class="book-card"><h2>{esc(label)}</h2>'
-            f'<ul class="lesson-list">{"".join(items)}</ul></div>'
-        )
+        total += len(lessons[book])
+        blocks.append(syllabus_block_html(book, lessons))
+
+    a1 = BOOK_ZINE.get("a1", {})
+    sticker_ge = a1.get("sticker_ge", "გამარჯობა")
+    sticker_en = a1.get("sticker_en", "HELLO · LESSON 01")
 
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Georgian Lessons — აღმართი Reader</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="Georgian, but make it fun — 48 mobile-first აღმართი lessons with grammar, vocab, and quick tests.">
+<title>Georgian, but make it fun — GEO · FL</title>
 {FAVICON_INDEX}
+{FONTS_HEAD}
 <link rel="stylesheet" href="style.css">
 </head>
 <body data-total-lessons="{total}">
-<div class="wrap">
-<header>
-  <div class="brand">აღმართი · GeoFL</div>
-  <h1>Georgian Lesson Reader</h1>
-  <p class="sub">Mobile-first აღმართი · 48 lessons · grammar, vocab &amp; quick tests · no PDFs</p>
-  <p class="sub" style="margin-top:0.5rem">Faster than <a href="https://www.geofl.ge/">geofl.ge</a> on your phone — same textbook content, built for reading.</p>
-  <div class="progress-bar" id="progress-summary">Progress: 0 / {total} lessons</div>
-  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+<div class="site">
+<header class="masthead">
+  <div class="masthead-brand">
+    <span class="logo-mark" aria-hidden="true">ა</span>
+    <div>
+      <span class="masthead-geo">GEO · FL</span>
+      <span class="masthead-issue">issue № 01 — winter · აღმართი</span>
+    </div>
+  </div>
+  <span class="progress-pill" id="progress-pill">0 / {total}</span>
+  <nav class="masthead-nav" aria-label="Sections">
+    <a href="#word-bank">Word bank</a>
+    <a href="#lessons">Lessons</a>
+    <a href="#culture">Culture</a>
+  </nav>
 </header>
-<section class="hard-bank">
-  <h2>🚩 Hard words bank <span id="hard-bank-count" class="sub-bank"></span></h2>
-  <p class="sub-bank">Flagged vocab for review — swipe the row below, or use flashcards. Stored on this device only.</p>
-  <div id="hard-words-bank"><p class="hard-bank-empty">No flagged words yet. Tap ⚑ on any vocab card in a lesson.</p></div>
+
+<section class="hero">
+  <p class="hero-start">→ start here</p>
+  <div class="hero-tape">A mixed-media reader · აღმართი</div>
+  <h1 class="hero-title">Georgian,<br><em>but make</em><br>it <span class="hi-yellow">fun.</span></h1>
+  <p class="hero-lede">A pocket-sized zine of <strong>48 lessons</strong>, torn-paper vocab and handwritten grammar notes — same textbook content as <a href="https://www.geofl.ge/" class="squiggle">geofl.ge</a>, re-cut for your phone.</p>
+  <div class="hero-cta">
+    <a class="btn-primary" href="#lessons">Start speaking →</a>
+    <a class="btn-secondary" href="#word-bank">Flip flashcards ★</a>
+    <span class="hero-aside">— no PDFs, no nonsense.</span>
+  </div>
+  <div class="hero-collage" aria-hidden="true">
+    <span class="collage-food">🫓</span>
+    <div class="collage-sticker">
+      <div class="st-ge">{esc(sticker_ge)}</div>
+      <div class="st-en">{esc(sticker_en)}</div>
+    </div>
+    <div class="collage-stamp">
+      <span class="stamp-floral">✿</span>
+      <span>GEORGIA</span>
+    </div>
+  </div>
+</section>
+
+{culture_strip_html()}
+
+<div class="progress-block">
+  <div class="progress-label" id="progress-summary">0 / {total} lessons</div>
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+</div>
+
+<section class="hard-bank" id="word-bank">
+  <h2>Word bank <span id="hard-bank-count" class="sub-bank"></span></h2>
+  <p class="sub-bank">Flagged vocab for review — swipe below, or flip through flashcards. Saved on this device only.</p>
+  <div id="hard-words-bank"><p class="hard-bank-empty">No flagged words yet — tap ⚑ on any vocab card.</p></div>
   <button type="button" class="flash-start-btn" id="flash-start-btn" disabled>Start flashcards</button>
 </section>
-<div class="book-grid">{"".join(blocks)}</div>
-<footer>Milo Georgian Tutor · <a href="https://www.geofl.ge/">geofl.ge</a></footer>
+
+<div id="lessons">{"".join(blocks)}</div>
+
+<p class="site-footer-bar">48 lessons · grammar + vocab · quick tests, no PDFs · <strong>mobile-first</strong></p>
+<footer class="page-footer">GEO · FL · aligned with <a href="https://www.geofl.ge/">geofl.ge</a> · აღმართი</footer>
 </div>
 <div class="flash-overlay" id="flash-overlay">
   <div class="flash-modal" id="flash-modal">

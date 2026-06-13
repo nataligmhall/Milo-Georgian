@@ -27,7 +27,7 @@
       const id = el.dataset.lesson;
       if (!id || id.indexOf("-") === -1) return;
       const done = isDone(id, data);
-      if (el.classList.contains("lesson-row")) {
+      if (el.classList.contains("lesson-row") || el.classList.contains("lesson-card-wrap")) {
         el.classList.toggle("done", done);
         const btn = el.querySelector(".done-btn");
         if (btn) {
@@ -46,7 +46,9 @@
       const pct = Math.round((doneCount / total) * 100);
       const summary = document.getElementById("progress-summary");
       const fill = document.getElementById("progress-fill");
-      if (summary) summary.textContent = "Progress: " + doneCount + " / " + total + " lessons";
+      const pill = document.getElementById("progress-pill");
+      if (summary) summary.textContent = doneCount + " / " + total + " lessons";
+      if (pill) pill.textContent = doneCount + " / " + total;
       if (fill) fill.style.width = pct + "%";
     }
   }

@@ -1,3 +1,57 @@
+"""Magazine / zine visual theme for the GeoFL reader (mobile-first)."""
+
+FONTS_HEAD = """\
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">"""
+
+FONTS_HEAD_LESSON = FONTS_HEAD  # same fonts, relative paths differ only in favicon
+
+BOOK_ZINE = {
+    "a1": {
+        "short": "Beginner.",
+        "ge": "დამწყები",
+        "issue": "03",
+        "blurb": "Twelve torn-out chapters from your first Georgian notebook — alphabet, food, family, and your first real sentences.",
+        "polaroid": "— Stepantsminda, est. forever",
+        "sticker_ge": "გამარჯობა",
+        "sticker_en": "HELLO · LESSON 01",
+    },
+    "a2": {
+        "short": "Elementary.",
+        "ge": "საწყისი",
+        "issue": "04",
+        "blurb": "Georgia opens up — friends, banks, health, wine festivals. Each lesson's a postcard from somewhere.",
+        "polaroid": "— Tbilisi balconies, 6 a.m.",
+        "sticker_ge": "მეგობარი",
+        "sticker_en": "FRIEND · LESSON 01",
+    },
+    "a2plus": {
+        "short": "Pre-Intermediate.",
+        "ge": "საშუალო+",
+        "issue": "05",
+        "blurb": "Hotels, blogs, film premieres — the vocabulary of modern Georgian life.",
+        "polaroid": "— Kakheti, qvevri season",
+        "sticker_ge": "ღვინო",
+        "sticker_en": "WINE · LESSON 01",
+    },
+    "b1": {
+        "short": "Intermediate.",
+        "ge": "საშუალო",
+        "issue": "06",
+        "blurb": "CVs, interviews, taxes, regional cuisine — you're reading real Georgian now.",
+        "polaroid": "— Svaneti, above the clouds",
+        "sticker_ge": "სამუშაო",
+        "sticker_en": "WORK · LESSON 01",
+    },
+}
+
+CULTURE_TAGS = [
+    "FOOD", "WINE", "QVEVRI", "POLYPHONY", "SUPRA",
+    "TBILISI", "KAZBEGI", "ALPHABET",
+]
+
+CSS = """\
 :root {
   --paper: #f4f1eb;
   --paper-deep: #ebe6dc;
@@ -970,3 +1024,4 @@ footer a { color: var(--muted); }
 .lesson-list { list-style: none; padding: 0; margin: 0; }
 .lesson-row { display: flex; align-items: center; gap: 0.55rem; }
 .lesson-row a { flex: 1; color: var(--ink); text-decoration: none; font-size: 0.92rem; }
+"""
