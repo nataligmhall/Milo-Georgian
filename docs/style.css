@@ -131,25 +131,6 @@ img { max-width: 100%; height: auto; display: block; }
   position: relative;
   padding: 0.5rem 0 2rem;
 }
-.hero-tape {
-  display: inline-block;
-  font-family: var(--mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: var(--cream);
-  padding: 0.35rem 0.65rem;
-  border: 1px solid var(--line);
-  transform: rotate(-1.5deg);
-  box-shadow: 2px 2px 0 rgba(26,22,20,.06);
-  margin-bottom: 1rem;
-}
-.hero-start {
-  font-family: var(--script);
-  font-size: 0.95rem;
-  color: var(--red);
-  margin: 0 0 0.35rem 0.25rem;
-}
 .hero-title {
   font-family: var(--serif);
   font-size: clamp(2.4rem, 9vw, 3.6rem);

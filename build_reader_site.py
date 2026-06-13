@@ -825,8 +825,6 @@ def index_page(lessons):
 </header>
 
 <section class="hero">
-  <p class="hero-start">→ start here</p>
-  <div class="hero-tape">A mixed-media reader · აღმართი</div>
   <h1 class="hero-title">Georgian,<br><em>but make</em><br>it <span class="hi-yellow">fun.</span></h1>
   <p class="hero-lede">A pocket-sized zine of <strong>48 lessons</strong>, torn-paper vocab and handwritten grammar notes — same textbook content as <a href="https://www.geofl.ge/" class="squiggle">geofl.ge</a>, re-cut for your phone.</p>
   <div class="hero-cta">
