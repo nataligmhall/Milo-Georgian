@@ -734,6 +734,7 @@ def copy_collage_assets():
 def culture_strip_html():
     kh = collage_href(COLLAGE["khinkali"])
     wine = collage_href(COLLAGE["wine"])
+    ch = collage_href(COLLAGE["churchkhela"])
     tags = "".join(f'<span class="culture-tag">{t}</span>' for t in CULTURE_TAGS)
     return f"""<section class="culture-strip" id="culture">
   <p class="culture-kicker">№ 04 — CULTURE SUPPLEMENT</p>
@@ -741,6 +742,10 @@ def culture_strip_html():
   <p class="culture-body">Every lesson smuggles in a piece of Georgia — a khinkali fold, a supra toast, a 4&nbsp;a.m. cab driver telling you about his grandmother in Kakheti.</p>
   <div class="culture-tags">{tags}</div>
   <div class="culture-deco" aria-hidden="true">
+    <div class="culture-polaroid">
+      <div class="culture-polaroid-img"><img src="{ch}" alt="" loading="lazy" width="200" height="200"></div>
+      <p class="culture-polaroid-cap">churchkhela</p>
+    </div>
     <img class="culture-cutout culture-cutout--screen culture-khinkali" src="{kh}" alt="" loading="lazy" width="220" height="220">
     <img class="culture-cutout culture-cutout--screen culture-wine" src="{wine}" alt="" loading="lazy" width="110" height="280">
   </div>

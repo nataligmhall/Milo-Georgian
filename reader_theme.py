@@ -11,6 +11,7 @@ COLLAGE = {
     "khachapuri": "khachapuri.png",
     "khinkali": "khinkali.png",
     "wine": "wine-glass.png",
+    "churchkhela": "pol-churchkhela.png",
 }
 
 BOOK_ZINE = {
@@ -39,8 +40,8 @@ BOOK_ZINE = {
         "ge": "საშუალო+",
         "issue": "05",
         "blurb": "Hotels, blogs, film premieres — the vocabulary of modern Georgian life.",
-        "polaroid": "— Kakheti hills, golden hour",
-        "pol_image": "pol-a2plus-hills.png",
+        "polaroid": "— Churchkhela row, market day",
+        "pol_image": "pol-churchkhela.png",
         "sticker_ge": "ღვინო",
         "sticker_en": "WINE · LESSON 01",
     },
@@ -452,9 +453,39 @@ img { max-width: 100%; height: auto; display: block; }
   position: absolute;
   right: 0.25rem;
   top: 0.75rem;
-  width: 7.5rem;
-  height: 8rem;
+  width: 9rem;
+  height: 9.5rem;
   pointer-events: none;
+}
+.culture-polaroid {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4.25rem;
+  background: #fff;
+  padding: 0.3rem 0.3rem 0.9rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,.35);
+  transform: rotate(7deg);
+  z-index: 2;
+}
+.culture-polaroid-img {
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+.culture-polaroid-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.culture-polaroid-cap {
+  font-family: var(--script);
+  font-size: 0.62rem;
+  color: var(--burgundy);
+  text-align: center;
+  margin: 0.3rem 0 0;
+  line-height: 1;
+  opacity: 0.9;
 }
 .culture-cutout {
   position: absolute;
@@ -463,15 +494,15 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .culture-cutout--screen { mix-blend-mode: screen; }
 .culture-khinkali {
-  width: 5.5rem;
-  right: 2.5rem;
-  top: 0;
+  width: 5rem;
+  right: 3.75rem;
+  top: 2.25rem;
   transform: rotate(-6deg);
 }
 .culture-wine {
-  width: 2.75rem;
-  right: 0;
-  top: 3.5rem;
+  width: 2.5rem;
+  right: 0.15rem;
+  top: 4.75rem;
   transform: rotate(8deg);
 }
 .culture-wine::before {
@@ -492,12 +523,13 @@ img { max-width: 100%; height: auto; display: block; }
     right: auto;
     top: auto;
     width: 100%;
-    height: 5rem;
+    height: 6.5rem;
     margin-top: 0.75rem;
-    opacity: 0.9;
+    opacity: 0.95;
   }
-  .culture-khinkali { right: auto; left: 55%; top: 0; width: 4.5rem; }
-  .culture-wine { right: auto; left: 5%; top: 1rem; width: 2.25rem; }
+  .culture-polaroid { right: auto; left: 0; top: 0; width: 3.75rem; }
+  .culture-khinkali { right: auto; left: 50%; top: 0.5rem; width: 4rem; }
+  .culture-wine { right: auto; left: 78%; top: 2rem; width: 2rem; }
 }
 
 /* ── Syllabus blocks ── */
