@@ -266,7 +266,6 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 400;
   line-height: 1.15;
   margin: 0 0 0.85rem;
-  max-width: 20rem;
 }
 .culture-headline em { font-style: italic; color: var(--gold); }
 .culture-body {

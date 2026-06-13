@@ -17,7 +17,7 @@ from pathlib import Path
 from config import CLIPS_DIR, DATASET, LESSON_DATA, READER_DIR, TRANSLATIONS, romanize
 from level_placement import BOOK_LABELS
 from reader_extras import merge_reader_extras
-from reader_theme import BOOK_ZINE, COLLAGE, CSS, CULTURE_TAGS, FONTS_HEAD
+from reader_theme import BOOK_ZINE, CSS, FONTS_HEAD
 from worksheet import build_worksheet_exercises
 
 BOOK_ORDER = ("a1", "a2", "a2plus", "b1")
@@ -731,34 +731,6 @@ def copy_collage_assets():
     return n
 
 
-def culture_strip_html():
-    kh = collage_href(COLLAGE["khinkali"])
-    wine = collage_href(COLLAGE["wine"])
-    kha = collage_href(COLLAGE["khachapuri"])
-    tags = "".join(f'<span class="culture-tag">{t}</span>' for t in CULTURE_TAGS)
-    return f"""<section class="culture-strip" id="culture">
-  <div class="culture-strip-inner">
-    <div class="culture-strip-copy">
-      <p class="culture-kicker">№ 04 — CULTURE SUPPLEMENT</p>
-      <h2 class="culture-headline">You're not <em>studying.</em><br>You're packing.</h2>
-      <p class="culture-body">Every lesson smuggles in a piece of Georgia — a khinkali fold, a supra toast, a 4&nbsp;a.m. cab driver telling you about his grandmother in Kakheti.</p>
-      <div class="culture-tags">{tags}</div>
-    </div>
-    <div class="culture-gallery" aria-hidden="true">
-      <div class="culture-sticker-pad culture-sticker-pad--khachapuri">
-        <img src="{kha}" alt="" loading="lazy" width="170" height="110">
-      </div>
-      <div class="culture-sticker-pad culture-sticker-pad--khinkali">
-        <img src="{kh}" alt="" loading="lazy" width="150" height="150">
-      </div>
-      <div class="culture-sticker-pad culture-sticker-pad--wine">
-        <img src="{wine}" alt="" loading="lazy" width="94" height="240">
-      </div>
-    </div>
-  </div>
-</section>"""
-
-
 def syllabus_block_html(book, lessons):
     meta = BOOK_ZINE.get(book, {})
     label = BOOK_LABELS.get(book, book.upper())
@@ -849,7 +821,6 @@ def index_page(lessons):
   <nav class="masthead-nav" aria-label="Sections">
     <a href="#word-bank">Word bank</a>
     <a href="#lessons">Lessons</a>
-    <a href="#culture">Culture</a>
   </nav>
 </header>
 
@@ -864,8 +835,6 @@ def index_page(lessons):
     <span class="hero-aside">— no PDFs, no nonsense.</span>
   </div>
 </section>
-
-{culture_strip_html()}
 
 <div class="progress-block">
   <div class="progress-label" id="progress-summary">0 / {total} lessons</div>
