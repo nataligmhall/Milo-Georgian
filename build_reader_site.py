@@ -307,7 +307,8 @@ def index_page(lessons):
 <header>
   <div class="brand">აღმართი · GeoFL</div>
   <h1>Georgian Lesson Reader</h1>
-  <p class="sub">Mobile-friendly · grammar, vocab &amp; worksheets · no PDFs</p>
+  <p class="sub">Mobile-first აღმართი · 48 lessons · grammar, vocab &amp; worksheets · no PDFs</p>
+  <p class="sub" style="margin-top:0.5rem">Faster than <a href="https://www.geofl.ge/">geofl.ge</a> on your phone — same textbook content, built for reading.</p>
 </header>
 <div class="book-grid">{"".join(blocks)}</div>
 <footer>Milo Georgian Tutor · <a href="https://www.geofl.ge/">geofl.ge</a></footer>

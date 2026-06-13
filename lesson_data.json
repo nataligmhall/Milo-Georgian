@@ -1799,855 +1799,1944 @@
     "1": {
       "title": "My Georgian Friend",
       "grammar": {
-        "en": "Genitive possession review: ანა-ს ოჯახი (Ana's family). Vowel names +ს, consonant names +ის. Compound words: და+ძმა → და-ძმა (siblings). Time range: X-იდან Y-ამდე = from X to Y.",
-        "ru": "Родительный падеж: ანა-ს ოჯახი. Имена на гласную +ს, на согласную +ის. Сложные слова: და-ძმა (брат и сестра). Время: X-იდან Y-ამდე = с X до Y.",
-        "example_ge": "ორშაბათიდან პარასკევამდე ვმუშაობ.",
-        "example_en": "I work from Monday to Friday."
+        "en": "Genitive possession review: ანა-ს ოჯახი (Ana's family). Vowel-ending names take +ს, consonant-ending names take +ის. Compound words: და+ძმა → და-ძმა, დედა+მამა → დედ-მამა. Time range: X-იდან Y-ამდე = from X to Y.",
+        "ru": "Повторение родительного: ანა-ს ოჯახი. Имена на гласную получают +ს, на согласную +ის. Сложные слова: და-ძმა, დედ-მამა. Интервал времени: X-იდან Y-ამდე = с X до Y.",
+        "example_ge": "ორშაბათიდან პარასკევამდე უნივერსიტეტში ვარ.",
+        "example_en": "From Monday to Friday I am at the university."
       },
-      "easier_than_russian": "Compound words are transparent — და-ძმა literally means sister+brother.",
+      "easier_than_russian": "Georgian compounds are very transparent: და-ძმა literally means sister-brother (siblings).",
       "vocab": [
         {
           "ge": "დეიდა",
           "en": "aunt (mother's sister)",
-          "ru": "тётя (по матери)"
+          "ru": "тётя (по матери)",
+          "group": "Family"
         },
         {
           "ge": "მამიდა",
           "en": "aunt (father's sister)",
-          "ru": "тётя (по отцу)"
+          "ru": "тётя (по отцу)",
+          "group": "Family"
         },
         {
           "ge": "ბიძა",
           "en": "uncle",
-          "ru": "дядя"
+          "ru": "дядя",
+          "group": "Family"
+        },
+        {
+          "ge": "ბიძაჩემი",
+          "en": "my uncle",
+          "ru": "мой дядя",
+          "group": "Family"
+        },
+        {
+          "ge": "დეიდაჩემი",
+          "en": "my aunt",
+          "ru": "моя тётя",
+          "group": "Family"
         },
         {
           "ge": "დეიდაშვილი",
           "en": "cousin (aunt's child)",
-          "ru": "двоюродный брат/сестра"
+          "ru": "двоюродный брат/сестра",
+          "group": "Family"
+        },
+        {
+          "ge": "მამიდაშვილი",
+          "en": "cousin (father's sister's child)",
+          "ru": "двоюродный брат/сестра",
+          "group": "Family"
+        },
+        {
+          "ge": "ბიძაშვილი",
+          "en": "cousin (uncle's child)",
+          "ru": "двоюродный брат/сестра",
+          "group": "Family"
+        },
+        {
+          "ge": "და-ძმა",
+          "en": "siblings",
+          "ru": "брат и сестра",
+          "group": "Family"
+        },
+        {
+          "ge": "დედ-მამა",
+          "en": "parents",
+          "ru": "родители",
+          "group": "Family"
+        },
+        {
+          "ge": "ცოლ-ქმარი",
+          "en": "married couple",
+          "ru": "супружеская пара",
+          "group": "Family"
+        },
+        {
+          "ge": "ბებია-ბაბუა",
+          "en": "grandparents",
+          "ru": "бабушка и дедушка",
+          "group": "Family"
         },
         {
           "ge": "ფაკულტეტი",
           "en": "faculty / department",
-          "ru": "факультет"
+          "ru": "факультет",
+          "group": "University"
         },
         {
           "ge": "ეკონომიკა",
           "en": "economics",
-          "ru": "экономика"
+          "ru": "экономика",
+          "group": "University"
         },
         {
           "ge": "ბიზნესი",
           "en": "business",
-          "ru": "бизнес"
+          "ru": "бизнес",
+          "group": "University"
+        },
+        {
+          "ge": "ბინა",
+          "en": "apartment",
+          "ru": "квартира",
+          "group": "Life"
         },
         {
           "ge": "სტუმარი",
           "en": "guest",
-          "ru": "гость"
-        },
-        {
-          "ge": "ხშირად",
-          "en": "often",
-          "ru": "часто"
-        },
-        {
-          "ge": "მარტო",
-          "en": "alone",
-          "ru": "один/одна"
-        },
-        {
-          "ge": "დედისერთა",
-          "en": "only child",
-          "ru": "единственный ребёнок"
+          "ru": "гость",
+          "group": "Life"
         },
         {
           "ge": "ცხოვრება",
           "en": "life",
-          "ru": "жизнь"
+          "ru": "жизнь",
+          "group": "Life"
+        },
+        {
+          "ge": "ხშირი",
+          "en": "frequent",
+          "ru": "частый",
+          "group": "Life"
+        },
+        {
+          "ge": "ხშირად",
+          "en": "often",
+          "ru": "часто",
+          "group": "Life"
+        },
+        {
+          "ge": "მარტო",
+          "en": "alone",
+          "ru": "один/одна",
+          "group": "Life"
+        },
+        {
+          "ge": "დედისერთა",
+          "en": "only child",
+          "ru": "единственный ребёнок",
+          "group": "Life"
+        },
+        {
+          "ge": "საათიდან",
+          "en": "from (o'clock)",
+          "ru": "с (часа)",
+          "group": "Time"
+        },
+        {
+          "ge": "საათამდე",
+          "en": "until (o'clock)",
+          "ru": "до (часа)",
+          "group": "Time"
         }
       ]
     },
     "2": {
       "title": "A Little About Georgia",
       "grammar": {
-        "en": "Instrumental case (-ით): means/instrument (ავტობუსით by bus). Adjectives from nouns with -იანი: მზე → მზიანი (sunny).",
-        "ru": "Творительный падеж (-ით): способ, инструмент. Прилагательные с -იანი: მზე → მზიანი (солнечный).",
-        "example_ge": "საქართველო მთიანი ქვეყანაა.",
-        "example_en": "Georgia is a mountainous country."
+        "en": "Instrumental case (-ით): means/instrument/material (ავტობუსით by bus, ქვებით with stones). Adjectives from nouns with -იანი: მზე → მზიანი, წვიმა → წვიმიანი.",
+        "ru": "Творительный падеж (-ით): средство, инструмент, материал (ავტობუსით, ქვებით). Прилагательные на -იანი: მზე → მზიანი, წვიმა → წვიმიანი.",
+        "example_ge": "საქართველო მთიანი და მზიანი ქვეყანაა.",
+        "example_en": "Georgia is a mountainous and sunny country."
       },
-      "easier_than_russian": "No gender on adjectives — მზიანი works for any noun.",
+      "easier_than_russian": "Adjectives do not change for gender: მზიანი works with any noun.",
       "vocab": [
         {
           "ge": "კავკასია",
           "en": "Caucasus",
-          "ru": "Кавказ"
+          "ru": "Кавказ",
+          "group": "Geography"
         },
         {
           "ge": "მთა",
           "en": "mountain",
-          "ru": "гора"
+          "ru": "гора",
+          "group": "Geography"
         },
         {
           "ge": "მთიანი",
           "en": "mountainous",
-          "ru": "гористый"
+          "ru": "гористый",
+          "group": "Geography"
+        },
+        {
+          "ge": "მთაგორიანი",
+          "en": "hilly",
+          "ru": "холмистый",
+          "group": "Geography"
         },
         {
           "ge": "ზღვა",
           "en": "sea",
-          "ru": "море"
+          "ru": "море",
+          "group": "Geography"
+        },
+        {
+          "ge": "სანაპირო",
+          "en": "coast / shore",
+          "ru": "побережье",
+          "group": "Geography"
         },
         {
           "ge": "მდინარე",
           "en": "river",
-          "ru": "река"
+          "ru": "река",
+          "group": "Geography"
         },
         {
           "ge": "ტყე",
           "en": "forest",
-          "ru": "лес"
+          "ru": "лес",
+          "group": "Geography"
         },
         {
           "ge": "ტბა",
           "en": "lake",
-          "ru": "озеро"
+          "ru": "озеро",
+          "group": "Geography"
+        },
+        {
+          "ge": "სოფელი",
+          "en": "village",
+          "ru": "деревня",
+          "group": "Geography"
+        },
+        {
+          "ge": "რაიონი",
+          "en": "district / region",
+          "ru": "район",
+          "group": "Geography"
+        },
+        {
+          "ge": "მხარე",
+          "en": "region / side",
+          "ru": "край / регион",
+          "group": "Geography"
+        },
+        {
+          "ge": "ჩრდილოეთი",
+          "en": "north",
+          "ru": "север",
+          "group": "Directions"
+        },
+        {
+          "ge": "სამხრეთი",
+          "en": "south",
+          "ru": "юг",
+          "group": "Directions"
+        },
+        {
+          "ge": "დასავლეთი",
+          "en": "west",
+          "ru": "запад",
+          "group": "Directions"
+        },
+        {
+          "ge": "აღმოსავლეთი",
+          "en": "east",
+          "ru": "восток",
+          "group": "Directions"
+        },
+        {
+          "ge": "მზე",
+          "en": "sun",
+          "ru": "солнце",
+          "group": "Weather"
+        },
+        {
+          "ge": "მზიანი",
+          "en": "sunny",
+          "ru": "солнечный",
+          "group": "Weather"
+        },
+        {
+          "ge": "წვიმა",
+          "en": "rain",
+          "ru": "дождь",
+          "group": "Weather"
         },
         {
           "ge": "წვიმიანი",
           "en": "rainy",
-          "ru": "дождливый"
+          "ru": "дождливый",
+          "group": "Weather"
+        },
+        {
+          "ge": "თოვლი",
+          "en": "snow",
+          "ru": "снег",
+          "group": "Weather"
         },
         {
           "ge": "თოვლიანი",
           "en": "snowy",
-          "ru": "снежный"
+          "ru": "снежный",
+          "group": "Weather"
+        },
+        {
+          "ge": "ღრუბელი",
+          "en": "cloud",
+          "ru": "облако",
+          "group": "Weather"
         },
         {
           "ge": "ღრუბლიანი",
           "en": "cloudy",
-          "ru": "облачный"
+          "ru": "облачный",
+          "group": "Weather"
         },
         {
-          "ge": "მშვენიერი",
-          "en": "beautiful / wonderful",
-          "ru": "прекрасный"
+          "ge": "ნისლი",
+          "en": "fog",
+          "ru": "туман",
+          "group": "Weather"
+        },
+        {
+          "ge": "ნისლიანი",
+          "en": "foggy",
+          "ru": "туманный",
+          "group": "Weather"
+        },
+        {
+          "ge": "ქარიანი",
+          "en": "windy",
+          "ru": "ветреный",
+          "group": "Weather"
         },
         {
           "ge": "მეზობელი",
           "en": "neighbor",
-          "ru": "сосед"
+          "ru": "сосед",
+          "group": "People"
         }
       ]
     },
     "3": {
       "title": "How They Live in Georgia",
       "grammar": {
-        "en": "Modifier always precedes noun: დიდი სახლი (big house). Time: დილით in the morning, ღამით at night, ყოველ დღე every day.",
-        "ru": "Прилагательное ПЕРЕД существительным: დიდი სახლი. Время: დილით утром, ღამით ночью, ყოველ დღე каждый день.",
-        "example_ge": "ნათელი ოთახია.",
-        "example_en": "It's a bright room."
+        "en": "Modifier + noun: adjective always comes before noun (დიდი სახლი). Time expressions: დილით in the morning, საღამოთი in the evening, ღამით at night, X-ჯერ X times.",
+        "ru": "Определение + существительное: прилагательное всегда перед существительным (დიდი სახლი). Время: დილით утром, საღამოთი вечером, ღამით ночью, X-ჯერ X раз.",
+        "example_ge": "დილით ნათელ ოთახში ვკითხულობ.",
+        "example_en": "In the morning I read in a bright room."
       },
+      "easier_than_russian": "No gender agreement on adjectives: დიდი and ნათელი keep one form.",
       "vocab": [
         {
           "ge": "ნათესავი",
           "en": "relative",
-          "ru": "родственник"
+          "ru": "родственник",
+          "group": "People"
+        },
+        {
+          "ge": "წევრი",
+          "en": "member",
+          "ru": "член",
+          "group": "People"
+        },
+        {
+          "ge": "მამიდა",
+          "en": "paternal aunt",
+          "ru": "тётя по отцу",
+          "group": "People"
+        },
+        {
+          "ge": "ბიცოლა",
+          "en": "uncle's wife",
+          "ru": "жена дяди",
+          "group": "People"
         },
         {
           "ge": "სართული",
           "en": "floor / storey",
-          "ru": "этаж"
+          "ru": "этаж",
+          "group": "Apartment"
+        },
+        {
+          "ge": "სადარბაზო",
+          "en": "entrance hall / stairwell",
+          "ru": "подъезд",
+          "group": "Apartment"
+        },
+        {
+          "ge": "შემოსასვლელი",
+          "en": "entrance",
+          "ru": "вход",
+          "group": "Apartment"
         },
         {
           "ge": "ლიფტი",
           "en": "elevator",
-          "ru": "лифт"
+          "ru": "лифт",
+          "group": "Apartment"
         },
         {
           "ge": "კიბე",
           "en": "stairs",
-          "ru": "лестница"
+          "ru": "лестница",
+          "group": "Apartment"
+        },
+        {
+          "ge": "იატაკი",
+          "en": "floor (surface)",
+          "ru": "пол",
+          "group": "Apartment"
+        },
+        {
+          "ge": "ჭერი",
+          "en": "ceiling",
+          "ru": "потолок",
+          "group": "Apartment"
+        },
+        {
+          "ge": "ფანჯარა",
+          "en": "window",
+          "ru": "окно",
+          "group": "Apartment"
+        },
+        {
+          "ge": "კარი",
+          "en": "door",
+          "ru": "дверь",
+          "group": "Apartment"
         },
         {
           "ge": "აივანი",
           "en": "balcony",
-          "ru": "балкон"
+          "ru": "балкон",
+          "group": "Apartment"
+        },
+        {
+          "ge": "კაბინეტი",
+          "en": "study / office room",
+          "ru": "кабинет",
+          "group": "Apartment"
         },
         {
           "ge": "ნათელი",
           "en": "bright",
-          "ru": "светлый"
+          "ru": "светлый",
+          "group": "Adjectives"
         },
         {
           "ge": "ბნელი",
           "en": "dark",
-          "ru": "тёмный"
+          "ru": "тёмный",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "ვიწრო",
+          "en": "narrow",
+          "ru": "узкий",
+          "group": "Adjectives"
         },
         {
           "ge": "ფართო",
           "en": "wide / spacious",
-          "ru": "широкий"
+          "ru": "широкий",
+          "group": "Adjectives"
         },
         {
           "ge": "კეთილი",
           "en": "kind",
-          "ru": "добрый"
+          "ru": "добрый",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "ჭკვიანი",
+          "en": "clever",
+          "ru": "умный",
+          "group": "Adjectives"
         },
         {
           "ge": "ძლიერი",
           "en": "strong",
-          "ru": "сильный"
+          "ru": "сильный",
+          "group": "Adjectives"
         },
         {
           "ge": "ზემოთ",
-          "en": "upstairs / above",
-          "ru": "наверху"
+          "en": "above / upstairs",
+          "ru": "наверху",
+          "group": "Position"
         },
         {
           "ge": "ქვემოთ",
-          "en": "downstairs / below",
-          "ru": "внизу"
+          "en": "below / downstairs",
+          "ru": "внизу",
+          "group": "Position"
+        },
+        {
+          "ge": "ერთმანეთი",
+          "en": "each other",
+          "ru": "друг друга",
+          "group": "Useful words"
         }
       ]
     },
     "4": {
       "title": "Our Acquaintances",
       "grammar": {
-        "en": "Ordinal numbers: მე+cardinal+ე (მეორე 2nd). First = პირველი. Past review: იყო was, ჰყავდა had (person).",
-        "ru": "Порядковые числительные: მეორე, მესამე. Первый = პირველი. Прошедшее: იყო был, ჰყავდა у него был (человек).",
-        "example_ge": "ის ცნობილი ჟურნალისტი იყო.",
-        "example_en": "He was a famous journalist."
+        "en": "Ordinal numbers: მე+cardinal+ე (მეორე, მესამე), first is პირველი. Past review: იყო was, ჰყავდა had (person), ჰქონდა had (thing). Reported speech uses -ო.",
+        "ru": "Порядковые числительные: მე+числительное+ე (მეორე, მესამე), первый = პირველი. Повторение прошедшего: იყო, ჰყავდა, ჰქონდა. В косвенной речи часто используется -ო.",
+        "example_ge": "ის ცნობილი ფეხბურთელი იყო და ყველა ყოჩაღო ეუბნებოდა.",
+        "example_en": "He was a famous footballer and everyone told him 'bravo'."
       },
+      "easier_than_russian": "Ordinal formation is regular after პირველი, so fewer irregular patterns to memorize.",
       "vocab": [
         {
           "ge": "დიასახლისი",
           "en": "housewife",
-          "ru": "домохозяйка"
+          "ru": "домохозяйка",
+          "group": "Professions"
         },
         {
           "ge": "პენსიონერი",
           "en": "pensioner",
-          "ru": "пенсионер"
+          "ru": "пенсионер",
+          "group": "Professions"
+        },
+        {
+          "ge": "უმუშევარი",
+          "en": "unemployed",
+          "ru": "безработный",
+          "group": "Professions"
         },
         {
           "ge": "ეკონომისტი",
           "en": "economist",
-          "ru": "экономист"
+          "ru": "экономист",
+          "group": "Professions"
+        },
+        {
+          "ge": "ბანკირი",
+          "en": "banker",
+          "ru": "банкир",
+          "group": "Professions"
+        },
+        {
+          "ge": "ფეხბურთელი",
+          "en": "footballer",
+          "ru": "футболист",
+          "group": "Professions"
+        },
+        {
+          "ge": "გამხდარი",
+          "en": "slim / thin",
+          "ru": "стройный",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "მსუქანი",
+          "en": "fat",
+          "ru": "полный",
+          "group": "Descriptions"
         },
         {
           "ge": "წყნარი",
           "en": "calm / quiet",
-          "ru": "спокойный"
+          "ru": "спокойный",
+          "group": "Descriptions"
         },
         {
           "ge": "მხიარული",
           "en": "cheerful",
-          "ru": "весёлый"
+          "ru": "весёлый",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "დაკავებული",
+          "en": "busy",
+          "ru": "занятый",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "მნიშვნელოვანი",
+          "en": "important",
+          "ru": "важный",
+          "group": "Descriptions"
         },
         {
           "ge": "მდიდარი",
           "en": "rich",
-          "ru": "богатый"
+          "ru": "богатый",
+          "group": "Descriptions"
         },
         {
           "ge": "ღარიბი",
           "en": "poor",
-          "ru": "бедный"
+          "ru": "бедный",
+          "group": "Descriptions"
         },
         {
           "ge": "ცნობილი",
           "en": "famous",
-          "ru": "известный"
+          "ru": "известный",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "შავგვრემანი",
+          "en": "dark-haired",
+          "ru": "темноволосый",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "ქერა",
+          "en": "blond / fair-haired",
+          "ru": "светловолосый",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "წითური",
+          "en": "red-haired",
+          "ru": "рыжий",
+          "group": "Descriptions"
+        },
+        {
+          "ge": "გასათხოვარი",
+          "en": "unmarried (woman)",
+          "ru": "незамужняя",
+          "group": "Relationship status"
         },
         {
           "ge": "გათხოვილი",
           "en": "married (woman)",
-          "ru": "замужняя"
+          "ru": "замужняя",
+          "group": "Relationship status"
+        },
+        {
+          "ge": "ცოლიანი",
+          "en": "married (man)",
+          "ru": "женатый",
+          "group": "Relationship status"
+        },
+        {
+          "ge": "უცოლო",
+          "en": "unmarried (man)",
+          "ru": "холостой",
+          "group": "Relationship status"
+        },
+        {
+          "ge": "საქმრო",
+          "en": "fiance",
+          "ru": "жених",
+          "group": "Relationship status"
+        },
+        {
+          "ge": "საცოლე",
+          "en": "fiancee",
+          "ru": "невеста",
+          "group": "Relationship status"
         },
         {
           "ge": "ქორწილი",
           "en": "wedding",
-          "ru": "свадьба"
+          "ru": "свадьба",
+          "group": "Relationship status"
         },
         {
           "ge": "ყოჩაღ",
           "en": "well done! / bravo!",
-          "ru": "молодец!"
-        },
-        {
-          "ge": "პირველი",
-          "en": "first",
-          "ru": "первый"
+          "ru": "молодец!",
+          "group": "Useful words"
         }
       ]
     },
     "5": {
       "title": "Foreign Guest in Tbilisi",
       "grammar": {
-        "en": "Comparative: უფრო + adj. Superlative: ყველაზე + adj. Indefinite pronouns: რამე something, ვინმე someone, არავინ nobody.",
-        "ru": "Сравнительная: უფრო + прил. Превосходная: ყველაზე + прил. Местоимения: რამე что-то, ვინმე кто-то, არავინ никто.",
-        "example_ge": "ეს ყველაზე ლამაზი ეკლესიაა.",
-        "example_en": "This is the most beautiful church."
+        "en": "Adjective degrees: comparative with უფრო...ვიდრე and superlative with ყველაზე + adjective. Indefinite pronouns: რამე, ვინმე, სადმე, არავინ, არაფერი.",
+        "ru": "Степени сравнения: сравнительная უფრო...ვიდრე, превосходная ყველაზე + прилагательное. Неопределенные местоимения: რამე, ვინმე, სადმე, არავინ, არაფერი.",
+        "example_ge": "ეს ყველაზე საინტერესო ხიდია ქალაქში.",
+        "example_en": "This is the most interesting bridge in the city."
       },
+      "easier_than_russian": "One stable superlative marker (ყველაზე) replaces many Russian adjective endings.",
       "vocab": [
         {
           "ge": "სასტუმრო",
           "en": "hotel",
-          "ru": "отель"
+          "ru": "отель",
+          "group": "City sightseeing"
         },
         {
           "ge": "ციხე",
           "en": "fortress / castle",
-          "ru": "крепость"
+          "ru": "крепость",
+          "group": "City sightseeing"
         },
         {
           "ge": "ეკლესია",
           "en": "church",
-          "ru": "церковь"
+          "ru": "церковь",
+          "group": "City sightseeing"
+        },
+        {
+          "ge": "გოგირდი",
+          "en": "sulfur",
+          "ru": "сера",
+          "group": "City sightseeing"
+        },
+        {
+          "ge": "სტილი",
+          "en": "style",
+          "ru": "стиль",
+          "group": "City sightseeing"
         },
         {
           "ge": "არქიტექტურა",
           "en": "architecture",
-          "ru": "архитектура"
+          "ru": "архитектура",
+          "group": "City sightseeing"
+        },
+        {
+          "ge": "ისტორიკოსი",
+          "en": "historian",
+          "ru": "историк",
+          "group": "People"
         },
         {
           "ge": "მოგზაური",
           "en": "traveler",
-          "ru": "путешественник"
+          "ru": "путешественник",
+          "group": "People"
+        },
+        {
+          "ge": "მიწა",
+          "en": "land / earth",
+          "ru": "земля",
+          "group": "City sightseeing"
         },
         {
           "ge": "ხიდი",
           "en": "bridge",
-          "ru": "мост"
+          "ru": "мост",
+          "group": "City sightseeing"
         },
         {
           "ge": "შესანიშნავი",
-          "en": "wonderful",
-          "ru": "замечательный"
+          "en": "wonderful / magnificent",
+          "ru": "замечательный",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "მთავარი",
+          "en": "main",
+          "ru": "главный",
+          "group": "Adjectives"
         },
         {
           "ge": "აუცილებელი",
           "en": "necessary",
-          "ru": "необходимый"
+          "ru": "необходимый",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "საკმარისი",
+          "en": "sufficient",
+          "ru": "достаточный",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "დასასვენებელი",
+          "en": "recreational / for отдыха",
+          "ru": "для отдыха",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "იმედი",
+          "en": "hope",
+          "ru": "надежда",
+          "group": "Useful words"
+        },
+        {
+          "ge": "იმედია",
+          "en": "hopefully",
+          "ru": "надеюсь",
+          "group": "Useful words"
+        },
+        {
+          "ge": "ჩანს",
+          "en": "it seems / is visible",
+          "ru": "кажется / видно",
+          "group": "Useful words"
         },
         {
           "ge": "რამე",
           "en": "something",
-          "ru": "что-то"
+          "ru": "что-то",
+          "group": "Pronouns"
         },
         {
           "ge": "ვინმე",
           "en": "someone",
-          "ru": "кто-то"
+          "ru": "кто-то",
+          "group": "Pronouns"
+        },
+        {
+          "ge": "სადმე",
+          "en": "somewhere",
+          "ru": "где-то",
+          "group": "Pronouns"
+        },
+        {
+          "ge": "რამდენიმე",
+          "en": "a few / several",
+          "ru": "несколько",
+          "group": "Pronouns"
         },
         {
           "ge": "არავინ",
           "en": "nobody",
-          "ru": "никто"
+          "ru": "никто",
+          "group": "Pronouns"
         },
         {
-          "ge": "შეხვედრამდე",
-          "en": "until we meet",
-          "ru": "до встречи"
+          "ge": "არაფერი",
+          "en": "nothing",
+          "ru": "ничего",
+          "group": "Pronouns"
         }
       ]
     },
     "6": {
       "title": "My One Day",
       "grammar": {
-        "en": "Comparative: უფრო...ვიდრე more than. Equality: ისეთივე...როგორც as...as. Daily adverbs: ჩვეულებრივ usually, ხანდახან sometimes.",
-        "ru": "Сравнение: უფრო...ვიდრე больше чем. Равенство: ისეთივე...როგორც такой же как. ჩვეულებრივ обычно, ხანდახან иногда.",
-        "example_ge": "ის უფრო მაღალია ვიდრე მე.",
-        "example_en": "He is taller than me."
+        "en": "Comparative: უფრო...ვიდრე (more...than). Equality: ისეთივე...როგორც (as...as). Daily adverbs: ჩვეულებრივ usually, ხანდახან sometimes, თითქმის almost.",
+        "ru": "Сравнение: უფრო...ვიდრე (более...чем). Равенство: ისეთივე...როგორც (такой же...как). Наречия: ჩვეულებრივ обычно, ხანდახან иногда, თითქმის почти.",
+        "example_ge": "ჩემი დილა უფრო სწრაფია, ვიდრე ჩემი საღამო.",
+        "example_en": "My morning is faster-paced than my evening."
       },
+      "easier_than_russian": "Daily routine phrases are straightforward: no aspect pairs like делать/сделать.",
       "vocab": [
         {
           "ge": "ჭიქა",
           "en": "glass / cup",
-          "ru": "стакан"
+          "ru": "стакан / чашка",
+          "group": "Kitchen"
         },
         {
           "ge": "თეფში",
           "en": "plate",
-          "ru": "тарелка"
+          "ru": "тарелка",
+          "group": "Kitchen"
         },
         {
           "ge": "ჩანგალი",
           "en": "fork",
-          "ru": "вилка"
+          "ru": "вилка",
+          "group": "Kitchen"
         },
         {
           "ge": "დანა",
           "en": "knife",
-          "ru": "нож"
+          "ru": "нож",
+          "group": "Kitchen"
+        },
+        {
+          "ge": "სუფრა",
+          "en": "table setting / tablecloth",
+          "ru": "скатерть / накрытый стол",
+          "group": "Kitchen"
+        },
+        {
+          "ge": "ღუმელი",
+          "en": "oven",
+          "ru": "духовка",
+          "group": "Kitchen"
+        },
+        {
+          "ge": "კარადა",
+          "en": "cupboard",
+          "ru": "шкаф",
+          "group": "Kitchen"
         },
         {
           "ge": "მოხარშული",
           "en": "boiled",
-          "ru": "варёный"
+          "ru": "вареный",
+          "group": "Food description"
         },
         {
           "ge": "შემწვარი",
           "en": "fried / roasted",
-          "ru": "жареный"
+          "ru": "жареный",
+          "group": "Food description"
         },
         {
           "ge": "ტკბილი",
           "en": "sweet",
-          "ru": "сладкий"
+          "ru": "сладкий",
+          "group": "Food description"
         },
         {
           "ge": "ცხარე",
           "en": "spicy / hot",
-          "ru": "острый"
+          "ru": "острый",
+          "group": "Food description"
+        },
+        {
+          "ge": "უმარილო",
+          "en": "unsalted",
+          "ru": "несоленый",
+          "group": "Food description"
+        },
+        {
+          "ge": "ნედლი",
+          "en": "raw",
+          "ru": "сырой",
+          "group": "Food description"
+        },
+        {
+          "ge": "ღია",
+          "en": "light (shade)",
+          "ru": "светлый",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "მუქი",
+          "en": "dark (shade)",
+          "ru": "темный",
+          "group": "Adjectives"
         },
         {
           "ge": "სუფთა",
           "en": "clean",
-          "ru": "чистый"
+          "ru": "чистый",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "სწრაფი",
+          "en": "fast",
+          "ru": "быстрый",
+          "group": "Adjectives"
         },
         {
           "ge": "ნელი",
           "en": "slow",
-          "ru": "медленный"
+          "ru": "медленный",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "იბანს",
+          "en": "washes (oneself)",
+          "ru": "умывается",
+          "group": "Daily verbs"
+        },
+        {
+          "ge": "იღებს შხაპს",
+          "en": "takes a shower",
+          "ru": "принимает душ",
+          "group": "Daily verbs"
+        },
+        {
+          "ge": "ამზადებს",
+          "en": "prepares / cooks",
+          "ru": "готовит",
+          "group": "Daily verbs"
         },
         {
           "ge": "ჩვეულებრივ",
           "en": "usually",
-          "ru": "обычно"
+          "ru": "обычно",
+          "group": "Adverbs"
         },
         {
           "ge": "ხანდახან",
           "en": "sometimes",
-          "ru": "иногда"
+          "ru": "иногда",
+          "group": "Adverbs"
+        },
+        {
+          "ge": "ძირითადად",
+          "en": "mainly",
+          "ru": "в основном",
+          "group": "Adverbs"
         }
       ]
     },
     "7": {
       "title": "Weekend",
       "grammar": {
-        "en": "Conjunctions: და and, მაგრამ but, თუ if, იმიტომ რომ because. Subjunctive/reported speech uses -ო suffix.",
-        "ru": "Союзы: და и, მაგრამ но, თუ если, იმიტომ რომ потому что. Косвенная речь: суффикс -ო.",
-        "example_ge": "ვიცი, რომ კარგად ხარ.",
-        "example_en": "I know that you are fine."
+        "en": "Subjunctive/reported speech patterns often use -ო in indirect speech. Conjunctions: და, მაგრამ, ან, თუ, რომ, იმიტომ რომ, თუმცა. A2 word-building suffixes: -ად, -ური, -იანი.",
+        "ru": "Косвенная речь и сослагательные конструкции часто используют -ო. Союзы: და, მაგრამ, ან, თუ, რომ, იმიტომ რომ, თუმცა. Словообразование: -ად, -ური, -იანი.",
+        "example_ge": "ვიცი, რომ ბაზარში დიდი არჩევანია, მაგრამ ყველაფერი იაფი არ არის.",
+        "example_en": "I know that there is a big selection at the market, but not everything is cheap."
       },
+      "easier_than_russian": "Conjunctions are fixed words and do not trigger case changes like many Russian prepositions.",
       "vocab": [
         {
           "ge": "ხილი",
           "en": "fruit",
-          "ru": "фрукт"
+          "ru": "фрукты",
+          "group": "Fruit"
+        },
+        {
+          "ge": "ვაშლი",
+          "en": "apple",
+          "ru": "яблоко",
+          "group": "Fruit"
         },
         {
           "ge": "მსხალი",
           "en": "pear",
-          "ru": "груша"
+          "ru": "груша",
+          "group": "Fruit"
         },
         {
           "ge": "ატამი",
           "en": "peach",
-          "ru": "персик"
+          "ru": "персик",
+          "group": "Fruit"
         },
         {
           "ge": "ბალი",
           "en": "cherry",
-          "ru": "вишня"
+          "ru": "черешня",
+          "group": "Fruit"
+        },
+        {
+          "ge": "ალუბალი",
+          "en": "sour cherry",
+          "ru": "вишня",
+          "group": "Fruit"
         },
         {
           "ge": "მარწყვი",
           "en": "strawberry",
-          "ru": "клубника"
+          "ru": "клубника",
+          "group": "Fruit"
+        },
+        {
+          "ge": "ფორთოხალი",
+          "en": "orange",
+          "ru": "апельсин",
+          "group": "Fruit"
+        },
+        {
+          "ge": "კივი",
+          "en": "kiwi",
+          "ru": "киви",
+          "group": "Fruit"
+        },
+        {
+          "ge": "გრეიპფრუტი",
+          "en": "grapefruit",
+          "ru": "грейпфрут",
+          "group": "Fruit"
+        },
+        {
+          "ge": "ფეიხოა",
+          "en": "feijoa",
+          "ru": "фейхоа",
+          "group": "Fruit"
         },
         {
           "ge": "საზამთრო",
           "en": "watermelon",
-          "ru": "арбуз"
+          "ru": "арбуз",
+          "group": "Fruit"
+        },
+        {
+          "ge": "ნესვი",
+          "en": "melon",
+          "ru": "дыня",
+          "group": "Fruit"
+        },
+        {
+          "ge": "კენკრა",
+          "en": "berry",
+          "ru": "ягода",
+          "group": "Fruit"
         },
         {
           "ge": "სტაფილო",
           "en": "carrot",
-          "ru": "морковь"
+          "ru": "морковь",
+          "group": "Vegetables"
+        },
+        {
+          "ge": "ჭარხალი",
+          "en": "beet",
+          "ru": "свекла",
+          "group": "Vegetables"
+        },
+        {
+          "ge": "ბოლოკი",
+          "en": "radish",
+          "ru": "редис",
+          "group": "Vegetables"
         },
         {
           "ge": "ხახვი",
           "en": "onion",
-          "ru": "лук"
+          "ru": "лук",
+          "group": "Vegetables"
         },
         {
-          "ge": "მურაბა",
-          "en": "jam",
-          "ru": "варенье"
+          "ge": "ოხრახუში",
+          "en": "parsley",
+          "ru": "петрушка",
+          "group": "Vegetables"
         },
         {
-          "ge": "ტყემალი",
-          "en": "tkemali (plum sauce)",
-          "ru": "ткемали"
+          "ge": "მწვანილი",
+          "en": "greens / herbs",
+          "ru": "зелень",
+          "group": "Vegetables"
         },
         {
           "ge": "მჭადი",
           "en": "cornbread",
-          "ru": "мчади"
+          "ru": "мчади",
+          "group": "Georgian food"
+        },
+        {
+          "ge": "ტყემალი",
+          "en": "tkemali (plum sauce)",
+          "ru": "ткемали",
+          "group": "Georgian food"
+        },
+        {
+          "ge": "მურაბა",
+          "en": "jam",
+          "ru": "варенье",
+          "group": "Georgian food"
+        },
+        {
+          "ge": "სუნელი",
+          "en": "spice / seasoning",
+          "ru": "специя",
+          "group": "Georgian food"
         },
         {
           "ge": "არჩევანი",
           "en": "choice / selection",
-          "ru": "выбор"
+          "ru": "выбор",
+          "group": "Market"
+        },
+        {
+          "ge": "ქოთანი",
+          "en": "pot",
+          "ru": "горшок",
+          "group": "Market"
+        },
+        {
+          "ge": "ბაზარი",
+          "en": "market",
+          "ru": "рынок",
+          "group": "Market"
         }
       ]
     },
     "8": {
       "title": "Bank",
       "grammar": {
-        "en": "Purpose nouns: სა-+stem+ო/ელი (საძინებელი bedroom). Postpositions after genitive: შესახებ about, გამო because of.",
-        "ru": "Существительные цели: საძინებელი спальня. Послелоги с родительным: შესახებ о, გამო из-за.",
-        "example_ge": "კრედიტის შესახებ გსურთ?",
-        "example_en": "Do you want (to know) about the credit?"
+        "en": "Purpose nouns: სა- + stem + -ო/-ელი (საძინებელი, სასადილო, სამზარეულო). Postpositions follow genitive: კრედიტის შესახებ, კრიზისის გამო, ბანკის მიმართ.",
+        "ru": "Существительные назначения: სა- + основа + -ო/-ელი (საძინებელი, სასადილო, სამზარეულო). Послелоги требуют родительного: კრედიტის შესახებ, კრიზისის გამო, ბანკის მიმართ.",
+        "example_ge": "კრედიტის შესახებ კონსულტანტს დაველაპარაკები.",
+        "example_en": "I will speak with a consultant about the loan."
       },
+      "easier_than_russian": "Key polite service phrases are fixed and reusable in many formal situations.",
       "vocab": [
         {
           "ge": "ანგარიში",
           "en": "account",
-          "ru": "счёт"
+          "ru": "счет",
+          "group": "Banking"
         },
         {
           "ge": "კრედიტი",
           "en": "credit / loan",
-          "ru": "кредит"
+          "ru": "кредит",
+          "group": "Banking"
+        },
+        {
+          "ge": "განვადება",
+          "en": "installment plan",
+          "ru": "рассрочка",
+          "group": "Banking"
         },
         {
           "ge": "გადარიცხვა",
           "en": "transfer",
-          "ru": "перевод"
+          "ru": "перевод",
+          "group": "Banking"
+        },
+        {
+          "ge": "ჩარიცხვა",
+          "en": "deposit",
+          "ru": "зачисление",
+          "group": "Banking"
+        },
+        {
+          "ge": "სალარო",
+          "en": "cash desk",
+          "ru": "касса",
+          "group": "Banking"
         },
         {
           "ge": "ბანკომატი",
           "en": "ATM",
-          "ru": "банкомат"
+          "ru": "банкомат",
+          "group": "Banking"
+        },
+        {
+          "ge": "მოლარე",
+          "en": "cashier",
+          "ru": "кассир",
+          "group": "Bank staff"
         },
         {
           "ge": "კლიენტი",
           "en": "client",
-          "ru": "клиент"
+          "ru": "клиент",
+          "group": "Bank staff"
+        },
+        {
+          "ge": "კონსულტანტი",
+          "en": "consultant",
+          "ru": "консультант",
+          "group": "Bank staff"
+        },
+        {
+          "ge": "კრედიტოფიცერი",
+          "en": "credit officer",
+          "ru": "кредитный специалист",
+          "group": "Bank staff"
+        },
+        {
+          "ge": "გასაუბრება",
+          "en": "interview",
+          "ru": "собеседование",
+          "group": "Banking"
         },
         {
           "ge": "შემოსავალი",
           "en": "income",
-          "ru": "доход"
+          "ru": "доход",
+          "group": "Documents"
+        },
+        {
+          "ge": "პირადობის მოწმობა",
+          "en": "ID card",
+          "ru": "удостоверение личности",
+          "group": "Documents"
+        },
+        {
+          "ge": "ფიზიკური პირი",
+          "en": "natural person",
+          "ru": "физическое лицо",
+          "group": "Documents"
+        },
+        {
+          "ge": "იურიდიული პირი",
+          "en": "legal entity",
+          "ru": "юридическое лицо",
+          "group": "Documents"
+        },
+        {
+          "ge": "საპროცენტო განაკვეთი",
+          "en": "interest rate",
+          "ru": "процентная ставка",
+          "group": "Documents"
         },
         {
           "ge": "ვადა",
           "en": "term / period",
-          "ru": "срок"
+          "ru": "срок",
+          "group": "Documents"
+        },
+        {
+          "ge": "ანკეტა",
+          "en": "application form",
+          "ru": "анкета",
+          "group": "Documents"
+        },
+        {
+          "ge": "ხელის მოწერა",
+          "en": "signature",
+          "ru": "подпись",
+          "group": "Documents"
         },
         {
           "ge": "მობრძანდით",
-          "en": "please come in (polite)",
-          "ru": "прошу, входите"
+          "en": "please come in",
+          "ru": "проходите, пожалуйста",
+          "group": "Polite phrases"
         },
         {
           "ge": "ინებეთ",
-          "en": "here you are (polite)",
-          "ru": "вот, пожалуйста"
+          "en": "here you are / please",
+          "ru": "вот, пожалуйста",
+          "group": "Polite phrases"
+        },
+        {
+          "ge": "რა გნებავთ?",
+          "en": "what do you wish?",
+          "ru": "что желаете?",
+          "group": "Polite phrases"
         },
         {
           "ge": "დაელოდეთ",
           "en": "please wait",
-          "ru": "подождите"
-        },
-        {
-          "ge": "დაახლოებით",
-          "en": "approximately",
-          "ru": "примерно"
+          "ru": "подождите, пожалуйста",
+          "group": "Polite phrases"
         },
         {
           "ge": "რა თქმა უნდა",
           "en": "of course",
-          "ru": "конечно"
+          "ru": "конечно",
+          "group": "Polite phrases"
+        },
+        {
+          "ge": "დაახლოებით",
+          "en": "approximately",
+          "ru": "примерно",
+          "group": "Polite phrases"
         }
       ]
     },
     "9": {
       "title": "Health",
       "grammar": {
-        "en": "Modal verbs: მინდა I want, უნდა must/should, შეიძლება it is possible. Obligation: უნდა + verb — წამალი უნდა მიიღო you must take medicine.",
-        "ru": "Модальные: მინდა хочу, უნდა должен, შეიძლება можно. Обязанность: უნდა + глагол.",
-        "example_ge": "ავად ვარ, სიცხე მაქვს.",
-        "example_en": "I'm ill, I have a fever."
+        "en": "Modal verbs: მინდა (I want), უნდა (must/should), შეიძლება (may/possible), არ შეიძლება (not allowed), შემიძლია (I can). Obligation pattern: უნდა + verb.",
+        "ru": "Модальные глаголы: მინდა (хочу), უნდა (должен), შეიძლება (можно), არ შეიძლება (нельзя), შემიძლია (могу). Обязанность: უნდა + глагол.",
+        "example_ge": "სიცხე მაქვს და წამალი უნდა მივიღო.",
+        "example_en": "I have a fever and I must take medicine."
       },
+      "easier_than_russian": "Modal words are highly reusable and do not inflect by gender.",
       "vocab": [
         {
           "ge": "წამალი",
           "en": "medicine",
-          "ru": "лекарство"
+          "ru": "лекарство",
+          "group": "Medical items"
+        },
+        {
+          "ge": "თერმომეტრი",
+          "en": "thermometer",
+          "ru": "термометр",
+          "group": "Medical items"
+        },
+        {
+          "ge": "წნევის აპარატი",
+          "en": "blood pressure monitor",
+          "ru": "тонометр",
+          "group": "Medical items"
+        },
+        {
+          "ge": "ანალიზი",
+          "en": "test / analysis",
+          "ru": "анализ",
+          "group": "Medical items"
         },
         {
           "ge": "ექიმი",
           "en": "doctor",
-          "ru": "врач"
+          "ru": "врач",
+          "group": "People"
         },
         {
           "ge": "ექთანი",
           "en": "nurse",
-          "ru": "медсестра"
+          "ru": "медсестра",
+          "group": "People"
         },
         {
           "ge": "პაციენტი",
           "en": "patient",
-          "ru": "пациент"
+          "ru": "пациент",
+          "group": "People"
         },
         {
-          "ge": "ავად",
-          "en": "ill (predicate)",
-          "ru": "болен"
+          "ge": "მკურნალობა",
+          "en": "treatment",
+          "ru": "лечение",
+          "group": "Medical care"
         },
         {
-          "ge": "გაციებული",
-          "en": "having a cold",
-          "ru": "простуженный"
-        },
-        {
-          "ge": "მტკივა",
-          "en": "it hurts (me)",
-          "ru": "болит"
+          "ge": "მკლავი",
+          "en": "arm",
+          "ru": "рука (от плеча)",
+          "group": "Body"
         },
         {
           "ge": "მუხლი",
           "en": "knee",
-          "ru": "колено"
+          "ru": "колено",
+          "group": "Body"
         },
         {
           "ge": "შუბლი",
           "en": "forehead",
-          "ru": "лоб"
+          "ru": "лоб",
+          "group": "Body"
+        },
+        {
+          "ge": "თითი",
+          "en": "finger",
+          "ru": "палец",
+          "group": "Body"
+        },
+        {
+          "ge": "გაციებული ვარ",
+          "en": "I have a cold",
+          "ru": "я простужен(а)",
+          "group": "Symptoms"
+        },
+        {
+          "ge": "ავად ვარ",
+          "en": "I am ill",
+          "ru": "я болен / больна",
+          "group": "Symptoms"
+        },
+        {
+          "ge": "სიცხე მაქვს",
+          "en": "I have a fever",
+          "ru": "у меня температура",
+          "group": "Symptoms"
+        },
+        {
+          "ge": "გტკივა?",
+          "en": "does it hurt?",
+          "ru": "болит?",
+          "group": "Symptoms"
+        },
+        {
+          "ge": "მტკივა",
+          "en": "it hurts",
+          "ru": "болит",
+          "group": "Symptoms"
+        },
+        {
+          "ge": "გაგსინჯავთ",
+          "en": "I will examine you",
+          "ru": "я вас осмотрю",
+          "group": "Clinic phrases"
+        },
+        {
+          "ge": "მინდა",
+          "en": "I want",
+          "ru": "я хочу",
+          "group": "Modal verbs"
         },
         {
           "ge": "უნდა",
           "en": "must / should",
-          "ru": "нужно / должен"
+          "ru": "нужно / должен",
+          "group": "Modal verbs"
         },
         {
           "ge": "შეიძლება",
           "en": "it is possible / may",
-          "ru": "можно"
+          "ru": "можно",
+          "group": "Modal verbs"
+        },
+        {
+          "ge": "არ შეიძლება",
+          "en": "it is not allowed",
+          "ru": "нельзя",
+          "group": "Modal verbs"
         },
         {
           "ge": "შემიძლია",
           "en": "I can",
-          "ru": "я могу"
+          "ru": "я могу",
+          "group": "Modal verbs"
+        },
+        {
+          "ge": "არ შემიძლია",
+          "en": "I cannot",
+          "ru": "я не могу",
+          "group": "Modal verbs"
         }
       ]
     },
     "10": {
       "title": "Everything for the New Apartment",
       "grammar": {
-        "en": "Imperative: informal (შენ) vs formal (თქვენ -ეთ). მობრძანდით please come. Contracted nouns: მეგობარი → მეგობრის in genitive.",
-        "ru": "Повелительное: неформ. vs форм. на -ეთ. მობრძანდით прошу войти. Сокращённые существительные в падежах.",
-        "example_ge": "მობრძანდით, გთხოვთ.",
-        "example_en": "Please come in."
+        "en": "Imperative mood: informal (შენ) vs formal (თქვენ, often -ეთ). Contracted nouns in oblique cases: მეგობარი → მეგობრის, კალამი → კალმის.",
+        "ru": "Повелительное наклонение: неформальное (შენ) и формальное (თქვენ, часто -ეთ). Сжатые основы в косвенных падежах: მეგობარი → მეგობრის, კალამი → კალმის.",
+        "example_ge": "მობრძანდით, ინებეთ და დაწერეთ თქვენი მისამართი.",
+        "example_en": "Please come in, here you are, and write your address."
       },
+      "easier_than_russian": "Formal imperative is usually predictable with -ეთ, which makes polite commands easy to build.",
       "vocab": [
         {
           "ge": "სარკე",
           "en": "mirror",
-          "ru": "зеркало"
+          "ru": "зеркало",
+          "group": "Furniture"
+        },
+        {
+          "ge": "თარო",
+          "en": "shelf",
+          "ru": "полка",
+          "group": "Furniture"
         },
         {
           "ge": "ფარდა",
           "en": "curtain",
-          "ru": "штора"
+          "ru": "штора",
+          "group": "Furniture"
+        },
+        {
+          "ge": "ტახტი",
+          "en": "sofa-bed / couch",
+          "ru": "диван",
+          "group": "Furniture"
         },
         {
           "ge": "კომოდი",
           "en": "chest of drawers",
-          "ru": "комод"
+          "ru": "комод",
+          "group": "Furniture"
+        },
+        {
+          "ge": "ტუმბო",
+          "en": "nightstand",
+          "ru": "тумбочка",
+          "group": "Furniture"
         },
         {
           "ge": "ჭაღი",
           "en": "chandelier",
-          "ru": "люстра"
+          "ru": "люстра",
+          "group": "Furniture"
+        },
+        {
+          "ge": "ელექტროქურა",
+          "en": "electric stove",
+          "ru": "электроплита",
+          "group": "Appliances"
         },
         {
           "ge": "მიკროტალღური",
           "en": "microwave",
-          "ru": "микроволновка"
+          "ru": "микроволновка",
+          "group": "Appliances"
         },
         {
           "ge": "სარეცხი მანქანა",
           "en": "washing machine",
-          "ru": "стиральная машина"
+          "ru": "стиральная машина",
+          "group": "Appliances"
+        },
+        {
+          "ge": "ჭურჭლის სარეცხი მანქანა",
+          "en": "dishwasher",
+          "ru": "посудомоечная машина",
+          "group": "Appliances"
         },
         {
           "ge": "ელექტროჩაიდანი",
           "en": "electric kettle",
-          "ru": "электрочайник"
+          "ru": "электрочайник",
+          "group": "Appliances"
+        },
+        {
+          "ge": "ტოსტერი",
+          "en": "toaster",
+          "ru": "тостер",
+          "group": "Appliances"
+        },
+        {
+          "ge": "ღუმელი",
+          "en": "oven",
+          "ru": "духовка",
+          "group": "Appliances"
         },
         {
           "ge": "ვერცხლისფერი",
           "en": "silver",
-          "ru": "серебряный"
+          "ru": "серебристый",
+          "group": "Colors"
         },
         {
           "ge": "ოქროსფერი",
           "en": "golden",
-          "ru": "золотой"
+          "ru": "золотистый",
+          "group": "Colors"
+        },
+        {
+          "ge": "ვარდისფერი",
+          "en": "pink",
+          "ru": "розовый",
+          "group": "Colors"
+        },
+        {
+          "ge": "ყავისფერი",
+          "en": "brown",
+          "ru": "коричневый",
+          "group": "Colors"
         },
         {
           "ge": "ღია",
           "en": "light (shade)",
-          "ru": "светлый"
+          "ru": "светлый",
+          "group": "Colors"
         },
         {
           "ge": "მუქი",
           "en": "dark (shade)",
-          "ru": "тёмный"
+          "ru": "темный",
+          "group": "Colors"
+        },
+        {
+          "ge": "წაიკითხეთ",
+          "en": "read! (formal)",
+          "ru": "прочитайте!",
+          "group": "Imperative"
+        },
+        {
+          "ge": "მოისმინეთ",
+          "en": "listen! (formal)",
+          "ru": "послушайте!",
+          "group": "Imperative"
         },
         {
           "ge": "დაწერეთ",
-          "en": "write! (formal imperative)",
-          "ru": "напишите!"
+          "en": "write! (formal)",
+          "ru": "напишите!",
+          "group": "Imperative"
+        },
+        {
+          "ge": "მობრძანდით",
+          "en": "please come in",
+          "ru": "проходите, пожалуйста",
+          "group": "Imperative"
         }
       ]
     },
     "11": {
       "title": "At the Wine Festival",
       "grammar": {
-        "en": "Diminutive/slight degree: მო- prefix (მოტკბო slightly sweet). Location postpositions: -თან near, -ში in, -ზე on.",
-        "ru": "Слабая степень: приставка მო- (მოტკბო слегка сладкий). Место: -თან у, -ში в, -ზე на.",
-        "example_ge": "ღვინის გემო მომწონს.",
-        "example_en": "I like the taste of the wine."
+        "en": "Diminutive/slight degree: მო- prefix (მოტკბო, მომჟავო). Location expressions with postpositions and local markers: -ში, -ზე, -თან, წინ, უკან, გვერდით.",
+        "ru": "Ослабленная степень качества: префикс მო- (მოტკბო, მომჟავო). Локация через послелоги и локативы: -ში, -ზე, -თან, წინ, უკან, გვერდით.",
+        "example_ge": "ეს ღვინო მოტკბოა და სასიამოვნო სუნი აქვს.",
+        "example_en": "This wine is slightly sweet and has a pleasant aroma."
       },
+      "easier_than_russian": "Wine descriptors are productive: adding მო- often gives a natural 'slightly' meaning.",
       "vocab": [
         {
           "ge": "გემო",
           "en": "taste / flavor",
-          "ru": "вкус"
+          "ru": "вкус",
+          "group": "Wine tasting"
         },
         {
           "ge": "სუნი",
           "en": "smell / aroma",
-          "ru": "запах"
+          "ru": "запах / аромат",
+          "group": "Wine tasting"
         },
         {
           "ge": "მშრალი",
-          "en": "dry (wine)",
-          "ru": "сухое"
+          "en": "dry",
+          "ru": "сухой",
+          "group": "Wine tasting"
         },
         {
           "ge": "ნახევრად ტკბილი",
           "en": "semi-sweet",
-          "ru": "полусладкое"
+          "ru": "полусладкий",
+          "group": "Wine tasting"
         },
         {
-          "ge": "მწარე",
-          "en": "bitter",
-          "ru": "горький"
-        },
-        {
-          "ge": "მჟავე",
-          "en": "sour",
-          "ru": "кислый"
-        },
-        {
-          "ge": "ყანწი",
-          "en": "drinking horn",
-          "ru": "рог для вина"
-        },
-        {
-          "ge": "მწარმოებელი",
-          "en": "producer",
-          "ru": "производитель"
-        },
-        {
-          "ge": "ირგვლივ",
-          "en": "around",
-          "ru": "вокруг"
-        },
-        {
-          "ge": "წინ",
-          "en": "in front",
-          "ru": "впереди"
-        },
-        {
-          "ge": "გვერდით",
-          "en": "beside",
-          "ru": "рядом"
+          "ge": "ნახევრად მშრალი",
+          "en": "semi-dry",
+          "ru": "полусухой",
+          "group": "Wine tasting"
         },
         {
           "ge": "მოტკბო",
           "en": "slightly sweet",
-          "ru": "слегка сладкий"
+          "ru": "слегка сладкий",
+          "group": "Wine tasting"
+        },
+        {
+          "ge": "მომჟავო",
+          "en": "slightly sour",
+          "ru": "слегка кислый",
+          "group": "Wine tasting"
+        },
+        {
+          "ge": "მწარე",
+          "en": "bitter",
+          "ru": "горький",
+          "group": "Wine tasting"
+        },
+        {
+          "ge": "მჟავე",
+          "en": "sour",
+          "ru": "кислый",
+          "group": "Wine tasting"
+        },
+        {
+          "ge": "ტკბილი",
+          "en": "sweet",
+          "ru": "сладкий",
+          "group": "Wine tasting"
+        },
+        {
+          "ge": "დოქი",
+          "en": "clay pitcher",
+          "ru": "кувшин",
+          "group": "Wine vessels"
+        },
+        {
+          "ge": "ყანწი",
+          "en": "drinking horn",
+          "ru": "рог для вина",
+          "group": "Wine vessels"
+        },
+        {
+          "ge": "სასმისი",
+          "en": "drinking vessel",
+          "ru": "бокал / сосуд",
+          "group": "Wine vessels"
+        },
+        {
+          "ge": "სასმელი",
+          "en": "beverage",
+          "ru": "напиток",
+          "group": "Wine vessels"
+        },
+        {
+          "ge": "მწარმოებელი",
+          "en": "producer",
+          "ru": "производитель",
+          "group": "Festival"
+        },
+        {
+          "ge": "წარმოება",
+          "en": "production",
+          "ru": "производство",
+          "group": "Festival"
+        },
+        {
+          "ge": "კუთხე",
+          "en": "region / corner",
+          "ru": "регион / угол",
+          "group": "Festival"
+        },
+        {
+          "ge": "მოკრეფილი",
+          "en": "harvested",
+          "ru": "собранный",
+          "group": "Festival"
+        },
+        {
+          "ge": "ირგვლივ",
+          "en": "around",
+          "ru": "вокруг",
+          "group": "Location"
+        },
+        {
+          "ge": "უკან",
+          "en": "behind / back",
+          "ru": "сзади",
+          "group": "Location"
+        },
+        {
+          "ge": "წინ",
+          "en": "in front",
+          "ru": "впереди / перед",
+          "group": "Location"
+        },
+        {
+          "ge": "შუაში",
+          "en": "in the middle",
+          "ru": "посередине",
+          "group": "Location"
+        },
+        {
+          "ge": "გვერდით",
+          "en": "beside",
+          "ru": "рядом",
+          "group": "Location"
+        },
+        {
+          "ge": "ზემოთ",
+          "en": "above",
+          "ru": "сверху",
+          "group": "Location"
         }
       ]
     },
     "12": {
       "title": "Guest in a Georgian Family",
       "grammar": {
-        "en": "Similative comparison: X-ის მსგავსი similar to X, X-ივით like X. Suffix -ივით: ბავშვივით like a child.",
-        "ru": "Сравнение по подобию: X-ის მსგავსი похожий на X, -ივით как. ბავშვივით как ребёнок.",
-        "example_ge": "სტუმარი ღვთისაა.",
-        "example_en": "The guest is from God (Georgian proverb)."
+        "en": "Similative comparison: X-ის მსგავსი (similar to X), X-ივით (like X), ისეთი...როგორც (such...as). Advanced contracted stems continue in oblique forms.",
+        "ru": "Сравнение по сходству: X-ის მსგავსი (похожий на X), X-ივით (как X), ისეთი...როგორც (такой...как). Продолжается тема сжатых основ в косвенных формах.",
+        "example_ge": "სტუმარი ღვთისაა და მასპინძელი გულით ხვდება.",
+        "example_en": "A guest is from God, and the host welcomes them warmly."
       },
-      "easier_than_russian": "Georgian hospitality is real — სტუმარი ღვთისაა is a living proverb.",
+      "easier_than_russian": "Pattern -ივით is very direct for 'like/as', without separate case prepositions.",
       "vocab": [
+        {
+          "ge": "სტუმარი",
+          "en": "guest",
+          "ru": "гость",
+          "group": "Hospitality"
+        },
         {
           "ge": "მასპინძელი",
           "en": "host",
-          "ru": "хозяин"
+          "ru": "хозяин / принимающая сторона",
+          "group": "Hospitality"
+        },
+        {
+          "ge": "სუფრა",
+          "en": "feast table setting",
+          "ru": "застолье / стол",
+          "group": "Hospitality"
         },
         {
           "ge": "თამადა",
           "en": "toastmaster",
-          "ru": "тамада"
+          "ru": "тамада",
+          "group": "Hospitality"
         },
         {
           "ge": "სადღეგრძელო",
           "en": "toast",
-          "ru": "тост"
+          "ru": "тост",
+          "group": "Hospitality"
         },
         {
           "ge": "ტრადიცია",
           "en": "tradition",
-          "ru": "традиция"
+          "ru": "традиция",
+          "group": "Hospitality"
         },
         {
-          "ge": "მზარეული",
-          "en": "cook / chef",
-          "ru": "повар"
+          "ge": "ტკბილეული",
+          "en": "sweets",
+          "ru": "сладости",
+          "group": "Food"
         },
         {
-          "ge": "თარჯიმანი",
-          "en": "translator",
-          "ru": "переводчик"
+          "ge": "მწნილეული",
+          "en": "pickled vegetables",
+          "ru": "соленья",
+          "group": "Food"
         },
         {
-          "ge": "მყუდრო",
-          "en": "cozy",
-          "ru": "уютный"
+          "ge": "ხეხილი",
+          "en": "fruit trees / fruit",
+          "ru": "плодовые деревья / фрукты",
+          "group": "Food"
         },
         {
-          "ge": "ხალისიანი",
-          "en": "cheerful / fun",
-          "ru": "весёлый"
+          "ge": "ისპანახი",
+          "en": "spinach",
+          "ru": "шпинат",
+          "group": "Food"
         },
         {
-          "ge": "ხედი",
-          "en": "view",
-          "ru": "вид"
+          "ge": "სასახლე",
+          "en": "palace",
+          "ru": "дворец",
+          "group": "House and place"
+        },
+        {
+          "ge": "საფლავი",
+          "en": "grave / tomb",
+          "ru": "могила",
+          "group": "House and place"
         },
         {
           "ge": "შვილთაშვილი",
           "en": "grandchild",
-          "ru": "внук/внучка"
+          "ru": "внук / внучка",
+          "group": "Family"
         },
         {
-          "ge": "გაგიმარჯოს",
-          "en": "cheers! / to your victory!",
-          "ru": "за ваше здоровье!"
+          "ge": "მზარეული",
+          "en": "cook / chef",
+          "ru": "повар",
+          "group": "People"
+        },
+        {
+          "ge": "თარჯიმანი",
+          "en": "translator / interpreter",
+          "ru": "переводчик",
+          "group": "People"
+        },
+        {
+          "ge": "თაობა",
+          "en": "generation",
+          "ru": "поколение",
+          "group": "People"
+        },
+        {
+          "ge": "მყუდრო",
+          "en": "cozy",
+          "ru": "уютный",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "ცოცხალი",
+          "en": "alive / lively",
+          "ru": "живой",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "ხალისიანი",
+          "en": "cheerful / fun",
+          "ru": "веселый",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "სახალისო",
+          "en": "entertaining",
+          "ru": "занимательный",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "სქელი",
+          "en": "thick",
+          "ru": "толстый / густой",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "თხელი",
+          "en": "thin",
+          "ru": "тонкий",
+          "group": "Adjectives"
+        },
+        {
+          "ge": "ხედი",
+          "en": "view",
+          "ru": "вид",
+          "group": "Adjectives"
         },
         {
           "ge": "ბავშვივით",
           "en": "like a child",
-          "ru": "как ребёнок"
+          "ru": "как ребенок",
+          "group": "Comparison"
         }
       ]
     }
@@ -2657,983 +3746,1727 @@
       "title": "National Product & Export",
       "grammar": {
         "en": "Passive voice (მიმღეობა): stem + -ებ-ა/ებ-ს — ძლიერდება (strengthens), საქმდება (jobs are created), იზრდება (grows). Export: ექსპორტი / ექსპორტირება. Import: იმპორტი.",
-        "ru": "Пассив: основа + -ებ-а/еб-ს — ძლიერდება (укрепляется), საქმდება (создаются рабочие места). Экспорт/импорт.",
-        "example_ge": "საქართველოდან ღვინო 33 ქვეყანაში ექსპორტირებულია.",
-        "example_en": "Wine from Georgia is exported to 33 countries."
+        "ru": "Пассив: основа + -ებ-а/ებ-ს — ძლიერდება (укрепляется), საქმდება (создаются рабочие места), იზრდება (растет). Экспорт/импорт.",
+        "example_ge": "საქართველოდან ღვინო ათეულობით ქვეყანაში ექსპორტირებულია.",
+        "example_en": "Wine from Georgia is exported to dozens of countries."
       },
       "easier_than_russian": "Passive is formed with -ებ- like a regular suffix — no auxiliary 'to be' needed.",
       "vocab": [
         {
           "ge": "ეროვნული პროდუქტი",
           "en": "national product",
-          "ru": "национальный продукт"
+          "ru": "национальный продукт",
+          "group": "economy"
         },
         {
           "ge": "ექსპორტი",
           "en": "export",
-          "ru": "экспорт"
+          "ru": "экспорт",
+          "group": "trade"
         },
         {
           "ge": "იმპორტი",
           "en": "import",
-          "ru": "импорт"
+          "ru": "импорт",
+          "group": "trade"
         },
         {
           "ge": "წარმოება",
           "en": "production / manufacturing",
-          "ru": "производство"
+          "ru": "производство",
+          "group": "industry"
         },
         {
           "ge": "ინვესტიცია",
           "en": "investment",
-          "ru": "инвестиция"
+          "ru": "инвестиция",
+          "group": "finance"
         },
         {
           "ge": "ბიუჯეტი",
           "en": "budget",
-          "ru": "бюджет"
+          "ru": "бюджет",
+          "group": "finance"
         },
         {
           "ge": "ვალუტა",
           "en": "currency",
-          "ru": "валюта"
+          "ru": "валюта",
+          "group": "finance"
         },
         {
           "ge": "საწარმო",
           "en": "enterprise / factory",
-          "ru": "предприятие"
+          "ru": "предприятие",
+          "group": "industry"
         },
         {
           "ge": "ექსპორტირება",
           "en": "to export",
-          "ru": "экспортировать"
+          "ru": "экспортировать",
+          "group": "trade"
         },
         {
           "ge": "პოპულარული",
           "en": "popular",
-          "ru": "популярный"
+          "ru": "популярный",
+          "group": "market"
         },
         {
           "ge": "მოთხოვნა",
           "en": "demand",
-          "ru": "спрос"
+          "ru": "спрос",
+          "group": "market"
         },
         {
           "ge": "ღირებულება",
           "en": "value / cost",
-          "ru": "стоимость"
+          "ru": "стоимость",
+          "group": "finance"
         },
         {
           "ge": "საერთაშორისო",
           "en": "international",
-          "ru": "международный"
+          "ru": "международный",
+          "group": "trade"
         },
         {
           "ge": "ძლიერდება",
           "en": "is strengthening",
-          "ru": "укрепляется"
+          "ru": "укрепляется",
+          "group": "trend"
+        },
+        {
+          "ge": "იზრდება",
+          "en": "is growing",
+          "ru": "растет",
+          "group": "trend"
+        },
+        {
+          "ge": "საქმდება",
+          "en": "jobs are created",
+          "ru": "трудоустраиваются",
+          "group": "employment"
+        },
+        {
+          "ge": "ეკონომიკა",
+          "en": "economy",
+          "ru": "экономика",
+          "group": "economy"
+        },
+        {
+          "ge": "შემოსავალი",
+          "en": "income / revenue",
+          "ru": "доход",
+          "group": "finance"
+        },
+        {
+          "ge": "მოგება",
+          "en": "profit",
+          "ru": "прибыль",
+          "group": "finance"
+        },
+        {
+          "ge": "დანახარჯი",
+          "en": "expense",
+          "ru": "расход",
+          "group": "finance"
+        },
+        {
+          "ge": "ადგილობრივი",
+          "en": "local",
+          "ru": "местный",
+          "group": "market"
+        },
+        {
+          "ge": "საგარეო ბაზარი",
+          "en": "foreign market",
+          "ru": "внешний рынок",
+          "group": "trade"
         }
       ]
     },
     "2": {
       "title": "Agrohub & Product Labels",
       "grammar": {
-        "en": "Adjectives from nouns: -იანი (quality) მწვანილი with greens, -ური (origin) ქართური Georgian. Genitive + postposition: პროდუქტის შესახებ (about the product), ვადის გამო (because of expiry).",
+        "en": "Adjectives from nouns: -იანი (quality), -ური (origin). Genitive + postposition: პროდუქტის შესახებ (about the product), ვადის გამო (because of expiry).",
         "ru": "Прилагательные: -იანი (качество), -ური (происхождение). Родительный + послелог: შესახებ (о), გამო (из-за).",
-        "example_ge": "ნატურალური პროდუქტი ორგანულია.",
-        "example_en": "The natural product is organic."
+        "example_ge": "ეტიკეტზე პროდუქტის შემადგენლობა და ვადაა მითითებული.",
+        "example_en": "The label shows the product ingredients and expiry date."
       },
       "easier_than_russian": "Label vocabulary is mostly international loanwords — ორგანული, კალორია, ეკოლოგიური.",
       "vocab": [
         {
           "ge": "აგროჰაბი",
           "en": "agrohub (farm market)",
-          "ru": "агрохаб"
+          "ru": "агрохаб",
+          "group": "retail"
         },
         {
           "ge": "ეტიკეტი",
           "en": "label",
-          "ru": "этикетка"
+          "ru": "этикетка",
+          "group": "packaging"
         },
         {
           "ge": "ნატურალური",
           "en": "natural",
-          "ru": "натуральный"
+          "ru": "натуральный",
+          "group": "quality"
         },
         {
           "ge": "ორგანული",
           "en": "organic",
-          "ru": "органический"
+          "ru": "органический",
+          "group": "quality"
         },
         {
           "ge": "კალორია",
           "en": "calorie",
-          "ru": "калория"
+          "ru": "калория",
+          "group": "nutrition"
         },
         {
           "ge": "ცხიმიანობა",
           "en": "fat content",
-          "ru": "жирность"
+          "ru": "жирность",
+          "group": "nutrition"
         },
         {
           "ge": "ვადა",
           "en": "expiry date / term",
-          "ru": "срок годности"
+          "ru": "срок",
+          "group": "labeling"
         },
         {
           "ge": "მწარმოებელი",
           "en": "producer / manufacturer",
-          "ru": "производитель"
+          "ru": "производитель",
+          "group": "supply"
         },
         {
           "ge": "ხელნაკეთი",
           "en": "handmade",
-          "ru": "ручной работы"
+          "ru": "ручной работы",
+          "group": "quality"
         },
         {
           "ge": "ქარხნული",
           "en": "factory-made",
-          "ru": "заводской"
+          "ru": "заводской",
+          "group": "production"
         },
         {
           "ge": "ბუნებრივი",
           "en": "natural",
-          "ru": "природный"
+          "ru": "природный",
+          "group": "quality"
         },
         {
           "ge": "ხელოვნური",
           "en": "artificial",
-          "ru": "искусственный"
+          "ru": "искусственный",
+          "group": "quality"
         },
         {
           "ge": "ნედლეული",
-          "en": "raw produce",
-          "ru": "сырьё"
+          "en": "raw material",
+          "ru": "сырье",
+          "group": "production"
         },
         {
           "ge": "შესახებ",
           "en": "about / regarding",
-          "ru": "о / насчёт"
+          "ru": "о",
+          "group": "language"
+        },
+        {
+          "ge": "შემადგენლობა",
+          "en": "ingredients / composition",
+          "ru": "состав",
+          "group": "labeling"
+        },
+        {
+          "ge": "სერტიფიკატი",
+          "en": "certificate",
+          "ru": "сертификат",
+          "group": "quality"
+        },
+        {
+          "ge": "ეკოლოგიური",
+          "en": "eco-friendly",
+          "ru": "экологичный",
+          "group": "quality"
+        },
+        {
+          "ge": "შეფუთვა",
+          "en": "packaging",
+          "ru": "упаковка",
+          "group": "packaging"
+        },
+        {
+          "ge": "წონა",
+          "en": "weight",
+          "ru": "вес",
+          "group": "labeling"
+        },
+        {
+          "ge": "მოცულობა",
+          "en": "volume",
+          "ru": "объем",
+          "group": "labeling"
+        },
+        {
+          "ge": "ფასდაკლება",
+          "en": "discount",
+          "ru": "скидка",
+          "group": "retail"
+        },
+        {
+          "ge": "ფასიანი",
+          "en": "priced / costly",
+          "ru": "стоимостной",
+          "group": "retail"
         }
       ]
     },
     "3": {
       "title": "Emergency 112",
       "grammar": {
-        "en": "Obligation: აუცილებელია + verb (noun clause). Future passive for instructions: დარეკოთ (call!), გახდით (become a witness). Question particle ხომ in polite questions.",
-        "ru": "Обязанность: აუცილებელია + глагол. Повелительное: დარეკოთ. Частица ხომ в вежливых вопросах.",
-        "example_ge": "აუცილებელია დაუყოვნებლივ დარეკოთ 112-ზე.",
-        "example_en": "You must call 112 immediately."
+        "en": "Obligation: აუცილებელია + verb. Instruction language uses polite imperative forms. Question particle ხომ softens urgent questions.",
+        "ru": "Обязанность: აუცილებელია + глагол. Инструкции: вежливый императив. Частица ხომ смягчает вопрос.",
+        "example_ge": "თუ საფრთხეა, აუცილებელია დაუყოვნებლივ დარეკოთ 112-ზე.",
+        "example_en": "If there is danger, you must call 112 immediately."
       },
       "easier_than_russian": "112 is 'ას თორმეტი' — same emergency number logic as 911.",
       "vocab": [
         {
           "ge": "საგანგებო",
           "en": "emergency",
-          "ru": "экстренный"
+          "ru": "экстренный",
+          "group": "emergency"
         },
         {
           "ge": "გადაუდებელი",
           "en": "urgent",
-          "ru": "срочный"
+          "ru": "срочный",
+          "group": "emergency"
         },
         {
           "ge": "თვითმხილველი",
           "en": "eyewitness",
-          "ru": "очевидец"
+          "ru": "очевидец",
+          "group": "reporting"
         },
         {
           "ge": "სისხლდენა",
           "en": "bleeding",
-          "ru": "кровотечение"
+          "ru": "кровотечение",
+          "group": "medical"
         },
         {
           "ge": "ხანძარი",
           "en": "fire",
-          "ru": "пожар"
+          "ru": "пожар",
+          "group": "fire"
         },
         {
           "ge": "ავარია",
           "en": "accident",
-          "ru": "авария"
+          "ru": "авария",
+          "group": "incident"
         },
         {
           "ge": "საფრთხე",
           "en": "danger / threat",
-          "ru": "опасность"
+          "ru": "опасность",
+          "group": "emergency"
         },
         {
           "ge": "დაუყოვნებლივ",
           "en": "immediately",
-          "ru": "немедленно"
+          "ru": "немедленно",
+          "group": "urgency"
         },
         {
           "ge": "დარეკეთ",
           "en": "call! (formal)",
-          "ru": "позвоните!"
+          "ru": "позвоните",
+          "group": "communication"
         },
         {
           "ge": "ოპერატორი",
           "en": "operator",
-          "ru": "оператор"
+          "ru": "оператор",
+          "group": "communication"
         },
         {
           "ge": "აუცილებელია",
-          "en": "it is necessary / must",
-          "ru": "необходимо"
+          "en": "it is necessary",
+          "ru": "необходимо",
+          "group": "grammar"
         },
         {
           "ge": "სასწრაფო",
           "en": "ambulance / urgent",
-          "ru": "скорая помощь"
+          "ru": "скорая помощь",
+          "group": "medical"
         },
         {
           "ge": "ინსტრუქცია",
           "en": "instruction",
-          "ru": "инструкция"
+          "ru": "инструкция",
+          "group": "communication"
         },
         {
           "ge": "გახდით",
           "en": "become! (formal)",
-          "ru": "станьте"
+          "ru": "станьте",
+          "group": "grammar"
+        },
+        {
+          "ge": "პოლიცია",
+          "en": "police",
+          "ru": "полиция",
+          "group": "services"
+        },
+        {
+          "ge": "სახანძრო",
+          "en": "fire service",
+          "ru": "пожарная служба",
+          "group": "services"
+        },
+        {
+          "ge": "სასწრაფო დახმარება",
+          "en": "ambulance service",
+          "ru": "скорая помощь",
+          "group": "services"
+        },
+        {
+          "ge": "დაშავებული",
+          "en": "injured person",
+          "ru": "пострадавший",
+          "group": "medical"
+        },
+        {
+          "ge": "უგონოდ",
+          "en": "unconscious",
+          "ru": "без сознания",
+          "group": "medical"
+        },
+        {
+          "ge": "მისამართი",
+          "en": "address",
+          "ru": "адрес",
+          "group": "reporting"
+        },
+        {
+          "ge": "ლოკაცია",
+          "en": "location",
+          "ru": "локация",
+          "group": "reporting"
+        },
+        {
+          "ge": "დაელოდეთ",
+          "en": "wait! (formal)",
+          "ru": "подождите",
+          "group": "instruction"
         }
       ]
     },
     "4": {
       "title": "Lost Items & Police",
       "grammar": {
-        "en": "Describing lost items: დაკარგა (was lost), მაქვს/მქონდა (I have/had). Identification: პირადობის მოწმობა (ID card). Phone dialog phrases: შეიძლება გკითხო? (May I ask?).",
-        "ru": "Потеря: დაკარგა. Идентификация: პირადობის მოწმობა. Вежливый вопрос: შეიძლება გკითხო?",
-        "example_ge": "საფულე დამკარგავია.",
-        "example_en": "I lost my wallet."
+        "en": "Describing lost items: დაკარგული, დამეკარგა, მქონდა. Identification: პირადობის მოწმობა. Phone phrases: შეიძლება გკითხოთ?",
+        "ru": "Потеря: დაკარგული, დამეკარგა. Идентификация: პირადობის მოწმობა. Вежливый вопрос: შეიძლება გკითხოთ?",
+        "example_ge": "დაკარგული ნივთის აღწერა პოლიციაში გავაკეთე.",
+        "example_en": "I gave a description of the lost item at the police station."
       },
-      "easier_than_russian": "დაკარგული is transparent — 'lost' from კარგავა to lose.",
+      "easier_than_russian": "დაკარგული is transparent — 'lost' from the same base as დაკარგვა.",
       "vocab": [
         {
           "ge": "დაკარგული",
-          "en": "lost (item)",
-          "ru": "потерянный"
+          "en": "lost",
+          "ru": "потерянный",
+          "group": "lost-item"
         },
         {
           "ge": "ნივთი",
           "en": "item / thing",
-          "ru": "вещь"
+          "ru": "вещь",
+          "group": "lost-item"
         },
         {
           "ge": "საფულე",
           "en": "wallet",
-          "ru": "кошелёк"
+          "ru": "кошелек",
+          "group": "lost-item"
         },
         {
           "ge": "პირადობის მოწმობა",
           "en": "ID card",
-          "ru": "удостоверение личности"
+          "ru": "удостоверение личности",
+          "group": "identification"
         },
         {
           "ge": "პოლიციელი",
           "en": "police officer",
-          "ru": "полицейский"
+          "ru": "полицейский",
+          "group": "police"
         },
         {
           "ge": "იდენტიფიცირება",
           "en": "identification",
-          "ru": "идентификация"
+          "ru": "идентификация",
+          "group": "identification"
         },
         {
           "ge": "აღწერა",
           "en": "description",
-          "ru": "описание"
+          "ru": "описание",
+          "group": "reporting"
         },
         {
           "ge": "დეტალი",
           "en": "detail",
-          "ru": "деталь"
+          "ru": "деталь",
+          "group": "reporting"
         },
         {
           "ge": "შემთხვევა",
-          "en": "incident / event",
-          "ru": "случай"
+          "en": "incident",
+          "ru": "случай",
+          "group": "incident"
         },
         {
           "ge": "განცხადება",
           "en": "statement / report",
-          "ru": "заявление"
+          "ru": "заявление",
+          "group": "reporting"
         },
         {
           "ge": "მოძებნა",
           "en": "search",
-          "ru": "поиск"
+          "ru": "поиск",
+          "group": "recovery"
         },
         {
           "ge": "დაკარგვა",
           "en": "loss",
-          "ru": "утрата"
+          "ru": "утрата",
+          "group": "lost-item"
         },
         {
-          "ge": "შეიძლება გკითხო?",
+          "ge": "შეიძლება გკითხოთ?",
           "en": "may I ask you?",
-          "ru": "можно спросить?"
+          "ru": "можно спросить?",
+          "group": "communication"
         },
         {
-          "ge": "დაუბრუნება",
-          "en": "return (of item)",
-          "ru": "возврат"
+          "ge": "დაბრუნება",
+          "en": "return (an item)",
+          "ru": "возврат",
+          "group": "recovery"
+        },
+        {
+          "ge": "დამეკარგა",
+          "en": "I lost (it happened to me)",
+          "ru": "я потерял(а)",
+          "group": "grammar"
+        },
+        {
+          "ge": "მფლობელი",
+          "en": "owner",
+          "ru": "владелец",
+          "group": "identification"
+        },
+        {
+          "ge": "პოვნა",
+          "en": "finding",
+          "ru": "нахождение",
+          "group": "recovery"
+        },
+        {
+          "ge": "ნაპოვნი",
+          "en": "found",
+          "ru": "найденный",
+          "group": "recovery"
+        },
+        {
+          "ge": "ოქმი",
+          "en": "official report",
+          "ru": "протокол",
+          "group": "police"
+        },
+        {
+          "ge": "განყოფილება",
+          "en": "department",
+          "ru": "отделение",
+          "group": "police"
+        },
+        {
+          "ge": "თანხა",
+          "en": "amount of money",
+          "ru": "сумма",
+          "group": "lost-item"
+        },
+        {
+          "ge": "დოკუმენტი",
+          "en": "document",
+          "ru": "документ",
+          "group": "identification"
         }
       ]
     },
     "5": {
       "title": "Holiday Destinations & Tours",
       "grammar": {
-        "en": "Tour descriptions: X-დან Y-მდე (from X to Y), X-დღიანი (X-day). Includes: შედის (includes), ღირებულება (price). Comparative: უფრო იაფი/ძვირი.",
-        "ru": "Туры: X-დღიანი (X-дневный), შედის (включает). Сравнение: უფრო იაფი.",
-        "example_ge": "ტური მოიცავს სასტუმროს და საუზმეს.",
-        "example_en": "The tour includes hotel and breakfast."
+        "en": "Tour descriptions use X-დან Y-მდე and X-დღიანი forms. შედის marks what is included; comparison uses უფრო + adjective.",
+        "ru": "Описание тура: X-დან Y-მდე, X-დღიანი. შედის = входит. Сравнение: უფრო + прилагательное.",
+        "example_ge": "ხუთდღიანი ტურის ღირებულებაში სასტუმრო და საუზმე შედის.",
+        "example_en": "The five-day tour price includes hotel and breakfast."
       },
       "easier_than_russian": "Tour words are international: ტური, მარშრუტი, ექსკურსია, ორგანიზატორი.",
       "vocab": [
         {
           "ge": "დასასვენებელი ადგილი",
           "en": "holiday destination",
-          "ru": "место отдыха"
+          "ru": "место отдыха",
+          "group": "travel"
         },
         {
           "ge": "მარშრუტი",
           "en": "route / itinerary",
-          "ru": "маршрут"
+          "ru": "маршрут",
+          "group": "travel"
         },
         {
           "ge": "ტური",
           "en": "tour",
-          "ru": "тур"
+          "ru": "тур",
+          "group": "travel"
         },
         {
           "ge": "ორგანიზატორი",
           "en": "organizer",
-          "ru": "организатор"
+          "ru": "организатор",
+          "group": "tour"
         },
         {
           "ge": "ექსკურსია",
           "en": "excursion",
-          "ru": "экскурсия"
+          "ru": "экскурсия",
+          "group": "activities"
         },
         {
           "ge": "კომფორტული",
           "en": "comfortable",
-          "ru": "комфортный"
+          "ru": "комфортный",
+          "group": "quality"
         },
         {
           "ge": "ორგანიზებული",
-          "en": "organized (tour)",
-          "ru": "организованный"
+          "en": "organized",
+          "ru": "организованный",
+          "group": "tour"
         },
         {
-          "ge": "ღვთისაფერი",
+          "ge": "საბაგირო",
           "en": "cable car",
-          "ru": "канатная дорога"
+          "ru": "канатная дорога",
+          "group": "transport"
         },
         {
           "ge": "სვანეთი",
-          "en": "Svaneti (region)",
-          "ru": "Сванетия"
+          "en": "Svaneti",
+          "ru": "Сванетия",
+          "group": "destination"
         },
         {
           "ge": "შედის",
-          "en": "includes / enters",
-          "ru": "включает"
+          "en": "is included",
+          "ru": "входит",
+          "group": "pricing"
         },
         {
           "ge": "საუზმე",
           "en": "breakfast",
-          "ru": "завтрак"
+          "ru": "завтрак",
+          "group": "accommodation"
         },
         {
           "ge": "ღირებულება",
-          "en": "price / cost",
-          "ru": "стоимость"
+          "en": "cost / price",
+          "ru": "стоимость",
+          "group": "pricing"
         },
         {
           "ge": "თარიღი",
           "en": "date",
-          "ru": "дата"
+          "ru": "дата",
+          "group": "planning"
         },
         {
           "ge": "დაჯავშნა",
-          "en": "booking / reservation",
-          "ru": "бронирование"
+          "en": "reservation",
+          "ru": "бронирование",
+          "group": "booking"
+        },
+        {
+          "ge": "გამგზავრება",
+          "en": "departure",
+          "ru": "отправление",
+          "group": "planning"
+        },
+        {
+          "ge": "დაბრუნება",
+          "en": "return trip",
+          "ru": "возвращение",
+          "group": "planning"
+        },
+        {
+          "ge": "გიდი",
+          "en": "guide",
+          "ru": "гид",
+          "group": "tour"
+        },
+        {
+          "ge": "ტრანსფერი",
+          "en": "transfer",
+          "ru": "трансфер",
+          "group": "transport"
+        },
+        {
+          "ge": "ტურისტი",
+          "en": "tourist",
+          "ru": "турист",
+          "group": "travel"
+        },
+        {
+          "ge": "უფრო იაფი",
+          "en": "cheaper",
+          "ru": "дешевле",
+          "group": "comparison"
+        },
+        {
+          "ge": "უფრო ძვირი",
+          "en": "more expensive",
+          "ru": "дороже",
+          "group": "comparison"
+        },
+        {
+          "ge": "დღიანი",
+          "en": "-day (duration suffix)",
+          "ru": "дневный",
+          "group": "grammar"
         }
       ]
     },
     "6": {
       "title": "Choosing a Hotel",
       "grammar": {
-        "en": "Room types: ორთოლიანი (double), ერთადგილიანი (single), ორადგილიანი (twin). Services: მომსახურება, დამატებითი საწოლი (extra bed). Location: ზღვისპირა (seaside).",
-        "ru": "Номера: ორთოლიანი (двухместный), ერთადგილიანი (одноместный). Услуги: მომსახურება.",
-        "example_ge": "სასტუმროში უფასო ინტერნეტია.",
-        "example_en": "The hotel has free internet."
+        "en": "Room-type compounds: ერთადგილიანი, ორადგილიანი, ორთოლიანი. Service and location vocabulary combines with nouns naturally.",
+        "ru": "Сложные слова о номерах: ერთადგილიანი, ორადგილიანი, ორთოლიანი. Услуги и локация формируются прозрачно.",
+        "example_ge": "ორადგილიანი ნომერი ზღვის ხედით თავისუფალია.",
+        "example_en": "A twin room with a sea view is available."
       },
-      "easier_than_russian": "Hotel compound words are logical: სასტუმრო = place-for-guests.",
+      "easier_than_russian": "Hotel compound words are logical: სასტუმრო literally means a place for guests.",
       "vocab": [
         {
           "ge": "სასტუმრო",
           "en": "hotel",
-          "ru": "отель"
+          "ru": "отель",
+          "group": "accommodation"
         },
         {
           "ge": "ნომერი",
-          "en": "room (hotel)",
-          "ru": "номер"
+          "en": "hotel room",
+          "ru": "номер",
+          "group": "room"
         },
         {
           "ge": "ორთოლიანი",
-          "en": "double (room)",
-          "ru": "двухместный"
+          "en": "double room",
+          "ru": "двуспальная",
+          "group": "room"
         },
         {
           "ge": "ერთადგილიანი",
-          "en": "single (room)",
-          "ru": "одноместный"
+          "en": "single room",
+          "ru": "одноместный",
+          "group": "room"
+        },
+        {
+          "ge": "ორადგილიანი",
+          "en": "twin room",
+          "ru": "двухместный",
+          "group": "room"
         },
         {
           "ge": "დამატებითი საწოლი",
           "en": "extra bed",
-          "ru": "дополнительная кровать"
+          "ru": "дополнительная кровать",
+          "group": "amenity"
         },
         {
           "ge": "მომსახურება",
           "en": "service",
-          "ru": "обслуживание"
+          "ru": "обслуживание",
+          "group": "service"
         },
         {
           "ge": "რეცეფცია",
           "en": "reception",
-          "ru": "ресепшн"
+          "ru": "ресепшн",
+          "group": "service"
         },
         {
           "ge": "ვერანდა",
           "en": "veranda / balcony",
-          "ru": "веранда"
+          "ru": "веранда",
+          "group": "amenity"
         },
         {
           "ge": "ხედი",
           "en": "view",
-          "ru": "вид"
+          "ru": "вид",
+          "group": "amenity"
         },
         {
           "ge": "კონდიციონერი",
-          "en": "air conditioning",
-          "ru": "кондиционер"
+          "en": "air conditioner",
+          "ru": "кондиционер",
+          "group": "amenity"
         },
         {
           "ge": "ზღვისპირა",
           "en": "seaside",
-          "ru": "приморский"
+          "ru": "приморский",
+          "group": "location"
         },
         {
           "ge": "ძველი ქალაქი",
           "en": "old town",
-          "ru": "старый город"
+          "ru": "старый город",
+          "group": "location"
         },
         {
           "ge": "ლარი",
-          "en": "lari (Georgian currency)",
-          "ru": "лари"
+          "en": "lari",
+          "ru": "лари",
+          "group": "payment"
         },
         {
-          "ge": "ღამის განმავლობაში",
-          "en": "overnight / per night",
-          "ru": "за ночь"
+          "ge": "ღამეში",
+          "en": "per night",
+          "ru": "за ночь",
+          "group": "payment"
+        },
+        {
+          "ge": "დაჯავშნა",
+          "en": "booking",
+          "ru": "бронирование",
+          "group": "booking"
+        },
+        {
+          "ge": "თავისუფალი",
+          "en": "available",
+          "ru": "свободный",
+          "group": "booking"
+        },
+        {
+          "ge": "დაკავებული",
+          "en": "occupied",
+          "ru": "занятый",
+          "group": "booking"
+        },
+        {
+          "ge": "ჩექ-ინი",
+          "en": "check-in",
+          "ru": "заселение",
+          "group": "service"
+        },
+        {
+          "ge": "ჩექ-აუთი",
+          "en": "check-out",
+          "ru": "выселение",
+          "group": "service"
+        },
+        {
+          "ge": "საუზმე შედის",
+          "en": "breakfast included",
+          "ru": "завтрак включен",
+          "group": "pricing"
+        },
+        {
+          "ge": "ინტერნეტი",
+          "en": "internet / wi-fi",
+          "ru": "интернет",
+          "group": "amenity"
         }
       ]
     },
     "7": {
       "title": "Social Networks — About Me",
       "grammar": {
-        "en": "Likes: მიყვარს X (I love X), მომწონს X (I like X). Profile talk: ჩემი პროფილი, ჩემ შესახებ. Reflexive: ვაკავშირებ (I connect), ვუკავშირდები (I connect to).",
-        "ru": "Нравится: მიყვარს / მომწონს. Профиль: ჩემ შესახებ.",
-        "example_ge": "მიყვარს ფეისბუქზე სიახლეების წაკითხვა.",
-        "example_en": "I like reading news on Facebook."
+        "en": "Preference verbs მიყვარს / მომწონს are central. Profile language uses ჩემ შესახებ and private/public contrast.",
+        "ru": "Глаголы предпочтения: მიყვარს / მომწონს. Язык профиля: ჩემ შესახებ, приватность.",
+        "example_ge": "ჩემ შესახებ ვწერ, რა მუსიკა მომწონს.",
+        "example_en": "In my profile I write what music I like."
       },
-      "easier_than_russian": "Social media terms are direct loans: ფეისბუქი, პროფილი, ექაუნთი.",
+      "easier_than_russian": "Social media terms are mostly direct loans: ფეისბუქი, პროფილი, ექაუნთი.",
       "vocab": [
         {
           "ge": "სოციალური ქსელი",
           "en": "social network",
-          "ru": "соцсеть"
+          "ru": "соцсеть",
+          "group": "platform"
         },
         {
           "ge": "ფეისბუქი",
           "en": "Facebook",
-          "ru": "Фейсбук"
+          "ru": "Фейсбук",
+          "group": "platform"
         },
         {
           "ge": "პროფილი",
           "en": "profile",
-          "ru": "профиль"
+          "ru": "профиль",
+          "group": "account"
         },
         {
           "ge": "ექაუნთი",
           "en": "account",
-          "ru": "аккаунт"
+          "ru": "аккаунт",
+          "group": "account"
         },
         {
           "ge": "მეგობარი",
           "en": "friend",
-          "ru": "друг"
+          "ru": "друг",
+          "group": "people"
         },
         {
           "ge": "პირადი",
           "en": "private / personal",
-          "ru": "личный"
+          "ru": "личный",
+          "group": "privacy"
         },
         {
-          "ge": "სახელზმნა",
-          "en": "username",
-          "ru": "имя пользователя"
+          "ge": "მომხმარებელი",
+          "en": "user",
+          "ru": "пользователь",
+          "group": "account"
         },
         {
           "ge": "გვერდი",
           "en": "page",
-          "ru": "страница"
+          "ru": "страница",
+          "group": "content"
         },
         {
           "ge": "გამომწერი",
-          "en": "subscriber / follower",
-          "ru": "подписчик"
+          "en": "follower / subscriber",
+          "ru": "подписчик",
+          "group": "people"
         },
         {
           "ge": "პოსტი",
           "en": "post",
-          "ru": "пост"
+          "ru": "пост",
+          "group": "content"
         },
         {
           "ge": "მიყვარს",
-          "en": "I love / I like (strong)",
-          "ru": "я люблю"
+          "en": "I love",
+          "ru": "я люблю",
+          "group": "expression"
         },
         {
           "ge": "მომწონს",
           "en": "I like",
-          "ru": "мне нравится"
+          "ru": "мне нравится",
+          "group": "expression"
         },
         {
           "ge": "ჩემ შესახებ",
           "en": "about me",
-          "ru": "обо мне"
+          "ru": "обо мне",
+          "group": "profile"
         },
         {
-          "ge": "უკავშირდება",
-          "en": "connects / is connected",
-          "ru": "связывается"
+          "ge": "ვუკავშირდები",
+          "en": "I connect to",
+          "ru": "я связываюсь",
+          "group": "interaction"
+        },
+        {
+          "ge": "შეტყობინება",
+          "en": "message",
+          "ru": "сообщение",
+          "group": "communication"
+        },
+        {
+          "ge": "ლაიქი",
+          "en": "like (reaction)",
+          "ru": "лайк",
+          "group": "interaction"
+        },
+        {
+          "ge": "გაზიარება",
+          "en": "share",
+          "ru": "поделиться",
+          "group": "interaction"
+        },
+        {
+          "ge": "კომენტარი",
+          "en": "comment",
+          "ru": "комментарий",
+          "group": "interaction"
+        },
+        {
+          "ge": "პაროლი",
+          "en": "password",
+          "ru": "пароль",
+          "group": "security"
+        },
+        {
+          "ge": "კონფიდენციალური",
+          "en": "confidential",
+          "ru": "конфиденциальный",
+          "group": "privacy"
+        },
+        {
+          "ge": "საჯარო",
+          "en": "public",
+          "ru": "публичный",
+          "group": "privacy"
+        },
+        {
+          "ge": "სიახლე",
+          "en": "news / update",
+          "ru": "новость",
+          "group": "content"
         }
       ]
     },
     "8": {
       "title": "Blogging & Vlog",
       "grammar": {
-        "en": "Expressing feelings: მომწონს/არ მომწონს, მინახავს (it annoys me). Opinion: ჩემი აზრით (in my opinion). Sharing: გაზიარება, გამოწერა (subscription).",
-        "ru": "Чувства: მომწონს/არ მომწონს. Мнение: ჩემი აზრით.",
-        "example_ge": "ბლოგის ავტორი თავის გამოცდილებას აღწერს.",
-        "example_en": "The blog author describes their experience."
+        "en": "Opinion and reaction phrases: ჩემი აზრით, მომწონს / არ მომწონს. Sharing verbs describe online audience interaction.",
+        "ru": "Мнение и реакция: ჩემი აზრით, მომწონს / არ მომწონს. Глаголы обмена для онлайн-аудитории.",
+        "example_ge": "ჩემი აზრით, ეს ვლოგი ძალიან საინტერესოა.",
+        "example_en": "In my opinion, this vlog is very interesting."
       },
-      "easier_than_russian": "ბლოგი and ვლოგი are the same international words you already know.",
+      "easier_than_russian": "ბლოგი and ვლოგი are familiar international words.",
       "vocab": [
         {
           "ge": "ბლოგი",
           "en": "blog",
-          "ru": "блог"
+          "ru": "блог",
+          "group": "format"
         },
         {
           "ge": "ვლოგი",
           "en": "vlog",
-          "ru": "влог"
+          "ru": "влог",
+          "group": "format"
         },
         {
           "ge": "ავტორი",
           "en": "author",
-          "ru": "автор"
+          "ru": "автор",
+          "group": "people"
         },
         {
           "ge": "ჩანაწერი",
-          "en": "post / entry / recording",
-          "ru": "запись"
+          "en": "entry / post",
+          "ru": "запись",
+          "group": "content"
         },
         {
           "ge": "ვიდეო",
           "en": "video",
-          "ru": "видео"
+          "ru": "видео",
+          "group": "media"
         },
         {
           "ge": "გამოწერა",
           "en": "subscription",
-          "ru": "подписка"
+          "ru": "подписка",
+          "group": "audience"
         },
         {
           "ge": "კომენტარი",
           "en": "comment",
-          "ru": "комментарий"
+          "ru": "комментарий",
+          "group": "audience"
         },
         {
           "ge": "უარყოფითი",
           "en": "negative",
-          "ru": "отрицательный"
+          "ru": "отрицательный",
+          "group": "tone"
         },
         {
           "ge": "გაზიარება",
           "en": "sharing",
-          "ru": "обмен / публикация"
+          "ru": "публикация",
+          "group": "audience"
         },
         {
           "ge": "ემოცია",
           "en": "emotion",
-          "ru": "эмоция"
+          "ru": "эмоция",
+          "group": "tone"
         },
         {
           "ge": "გრძნობა",
           "en": "feeling",
-          "ru": "чувство"
+          "ru": "чувство",
+          "group": "tone"
         },
         {
           "ge": "გამოცდილება",
           "en": "experience",
-          "ru": "опыт"
+          "ru": "опыт",
+          "group": "content"
         },
         {
           "ge": "ჩემი აზრით",
           "en": "in my opinion",
-          "ru": "по-моему"
+          "ru": "по-моему",
+          "group": "opinion"
         },
         {
           "ge": "საინტერესო",
           "en": "interesting",
-          "ru": "интересный"
+          "ru": "интересный",
+          "group": "opinion"
+        },
+        {
+          "ge": "აუდიტორია",
+          "en": "audience",
+          "ru": "аудитория",
+          "group": "audience"
+        },
+        {
+          "ge": "არხი",
+          "en": "channel",
+          "ru": "канал",
+          "group": "platform"
+        },
+        {
+          "ge": "მაყურებელი",
+          "en": "viewer",
+          "ru": "зритель",
+          "group": "audience"
+        },
+        {
+          "ge": "მოსაზრება",
+          "en": "opinion / viewpoint",
+          "ru": "мнение",
+          "group": "opinion"
+        },
+        {
+          "ge": "პოზიტიური",
+          "en": "positive",
+          "ru": "позитивный",
+          "group": "tone"
+        },
+        {
+          "ge": "რედაქტირება",
+          "en": "editing",
+          "ru": "редактирование",
+          "group": "production"
+        },
+        {
+          "ge": "სათაური",
+          "en": "title",
+          "ru": "заголовок",
+          "group": "content"
+        },
+        {
+          "ge": "აღწერა",
+          "en": "description",
+          "ru": "описание",
+          "group": "content"
         }
       ]
     },
     "9": {
       "title": "Film Premiere",
       "grammar": {
-        "en": "Invitations: მოდი ერთად წავიდეთ (let's go together). Future plans: წავალთ, ვიყიდით ბილეთს. Time: მარტის 15-ში (on March 15).",
-        "ru": "Приглашения: მოდი ერთად წავიდეთ. Планы: წავალთ. Дата: მარტის 15-ში.",
-        "example_ge": "ფილმის პრემიერა ხუთშაბათსაა.",
-        "example_en": "The film premiere is on Thursday."
+        "en": "Invitations use მოდი ერთად წავიდეთ. Future plans are made with present-future verbs and explicit date/time.",
+        "ru": "Приглашения: მოდი ერთად წავიდეთ. Планы на будущее: формы будущего + дата/время.",
+        "example_ge": "მოდი, პრემიერაზე ერთად წავიდეთ და ბილეთები წინასწარ ვიყიდოთ.",
+        "example_en": "Let's go to the premiere together and buy tickets in advance."
       },
-      "easier_than_russian": "Cinema words match European pattern: პრემიერა, რეჟისორი, სპექტაკლი.",
+      "easier_than_russian": "Cinema words follow international patterns: პრემიერა, რეჟისორი, სპექტაკლი.",
       "vocab": [
         {
           "ge": "პრემიერა",
           "en": "premiere",
-          "ru": "премьера"
+          "ru": "премьера",
+          "group": "event"
         },
         {
           "ge": "ფილმი",
           "en": "film",
-          "ru": "фильм"
+          "ru": "фильм",
+          "group": "cinema"
         },
         {
           "ge": "რეჟისორი",
           "en": "director",
-          "ru": "режиссёр"
+          "ru": "режиссер",
+          "group": "people"
         },
         {
           "ge": "დარბაზი",
           "en": "hall / auditorium",
-          "ru": "зал"
+          "ru": "зал",
+          "group": "venue"
         },
         {
           "ge": "სპექტაკლი",
-          "en": "play / performance",
-          "ru": "спектакль"
+          "en": "performance",
+          "ru": "спектакль",
+          "group": "event"
         },
         {
           "ge": "თეატრი",
           "en": "theatre",
-          "ru": "театр"
+          "ru": "театр",
+          "group": "venue"
         },
         {
           "ge": "ბილეთი",
           "en": "ticket",
-          "ru": "билет"
+          "ru": "билет",
+          "group": "ticketing"
         },
         {
           "ge": "მსახიობი",
           "en": "actor",
-          "ru": "актёр"
+          "ru": "актер",
+          "group": "people"
         },
         {
           "ge": "სცენა",
           "en": "stage / scene",
-          "ru": "сцена"
+          "ru": "сцена",
+          "group": "cinema"
         },
         {
           "ge": "თანამედროვე",
-          "en": "contemporary / modern",
-          "ru": "современный"
+          "en": "modern",
+          "ru": "современный",
+          "group": "description"
         },
         {
           "ge": "მოდი",
           "en": "come on / let's",
-          "ru": "давай"
+          "ru": "давай",
+          "group": "invitation"
         },
         {
           "ge": "ერთად",
           "en": "together",
-          "ru": "вместе"
+          "ru": "вместе",
+          "group": "invitation"
         },
         {
           "ge": "საათი",
-          "en": "hour / o'clock",
-          "ru": "час"
+          "en": "o'clock / hour",
+          "ru": "час",
+          "group": "time"
         },
         {
           "ge": "ფასი",
           "en": "price",
-          "ru": "цена"
+          "ru": "цена",
+          "group": "ticketing"
+        },
+        {
+          "ge": "კინოთეატრი",
+          "en": "cinema",
+          "ru": "кинотеатр",
+          "group": "venue"
+        },
+        {
+          "ge": "დასაწყისი",
+          "en": "beginning / start",
+          "ru": "начало",
+          "group": "time"
+        },
+        {
+          "ge": "დასასრული",
+          "en": "ending",
+          "ru": "конец",
+          "group": "time"
+        },
+        {
+          "ge": "წინასწარ",
+          "en": "in advance",
+          "ru": "заранее",
+          "group": "planning"
+        },
+        {
+          "ge": "დაჯავშნვა",
+          "en": "ticket booking",
+          "ru": "бронирование",
+          "group": "ticketing"
+        },
+        {
+          "ge": "პოსტერი",
+          "en": "poster",
+          "ru": "постер",
+          "group": "promotion"
+        },
+        {
+          "ge": "მაყურებელი",
+          "en": "viewer / spectator",
+          "ru": "зритель",
+          "group": "people"
+        },
+        {
+          "ge": "აპლოდისმენტები",
+          "en": "applause",
+          "ru": "аплодисменты",
+          "group": "event"
         }
       ]
     },
     "10": {
       "title": "Plot & Film Reviews",
       "grammar": {
-        "en": "Relative clauses with რომელიც (which/who): ფილმი, რომელიც... Review verbs: გირჩევთ (I recommend), მომწონს. Genres: დრამა, კომედია, ტრაგედია.",
-        "ru": "Придаточные с რომელიც. Рекомендация: გირჩევთ.",
-        "example_ge": "ეს ფილმი, რომელიც ვნახე, ძალიან საინტერესოა.",
-        "example_en": "This film that I saw is very interesting."
+        "en": "Relative clause marker რომელიც links descriptions. Review language uses გირჩევთ, შეფასება, and genre labels.",
+        "ru": "Связка რომელიც вводит определительные придаточные. Лексика рецензии: გირჩევთ, შეფასება, жанры.",
+        "example_ge": "ფილმი, რომელიც გუშინ ვნახე, საინტერესო სიუჟეტით გამოირჩევა.",
+        "example_en": "The film I watched yesterday stands out for its interesting storyline."
       },
-      "easier_than_russian": "რომელიც agrees in number only — no gender agreement like Russian который/которая.",
+      "easier_than_russian": "რომელიც does not require gender agreement like Russian relative pronouns.",
       "vocab": [
         {
           "ge": "ფაბულა",
           "en": "plot",
-          "ru": "сюжет"
+          "ru": "фабула",
+          "group": "narrative"
         },
         {
           "ge": "მოქმედება",
-          "en": "action / plot",
-          "ru": "действие"
+          "en": "action",
+          "ru": "действие",
+          "group": "narrative"
         },
         {
           "ge": "პერსონაჟი",
           "en": "character",
-          "ru": "персонаж"
+          "ru": "персонаж",
+          "group": "narrative"
         },
         {
           "ge": "სიუჟეტი",
           "en": "storyline",
-          "ru": "сюжетная линия"
+          "ru": "сюжет",
+          "group": "narrative"
         },
         {
           "ge": "რეცენზია",
           "en": "review",
-          "ru": "рецензия"
+          "ru": "рецензия",
+          "group": "review"
         },
         {
           "ge": "შეფასება",
-          "en": "rating / evaluation",
-          "ru": "оценка"
+          "en": "evaluation / rating",
+          "ru": "оценка",
+          "group": "review"
         },
         {
           "ge": "რეკომენდაცია",
           "en": "recommendation",
-          "ru": "рекомендация"
+          "ru": "рекомендация",
+          "group": "review"
         },
         {
           "ge": "ჟანრი",
           "en": "genre",
-          "ru": "жанр"
+          "ru": "жанр",
+          "group": "genre"
         },
         {
           "ge": "დრამა",
           "en": "drama",
-          "ru": "драма"
+          "ru": "драма",
+          "group": "genre"
         },
         {
           "ge": "კომედია",
           "en": "comedy",
-          "ru": "комедия"
+          "ru": "комедия",
+          "group": "genre"
         },
         {
           "ge": "ტრაგედია",
           "en": "tragedy",
-          "ru": "трагедия"
+          "ru": "трагедия",
+          "group": "genre"
         },
         {
           "ge": "რომელიც",
-          "en": "which / who (relative)",
-          "ru": "который"
+          "en": "which / who",
+          "ru": "который",
+          "group": "grammar"
         },
         {
           "ge": "გირჩევთ",
-          "en": "I recommend (to you)",
-          "ru": "рекомендую"
+          "en": "I recommend",
+          "ru": "рекомендую",
+          "group": "review"
         },
         {
           "ge": "საბოლოოდ",
-          "en": "finally / in the end",
-          "ru": "в итоге"
+          "en": "in the end",
+          "ru": "в итоге",
+          "group": "review"
+        },
+        {
+          "ge": "კრიტიკა",
+          "en": "criticism",
+          "ru": "критика",
+          "group": "review"
+        },
+        {
+          "ge": "მიმოხილვა",
+          "en": "overview / review",
+          "ru": "обзор",
+          "group": "review"
+        },
+        {
+          "ge": "დადებითი",
+          "en": "positive",
+          "ru": "положительный",
+          "group": "review"
+        },
+        {
+          "ge": "უარყოფითი",
+          "en": "negative",
+          "ru": "отрицательный",
+          "group": "review"
+        },
+        {
+          "ge": "სცენარი",
+          "en": "screenplay",
+          "ru": "сценарий",
+          "group": "production"
+        },
+        {
+          "ge": "გადაღება",
+          "en": "filming",
+          "ru": "съемка",
+          "group": "production"
+        },
+        {
+          "ge": "მუსიკალური გაფორმება",
+          "en": "musical score",
+          "ru": "музыкальное оформление",
+          "group": "production"
+        },
+        {
+          "ge": "მთავარი როლი",
+          "en": "leading role",
+          "ru": "главная роль",
+          "group": "people"
         }
       ]
     },
     "11": {
       "title": "Foreigners in Georgia",
       "grammar": {
-        "en": "Cultural shock: კულტურული შოკი. Reasons: იმიტომ რომ (because). Experience: პირველად (for the first time), ხშირად (often). Interview language: ინტერვიუ, პასუხი.",
-        "ru": "Культурный шок: კულტურული შოკი. Причина: იმიტომ რომ. Опыт: პირველად.",
-        "example_ge": "უცხოელებს ხშირად კულტურული შოკი აქვთ.",
-        "example_en": "Foreigners often have culture shock."
+        "en": "Culture topics use იმიტომ რომ for reasons and adverbs like პირველად / ხშირად for experience frequency.",
+        "ru": "Культурная тема: იმიტომ რომ для причин, პირველად / ხშირად для частоты опыта.",
+        "example_ge": "უცხოელებს თავიდან კულტურული შოკი აქვთ, მაგრამ შემდეგ ადაპტირდებიან.",
+        "example_en": "Foreigners often have culture shock at first, but later they adapt."
       },
-      "easier_than_russian": "ქართველოლოგი is a fun transparent compound — Georgian-language-ologist.",
+      "easier_than_russian": "ქართველოლოგი is transparent as a compound around Georgian language and studies.",
       "vocab": [
         {
           "ge": "უცხოელი",
           "en": "foreigner",
-          "ru": "иностранец"
+          "ru": "иностранец",
+          "group": "people"
         },
         {
           "ge": "ქართველოლოგი",
-          "en": "Georgianist / scholar of Georgian",
-          "ru": "картвелолог"
+          "en": "Georgianist",
+          "ru": "картвелолог",
+          "group": "study"
         },
         {
           "ge": "კულტურული შოკი",
           "en": "culture shock",
-          "ru": "культурный шок"
+          "ru": "культурный шок",
+          "group": "culture"
         },
         {
           "ge": "ტრადიცია",
           "en": "tradition",
-          "ru": "традиция"
+          "ru": "традиция",
+          "group": "culture"
         },
         {
           "ge": "ზნეობა",
-          "en": "custom / morality",
-          "ru": "обычай / нравы"
+          "en": "custom / morals",
+          "ru": "нравы",
+          "group": "culture"
         },
         {
           "ge": "ქცევა",
           "en": "behavior",
-          "ru": "поведение"
+          "ru": "поведение",
+          "group": "society"
         },
         {
           "ge": "ადაპტაცია",
           "en": "adaptation",
-          "ru": "адаптация"
+          "ru": "адаптация",
+          "group": "integration"
         },
         {
           "ge": "ინტერვიუ",
           "en": "interview",
-          "ru": "интервью"
+          "ru": "интервью",
+          "group": "communication"
         },
         {
           "ge": "მოგზაური",
           "en": "traveler",
-          "ru": "путешественник"
+          "ru": "путешественник",
+          "group": "people"
         },
         {
           "ge": "პირველად",
           "en": "for the first time",
-          "ru": "впервые"
+          "ru": "впервые",
+          "group": "time"
         },
         {
-          "ge": "იმიტომ",
-          "en": "because / that's why",
-          "ru": "потому что"
+          "ge": "იმიტომ რომ",
+          "en": "because",
+          "ru": "потому что",
+          "group": "grammar"
         },
         {
           "ge": "საზღვარი",
           "en": "border",
-          "ru": "граница"
+          "ru": "граница",
+          "group": "mobility"
         },
         {
           "ge": "მეცადინეობა",
-          "en": "studying / lessons",
-          "ru": "занятия"
+          "en": "studying",
+          "ru": "занятия",
+          "group": "study"
         },
         {
           "ge": "გამოცდილება",
           "en": "experience",
-          "ru": "опыт"
+          "ru": "опыт",
+          "group": "culture"
+        },
+        {
+          "ge": "სტერეოტიპი",
+          "en": "stereotype",
+          "ru": "стереотип",
+          "group": "culture"
+        },
+        {
+          "ge": "სუფრა",
+          "en": "traditional feast table",
+          "ru": "застолье",
+          "group": "culture"
+        },
+        {
+          "ge": "მასპინძელი",
+          "en": "host",
+          "ru": "хозяин",
+          "group": "people"
+        },
+        {
+          "ge": "სტუმარი",
+          "en": "guest",
+          "ru": "гость",
+          "group": "people"
+        },
+        {
+          "ge": "პატივისცემა",
+          "en": "respect",
+          "ru": "уважение",
+          "group": "society"
+        },
+        {
+          "ge": "ჩვევა",
+          "en": "habit",
+          "ru": "привычка",
+          "group": "culture"
+        },
+        {
+          "ge": "ხშირად",
+          "en": "often",
+          "ru": "часто",
+          "group": "time"
+        },
+        {
+          "ge": "შეჩვევა",
+          "en": "getting used to",
+          "ru": "привыкание",
+          "group": "integration"
         }
       ]
     },
     "12": {
       "title": "How to Learn a Language",
       "grammar": {
-        "en": "Learning verbs: ვსწავლობ (I study), ვიცი (I know), ვცდილობ (I try). Purpose: რათა (so that), -ისთვის (for). Advice: უნდა ბევრი ივარჯიშო (you should practice a lot).",
-        "ru": "Учёба: ვსწავლობ, ვიცი. Цель: რათა, -ისთვის. Совет: უნდა ივარჯიშო.",
-        "example_ge": "ქართულს ყოველდღე ვსწავლობ.",
-        "example_en": "I study Georgian every day."
+        "en": "Learning verbs: ვსწავლობ, ვიცი, ვცდილობ. Purpose uses რათა / -ისთვის; advice uses უნდა + verb.",
+        "ru": "Глаголы обучения: ვსწავლობ, ვიცი, ვცდილობ. Цель: რათა / -ისთვის. Совет: უნდა + глагол.",
+        "example_ge": "ენა რომ კარგად ისწავლო, ყოველდღე უნდა ივარჯიშო.",
+        "example_en": "To learn a language well, you should practice every day."
       },
-      "easier_than_russian": "Language learning vocab is mostly international: გრამატიკა, ლექსიკა, პრაქტიკა.",
+      "easier_than_russian": "Language-learning vocabulary is largely international: გრამატიკა, ლექსიკა, პრაქტიკა.",
       "vocab": [
         {
           "ge": "ენა",
           "en": "language",
-          "ru": "язык"
+          "ru": "язык",
+          "group": "learning"
         },
         {
           "ge": "სწავლა",
-          "en": "learning / study",
-          "ru": "учёба"
+          "en": "study / learning",
+          "ru": "учеба",
+          "group": "learning"
         },
         {
           "ge": "მეთოდი",
           "en": "method",
-          "ru": "метод"
+          "ru": "метод",
+          "group": "strategy"
         },
         {
           "ge": "გრამატიკა",
           "en": "grammar",
-          "ru": "грамматика"
+          "ru": "грамматика",
+          "group": "skills"
         },
         {
           "ge": "ლექსიკა",
           "en": "vocabulary",
-          "ru": "лексика"
+          "ru": "лексика",
+          "group": "skills"
         },
         {
           "ge": "პრაქტიკა",
           "en": "practice",
-          "ru": "практика"
+          "ru": "практика",
+          "group": "strategy"
         },
         {
           "ge": "რჩევა",
           "en": "advice / tip",
-          "ru": "совет"
+          "ru": "совет",
+          "group": "strategy"
         },
         {
           "ge": "გაგება",
           "en": "understanding",
-          "ru": "понимание"
+          "ru": "понимание",
+          "group": "skills"
         },
         {
           "ge": "გამოხატვა",
           "en": "expression",
-          "ru": "выражение"
+          "ru": "выражение",
+          "group": "skills"
         },
         {
           "ge": "უნარი",
           "en": "skill",
-          "ru": "навык"
+          "ru": "навык",
+          "group": "skills"
         },
         {
           "ge": "ვსწავლობ",
-          "en": "I study / learn",
-          "ru": "я учу(сь)"
+          "en": "I study",
+          "ru": "я учусь",
+          "group": "grammar"
         },
         {
           "ge": "ვცდილობ",
           "en": "I try",
-          "ru": "я пытаюсь"
+          "ru": "я стараюсь",
+          "group": "grammar"
         },
         {
           "ge": "რათა",
-          "en": "so that / in order to",
-          "ru": "чтобы"
+          "en": "so that",
+          "ru": "чтобы",
+          "group": "grammar"
         },
         {
           "ge": "ყოველდღე",
           "en": "every day",
-          "ru": "каждый день"
+          "ru": "каждый день",
+          "group": "habit"
+        },
+        {
+          "ge": "კითხვა",
+          "en": "reading",
+          "ru": "чтение",
+          "group": "skills"
+        },
+        {
+          "ge": "წერა",
+          "en": "writing",
+          "ru": "письмо",
+          "group": "skills"
+        },
+        {
+          "ge": "მოსმენა",
+          "en": "listening",
+          "ru": "аудирование",
+          "group": "skills"
+        },
+        {
+          "ge": "ლაპარაკი",
+          "en": "speaking",
+          "ru": "говорение",
+          "group": "skills"
+        },
+        {
+          "ge": "მახსოვრობა",
+          "en": "memory",
+          "ru": "память",
+          "group": "strategy"
+        },
+        {
+          "ge": "გამეორება",
+          "en": "revision / repetition",
+          "ru": "повторение",
+          "group": "strategy"
+        },
+        {
+          "ge": "მოტივაცია",
+          "en": "motivation",
+          "ru": "мотивация",
+          "group": "habit"
+        },
+        {
+          "ge": "მიზანი",
+          "en": "goal",
+          "ru": "цель",
+          "group": "habit"
         }
       ]
     }
@@ -3652,72 +5485,134 @@
         {
           "ge": "ავტობიოგრაფია",
           "en": "autobiography",
-          "ru": "автобиография"
+          "ru": "автобиография",
+          "group": "text"
+        },
+        {
+          "ge": "ბიოგრაფია",
+          "en": "biography",
+          "ru": "биография",
+          "group": "text"
         },
         {
           "ge": "დაბადება",
           "en": "birth",
-          "ru": "рождение"
+          "ru": "рождение",
+          "group": "life event"
         },
         {
           "ge": "დაბადების ადგილი",
           "en": "place of birth",
-          "ru": "место рождения"
+          "ru": "место рождения",
+          "group": "personal data"
+        },
+        {
+          "ge": "დაბადების თარიღი",
+          "en": "date of birth",
+          "ru": "дата рождения",
+          "group": "personal data"
         },
         {
           "ge": "დედა-მამა",
           "en": "parents",
-          "ru": "родители"
+          "ru": "родители",
+          "group": "family"
         },
         {
-          "ge": "სოფელი",
-          "en": "village",
-          "ru": "деревня"
+          "ge": "ოჯახი",
+          "en": "family",
+          "ru": "семья",
+          "group": "family"
         },
         {
-          "ge": "რაიონი",
-          "en": "district",
-          "ru": "район"
+          "ge": "წინაპარი",
+          "en": "ancestor",
+          "ru": "предок",
+          "group": "family"
         },
         {
-          "ge": "წმინდა ადგილი",
-          "en": "holy place",
-          "ru": "святое место"
+          "ge": "ბავშვობა",
+          "en": "childhood",
+          "ru": "детство",
+          "group": "life stage"
         },
         {
           "ge": "მშობიარობა",
           "en": "childbirth",
-          "ru": "роды"
+          "ru": "роды",
+          "group": "life event"
         },
         {
-          "ge": "ხასიათი",
-          "en": "character / personality",
-          "ru": "характер"
+          "ge": "სოფელი",
+          "en": "village",
+          "ru": "деревня",
+          "group": "place"
         },
         {
-          "ge": "მოღვაწეობა",
-          "en": "activity / career",
-          "ru": "деятельность"
+          "ge": "ქალაქი",
+          "en": "city",
+          "ru": "город",
+          "group": "place"
         },
         {
-          "ge": "იბადებოდა",
-          "en": "was being born (impf.)",
-          "ru": "рождался"
+          "ge": "რაიონი",
+          "en": "district",
+          "ru": "район",
+          "group": "place"
         },
         {
-          "ge": "მიდიოდა",
-          "en": "was going (impf.)",
-          "ru": "шёл / ехал"
+          "ge": "წმინდა ადგილი",
+          "en": "holy place",
+          "ru": "святое место",
+          "group": "place"
         },
         {
-          "ge": "ვარაუდი",
-          "en": "assumption / guess",
-          "ru": "предположение"
+          "ge": "მოგონება",
+          "en": "memory",
+          "ru": "воспоминание",
+          "group": "narrative"
         },
         {
           "ge": "ისტორია",
           "en": "story / history",
-          "ru": "история"
+          "ru": "история",
+          "group": "narrative"
+        },
+        {
+          "ge": "ხასიათი",
+          "en": "character / personality",
+          "ru": "характер",
+          "group": "personality"
+        },
+        {
+          "ge": "მოღვაწეობა",
+          "en": "activity / career",
+          "ru": "деятельность",
+          "group": "career"
+        },
+        {
+          "ge": "გზა",
+          "en": "road / path",
+          "ru": "дорога",
+          "group": "place"
+        },
+        {
+          "ge": "იბადებოდა",
+          "en": "was being born (impf.)",
+          "ru": "рождался",
+          "group": "grammar"
+        },
+        {
+          "ge": "მიდიოდა",
+          "en": "was going (impf.)",
+          "ru": "шёл / ехал",
+          "group": "grammar"
+        },
+        {
+          "ge": "აღწევდა",
+          "en": "was reaching (impf.)",
+          "ru": "достигал",
+          "group": "grammar"
         }
       ]
     },
@@ -3733,73 +5628,135 @@
       "vocab": [
         {
           "ge": "CV",
-          "en": "CV / résumé",
-          "ru": "резюме"
+          "en": "CV / resume",
+          "ru": "резюме",
+          "group": "document"
+        },
+        {
+          "ge": "რეზიუმე",
+          "en": "resume",
+          "ru": "резюме",
+          "group": "document"
         },
         {
           "ge": "ვაკანსია",
           "en": "vacancy / job opening",
-          "ru": "вакансия"
-        },
-        {
-          "ge": "განათლება",
-          "en": "education",
-          "ru": "образование"
-        },
-        {
-          "ge": "გამოცდილება",
-          "en": "experience",
-          "ru": "опыт"
-        },
-        {
-          "ge": "უნარ-ჩვევები",
-          "en": "skills",
-          "ru": "навыки"
-        },
-        {
-          "ge": "პროფესიული გამოცდილება",
-          "en": "professional experience",
-          "ru": "профессиональный опыт"
-        },
-        {
-          "ge": "დიპლომი",
-          "en": "diploma",
-          "ru": "диплом"
-        },
-        {
-          "ge": "ფაკულტეტი",
-          "en": "faculty",
-          "ru": "факультет"
-        },
-        {
-          "ge": "სტაჟი",
-          "en": "internship / work experience",
-          "ru": "стаж"
-        },
-        {
-          "ge": "დასაქმება",
-          "en": "employment / hiring",
-          "ru": "трудоустройство"
+          "ru": "вакансия",
+          "group": "employment"
         },
         {
           "ge": "განცხადება",
           "en": "announcement / ad",
-          "ru": "объявление"
+          "ru": "объявление",
+          "group": "employment"
+        },
+        {
+          "ge": "თანამდებობა",
+          "en": "position / post",
+          "ru": "должность",
+          "group": "employment"
+        },
+        {
+          "ge": "განაცხადი",
+          "en": "application",
+          "ru": "заявление",
+          "group": "document"
+        },
+        {
+          "ge": "კანდიდატი",
+          "en": "candidate",
+          "ru": "кандидат",
+          "group": "employment"
+        },
+        {
+          "ge": "განათლება",
+          "en": "education",
+          "ru": "образование",
+          "group": "cv section"
+        },
+        {
+          "ge": "გამოცდილება",
+          "en": "experience",
+          "ru": "опыт",
+          "group": "cv section"
+        },
+        {
+          "ge": "პროფესიული გამოცდილება",
+          "en": "professional experience",
+          "ru": "профессиональный опыт",
+          "group": "cv section"
+        },
+        {
+          "ge": "უნარ-ჩვევები",
+          "en": "skills",
+          "ru": "навыки",
+          "group": "cv section"
+        },
+        {
+          "ge": "უცხო ენა",
+          "en": "foreign language",
+          "ru": "иностранный язык",
+          "group": "cv section"
+        },
+        {
+          "ge": "კომპიუტერული უნარები",
+          "en": "computer skills",
+          "ru": "компьютерные навыки",
+          "group": "cv section"
+        },
+        {
+          "ge": "დიპლომი",
+          "en": "diploma",
+          "ru": "диплом",
+          "group": "education"
+        },
+        {
+          "ge": "ფაკულტეტი",
+          "en": "faculty",
+          "ru": "факультет",
+          "group": "education"
+        },
+        {
+          "ge": "უნივერსიტეტი",
+          "en": "university",
+          "ru": "университет",
+          "group": "education"
+        },
+        {
+          "ge": "სტაჟირება",
+          "en": "internship",
+          "ru": "стажировка",
+          "group": "experience"
+        },
+        {
+          "ge": "დასაქმება",
+          "en": "employment",
+          "ru": "трудоустройство",
+          "group": "employment"
+        },
+        {
+          "ge": "ხელფასი",
+          "en": "salary",
+          "ru": "зарплата",
+          "group": "employment"
         },
         {
           "ge": "ელფოსტა",
           "en": "email",
-          "ru": "электронная почта"
+          "ru": "электронная почта",
+          "group": "contact"
         },
         {
-          "ge": "ფოტოსურათი",
-          "en": "photograph",
-          "ru": "фотография"
+          "ge": "ტელეფონის ნომერი",
+          "en": "phone number",
+          "ru": "номер телефона",
+          "group": "contact"
         },
         {
-          "ge": "დაინტერესებული",
-          "en": "interested (person)",
-          "ru": "заинтересованный"
+          "ge": "სამოტივაციო წერილი",
+          "en": "motivation letter",
+          "ru": "мотивационное письмо",
+          "group": "document"
         }
       ]
     },
@@ -3816,72 +5773,134 @@
         {
           "ge": "გასაუბრება",
           "en": "job interview",
-          "ru": "собеседование"
-        },
-        {
-          "ge": "კანდიდატი",
-          "en": "candidate",
-          "ru": "кандидат"
-        },
-        {
-          "ge": "პუნქტუალური",
-          "en": "punctual",
-          "ru": "пунктуальный"
-        },
-        {
-          "ge": "პასუხისმგებელი",
-          "en": "responsible",
-          "ru": "ответственный"
-        },
-        {
-          "ge": "შემოქმედებითი",
-          "en": "creative",
-          "ru": "творческий"
-        },
-        {
-          "ge": "თარჯიმნობა",
-          "en": "translation work",
-          "ru": "перевод"
-        },
-        {
-          "ge": "ბეჭდვა",
-          "en": "typing / printing",
-          "ru": "печать / набор"
-        },
-        {
-          "ge": "მომზადება",
-          "en": "preparation",
-          "ru": "подготовка"
+          "ru": "собеседование",
+          "group": "interview"
         },
         {
           "ge": "დამსაქმებელი",
           "en": "employer",
-          "ru": "работодатель"
+          "ru": "работодатель",
+          "group": "interview"
+        },
+        {
+          "ge": "კანდიდატი",
+          "en": "candidate",
+          "ru": "кандидат",
+          "group": "interview"
+        },
+        {
+          "ge": "შეკითხვა",
+          "en": "question",
+          "ru": "вопрос",
+          "group": "interview"
+        },
+        {
+          "ge": "პასუხი",
+          "en": "answer",
+          "ru": "ответ",
+          "group": "interview"
         },
         {
           "ge": "სამუშაო გამოცდილება",
           "en": "work experience",
-          "ru": "рабочий опыт"
+          "ru": "рабочий опыт",
+          "group": "interview"
         },
         {
-          "ge": "საკვალიფიკაციო მოთხოვნები",
-          "en": "qualification requirements",
-          "ru": "квалификационные требования"
+          "ge": "პასუხისმგებლობა",
+          "en": "responsibility",
+          "ru": "ответственность",
+          "group": "qualities"
         },
         {
-          "ge": "სამოტივაციო წერილი",
-          "en": "motivation letter",
-          "ru": "мотивационное письмо"
+          "ge": "პუნქტუალური",
+          "en": "punctual",
+          "ru": "пунктуальный",
+          "group": "qualities"
+        },
+        {
+          "ge": "პასუხისმგებელი",
+          "en": "responsible",
+          "ru": "ответственный",
+          "group": "qualities"
+        },
+        {
+          "ge": "შემოქმედებითი",
+          "en": "creative",
+          "ru": "творческий",
+          "group": "qualities"
+        },
+        {
+          "ge": "კომუნიკაბელური",
+          "en": "communicative",
+          "ru": "коммуникабельный",
+          "group": "qualities"
+        },
+        {
+          "ge": "გუნდური",
+          "en": "team-oriented",
+          "ru": "командный",
+          "group": "qualities"
+        },
+        {
+          "ge": "ძლიერი მხარე",
+          "en": "strong side",
+          "ru": "сильная сторона",
+          "group": "self-presentation"
+        },
+        {
+          "ge": "სუსტი მხარე",
+          "en": "weak side",
+          "ru": "слабая сторона",
+          "group": "self-presentation"
+        },
+        {
+          "ge": "პროფესია",
+          "en": "profession",
+          "ru": "профессия",
+          "group": "career"
+        },
+        {
+          "ge": "თარჯიმნობა",
+          "en": "translation work",
+          "ru": "перевод",
+          "group": "career"
+        },
+        {
+          "ge": "ბეჭდვა",
+          "en": "typing / printing",
+          "ru": "печать / набор",
+          "group": "skill"
+        },
+        {
+          "ge": "პრეზენტაცია",
+          "en": "presentation",
+          "ru": "презентация",
+          "group": "skill"
+        },
+        {
+          "ge": "მომზადება",
+          "en": "preparation",
+          "ru": "подготовка",
+          "group": "process"
+        },
+        {
+          "ge": "მოვემზადოთ",
+          "en": "let us prepare",
+          "ru": "давайте подготовимся",
+          "group": "grammar"
         },
         {
           "ge": "შეუძლია",
           "en": "he/she can",
-          "ru": "может"
+          "ru": "может",
+          "group": "grammar"
         },
         {
           "ge": "აქვს",
           "en": "he/she has",
-          "ru": "имеет / у него есть"
+          "ru": "имеет / у него есть",
+          "group": "grammar"
         }
       ]
     },
@@ -3898,72 +5917,134 @@
         {
           "ge": "პროფესია",
           "en": "profession",
-          "ru": "профессия"
+          "ru": "профессия",
+          "group": "career"
+        },
+        {
+          "ge": "უჩვეულო პროფესია",
+          "en": "unusual profession",
+          "ru": "необычная профессия",
+          "group": "career"
         },
         {
           "ge": "ფერმა",
           "en": "farm",
-          "ru": "ферма"
+          "ru": "ферма",
+          "group": "workplace"
+        },
+        {
+          "ge": "ფერმერი",
+          "en": "farmer",
+          "ru": "фермер",
+          "group": "profession"
         },
         {
           "ge": "რანჩო",
           "en": "ranch",
-          "ru": "ранчо"
+          "ru": "ранчо",
+          "group": "workplace"
         },
         {
           "ge": "სათბური",
           "en": "greenhouse",
-          "ru": "теплица"
+          "ru": "теплица",
+          "group": "workplace"
         },
         {
           "ge": "ინკუბატორი",
           "en": "incubator",
-          "ru": "инкубатор"
+          "ru": "инкубатор",
+          "group": "equipment"
         },
         {
           "ge": "რეპორტიორი",
           "en": "reporter",
-          "ru": "репортёр"
+          "ru": "репортер",
+          "group": "profession"
         },
         {
           "ge": "გაზეთი",
           "en": "newspaper",
-          "ru": "газета"
+          "ru": "газета",
+          "group": "media"
+        },
+        {
+          "ge": "ფოტოგრაფი",
+          "en": "photographer",
+          "ru": "фотограф",
+          "group": "profession"
         },
         {
           "ge": "ფეხბურთელი",
           "en": "footballer",
-          "ru": "футболист"
+          "ru": "футболист",
+          "group": "profession"
         },
         {
           "ge": "მწვრთნელი",
           "en": "coach / trainer",
-          "ru": "тренер"
+          "ru": "тренер",
+          "group": "profession"
         },
         {
           "ge": "მსაჯი",
           "en": "referee / judge",
-          "ru": "судья / арбитр"
+          "ru": "судья / арбитр",
+          "group": "profession"
         },
         {
-          "ge": "ცნობილი",
-          "en": "famous",
-          "ru": "известный"
+          "ge": "მსახიობი",
+          "en": "actor",
+          "ru": "актер",
+          "group": "profession"
         },
         {
-          "ge": "აღწერა",
-          "en": "description",
-          "ru": "описание"
+          "ge": "მყვინთავი",
+          "en": "diver",
+          "ru": "дайвер",
+          "group": "profession"
+        },
+        {
+          "ge": "მეხანძრე",
+          "en": "firefighter",
+          "ru": "пожарный",
+          "group": "profession"
         },
         {
           "ge": "სამუშაო ადგილი",
           "en": "workplace",
-          "ru": "место работы"
+          "ru": "место работы",
+          "group": "workplace"
         },
         {
-          "ge": "უცნაური",
-          "en": "unusual / strange",
-          "ru": "необычный"
+          "ge": "სამუშაო გრაფიკი",
+          "en": "work schedule",
+          "ru": "график работы",
+          "group": "employment"
+        },
+        {
+          "ge": "მოვალეობა",
+          "en": "duty",
+          "ru": "обязанность",
+          "group": "employment"
+        },
+        {
+          "ge": "აღწერა",
+          "en": "description",
+          "ru": "описание",
+          "group": "language"
+        },
+        {
+          "ge": "ცნობილი",
+          "en": "famous",
+          "ru": "известный",
+          "group": "adjective"
+        },
+        {
+          "ge": "რომელიც",
+          "en": "which / who",
+          "ru": "который",
+          "group": "grammar"
         }
       ]
     },
@@ -3980,72 +6061,134 @@
         {
           "ge": "ალპინიზმი",
           "en": "alpinism / mountaineering",
-          "ru": "альпинизм"
+          "ru": "альпинизм",
+          "group": "sport"
+        },
+        {
+          "ge": "მთა",
+          "en": "mountain",
+          "ru": "гора",
+          "group": "terrain"
         },
         {
           "ge": "მწვერვალი",
           "en": "peak / summit",
-          "ru": "вершина"
+          "ru": "вершина",
+          "group": "terrain"
+        },
+        {
+          "ge": "ბილიკი",
+          "en": "trail",
+          "ru": "тропа",
+          "group": "terrain"
         },
         {
           "ge": "ნაპრალი",
           "en": "canyon / gorge",
-          "ru": "ущелье"
+          "ru": "ущелье",
+          "group": "terrain"
         },
         {
           "ge": "ქვათაცვენა",
           "en": "rockfall zone",
-          "ru": "камнепад"
+          "ru": "камнепад",
+          "group": "hazard"
+        },
+        {
+          "ge": "მყინვარი",
+          "en": "glacier",
+          "ru": "ледник",
+          "group": "terrain"
+        },
+        {
+          "ge": "კლდე",
+          "en": "cliff / rock",
+          "ru": "скала",
+          "group": "terrain"
+        },
+        {
+          "ge": "თოკი",
+          "en": "rope",
+          "ru": "веревка",
+          "group": "equipment"
+        },
+        {
+          "ge": "კარაბინი",
+          "en": "carabiner",
+          "ru": "карабин",
+          "group": "equipment"
+        },
+        {
+          "ge": "ჩაფხუტი",
+          "en": "helmet",
+          "ru": "шлем",
+          "group": "equipment"
+        },
+        {
+          "ge": "რუკა",
+          "en": "map",
+          "ru": "карта",
+          "group": "navigation"
+        },
+        {
+          "ge": "პირობითი აღნიშვნა",
+          "en": "conditional map marking",
+          "ru": "условное обозначение",
+          "group": "navigation"
+        },
+        {
+          "ge": "სირთულის დონე",
+          "en": "difficulty level",
+          "ru": "уровень сложности",
+          "group": "navigation"
         },
         {
           "ge": "სირტის გრადაცია",
           "en": "slope gradient",
-          "ru": "уклон склона"
-        },
-        {
-          "ge": "პირობითი აღნიშვნა",
-          "en": "conditional marking (map)",
-          "ru": "условное обозначение"
-        },
-        {
-          "ge": "საშიში",
-          "en": "dangerous",
-          "ru": "опасный"
+          "ru": "уклон склона",
+          "group": "navigation"
         },
         {
           "ge": "ინსტრუქცია",
           "en": "instruction",
-          "ru": "инструкция"
-        },
-        {
-          "ge": "დაიცავით",
-          "en": "observe! / keep! (formal)",
-          "ru": "соблюдайте!"
+          "ru": "инструкция",
+          "group": "safety"
         },
         {
           "ge": "მიმართულება",
           "en": "direction",
-          "ru": "направление"
+          "ru": "направление",
+          "group": "navigation"
         },
         {
           "ge": "მონაკვეთი",
           "en": "section / segment",
-          "ru": "участок"
+          "ru": "участок",
+          "group": "navigation"
         },
         {
-          "ge": "ტბა",
-          "en": "lake",
-          "ru": "озеро"
+          "ge": "საშიში",
+          "en": "dangerous",
+          "ru": "опасный",
+          "group": "safety"
         },
         {
-          "ge": "მარტივი",
-          "en": "simple / easy",
-          "ru": "простой"
+          "ge": "ფრთხილად",
+          "en": "carefully",
+          "ru": "осторожно",
+          "group": "safety"
         },
         {
-          "ge": "საშუალო",
-          "en": "medium / average",
-          "ru": "средний"
+          "ge": "დაიცავით",
+          "en": "observe! / keep! (formal)",
+          "ru": "соблюдайте!",
+          "group": "grammar"
+        },
+        {
+          "ge": "არ გადაინაცვლოთ",
+          "en": "do not move",
+          "ru": "не перемещайтесь",
+          "group": "grammar"
         }
       ]
     },
@@ -4062,72 +6205,134 @@
         {
           "ge": "ოლიმპიადა",
           "en": "Olympics",
-          "ru": "олимпиада"
+          "ru": "олимпиада",
+          "group": "sport event"
+        },
+        {
+          "ge": "ოლიმპიური თამაშები",
+          "en": "Olympic Games",
+          "ru": "олимпийские игры",
+          "group": "sport event"
+        },
+        {
+          "ge": "სპორტი",
+          "en": "sport",
+          "ru": "спорт",
+          "group": "sport"
         },
         {
           "ge": "თამაში",
-          "en": "game / sport",
-          "ru": "игра / спорт"
+          "en": "game",
+          "ru": "игра",
+          "group": "sport"
         },
         {
           "ge": "ჩემპიონი",
           "en": "champion",
-          "ru": "чемпион"
+          "ru": "чемпион",
+          "group": "result"
         },
         {
           "ge": "მედალი",
           "en": "medal",
-          "ru": "медаль"
+          "ru": "медаль",
+          "group": "result"
         },
         {
-          "ge": "მსხვერპლი",
-          "en": "sacrifice / offering",
-          "ru": "жертва"
+          "ge": "ოქროს მედალი",
+          "en": "gold medal",
+          "ru": "золотая медаль",
+          "group": "result"
         },
         {
-          "ge": "რიტუალი",
-          "en": "ritual",
-          "ru": "ритуал"
+          "ge": "ვერცხლის მედალი",
+          "en": "silver medal",
+          "ru": "серебряная медаль",
+          "group": "result"
         },
         {
-          "ge": "ექსტრემალური",
-          "en": "extreme",
-          "ru": "экстремальный"
-        },
-        {
-          "ge": "ჯომარდობა",
-          "en": "rowing / kayaking",
-          "ru": "гребля"
-        },
-        {
-          "ge": "ფრისბი",
-          "en": "frisbee",
-          "ru": "фрисби"
+          "ge": "ბრინჯაოს მედალი",
+          "en": "bronze medal",
+          "ru": "бронзовая медаль",
+          "group": "result"
         },
         {
           "ge": "მონაწილე",
           "en": "participant",
-          "ru": "участник"
+          "ru": "участник",
+          "group": "sport event"
         },
         {
-          "ge": "სარტყელი",
-          "en": "belt / strap",
-          "ru": "ремень"
+          "ge": "გუნდი",
+          "en": "team",
+          "ru": "команда",
+          "group": "sport"
         },
         {
-          "ge": "უპირატესობა",
-          "en": "advantage",
-          "ru": "преимущество"
+          "ge": "შეჯიბრება",
+          "en": "competition",
+          "ru": "соревнование",
+          "group": "sport event"
         },
         {
-          "ge": "ყოველ ოთხ წელიწადში",
-          "en": "every four years",
-          "ru": "каждые четыре года"
+          "ge": "გამარჯვება",
+          "en": "victory",
+          "ru": "победа",
+          "group": "result"
         },
         {
           "ge": "გაიმარჯვა",
           "en": "won / was victorious",
-          "ru": "победил"
+          "ru": "победил",
+          "group": "grammar"
+        },
+        {
+          "ge": "დაიწყო",
+          "en": "began",
+          "ru": "начался",
+          "group": "grammar"
+        },
+        {
+          "ge": "დასრულდა",
+          "en": "finished",
+          "ru": "закончился",
+          "group": "grammar"
+        },
+        {
+          "ge": "მწვრთნელი",
+          "en": "coach",
+          "ru": "тренер",
+          "group": "sport"
+        },
+        {
+          "ge": "რეკორდი",
+          "en": "record",
+          "ru": "рекорд",
+          "group": "result"
+        },
+        {
+          "ge": "რიტუალი",
+          "en": "ritual",
+          "ru": "ритуал",
+          "group": "history"
+        },
+        {
+          "ge": "მსხვერპლი",
+          "en": "sacrifice / offering",
+          "ru": "жертва",
+          "group": "history"
+        },
+        {
+          "ge": "ექსტრემალური სპორტი",
+          "en": "extreme sport",
+          "ru": "экстремальный спорт",
+          "group": "sport"
+        },
+        {
+          "ge": "ჯომარდობა",
+          "en": "rafting / kayaking",
+          "ru": "гребля / рафтинг",
+          "group": "sport"
         }
       ]
     },
@@ -4144,72 +6349,134 @@
         {
           "ge": "თავისუფალი დრო",
           "en": "free time",
-          "ru": "свободное время"
-        },
-        {
-          "ge": "მუსიკა",
-          "en": "music",
-          "ru": "музыка"
-        },
-        {
-          "ge": "კონცერტი",
-          "en": "concert",
-          "ru": "концерт"
-        },
-        {
-          "ge": "მელოდია",
-          "en": "song / melody",
-          "ru": "мелодия / песня"
-        },
-        {
-          "ge": "ორკესტრი",
-          "en": "orchestra",
-          "ru": "оркестр"
-        },
-        {
-          "ge": "ფესტივალი",
-          "en": "festival",
-          "ru": "фестиваль"
-        },
-        {
-          "ge": "ღონისძიება",
-          "en": "event",
-          "ru": "мероприятие"
-        },
-        {
-          "ge": "კითხვის კლუბი",
-          "en": "book club",
-          "ru": "книжный клуб"
-        },
-        {
-          "ge": "წიგნი",
-          "en": "book",
-          "ru": "книг"
+          "ru": "свободное время",
+          "group": "lifestyle"
         },
         {
           "ge": "ჰობი",
           "en": "hobby",
-          "ru": "хобби"
+          "ru": "хобби",
+          "group": "lifestyle"
+        },
+        {
+          "ge": "მუსიკა",
+          "en": "music",
+          "ru": "музыка",
+          "group": "music"
+        },
+        {
+          "ge": "მუსიკოსი",
+          "en": "musician",
+          "ru": "музыкант",
+          "group": "music"
+        },
+        {
+          "ge": "კონცერტი",
+          "en": "concert",
+          "ru": "концерт",
+          "group": "music"
+        },
+        {
+          "ge": "მელოდია",
+          "en": "melody",
+          "ru": "мелодия",
+          "group": "music"
+        },
+        {
+          "ge": "სიმღერა",
+          "en": "song",
+          "ru": "песня",
+          "group": "music"
+        },
+        {
+          "ge": "ორკესტრი",
+          "en": "orchestra",
+          "ru": "оркестр",
+          "group": "music"
+        },
+        {
+          "ge": "ფესტივალი",
+          "en": "festival",
+          "ru": "фестиваль",
+          "group": "event"
+        },
+        {
+          "ge": "ღონისძიება",
+          "en": "event",
+          "ru": "мероприятие",
+          "group": "event"
         },
         {
           "ge": "დასვენება",
           "en": "rest / relaxation",
-          "ru": "отдых"
+          "ru": "отдых",
+          "group": "lifestyle"
         },
         {
           "ge": "გართობა",
           "en": "entertainment / fun",
-          "ru": "развлечение"
+          "ru": "развлечение",
+          "group": "lifestyle"
+        },
+        {
+          "ge": "კითხვა",
+          "en": "reading",
+          "ru": "чтение",
+          "group": "activity"
+        },
+        {
+          "ge": "წიგნი",
+          "en": "book",
+          "ru": "книга",
+          "group": "activity"
+        },
+        {
+          "ge": "კითხვის კლუბი",
+          "en": "book club",
+          "ru": "книжный клуб",
+          "group": "activity"
+        },
+        {
+          "ge": "კინო",
+          "en": "cinema",
+          "ru": "кино",
+          "group": "activity"
+        },
+        {
+          "ge": "თეატრი",
+          "en": "theater",
+          "ru": "театр",
+          "group": "activity"
+        },
+        {
+          "ge": "მეგობრები",
+          "en": "friends",
+          "ru": "друзья",
+          "group": "social"
+        },
+        {
+          "ge": "მოგზაურობა",
+          "en": "travel",
+          "ru": "путешествие",
+          "group": "activity"
+        },
+        {
+          "ge": "მოსმენა",
+          "en": "listening",
+          "ru": "слушание",
+          "group": "grammar"
         },
         {
           "ge": "ვატარებ",
           "en": "I spend (time)",
-          "ru": "провожу (время)"
+          "ru": "провожу (время)",
+          "group": "grammar"
         },
         {
-          "ge": "მოგწონს",
-          "en": "you like",
-          "ru": "тебе нравится"
+          "ge": "მომწონს",
+          "en": "I like",
+          "ru": "мне нравится",
+          "group": "grammar"
         }
       ]
     },
@@ -4226,72 +6493,134 @@
         {
           "ge": "ფლეშმობი",
           "en": "flash mob",
-          "ru": "флешмоб"
+          "ru": "флешмоб",
+          "group": "social event"
+        },
+        {
+          "ge": "სოციალური ფენომენი",
+          "en": "social phenomenon",
+          "ru": "социальный феномен",
+          "group": "concept"
         },
         {
           "ge": "მონაწილეობა",
           "en": "participation",
-          "ru": "участие"
+          "ru": "участие",
+          "group": "social event"
         },
         {
-          "ge": "მოყვარული",
-          "en": "fan / enthusiast",
-          "ru": "любитель / фанат"
+          "ge": "მონაწილე",
+          "en": "participant",
+          "ru": "участник",
+          "group": "social event"
+        },
+        {
+          "ge": "ორგანიზატორი",
+          "en": "organizer",
+          "ru": "организатор",
+          "group": "social event"
         },
         {
           "ge": "რეკლამა",
           "en": "advertisement",
-          "ru": "реклама"
+          "ru": "реклама",
+          "group": "media"
+        },
+        {
+          "ge": "კამპანია",
+          "en": "campaign",
+          "ru": "кампания",
+          "group": "media"
         },
         {
           "ge": "ქუჩა",
           "en": "street",
-          "ru": "улица"
+          "ru": "улица",
+          "group": "place"
+        },
+        {
+          "ge": "მოედანი",
+          "en": "square",
+          "ru": "площадь",
+          "group": "place"
         },
         {
           "ge": "ფეხით მოსიარულე",
           "en": "pedestrian",
-          "ru": "пешеход"
+          "ru": "пешеход",
+          "group": "people"
         },
         {
-          "ge": "შეშინება",
-          "en": "frightening / scare",
-          "ru": "испуг"
+          "ge": "გამვლელი",
+          "en": "passerby",
+          "ru": "прохожий",
+          "group": "people"
         },
         {
           "ge": "ცეკვა",
           "en": "dance",
-          "ru": "танец"
+          "ru": "танец",
+          "group": "activity"
+        },
+        {
+          "ge": "სიმღერა",
+          "en": "song",
+          "ru": "песня",
+          "group": "activity"
+        },
+        {
+          "ge": "ვიდეოჩანაწერი",
+          "en": "video recording",
+          "ru": "видеозапись",
+          "group": "media"
         },
         {
           "ge": "წინასწარ",
           "en": "in advance / beforehand",
-          "ru": "заранее"
+          "ru": "заранее",
+          "group": "time"
+        },
+        {
+          "ge": "შეტყობინება",
+          "en": "notification",
+          "ru": "уведомление",
+          "group": "communication"
         },
         {
           "ge": "გაფრთხილება",
           "en": "warning",
-          "ru": "предупреждение"
+          "ru": "предупреждение",
+          "group": "communication"
+        },
+        {
+          "ge": "შეშინება",
+          "en": "frightening / scare",
+          "ru": "испуг",
+          "group": "emotion"
+        },
+        {
+          "ge": "ემოცია",
+          "en": "emotion",
+          "ru": "эмоция",
+          "group": "emotion"
         },
         {
           "ge": "რომელიც",
           "en": "which / who",
-          "ru": "который"
+          "ru": "который",
+          "group": "grammar"
         },
         {
-          "ge": "მაკავშირებელი",
-          "en": "connecting (word)",
-          "ru": "связующий"
+          "ge": "მაკავშირებელი სიტყვა",
+          "en": "linking word",
+          "ru": "связующее слово",
+          "group": "grammar"
         },
         {
-          "ge": "ფენომენი",
-          "en": "phenomenon",
-          "ru": "феномен"
-        },
-        {
-          "ge": "კომპანია",
-          "en": "company",
-          "ru": "компания"
+          "ge": "საზოგადოება",
+          "en": "society",
+          "ru": "общество",
+          "group": "concept"
         }
       ]
     },
@@ -4308,72 +6637,134 @@
         {
           "ge": "ონლაინვაჭრობა",
           "en": "online shopping",
-          "ru": "онлайн-торговля"
+          "ru": "онлайн-торговля",
+          "group": "e-commerce"
         },
         {
-          "ge": "ონეომანია",
-          "en": "onomatopoeia",
-          "ru": "ономатопея"
-        },
-        {
-          "ge": "განვადება",
-          "en": "installment plan",
-          "ru": "рассрочка"
+          "ge": "ონლაინმაღაზია",
+          "en": "online store",
+          "ru": "интернет-магазин",
+          "group": "e-commerce"
         },
         {
           "ge": "შეკვეთა",
           "en": "order",
-          "ru": "заказ"
-        },
-        {
-          "ge": "მიწოდება",
-          "en": "delivery",
-          "ru": "доставка"
-        },
-        {
-          "ge": "ფასდაკლება",
-          "en": "discount",
-          "ru": "скидка"
-        },
-        {
-          "ge": "საგანგებო",
-          "en": "urgent / express",
-          "ru": "срочный"
-        },
-        {
-          "ge": "ტექნიკა",
-          "en": "electronics / equipment",
-          "ru": "техника"
-        },
-        {
-          "ge": "საბანკო განვადება",
-          "en": "bank installment",
-          "ru": "банковская рассрочка"
-        },
-        {
-          "ge": "მომავალი დრო",
-          "en": "future tense",
-          "ru": "будущее время"
-        },
-        {
-          "ge": "იყიდება",
-          "en": "is sold / buys",
-          "ru": "продаётся"
-        },
-        {
-          "ge": "გადახდა",
-          "en": "payment",
-          "ru": "оплата"
-        },
-        {
-          "ge": "საკუთარი",
-          "en": "own / personal",
-          "ru": "собственный"
+          "ru": "заказ",
+          "group": "order flow"
         },
         {
           "ge": "შეკვეთის გაფორმება",
           "en": "placing an order",
-          "ru": "оформление заказа"
+          "ru": "оформление заказа",
+          "group": "order flow"
+        },
+        {
+          "ge": "მიწოდება",
+          "en": "delivery",
+          "ru": "доставка",
+          "group": "order flow"
+        },
+        {
+          "ge": "მისამართი",
+          "en": "address",
+          "ru": "адрес",
+          "group": "order flow"
+        },
+        {
+          "ge": "გადახდა",
+          "en": "payment",
+          "ru": "оплата",
+          "group": "payment"
+        },
+        {
+          "ge": "საბანკო ბარათი",
+          "en": "bank card",
+          "ru": "банковская карта",
+          "group": "payment"
+        },
+        {
+          "ge": "განვადება",
+          "en": "installment plan",
+          "ru": "рассрочка",
+          "group": "payment"
+        },
+        {
+          "ge": "საბანკო განვადება",
+          "en": "bank installment",
+          "ru": "банковская рассрочка",
+          "group": "payment"
+        },
+        {
+          "ge": "ფასდაკლება",
+          "en": "discount",
+          "ru": "скидка",
+          "group": "sales"
+        },
+        {
+          "ge": "აქცია",
+          "en": "special offer / promo",
+          "ru": "акция",
+          "group": "sales"
+        },
+        {
+          "ge": "დაბრუნება",
+          "en": "return",
+          "ru": "возврат",
+          "group": "consumer rights"
+        },
+        {
+          "ge": "გარანტია",
+          "en": "warranty",
+          "ru": "гарантия",
+          "group": "consumer rights"
+        },
+        {
+          "ge": "ტექნიკა",
+          "en": "electronics / equipment",
+          "ru": "техника",
+          "group": "products"
+        },
+        {
+          "ge": "პროდუქტი",
+          "en": "product",
+          "ru": "продукт / товар",
+          "group": "products"
+        },
+        {
+          "ge": "კალათა",
+          "en": "cart / basket",
+          "ru": "корзина",
+          "group": "order flow"
+        },
+        {
+          "ge": "ონეომანია",
+          "en": "oniomania / shopping addiction",
+          "ru": "ониомания",
+          "group": "concept"
+        },
+        {
+          "ge": "მომავალი დრო",
+          "en": "future tense",
+          "ru": "будущее время",
+          "group": "grammar"
+        },
+        {
+          "ge": "უნდა",
+          "en": "should / must",
+          "ru": "должен / нужно",
+          "group": "grammar"
+        },
+        {
+          "ge": "იყიდება",
+          "en": "is sold",
+          "ru": "продается",
+          "group": "grammar"
+        },
+        {
+          "ge": "მომხმარებელი",
+          "en": "consumer / customer",
+          "ru": "покупатель",
+          "group": "people"
         }
       ]
     },
@@ -4390,72 +6781,134 @@
         {
           "ge": "გადასახადი",
           "en": "tax",
-          "ru": "налог"
+          "ru": "налог",
+          "group": "finance"
+        },
+        {
+          "ge": "გადასახადის გადახდა",
+          "en": "tax payment",
+          "ru": "уплата налога",
+          "group": "finance"
+        },
+        {
+          "ge": "დეკლარაცია",
+          "en": "declaration",
+          "ru": "декларация",
+          "group": "document"
+        },
+        {
+          "ge": "სახელმწიფო ბიუჯეტი",
+          "en": "state budget",
+          "ru": "государственный бюджет",
+          "group": "finance"
         },
         {
           "ge": "საჩივარი",
           "en": "complaint",
-          "ru": "жалоба"
+          "ru": "жалоба",
+          "group": "document"
+        },
+        {
+          "ge": "განცხადება",
+          "en": "statement / application",
+          "ru": "заявление",
+          "group": "document"
         },
         {
           "ge": "მომხმარებელი",
           "en": "consumer",
-          "ru": "потребитель"
+          "ru": "потребитель",
+          "group": "people"
         },
         {
           "ge": "მომხმარებლის უფლება",
           "en": "consumer right",
-          "ru": "право потребителя"
-        },
-        {
-          "ge": "ინტერნეტი",
-          "en": "internet",
-          "ru": "интернет"
-        },
-        {
-          "ge": "ბაზარი",
-          "en": "market",
-          "ru": "рынок"
-        },
-        {
-          "ge": "კარცერი",
-          "en": "career",
-          "ru": "карьера"
-        },
-        {
-          "ge": "ლუქსი",
-          "en": "luxury",
-          "ru": "роскошь"
-        },
-        {
-          "ge": "უცნაური",
-          "en": "unusual / strange",
-          "ru": "необычный"
-        },
-        {
-          "ge": "შემოქმედება",
-          "en": "creation / work",
-          "ru": "произведение"
-        },
-        {
-          "ge": "შემასმენელი",
-          "en": "listener / recipient",
-          "ru": "слушатель / адресат"
-        },
-        {
-          "ge": "ოფიციალური",
-          "en": "official",
-          "ru": "официальный"
+          "ru": "право потребителя",
+          "group": "law"
         },
         {
           "ge": "დაცვა",
           "en": "protection",
-          "ru": "защита"
+          "ru": "защита",
+          "group": "law"
         },
         {
-          "ge": "საყიდლები",
-          "en": "purchases / shopping",
-          "ru": "покупки"
+          "ge": "კანონი",
+          "en": "law",
+          "ru": "закон",
+          "group": "law"
+        },
+        {
+          "ge": "კონტრაქტი",
+          "en": "contract",
+          "ru": "контракт",
+          "group": "document"
+        },
+        {
+          "ge": "ქვითარი",
+          "en": "receipt",
+          "ru": "квитанция",
+          "group": "document"
+        },
+        {
+          "ge": "ჩეკი",
+          "en": "receipt check",
+          "ru": "чек",
+          "group": "document"
+        },
+        {
+          "ge": "მომსახურება",
+          "en": "service",
+          "ru": "услуга",
+          "group": "consumer rights"
+        },
+        {
+          "ge": "ხარისხი",
+          "en": "quality",
+          "ru": "качество",
+          "group": "consumer rights"
+        },
+        {
+          "ge": "ბაზარი",
+          "en": "market",
+          "ru": "рынок",
+          "group": "economy"
+        },
+        {
+          "ge": "ფასი",
+          "en": "price",
+          "ru": "цена",
+          "group": "economy"
+        },
+        {
+          "ge": "ინტერნეტმაღაზია",
+          "en": "online store",
+          "ru": "интернет-магазин",
+          "group": "economy"
+        },
+        {
+          "ge": "ოფიციალური ენა",
+          "en": "official language",
+          "ru": "официальный язык",
+          "group": "writing"
+        },
+        {
+          "ge": "დაბრუნება",
+          "en": "return",
+          "ru": "возврат",
+          "group": "consumer rights"
+        },
+        {
+          "ge": "ანაზღაურება",
+          "en": "compensation / reimbursement",
+          "ru": "компенсация",
+          "group": "consumer rights"
+        },
+        {
+          "ge": "ზედამხედველობა",
+          "en": "supervision / oversight",
+          "ru": "надзор",
+          "group": "law"
         }
       ]
     },
@@ -4472,72 +6925,134 @@
         {
           "ge": "კულინარია",
           "en": "cuisine",
-          "ru": "кухня"
+          "ru": "кулинария",
+          "group": "food"
         },
         {
           "ge": "კერძი",
           "en": "dish",
-          "ru": "блюдо"
-        },
-        {
-          "ge": "სვანური",
-          "en": "Svan (regional)",
-          "ru": "сванский"
-        },
-        {
-          "ge": "იმერული",
-          "en": "Imeretian (regional)",
-          "ru": "имеретинский"
-        },
-        {
-          "ge": "კახური",
-          "en": "Kakhetian (regional)",
-          "ru": "кахетинский"
-        },
-        {
-          "ge": "ჩიხირთმა",
-          "en": "chikhirtma (egg-lemon soup)",
-          "ru": "чихиртма"
-        },
-        {
-          "ge": "ბოჟბა",
-          "en": "bozbashi (meat soup)",
-          "ru": "божбаши"
+          "ru": "блюдо",
+          "group": "food"
         },
         {
           "ge": "რეცეპტი",
           "en": "recipe",
-          "ru": "рецепт"
+          "ru": "рецепт",
+          "group": "cooking"
         },
         {
           "ge": "ინგრედიენტი",
           "en": "ingredient",
-          "ru": "ингредиент"
+          "ru": "ингредиент",
+          "group": "cooking"
+        },
+        {
+          "ge": "მომზადება",
+          "en": "preparation / cooking",
+          "ru": "приготовление",
+          "group": "cooking"
+        },
+        {
+          "ge": "სვანური",
+          "en": "Svan (regional)",
+          "ru": "сванский",
+          "group": "region"
+        },
+        {
+          "ge": "იმერული",
+          "en": "Imeretian (regional)",
+          "ru": "имеретинский",
+          "group": "region"
+        },
+        {
+          "ge": "კახური",
+          "en": "Kakhetian (regional)",
+          "ru": "кахетинский",
+          "group": "region"
+        },
+        {
+          "ge": "ჩიხირთმა",
+          "en": "chikhirtma soup",
+          "ru": "чихиртма",
+          "group": "dish"
+        },
+        {
+          "ge": "ბოჟბა",
+          "en": "bozbashi soup",
+          "ru": "божбаши",
+          "group": "dish"
+        },
+        {
+          "ge": "ხაჭაპური",
+          "en": "khachapuri",
+          "ru": "хачапури",
+          "group": "dish"
+        },
+        {
+          "ge": "ხინკალი",
+          "en": "khinkali",
+          "ru": "хинкали",
+          "group": "dish"
+        },
+        {
+          "ge": "ჩურჩხელა",
+          "en": "churchkhela",
+          "ru": "чурчхела",
+          "group": "dish"
+        },
+        {
+          "ge": "სანელებელი",
+          "en": "spice",
+          "ru": "специя",
+          "group": "ingredient"
+        },
+        {
+          "ge": "მარილი",
+          "en": "salt",
+          "ru": "соль",
+          "group": "ingredient"
+        },
+        {
+          "ge": "წიწაკა",
+          "en": "pepper",
+          "ru": "перец",
+          "group": "ingredient"
         },
         {
           "ge": "რესტორანი",
           "en": "restaurant",
-          "ru": "ресторан"
+          "ru": "ресторан",
+          "group": "place"
+        },
+        {
+          "ge": "მენიუ",
+          "en": "menu",
+          "ru": "меню",
+          "group": "place"
         },
         {
           "ge": "სტუმარმასპინძლობა",
           "en": "hospitality",
-          "ru": "гостеприимство"
+          "ru": "гостеприимство",
+          "group": "culture"
         },
         {
           "ge": "ტრადიციული",
           "en": "traditional",
-          "ru": "традиционный"
-        },
-        {
-          "ge": "კვების ობიექტი",
-          "en": "food establishment",
-          "ru": "заведение общепита"
+          "ru": "традиционный",
+          "group": "culture"
         },
         {
           "ge": "გემრიელი",
           "en": "tasty / delicious",
-          "ru": "вкусный"
+          "ru": "вкусный",
+          "group": "adjective"
+        },
+        {
+          "ge": "კვების ობიექტი",
+          "en": "food establishment",
+          "ru": "заведение питания",
+          "group": "place"
         }
       ]
     },
@@ -4554,72 +7069,134 @@
         {
           "ge": "ჯანსაღი",
           "en": "healthy",
-          "ru": "здоровый"
+          "ru": "здоровый",
+          "group": "health"
+        },
+        {
+          "ge": "ჯანსაღი ცხოვრების წესი",
+          "en": "healthy lifestyle",
+          "ru": "здоровый образ жизни",
+          "group": "health"
         },
         {
           "ge": "დიეტა",
           "en": "diet",
-          "ru": "диета"
+          "ru": "диета",
+          "group": "health"
+        },
+        {
+          "ge": "დაბალანსებული კვება",
+          "en": "balanced nutrition",
+          "ru": "сбалансированное питание",
+          "group": "nutrition"
+        },
+        {
+          "ge": "ვიტამინი",
+          "en": "vitamin",
+          "ru": "витамин",
+          "group": "nutrition"
+        },
+        {
+          "ge": "მინერალი",
+          "en": "mineral",
+          "ru": "минерал",
+          "group": "nutrition"
         },
         {
           "ge": "წონა",
           "en": "weight",
-          "ru": "вес"
+          "ru": "вес",
+          "group": "health"
+        },
+        {
+          "ge": "კალორია",
+          "en": "calorie",
+          "ru": "калория",
+          "group": "nutrition"
         },
         {
           "ge": "სწრაფი კვება",
           "en": "fast food",
-          "ru": "фастфуд"
+          "ru": "фастфуд",
+          "group": "nutrition"
         },
         {
           "ge": "სასარგებლო",
           "en": "beneficial / healthy",
-          "ru": "полезный"
+          "ru": "полезный",
+          "group": "health"
         },
         {
-          "ge": "კავკასია",
-          "en": "Caucasus",
-          "ru": "Кавказ"
+          "ge": "მავნე",
+          "en": "harmful",
+          "ru": "вредный",
+          "group": "health"
         },
         {
-          "ge": "კავკასიელი",
-          "en": "Caucasian (person)",
-          "ru": "кавказец"
+          "ge": "ვარჯიში",
+          "en": "exercise",
+          "ru": "упражнение",
+          "group": "health"
         },
         {
-          "ge": "ქისტი",
-          "en": "kist (Chechen sub-ethnic group in Georgia)",
-          "ru": "кистинец"
+          "ge": "სეირნობა",
+          "en": "walking",
+          "ru": "прогулка",
+          "group": "health"
         },
         {
-          "ge": "გეოგრაფიული",
-          "en": "geographical",
-          "ru": "географический"
-        },
-        {
-          "ge": "მდებარეობა",
-          "en": "location",
-          "ru": "расположение"
-        },
-        {
-          "ge": "არგუმენტაცია",
-          "en": "argumentation",
-          "ru": "аргументация"
+          "ge": "ძილი",
+          "en": "sleep",
+          "ru": "сон",
+          "group": "health"
         },
         {
           "ge": "რეკომენდაცია",
           "en": "recommendation",
-          "ru": "рекомендация"
+          "ru": "рекомендация",
+          "group": "communication"
         },
         {
-          "ge": "პროდუქტი",
-          "en": "product / food item",
-          "ru": "продукт"
+          "ge": "არგუმენტაცია",
+          "en": "argumentation",
+          "ru": "аргументация",
+          "group": "communication"
         },
         {
-          "ge": "ცხოვრების წესი",
-          "en": "way of life / lifestyle",
-          "ru": "образ жизни"
+          "ge": "კავკასია",
+          "en": "Caucasus",
+          "ru": "Кавказ",
+          "group": "geography"
+        },
+        {
+          "ge": "კავკასიელი",
+          "en": "Caucasian (person)",
+          "ru": "кавказец",
+          "group": "geography"
+        },
+        {
+          "ge": "ქისტი",
+          "en": "Kist",
+          "ru": "кистинец",
+          "group": "ethnography"
+        },
+        {
+          "ge": "გეოგრაფიული",
+          "en": "geographical",
+          "ru": "географический",
+          "group": "geography"
+        },
+        {
+          "ge": "მდებარეობა",
+          "en": "location",
+          "ru": "расположение",
+          "group": "geography"
+        },
+        {
+          "ge": "დიალექტი",
+          "en": "dialect",
+          "ru": "диалект",
+          "group": "language"
         }
       ]
     }
