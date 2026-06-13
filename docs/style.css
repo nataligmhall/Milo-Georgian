@@ -262,7 +262,9 @@ details.gram-table[open] summary { border-bottom: 1px solid var(--line); }
 .audio-ge { font-size: 1.05rem; font-weight: 600; line-height: 1.55; }
 .audio-rom { color: var(--gold); font-style: italic; font-size: 0.86rem; margin-top: 0.2rem; }
 .audio-en { font-size: 0.88rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.45; }
-.sentence-builder { margin: 1.5rem 0; }
+.quiz-section { margin: 1.5rem 0; }
+.sb-prompt strong { color: var(--ink); }
+.sb-ge-inline { font-weight: 600; letter-spacing: 0.02em; }
 .sb-exercise {
   background: var(--card);
   border: 1px solid var(--line);
@@ -477,15 +479,6 @@ h2 { font-size: 1rem; color: var(--accent); margin: 0 0 0.75rem; }
 .vocab-rom { color: var(--gold); font-style: italic; font-size: 0.86rem; margin-top: 0.1rem; }
 .vocab-en { font-size: 0.94rem; margin-top: 0.25rem; line-height: 1.35; }
 .vocab-ru { color: var(--ru); font-size: 0.84rem; margin-top: 0.15rem; }
-details.work {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 0.65rem 0.85rem;
-  margin-bottom: 0.5rem;
-}
-details.work summary { cursor: pointer; font-size: 0.92rem; font-weight: 600; }
-details.work .ans { margin-top: 0.5rem; font-size: 0.88rem; color: var(--green); }
 .book-grid { display: grid; gap: 1rem; }
 .book-card {
   background: var(--card);

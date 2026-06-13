@@ -296,7 +296,9 @@ details.gram-table[open] summary { border-bottom: 1px solid var(--line); }
 .audio-ge { font-size: 1.05rem; font-weight: 600; line-height: 1.55; }
 .audio-rom { color: var(--gold); font-style: italic; font-size: 0.86rem; margin-top: 0.2rem; }
 .audio-en { font-size: 0.88rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.45; }
-.sentence-builder { margin: 1.5rem 0; }
+.quiz-section { margin: 1.5rem 0; }
+.sb-prompt strong { color: var(--ink); }
+.sb-ge-inline { font-weight: 600; letter-spacing: 0.02em; }
 .sb-exercise {
   background: var(--card);
   border: 1px solid var(--line);
@@ -511,15 +513,6 @@ h2 { font-size: 1rem; color: var(--accent); margin: 0 0 0.75rem; }
 .vocab-rom { color: var(--gold); font-style: italic; font-size: 0.86rem; margin-top: 0.1rem; }
 .vocab-en { font-size: 0.94rem; margin-top: 0.25rem; line-height: 1.35; }
 .vocab-ru { color: var(--ru); font-size: 0.84rem; margin-top: 0.15rem; }
-details.work {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 0.65rem 0.85rem;
-  margin-bottom: 0.5rem;
-}
-details.work summary { cursor: pointer; font-size: 0.92rem; font-weight: 600; }
-details.work .ans { margin-top: 0.5rem; font-size: 0.88rem; color: var(--green); }
 .book-grid { display: grid; gap: 1rem; }
 .book-card {
   background: var(--card);
@@ -1018,12 +1011,35 @@ def practice_audio_html(lesson):
     )
 
 
-def sentence_builder_html(lesson, book, num):
-    exercises = lesson.get("sentence_builder") or []
-    if not exercises:
-        return ""
+def quiz_prompt_html(prompt):
+    """Turn worksheet prompt markup into safe HTML."""
+    p = esc(prompt)
+    p = p.replace("&lt;b&gt;", "<strong>").replace("&lt;/b&gt;", "</strong>")
+    p = p.replace("&lt;code&gt;", '<span class="sb-ge-inline">').replace(
+        "&lt;/code&gt;", "</span>"
+    )
+    return p.replace("\n", "<br>")
+
+
+def mc_choice_buttons(choices, answer, seed):
+    rng = random.Random(seed)
+    opts = list(choices)
+    rng.shuffle(opts)
+    buttons = []
+    for opt in opts:
+        correct = "1" if opt == answer else "0"
+        buttons.append(
+            f'<button type="button" class="sb-choice" data-correct="{correct}">'
+            f"{esc(opt)}</button>"
+        )
+    return "".join(buttons)
+
+
+def quiz_section_html(lesson, book, num, vocab):
+    """Interactive multiple-choice: sentence gaps + vocab/grammar drills."""
     items = []
-    for i, ex in enumerate(exercises):
+
+    for i, ex in enumerate(lesson.get("sentence_builder") or []):
         opts = list(ex["options"])
         rng = random.Random(f"{book}-{num}-sb-{i}")
         rng.shuffle(opts)
@@ -1044,10 +1060,24 @@ def sentence_builder_html(lesson, book, num):
             f'<div class="sb-choices">{"".join(buttons)}</div>'
             f'<p class="sb-feedback hidden"></p></div>'
         )
+
+    for i, ex in enumerate(build_worksheet_exercises(lesson, vocab)):
+        answer = ex["answer"]
+        items.append(
+            f'<div class="sb-exercise" data-full="{esc(answer)}">'
+            f'<p class="sb-prompt">{quiz_prompt_html(ex["prompt"])}</p>'
+            f'<div class="sb-choices">{mc_choice_buttons(ex["choices"], answer, f"{book}-{num}-ws-{i}")}</div>'
+            f'<p class="sb-feedback hidden"></p></div>'
+        )
+
+    if not items:
+        return ""
+
+    n = len(items)
     return (
-        f'<section class="sentence-builder"><h2>🧩 Sentence builder</h2>'
+        f'<section class="quiz-section"><h2>🧪 Quick test</h2>'
         f'<p class="sub" style="margin:-0.35rem 0 0.75rem">'
-        f"Tap the correct word to complete each sentence.</p>"
+        f"Tap the correct answer — {n} questions.</p>"
         f'{"".join(items)}</section>'
     )
 
@@ -1117,20 +1147,6 @@ def vocab_sections(vocab, book, num):
     return "\n".join(groups)
 
 
-def worksheet_html(lesson, vocab):
-    exercises = build_worksheet_exercises(lesson, vocab)
-    if not exercises:
-        return ""
-    items = []
-    for i, ex in enumerate(exercises, 1):
-        prompt = ex["prompt"].replace("<b>", "").replace("</b>", "").replace("<code>", "").replace("</code>", "")
-        items.append(
-            f"<details class=\"work\"><summary>{i}. {esc(prompt)}</summary>"
-            f"<div class=\"ans\">✓ {esc(ex.get('answer', ''))}</div></details>"
-        )
-    return f"<section><h2>📝 Worksheet ({len(exercises)} exercises)</h2>{''.join(items)}</section>"
-
-
 def lesson_page(book, num, lesson, lessons):
     lesson = merge_reader_extras(lesson, book, num)
     lesson["_rid"] = f"{book}-{num}"
@@ -1184,8 +1200,7 @@ def lesson_page(book, num, lesson, lessons):
   <p class="sub" style="margin:-0.35rem 0 0.75rem">Tap ⚑ to flag hard words — they go to your review bank on the homepage.</p>
   {vocab_sections(vocab, book, num)}
 </section>
-{sentence_builder_html(lesson, book, num)}
-{worksheet_html(lesson, vocab)}
+{quiz_section_html(lesson, book, num, vocab)}
 {practice_audio_html(lesson)}
 <p class="sub" style="margin-top:1.5rem">🎧 More audio &amp; quizzes in Telegram · /audio · /quiz</p>
 <footer>Milo Georgian Tutor · synced from lesson_data.json</footer>
@@ -1236,7 +1251,7 @@ def index_page(lessons):
 <header>
   <div class="brand">აღმართი · GeoFL</div>
   <h1>Georgian Lesson Reader</h1>
-  <p class="sub">Mobile-first აღმართი · 48 lessons · grammar, vocab &amp; worksheets · no PDFs</p>
+  <p class="sub">Mobile-first აღმართი · 48 lessons · grammar, vocab &amp; quick tests · no PDFs</p>
   <p class="sub" style="margin-top:0.5rem">Faster than <a href="https://www.geofl.ge/">geofl.ge</a> on your phone — same textbook content, built for reading.</p>
   <div class="progress-bar" id="progress-summary">Progress: 0 / {total} lessons</div>
   <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
