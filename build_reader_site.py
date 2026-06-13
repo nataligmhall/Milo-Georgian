@@ -409,35 +409,57 @@ details.gram-table[open] summary { border-bottom: 1px solid var(--line); }
 .hard-bank h2 { margin: 0 0 0.35rem; font-size: 1rem; }
 .hard-bank .sub-bank { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.75rem; }
 .hard-bank-empty { font-size: 0.88rem; color: var(--muted); font-style: italic; }
-.hard-bank-grid {
-  display: grid;
-  gap: 0.55rem;
+.hard-bank-hint {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0 0 0.45rem;
 }
-@media (min-width: 480px) {
-  .hard-bank-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.hard-bank-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  margin: 0 -0.35rem;
+  padding-bottom: 0.25rem;
+  scrollbar-width: thin;
+}
+.hard-bank-scroll::-webkit-scrollbar { height: 4px; }
+.hard-bank-scroll::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
+.hard-bank-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 0.55rem;
+  width: max-content;
+  min-height: 0;
+  padding: 0.15rem 0.35rem 0.35rem;
 }
 .hard-bank-card {
+  flex: 0 0 8.75rem;
+  scroll-snap-align: start;
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 0.65rem 0.75rem;
-  font-size: 0.88rem;
+  padding: 0.6rem 0.65rem;
+  font-size: 0.82rem;
+  background: var(--bg);
 }
-.hard-bank-card .hb-ge { font-weight: 700; font-size: 1.05rem; }
-.hard-bank-card .hb-en { font-size: 0.9rem; margin-top: 0.35rem; }
+.hard-bank-card .hb-ge { font-weight: 700; font-size: 1rem; line-height: 1.25; }
+.hard-bank-card .hb-meta { font-size: 0.72rem; color: var(--muted); margin-top: 0.2rem; line-height: 1.3; }
+.hard-bank-card .hb-meta code { font-size: 0.72rem; }
+.hard-bank-card .hb-en { font-size: 0.82rem; margin-top: 0.3rem; line-height: 1.3; }
 .hard-bank-card .hb-en.hidden { display: none; }
 .hard-bank-card .hb-show {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--accent);
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
   font-weight: 600;
-  margin-top: 0.25rem;
+  margin-top: 0.3rem;
 }
-.hard-bank-card .hb-actions { margin-top: 0.4rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.hard-bank-card .hb-actions { margin-top: 0.35rem; display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .hard-bank-card a, .hard-bank-card button {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--accent);
   background: none;
   border: none;
@@ -596,7 +618,11 @@ HARD_WORDS_JS = """\
       root.innerHTML = '<p class="hard-bank-empty">No flagged words yet. Tap ⚑ on any vocab card in a lesson.</p>';
       return;
     }
-    var html = '<div class="hard-bank-grid">';
+    var html = "";
+    if (keys.length > 2) {
+      html += '<p class="hard-bank-hint">Swipe sideways to browse →</p>';
+    }
+    html += '<div class="hard-bank-scroll"><div class="hard-bank-grid">';
     keys.forEach(function (id) {
       var w = data[id];
       var href = w.book + "/lesson-" + String(w.lesson).padStart(2, "0") + ".html";
@@ -608,10 +634,10 @@ HARD_WORDS_JS = """\
       html += '<button type="button" class="hb-show" data-show-en="' + enId + '">Show meaning</button>';
       html += '<div class="hb-en hidden" id="' + enId + '">' + (w.en || "") + '</div>';
       html += '<div class="hb-meta">' + w.book.toUpperCase() + " L" + w.lesson + '</div>';
-      html += '<div class="hb-actions"><a href="' + href + '">Open lesson</a>';
-      html += '<button type="button" class="hb-remove" data-remove-hard="' + id + '">Remove</button></div></div>';
+      html += '<div class="hb-actions"><a href="' + href + '">Lesson</a>';
+      html += '<button type="button" class="hb-remove" data-remove-hard="' + id + '">✕</button></div></div>';
     });
-    html += "</div>";
+    html += "</div></div>";
     root.innerHTML = html;
   }
 
@@ -1217,7 +1243,7 @@ def index_page(lessons):
 </header>
 <section class="hard-bank">
   <h2>🚩 Hard words bank <span id="hard-bank-count" class="sub-bank"></span></h2>
-  <p class="sub-bank">Words you flagged for extra review. Georgian shown first — tap Show meaning to quiz yourself. Stored on this device only.</p>
+  <p class="sub-bank">Flagged vocab for review — swipe the row below, or use flashcards. Stored on this device only.</p>
   <div id="hard-words-bank"><p class="hard-bank-empty">No flagged words yet. Tap ⚑ on any vocab card in a lesson.</p></div>
   <button type="button" class="flash-start-btn" id="flash-start-btn" disabled>Start flashcards</button>
 </section>

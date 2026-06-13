@@ -55,7 +55,11 @@
       root.innerHTML = '<p class="hard-bank-empty">No flagged words yet. Tap ⚑ on any vocab card in a lesson.</p>';
       return;
     }
-    var html = '<div class="hard-bank-grid">';
+    var html = "";
+    if (keys.length > 2) {
+      html += '<p class="hard-bank-hint">Swipe sideways to browse →</p>';
+    }
+    html += '<div class="hard-bank-scroll"><div class="hard-bank-grid">';
     keys.forEach(function (id) {
       var w = data[id];
       var href = w.book + "/lesson-" + String(w.lesson).padStart(2, "0") + ".html";
@@ -67,10 +71,10 @@
       html += '<button type="button" class="hb-show" data-show-en="' + enId + '">Show meaning</button>';
       html += '<div class="hb-en hidden" id="' + enId + '">' + (w.en || "") + '</div>';
       html += '<div class="hb-meta">' + w.book.toUpperCase() + " L" + w.lesson + '</div>';
-      html += '<div class="hb-actions"><a href="' + href + '">Open lesson</a>';
-      html += '<button type="button" class="hb-remove" data-remove-hard="' + id + '">Remove</button></div></div>';
+      html += '<div class="hb-actions"><a href="' + href + '">Lesson</a>';
+      html += '<button type="button" class="hb-remove" data-remove-hard="' + id + '">✕</button></div></div>';
     });
-    html += "</div>";
+    html += "</div></div>";
     root.innerHTML = html;
   }
 
