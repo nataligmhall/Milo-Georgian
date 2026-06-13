@@ -50,6 +50,73 @@ nav.top a, .pill {
   font-weight: 600;
 }
 nav.top a:hover { border-color: var(--gold); }
+.done-btn {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+.done-btn.done { border-color: var(--green); background: rgba(45,90,61,.12); color: var(--green); }
+.progress-bar {
+  margin: 0.75rem 0 1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.progress-track {
+  height: 6px;
+  background: var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 0.35rem;
+}
+.progress-fill { height: 100%; background: var(--green); border-radius: 999px; width: 0%; transition: width .2s; }
+.lesson-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0.35rem 0;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.lesson-row.done a { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--green); }
+.lesson-row a {
+  flex: 1;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.92rem;
+  padding: 0.2rem 0;
+}
+.lesson-row a:hover { color: var(--accent); }
+.lesson-done-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+}
+.lesson-done-toggle input { width: 1.1rem; height: 1.1rem; accent-color: var(--green); }
+.phrase-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.55rem;
+}
+.phrase-ge { font-size: 1.1rem; font-weight: 600; }
+.phrase-en { font-size: 0.9rem; margin-top: 0.2rem; }
+.phrase-ru { color: var(--ru); font-size: 0.84rem; margin-top: 0.1rem; }
+.grammar ul { margin: 0.5rem 0 0; padding-left: 1.1rem; font-size: 0.92rem; }
+.grammar ul li { margin: 0.25rem 0; }
 section { margin: 1.5rem 0; }
 h2 { font-size: 1rem; color: var(--accent); margin: 0 0 0.75rem; }
 .card {
