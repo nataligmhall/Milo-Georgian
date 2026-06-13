@@ -117,6 +117,80 @@ nav.top a:hover { border-color: var(--gold); }
 .phrase-ru { color: var(--ru); font-size: 0.84rem; margin-top: 0.1rem; }
 .grammar ul { margin: 0.5rem 0 0; padding-left: 1.1rem; font-size: 0.92rem; }
 .grammar ul li { margin: 0.25rem 0; }
+details.gram-table {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin: 0.55rem 0;
+  overflow: hidden;
+}
+details.gram-table summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.65rem 0.85rem;
+  color: var(--accent);
+}
+details.gram-table[open] summary { border-bottom: 1px solid var(--line); }
+.table-wrap { overflow-x: auto; padding: 0 0.5rem 0.5rem; }
+.gram-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+.gram-table th, .gram-table td {
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+.gram-table th { color: var(--muted); font-weight: 600; font-size: 0.78rem; }
+.gram-table td:first-child { color: var(--muted); }
+.gram-table .cell-ge { font-weight: 600; font-size: 0.95rem; }
+.table-note {
+  margin: 0 0.85rem 0.65rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.can-do {
+  background: rgba(200, 169, 110, 0.12);
+  border: 1px solid var(--gold);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  margin: 1.25rem 0;
+}
+.can-do h2 { margin: 0 0 0.55rem; font-size: 0.95rem; }
+.can-do ul { margin: 0; padding-left: 1.15rem; font-size: 0.92rem; }
+.can-do li { margin: 0.3rem 0; }
+.reading-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+}
+.reading-ge {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 500;
+}
+.reading-toggle {
+  margin-top: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  background: none;
+  padding: 0;
+}
+.reading-en {
+  margin-top: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.55;
+  border-top: 1px dashed var(--line);
+  padding-top: 0.65rem;
+}
+.reading-en.hidden { display: none; }
 section { margin: 1.5rem 0; }
 h2 { font-size: 1rem; color: var(--accent); margin: 0 0 0.75rem; }
 .card {

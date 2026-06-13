@@ -14,6 +14,7 @@ from pathlib import Path
 
 from config import LESSON_DATA, READER_DIR, romanize
 from level_placement import BOOK_LABELS
+from reader_extras import merge_reader_extras
 from worksheet import build_worksheet_exercises
 
 BOOK_ORDER = ("a1", "a2", "a2plus", "b1")
@@ -138,6 +139,80 @@ nav.top a:hover { border-color: var(--gold); }
 .phrase-ru { color: var(--ru); font-size: 0.84rem; margin-top: 0.1rem; }
 .grammar ul { margin: 0.5rem 0 0; padding-left: 1.1rem; font-size: 0.92rem; }
 .grammar ul li { margin: 0.25rem 0; }
+details.gram-table {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin: 0.55rem 0;
+  overflow: hidden;
+}
+details.gram-table summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.65rem 0.85rem;
+  color: var(--accent);
+}
+details.gram-table[open] summary { border-bottom: 1px solid var(--line); }
+.table-wrap { overflow-x: auto; padding: 0 0.5rem 0.5rem; }
+.gram-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+.gram-table th, .gram-table td {
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+.gram-table th { color: var(--muted); font-weight: 600; font-size: 0.78rem; }
+.gram-table td:first-child { color: var(--muted); }
+.gram-table .cell-ge { font-weight: 600; font-size: 0.95rem; }
+.table-note {
+  margin: 0 0.85rem 0.65rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.can-do {
+  background: rgba(200, 169, 110, 0.12);
+  border: 1px solid var(--gold);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  margin: 1.25rem 0;
+}
+.can-do h2 { margin: 0 0 0.55rem; font-size: 0.95rem; }
+.can-do ul { margin: 0; padding-left: 1.15rem; font-size: 0.92rem; }
+.can-do li { margin: 0.3rem 0; }
+.reading-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+}
+.reading-ge {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 500;
+}
+.reading-toggle {
+  margin-top: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  background: none;
+  padding: 0;
+}
+.reading-en {
+  margin-top: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.55;
+  border-top: 1px dashed var(--line);
+  padding-top: 0.65rem;
+}
+.reading-en.hidden { display: none; }
 section { margin: 1.5rem 0; }
 h2 { font-size: 1rem; color: var(--accent); margin: 0 0 0.75rem; }
 .card {
@@ -222,6 +297,18 @@ footer {
   margin-top: 2rem;
   padding: 1rem;
 }
+"""
+
+READING_JS = """\
+document.addEventListener("click", function (e) {
+  var btn = e.target.closest("[data-reading-toggle]");
+  if (!btn) return;
+  var id = btn.dataset.readingToggle;
+  var en = document.getElementById(id + "-en");
+  if (!en) return;
+  var hidden = en.classList.toggle("hidden");
+  btn.textContent = hidden ? "Show translation" : "Hide translation";
+});
 """
 
 PROGRESS_JS = """\
@@ -369,6 +456,74 @@ def grammar_bullets_html(g):
     return f"<ul>{items}</ul>"
 
 
+def grammar_tables_html(g):
+    tables = g.get("tables") or []
+    if not tables:
+        return ""
+    blocks = []
+    for i, tbl in enumerate(tables):
+        headers = tbl.get("headers") or []
+        ge_cols = {j for j, h in enumerate(headers) if h in ("Georgian", "Pattern", "Noun", "Country")}
+        if not ge_cols and headers:
+            if headers[0] == "Georgian":
+                ge_cols = {0}
+            elif len(headers) >= 2:
+                ge_cols = {1}
+        head = ""
+        if headers:
+            head = "<thead><tr>" + "".join(f"<th>{esc(h)}</th>" for h in headers) + "</tr></thead>"
+        body_rows = []
+        for row in tbl.get("rows") or []:
+            cells = []
+            for j, cell in enumerate(row):
+                cls = ' class="cell-ge"' if j in ge_cols else ""
+                cells.append(f"<td{cls}>{esc(cell)}</td>")
+            body_rows.append("<tr>" + "".join(cells) + "</tr>")
+        body = "<tbody>" + "".join(body_rows) + "</tbody>" if body_rows else ""
+        note = tbl.get("note") or ""
+        note_html = f'<p class="table-note">{esc(note)}</p>' if note else ""
+        open_attr = " open" if i == 0 else ""
+        blocks.append(
+            f'<details class="gram-table"{open_attr}>'
+            f'<summary>{esc(tbl.get("title", "Table"))}</summary>'
+            f'<div class="table-wrap"><table>{head}{body}</table></div>{note_html}</details>'
+        )
+    return f'<div class="grammar-tables">{"".join(blocks)}</div>'
+
+
+def can_do_html(lesson):
+    items = lesson.get("can_do") or []
+    if not items:
+        return ""
+    lis = "".join(f"<li>{esc(x)}</li>" for x in items)
+    return f'<section class="can-do"><h2>🎯 After this lesson you can…</h2><ul>{lis}</ul></section>'
+
+
+def reading_html(lesson):
+    reading = lesson.get("reading")
+    if not reading or not reading.get("ge"):
+        return ""
+    rid = f"reading-{lesson.get('_rid', 'x')}"
+    en = reading.get("en", "")
+    en_block = (
+        f'<div class="reading-en hidden" id="{rid}-en">{esc(en)}</div>'
+        if en
+        else ""
+    )
+    toggle = (
+        f'<button type="button" class="reading-toggle" data-reading-toggle="{rid}">'
+        f"Show translation</button>"
+        if en
+        else ""
+    )
+    return (
+        f"<section><h2>📄 Short reading</h2>"
+        f'<div class="reading-card">'
+        f'<div class="reading-ge">{esc(reading["ge"])}</div>'
+        f"{toggle}{en_block}</div></section>"
+    )
+
+
 def vocab_card(v):
     rom = v.get("rom") or romanize(v["ge"])
     ru = f'<div class="vocab-ru">🇷🇺 {esc(v.get("ru", ""))}</div>' if v.get("ru") else ""
@@ -418,6 +573,8 @@ def worksheet_html(lesson, vocab):
 
 
 def lesson_page(book, num, lesson, lessons):
+    lesson = merge_reader_extras(lesson, book, num)
+    lesson["_rid"] = f"{book}-{num}"
     g = lesson.get("grammar", {})
     easier = lesson.get("easier_than_russian", "")
     label = BOOK_LABELS.get(book, book.upper())
@@ -426,6 +583,7 @@ def lesson_page(book, num, lesson, lessons):
 
     lesson_id = f"{book}-{num}"
     bullets = grammar_bullets_html(g)
+    tables = grammar_tables_html(g)
 
     body = f"""<!DOCTYPE html>
 <html lang="en">
@@ -445,17 +603,20 @@ def lesson_page(book, num, lesson, lessons):
   <p class="sub">{esc(lesson.get('title', ''))} · {len(vocab)} words</p>
   <label class="lesson-done-toggle"><input type="checkbox" class="lesson-done-cb" data-lesson="{lesson_id}"> Mark lesson complete</label>
 </header>
+{can_do_html(lesson)}
 <section>
   <h2>📖 Grammar</h2>
   <div class="card grammar">
     <p>{esc(g.get('en', ''))}</p>
     {bullets}
+    {tables}
     <p class="ru">🇷🇺 {esc(g.get('ru', ''))}</p>
     <div class="ex-ge">{esc(g.get('example_ge', ''))}</div>
     <div class="ex-en">{esc(g.get('example_en', ''))}</div>
     {easier_block}
   </div>
 </section>
+{reading_html(lesson)}
 {phrases_html(lesson)}
 <section>
   <h2>📚 Vocabulary</h2>
@@ -466,6 +627,7 @@ def lesson_page(book, num, lesson, lessons):
 <footer>Milo Georgian Tutor · synced from lesson_data.json</footer>
 </div>
 <script src="../progress.js"></script>
+<script src="../reading.js"></script>
 </body>
 </html>"""
     return body
@@ -527,6 +689,7 @@ def build():
     READER_DIR.mkdir(parents=True, exist_ok=True)
     (READER_DIR / "style.css").write_text(CSS, encoding="utf-8")
     (READER_DIR / "progress.js").write_text(PROGRESS_JS, encoding="utf-8")
+    (READER_DIR / "reading.js").write_text(READING_JS, encoding="utf-8")
     (READER_DIR / ".nojekyll").touch()
     (READER_DIR / "index.html").write_text(index_page(lessons), encoding="utf-8")
 
