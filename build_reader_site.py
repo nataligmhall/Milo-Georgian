@@ -10,9 +10,10 @@ Output: docs/  (enable Pages → Deploy from branch main, folder /docs)
 
 import html
 import json
+import shutil
 from pathlib import Path
 
-from config import LESSON_DATA, READER_DIR, romanize
+from config import CLIPS_DIR, DATASET, LESSON_DATA, READER_DIR, TRANSLATIONS, romanize
 from level_placement import BOOK_LABELS
 from reader_extras import merge_reader_extras
 from worksheet import build_worksheet_exercises
@@ -213,6 +214,136 @@ details.gram-table[open] summary { border-bottom: 1px solid var(--line); }
   padding-top: 0.65rem;
 }
 .reading-en.hidden { display: none; }
+.focus-verb {
+  background: var(--card);
+  border: 2px solid var(--accent);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  margin: 1.25rem 0;
+}
+.focus-verb h2 { margin: 0 0 0.35rem; font-size: 1rem; }
+.verb-meta { font-size: 0.88rem; color: var(--muted); margin: 0 0 0.75rem; }
+.verb-meta code { color: var(--gold); font-style: italic; }
+.verb-table-wrap { overflow-x: auto; }
+.verb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+.verb-table th, .verb-table td {
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+.verb-table th { color: var(--muted); font-size: 0.78rem; }
+.verb-table .cell-ge { font-weight: 700; font-size: 1rem; }
+.verb-note { font-size: 0.82rem; color: var(--green); margin: 0.65rem 0 0; }
+.vocab-card {
+  position: relative;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 0.9rem 1rem 0.9rem 2.5rem;
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+}
+.vocab-card.flagged { border-color: #c45c26; background: rgba(196, 92, 38, 0.06); }
+.hard-flag-btn {
+  position: absolute;
+  left: 0.45rem;
+  top: 0.55rem;
+  width: 1.65rem;
+  height: 1.65rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.35;
+  padding: 0;
+}
+.hard-flag-btn:hover { opacity: 0.85; }
+.hard-flag-btn.flagged { opacity: 1; }
+.practice-audio {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  margin: 1.5rem 0;
+}
+.practice-audio h2 { margin: 0 0 0.65rem; }
+.audio-disclaimer {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 0.85rem;
+  padding: 0.65rem 0.75rem;
+  background: rgba(107, 79, 160, 0.08);
+  border-radius: 8px;
+  border-left: 3px solid var(--ru);
+}
+.audio-clip-card audio { width: 100%; margin-bottom: 0.65rem; }
+.audio-ge { font-size: 1.05rem; font-weight: 600; line-height: 1.55; }
+.audio-rom { color: var(--gold); font-style: italic; font-size: 0.86rem; margin-top: 0.2rem; }
+.audio-en-toggle {
+  margin-top: 0.55rem;
+  font-size: 0.82rem;
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  background: none;
+  padding: 0;
+}
+.audio-en { font-size: 0.88rem; color: var(--muted); margin-top: 0.4rem; }
+.audio-en.hidden { display: none; }
+.hard-bank {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  margin: 1.25rem 0 1.5rem;
+}
+.hard-bank h2 { margin: 0 0 0.35rem; font-size: 1rem; }
+.hard-bank .sub-bank { font-size: 0.82rem; color: var(--muted); margin: 0 0 0.75rem; }
+.hard-bank-empty { font-size: 0.88rem; color: var(--muted); font-style: italic; }
+.hard-bank-grid {
+  display: grid;
+  gap: 0.55rem;
+}
+@media (min-width: 480px) {
+  .hard-bank-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.hard-bank-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.88rem;
+}
+.hard-bank-card .hb-ge { font-weight: 700; font-size: 1.05rem; }
+.hard-bank-card .hb-en { font-size: 0.9rem; margin-top: 0.35rem; }
+.hard-bank-card .hb-en.hidden { display: none; }
+.hard-bank-card .hb-show {
+  font-size: 0.78rem;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+.hard-bank-card .hb-actions { margin-top: 0.4rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.hard-bank-card a, .hard-bank-card button {
+  font-size: 0.78rem;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+}
+.hard-bank-card button.hb-remove { color: var(--muted); }
 section { margin: 1.5rem 0; }
 h2 { font-size: 1rem; color: var(--accent); margin: 0 0 0.75rem; }
 .card {
@@ -250,13 +381,6 @@ h2 { font-size: 1rem; color: var(--accent); margin: 0 0 0.75rem; }
 }
 @media (min-width: 480px) {
   .vocab-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-.vocab-card {
-  background: var(--card);
-  border-radius: 12px;
-  padding: 0.9rem 1rem;
-  border: 1px solid var(--line);
-  box-shadow: 0 1px 4px rgba(0,0,0,.04);
 }
 .vocab-ge { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.01em; line-height: 1.3; }
 .vocab-rom { color: var(--gold); font-style: italic; font-size: 0.86rem; margin-top: 0.1rem; }
@@ -302,13 +426,131 @@ footer {
 READING_JS = """\
 document.addEventListener("click", function (e) {
   var btn = e.target.closest("[data-reading-toggle]");
-  if (!btn) return;
-  var id = btn.dataset.readingToggle;
-  var en = document.getElementById(id + "-en");
-  if (!en) return;
-  var hidden = en.classList.toggle("hidden");
-  btn.textContent = hidden ? "Show translation" : "Hide translation";
+  if (btn) {
+    var id = btn.dataset.readingToggle;
+    var en = document.getElementById(id + "-en");
+    if (!en) return;
+    var hidden = en.classList.toggle("hidden");
+    btn.textContent = hidden ? "Show translation" : "Hide translation";
+    return;
+  }
+  var audioBtn = e.target.closest("[data-audio-en-toggle]");
+  if (audioBtn) {
+    var en2 = document.getElementById(audioBtn.dataset.audioEnToggle);
+    if (!en2) return;
+    var h = en2.classList.toggle("hidden");
+    audioBtn.textContent = h ? "What does it mean? (not lesson vocab)" : "Hide meaning";
+  }
 });
+"""
+
+HARD_WORDS_JS = """\
+(function () {
+  const KEY = "milo-hard-words";
+
+  function load() {
+    try { return JSON.parse(localStorage.getItem(KEY) || "{}"); }
+    catch (e) { return {}; }
+  }
+
+  function save(data) {
+    localStorage.setItem(KEY, JSON.stringify(data));
+    syncFlags(data);
+    renderBank(data);
+  }
+
+  function wordKey(book, lesson, ge) {
+    return book + "-" + lesson + "-" + ge;
+  }
+
+  function syncFlags(data) {
+    document.querySelectorAll(".hard-flag-btn").forEach(function (btn) {
+      var id = btn.dataset.wordId;
+      var on = !!(id && data[id]);
+      btn.classList.toggle("flagged", on);
+      btn.textContent = on ? "🚩" : "⚑";
+      var card = btn.closest(".vocab-card");
+      if (card) card.classList.toggle("flagged", on);
+    });
+  }
+
+  function renderBank(data) {
+    var root = document.getElementById("hard-words-bank");
+    if (!root) return;
+    var keys = Object.keys(data).filter(function (k) { return data[k]; });
+    var countEl = document.getElementById("hard-bank-count");
+    if (countEl) countEl.textContent = keys.length ? keys.length + " word" + (keys.length === 1 ? "" : "s") : "";
+    if (!keys.length) {
+      root.innerHTML = '<p class="hard-bank-empty">No flagged words yet. Tap ⚑ on any vocab card in a lesson.</p>';
+      return;
+    }
+    keys.sort(function (a, b) {
+      var da = data[a], db = data[b];
+      if (da.book !== db.book) return da.book < db.book ? -1 : 1;
+      if (da.lesson !== db.lesson) return parseInt(da.lesson, 10) - parseInt(db.lesson, 10);
+      return a < b ? -1 : 1;
+    });
+    var html = '<div class="hard-bank-grid">';
+    keys.forEach(function (id) {
+      var w = data[id];
+      var href = w.book + "/lesson-" + String(w.lesson).padStart(2, "0") + ".html";
+      var ru = w.ru ? " · " + w.ru : "";
+      var enId = "hb-en-" + id.replace(/[^a-zA-Z0-9_-]/g, "_");
+      html += '<div class="hard-bank-card" data-word-id="' + id + '">';
+      html += '<div class="hb-ge">' + w.ge + '</div>';
+      html += '<div class="hb-meta"><code>' + (w.rom || "") + '</code>' + ru + '</div>';
+      html += '<button type="button" class="hb-show" data-show-en="' + enId + '">Show meaning</button>';
+      html += '<div class="hb-en hidden" id="' + enId + '">' + (w.en || "") + '</div>';
+      html += '<div class="hb-meta">' + w.book.toUpperCase() + " L" + w.lesson + '</div>';
+      html += '<div class="hb-actions"><a href="' + href + '">Open lesson</a>';
+      html += '<button type="button" class="hb-remove" data-remove-hard="' + id + '">Remove</button></div></div>';
+    });
+    html += "</div>";
+    root.innerHTML = html;
+  }
+
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".hard-flag-btn");
+    if (btn) {
+      e.preventDefault();
+      var id = btn.dataset.wordId;
+      if (!id) return;
+      var data = load();
+      if (data[id]) {
+        delete data[id];
+      } else {
+        data[id] = {
+          ge: btn.dataset.ge || "",
+          en: btn.dataset.en || "",
+          rom: btn.dataset.rom || "",
+          ru: btn.dataset.ru || "",
+          book: btn.dataset.book || "",
+          lesson: btn.dataset.lesson || ""
+        };
+      }
+      save(data);
+      return;
+    }
+    var rm = e.target.closest("[data-remove-hard]");
+    if (rm) {
+      var data2 = load();
+      delete data2[rm.dataset.removeHard];
+      save(data2);
+      return;
+    }
+    var show = e.target.closest("[data-show-en]");
+    if (show) {
+      var el = document.getElementById(show.dataset.showEn);
+      if (!el) return;
+      var hid = el.classList.toggle("hidden");
+      show.textContent = hid ? "Show meaning" : "Hide meaning";
+    }
+  });
+
+  var initial = load();
+  syncFlags(initial);
+  renderBank(initial);
+})();
 """
 
 PROGRESS_JS = """\
@@ -499,6 +741,65 @@ def can_do_html(lesson):
     return f'<section class="can-do"><h2>🎯 After this lesson you can…</h2><ul>{lis}</ul></section>'
 
 
+def focus_verb_html(lesson):
+    v = lesson.get("focus_verb")
+    if not v:
+        return ""
+    rows = v.get("rows") or []
+    body = "".join(
+        f'<tr><td>{esc(r[0])}</td><td class="cell-ge">{esc(r[1])}</td>'
+        f'<td>{esc(r[2]) if len(r) > 2 else ""}</td></tr>'
+        for r in rows
+    )
+    tense = v.get("tense", "Present")
+    note = v.get("note") or ""
+    note_html = f'<p class="verb-note">{esc(note)}</p>' if note else ""
+    return (
+        f'<section class="focus-verb">'
+        f'<h2>⚡ Verb of the lesson: {esc(v["ge"])}</h2>'
+        f'<p class="verb-meta">{esc(v["en"])} · <b>{esc(tense)}</b> '
+        f'— <code>{esc(romanize(v["ge"]))}</code></p>'
+        f'<div class="verb-table-wrap"><table class="verb-table">'
+        f"<thead><tr><th>Person</th><th>Georgian</th><th>English</th></tr></thead>"
+        f"<tbody>{body}</tbody></table></div>{note_html}</section>"
+    )
+
+
+def practice_audio_html(lesson):
+    audio = lesson.get("practice_audio")
+    if not audio or not audio.get("file"):
+        return ""
+    aid = f"audio-{lesson.get('_rid', 'x')}"
+    en = (audio.get("en") or "").strip()
+    en_block = (
+        f'<div class="audio-en hidden" id="{aid}-en">{esc(en)}</div>'
+        if en
+        else ""
+    )
+    en_btn = (
+        f'<button type="button" class="audio-en-toggle" data-audio-en-toggle="{aid}">'
+        f"What does it mean? (not lesson vocab)</button>{en_block}"
+        if en
+        else ""
+    )
+    disclaimer = (
+        "This clip is from <b>Mozilla Common Voice</b> — free, royalty-free recordings "
+        "by native Georgian speakers. It's here for <b>listening and pronunciation practice only</b>: "
+        "the sentence isn't lesson vocabulary and you don't need to memorize it. "
+        "Listen, repeat aloud, and train your ear."
+    )
+    return (
+        f'<section class="practice-audio">'
+        f"<h2>🎧 Pronunciation practice</h2>"
+        f'<div class="audio-disclaimer">{disclaimer}</div>'
+        f'<div class="audio-clip-card">'
+        f'<audio controls preload="none" src="../audio/{esc(audio["file"])}"></audio>'
+        f'<div class="audio-ge">{esc(audio.get("ge", ""))}</div>'
+        f'<div class="audio-rom">{esc(audio.get("rom", ""))}</div>'
+        f"{en_btn}</div></section>"
+    )
+
+
 def reading_html(lesson):
     reading = lesson.get("reading")
     if not reading or not reading.get("ge"):
@@ -524,18 +825,24 @@ def reading_html(lesson):
     )
 
 
-def vocab_card(v):
+def vocab_card(v, book, num):
     rom = v.get("rom") or romanize(v["ge"])
-    ru = f'<div class="vocab-ru">🇷🇺 {esc(v.get("ru", ""))}</div>' if v.get("ru") else ""
+    ru = v.get("ru", "")
+    ru_div = f'<div class="vocab-ru">🇷🇺 {esc(ru)}</div>' if ru else ""
+    wid = f"{book}-{num}-{v['ge']}"
     return (
-        f'<div class="vocab-card">'
+        f'<div class="vocab-card" data-word-id="{esc(wid)}">'
+        f'<button type="button" class="hard-flag-btn" aria-label="Flag as hard word" '
+        f'data-word-id="{esc(wid)}" data-ge="{esc(v["ge"])}" data-en="{esc(v["en"])}" '
+        f'data-rom="{esc(rom)}" data-ru="{esc(ru)}" data-book="{esc(book)}" '
+        f'data-lesson="{esc(num)}">⚑</button>'
         f'<div class="vocab-ge">{esc(v["ge"])}</div>'
         f'<div class="vocab-rom">{esc(rom)}</div>'
-        f'<div class="vocab-en">{esc(v["en"])}</div>{ru}</div>'
+        f'<div class="vocab-en">{esc(v["en"])}</div>{ru_div}</div>'
     )
 
 
-def vocab_sections(vocab):
+def vocab_sections(vocab, book, num):
     groups = []
     current = None
     cards = []
@@ -549,7 +856,7 @@ def vocab_sections(vocab):
                 )
             current = group
             cards = []
-        cards.append(vocab_card(v))
+        cards.append(vocab_card(v, book, num))
     if cards:
         groups.append(
             f'<div class="vocab-group"><h3>{esc(current)}</h3>'
@@ -604,6 +911,7 @@ def lesson_page(book, num, lesson, lessons):
   <label class="lesson-done-toggle"><input type="checkbox" class="lesson-done-cb" data-lesson="{lesson_id}"> Mark lesson complete</label>
 </header>
 {can_do_html(lesson)}
+{focus_verb_html(lesson)}
 <section>
   <h2>📖 Grammar</h2>
   <div class="card grammar">
@@ -620,13 +928,16 @@ def lesson_page(book, num, lesson, lessons):
 {phrases_html(lesson)}
 <section>
   <h2>📚 Vocabulary</h2>
-  {vocab_sections(vocab)}
+  <p class="sub" style="margin:-0.35rem 0 0.75rem">Tap ⚑ to flag hard words — they go to your review bank on the homepage.</p>
+  {vocab_sections(vocab, book, num)}
 </section>
 {worksheet_html(lesson, vocab)}
-<p class="sub" style="margin-top:1.5rem">🎧 Audio &amp; quizzes in Telegram · /audio · /quiz</p>
+{practice_audio_html(lesson)}
+<p class="sub" style="margin-top:1.5rem">🎧 More audio &amp; quizzes in Telegram · /audio · /quiz</p>
 <footer>Milo Georgian Tutor · synced from lesson_data.json</footer>
 </div>
 <script src="../progress.js"></script>
+<script src="../hard-words.js"></script>
 <script src="../reading.js"></script>
 </body>
 </html>"""
@@ -674,12 +985,93 @@ def index_page(lessons):
   <div class="progress-bar" id="progress-summary">Progress: 0 / {total} lessons</div>
   <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
 </header>
+<section class="hard-bank">
+  <h2>🚩 Hard words bank <span id="hard-bank-count" class="sub-bank"></span></h2>
+  <p class="sub-bank">Words you flagged for extra review. Georgian shown first — tap Show meaning to quiz yourself. Stored on this device only.</p>
+  <div id="hard-words-bank"><p class="hard-bank-empty">No flagged words yet. Tap ⚑ on any vocab card in a lesson.</p></div>
+</section>
 <div class="book-grid">{"".join(blocks)}</div>
 <footer>Milo Georgian Tutor · <a href="https://www.geofl.ge/">geofl.ge</a></footer>
 </div>
 <script src="progress.js"></script>
+<script src="hard-words.js"></script>
 </body>
 </html>"""
+
+
+def lesson_linear_index(book, num):
+    idx = 0
+    for b in BOOK_ORDER:
+        if b == book:
+            return idx + int(num) - 1
+        idx += 12
+    return int(num) - 1
+
+
+def load_translation_map():
+    if not TRANSLATIONS.exists():
+        return {}
+    with open(TRANSLATIONS, encoding="utf-8") as f:
+        data = json.load(f)
+    out = {}
+    for entry in data:
+        if isinstance(entry, dict):
+            key = Path(entry.get("audio", entry.get("path", ""))).name
+            if key:
+                out[key] = entry.get("en", entry.get("text", ""))
+    return out
+
+
+def load_audio_pool():
+    if not DATASET.exists():
+        return []
+    with open(DATASET, encoding="utf-8") as f:
+        data = json.load(f)
+    pool = []
+    for entry in data:
+        fname = Path(entry["audio"]).name
+        if not (CLIPS_DIR / fname).exists():
+            continue
+        wc = entry.get("word_count", 0)
+        if 5 <= wc <= 18:
+            pool.append(entry)
+    return pool
+
+
+def prepare_lesson_audio(lessons):
+    """Assign one Common Voice clip per lesson; copy MP3s into docs/audio/."""
+    pool = load_audio_pool()
+    if not pool:
+        print("   ⚠️  No audio clips found — skipping practice audio")
+        return {}
+
+    trans_map = load_translation_map()
+    audio_dir = READER_DIR / "audio"
+    audio_dir.mkdir(parents=True, exist_ok=True)
+    manifest = {}
+    copied = set()
+
+    for book in BOOK_ORDER:
+        if book not in lessons:
+            continue
+        for num in sorted(lessons[book].keys(), key=int):
+            li = lesson_linear_index(book, num)
+            pick = pool[(li * 997 + 42) % len(pool)]
+            fname = Path(pick["audio"]).name
+            src = CLIPS_DIR / fname
+            if fname not in copied and src.exists():
+                shutil.copy2(src, audio_dir / fname)
+                copied.add(fname)
+            en = (pick.get("en") or trans_map.get(fname, "")).strip()
+            manifest[f"{book}-{num}"] = {
+                "file": fname,
+                "ge": pick["ge"],
+                "en": en,
+                "rom": romanize(pick["ge"]),
+            }
+
+    print(f"   🎧 Copied {len(copied)} Common Voice clips → {audio_dir}")
+    return manifest
 
 
 def build():
@@ -687,8 +1079,10 @@ def build():
         lessons = json.load(f)
 
     READER_DIR.mkdir(parents=True, exist_ok=True)
+    audio_manifest = prepare_lesson_audio(lessons)
     (READER_DIR / "style.css").write_text(CSS, encoding="utf-8")
     (READER_DIR / "progress.js").write_text(PROGRESS_JS, encoding="utf-8")
+    (READER_DIR / "hard-words.js").write_text(HARD_WORDS_JS, encoding="utf-8")
     (READER_DIR / "reading.js").write_text(READING_JS, encoding="utf-8")
     (READER_DIR / ".nojekyll").touch()
     (READER_DIR / "index.html").write_text(index_page(lessons), encoding="utf-8")
@@ -701,7 +1095,11 @@ def build():
         book_dir.mkdir(exist_ok=True)
         for num, lesson in lessons[book].items():
             path = book_dir / f"lesson-{int(num):02d}.html"
-            path.write_text(lesson_page(book, num, lesson, lessons), encoding="utf-8")
+            enriched = dict(lesson)
+            key = f"{book}-{num}"
+            if key in audio_manifest:
+                enriched["practice_audio"] = audio_manifest[key]
+            path.write_text(lesson_page(book, num, enriched, lessons), encoding="utf-8")
             count += 1
 
     print(f"✅ Built {count} lessons + index → {READER_DIR}")

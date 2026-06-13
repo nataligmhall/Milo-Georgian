@@ -556,10 +556,12 @@ READER_EXTRAS = {
 
 def merge_reader_extras(lesson, book, num):
     """Return lesson dict with reader extras merged in (shallow copy)."""
+    from reader_verbs import FOCUS_VERBS
+
     out = copy.deepcopy(lesson)
     extra = READER_EXTRAS.get(book, {}).get(str(num), {})
     if not extra:
-        return out
+        extra = {}
 
     if extra.get("can_do"):
         out["can_do"] = extra["can_do"]
@@ -568,4 +570,12 @@ def merge_reader_extras(lesson, book, num):
     if extra.get("grammar_tables"):
         g = out.setdefault("grammar", {})
         g["tables"] = extra["grammar_tables"]
+
+    verb = FOCUS_VERBS.get(book, {}).get(str(num))
+    if verb:
+        out["focus_verb"] = verb
+
+    if lesson.get("practice_audio"):
+        out["practice_audio"] = lesson["practice_audio"]
+
     return out
