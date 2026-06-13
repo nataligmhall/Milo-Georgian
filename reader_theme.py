@@ -7,13 +7,20 @@ FONTS_HEAD = """\
 
 FONTS_HEAD_LESSON = FONTS_HEAD  # same fonts, relative paths differ only in favicon
 
+COLLAGE = {
+    "khachapuri": "khachapuri.png",
+    "khinkali": "khinkali.png",
+    "wine": "wine-glass.png",
+}
+
 BOOK_ZINE = {
     "a1": {
         "short": "Beginner.",
         "ge": "დამწყები",
         "issue": "03",
         "blurb": "Twelve torn-out chapters from your first Georgian notebook — alphabet, food, family, and your first real sentences.",
-        "polaroid": "— Stepantsminda, est. forever",
+        "polaroid": "— Ananuri, above the reservoir",
+        "pol_image": "pol-a1-ananuri.png",
         "sticker_ge": "გამარჯობა",
         "sticker_en": "HELLO · LESSON 01",
     },
@@ -22,7 +29,8 @@ BOOK_ZINE = {
         "ge": "საწყისი",
         "issue": "04",
         "blurb": "Georgia opens up — friends, banks, health, wine festivals. Each lesson's a postcard from somewhere.",
-        "polaroid": "— Tbilisi balconies, 6 a.m.",
+        "polaroid": "— Metekhi & Old Tbilisi, dusk",
+        "pol_image": "pol-a2-tbilisi.png",
         "sticker_ge": "მეგობარი",
         "sticker_en": "FRIEND · LESSON 01",
     },
@@ -31,7 +39,8 @@ BOOK_ZINE = {
         "ge": "საშუალო+",
         "issue": "05",
         "blurb": "Hotels, blogs, film premieres — the vocabulary of modern Georgian life.",
-        "polaroid": "— Kakheti, qvevri season",
+        "polaroid": "— Kakheti hills, golden hour",
+        "pol_image": "pol-a2plus-hills.png",
         "sticker_ge": "ღვინო",
         "sticker_en": "WINE · LESSON 01",
     },
@@ -40,7 +49,8 @@ BOOK_ZINE = {
         "ge": "საშუალო",
         "issue": "06",
         "blurb": "CVs, interviews, taxes, regional cuisine — you're reading real Georgian now.",
-        "polaroid": "— Svaneti, above the clouds",
+        "polaroid": "— Tusheti, wild horses",
+        "pol_image": "pol-b1-mountains.png",
         "sticker_ge": "სამუშაო",
         "sticker_en": "WORK · LESSON 01",
     },
@@ -341,11 +351,37 @@ img { max-width: 100%; height: auto; display: block; }
   text-align: center;
 }
 .collage-stamp .stamp-floral { font-size: 1.4rem; line-height: 1; }
-.collage-food {
-  font-size: 2.75rem;
-  line-height: 1;
-  filter: drop-shadow(2px 3px 0 rgba(26,22,20,.12));
-  transform: rotate(-4deg);
+.collage-cutout {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(3px 5px 8px rgba(26, 22, 20, 0.22));
+}
+.collage-cutout--screen {
+  mix-blend-mode: screen;
+}
+.collage-khachapuri {
+  width: min(11rem, 42vw);
+  transform: rotate(-8deg);
+}
+.collage-wine-hero {
+  width: min(3.5rem, 14vw);
+  transform: rotate(6deg);
+  margin-top: 1rem;
+  position: relative;
+}
+.collage-wine-hero::before {
+  content: "";
+  position: absolute;
+  top: -0.35rem;
+  left: 20%;
+  width: 2.5rem;
+  height: 0.85rem;
+  background: var(--tape);
+  opacity: 0.8;
+  transform: rotate(-8deg);
+  border-radius: 2px;
+  z-index: 1;
 }
 .site-footer-bar {
   margin-top: 2.5rem;
@@ -414,16 +450,54 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .culture-deco {
   position: absolute;
-  right: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2.5rem;
-  opacity: 0.35;
+  right: 0.25rem;
+  top: 0.75rem;
+  width: 7.5rem;
+  height: 8rem;
   pointer-events: none;
-  line-height: 1;
 }
-@media (max-width: 480px) {
-  .culture-deco { display: none; }
+.culture-cutout {
+  position: absolute;
+  display: block;
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,.35));
+}
+.culture-cutout--screen { mix-blend-mode: screen; }
+.culture-khinkali {
+  width: 5.5rem;
+  right: 2.5rem;
+  top: 0;
+  transform: rotate(-6deg);
+}
+.culture-wine {
+  width: 2.75rem;
+  right: 0;
+  top: 3.5rem;
+  transform: rotate(8deg);
+}
+.culture-wine::before {
+  content: "";
+  position: absolute;
+  top: 0.15rem;
+  left: 10%;
+  width: 2.2rem;
+  height: 0.7rem;
+  background: var(--tape);
+  opacity: 0.85;
+  transform: rotate(-12deg);
+  border-radius: 1px;
+}
+@media (max-width: 520px) {
+  .culture-deco {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: 5rem;
+    margin-top: 0.75rem;
+    opacity: 0.9;
+  }
+  .culture-khinkali { right: auto; left: 55%; top: 0; width: 4.5rem; }
+  .culture-wine { right: auto; left: 5%; top: 1rem; width: 2.25rem; }
 }
 
 /* ── Syllabus blocks ── */
@@ -470,11 +544,14 @@ img { max-width: 100%; height: auto; display: block; }
 .syllabus-polaroid .pol-img {
   width: 100%;
   aspect-ratio: 1;
-  background: linear-gradient(145deg, #8bafc4 0%, #d4c4a8 50%, #5c7a6a 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
+  overflow: hidden;
+  background: #ddd;
+}
+.syllabus-polaroid .pol-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .syllabus-polaroid .pol-cap {
   font-family: var(--script);

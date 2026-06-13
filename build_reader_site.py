@@ -17,12 +17,13 @@ from pathlib import Path
 from config import CLIPS_DIR, DATASET, LESSON_DATA, READER_DIR, TRANSLATIONS, romanize
 from level_placement import BOOK_LABELS
 from reader_extras import merge_reader_extras
-from reader_theme import BOOK_ZINE, CSS, CULTURE_TAGS, FONTS_HEAD
+from reader_theme import BOOK_ZINE, COLLAGE, CSS, CULTURE_TAGS, FONTS_HEAD
 from worksheet import build_worksheet_exercises
 
 BOOK_ORDER = ("a1", "a2", "a2plus", "b1")
 GE_DIR = Path(__file__).resolve().parent
 LOGO_SRC = GE_DIR / "assets" / "milo-logo.png"
+COLLAGE_SRC = GE_DIR / "assets" / "collage"
 
 FAVICON_INDEX = """\
 <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
@@ -710,14 +711,39 @@ def lesson_page(book, num, lesson, lessons):
     return body
 
 
+def collage_href(filename):
+    return f"assets/collage/{filename}"
+
+
+def copy_collage_assets():
+    if not COLLAGE_SRC.is_dir():
+        print("   ⚠️  No assets/collage/ — skipping collage images")
+        return 0
+    dest = READER_DIR / "assets" / "collage"
+    dest.mkdir(parents=True, exist_ok=True)
+    n = 0
+    for path in sorted(COLLAGE_SRC.iterdir()):
+        if path.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp"):
+            shutil.copy2(path, dest / path.name)
+            n += 1
+    if n:
+        print(f"   🖼  Copied {n} collage assets → {dest}")
+    return n
+
+
 def culture_strip_html():
+    kh = collage_href(COLLAGE["khinkali"])
+    wine = collage_href(COLLAGE["wine"])
     tags = "".join(f'<span class="culture-tag">{t}</span>' for t in CULTURE_TAGS)
     return f"""<section class="culture-strip" id="culture">
   <p class="culture-kicker">№ 04 — CULTURE SUPPLEMENT</p>
   <h2 class="culture-headline">You're not <em>studying.</em><br>You're packing.</h2>
   <p class="culture-body">Every lesson smuggles in a piece of Georgia — a khinkali fold, a supra toast, a 4&nbsp;a.m. cab driver telling you about his grandmother in Kakheti.</p>
   <div class="culture-tags">{tags}</div>
-  <div class="culture-deco" aria-hidden="true">🥟🍷</div>
+  <div class="culture-deco" aria-hidden="true">
+    <img class="culture-cutout culture-cutout--screen culture-khinkali" src="{kh}" alt="" loading="lazy" width="220" height="220">
+    <img class="culture-cutout culture-cutout--screen culture-wine" src="{wine}" alt="" loading="lazy" width="110" height="280">
+  </div>
 </section>"""
 
 
@@ -753,9 +779,15 @@ def syllabus_block_html(book, lessons):
             f'</a></div></li>'
         )
 
+    pol_file = meta.get("pol_image", "")
+    pol_inner = (
+        f'<img src="{collage_href(pol_file)}" alt="" loading="lazy">'
+        if pol_file
+        else ""
+    )
     polaroid = (
         f'<div class="syllabus-polaroid">'
-        f'<div class="pol-img" aria-hidden="true">⛪</div>'
+        f'<div class="pol-img">{pol_inner}</div>'
         f'<p class="pol-cap">{esc(meta.get("polaroid", ""))}</p></div>'
     )
     return (
@@ -781,6 +813,9 @@ def index_page(lessons):
     a1 = BOOK_ZINE.get("a1", {})
     sticker_ge = a1.get("sticker_ge", "გამარჯობა")
     sticker_en = a1.get("sticker_en", "HELLO · LESSON 01")
+
+    kh = collage_href(COLLAGE["khachapuri"])
+    wine = collage_href(COLLAGE["wine"])
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -823,11 +858,12 @@ def index_page(lessons):
     <span class="hero-aside">— no PDFs, no nonsense.</span>
   </div>
   <div class="hero-collage" aria-hidden="true">
-    <span class="collage-food">🫓</span>
+    <img class="collage-cutout collage-cutout--screen collage-khachapuri" src="{kh}" alt="" loading="lazy" width="320" height="200">
     <div class="collage-sticker">
       <div class="st-ge">{esc(sticker_ge)}</div>
       <div class="st-en">{esc(sticker_en)}</div>
     </div>
+    <img class="collage-cutout collage-cutout--screen collage-wine-hero" src="{wine}" alt="" loading="lazy" width="88" height="220">
     <div class="collage-stamp">
       <span class="stamp-floral">✿</span>
       <span>GEORGIA</span>
@@ -958,6 +994,7 @@ def build():
         shutil.copy2(LOGO_SRC, READER_DIR / "favicon.png")
         shutil.copy2(LOGO_SRC, READER_DIR / "apple-touch-icon.png")
     audio_manifest = prepare_lesson_audio(lessons)
+    copy_collage_assets()
     (READER_DIR / "style.css").write_text(CSS, encoding="utf-8")
     (READER_DIR / "progress.js").write_text(PROGRESS_JS, encoding="utf-8")
     (READER_DIR / "hard-words.js").write_text(HARD_WORDS_JS, encoding="utf-8")
