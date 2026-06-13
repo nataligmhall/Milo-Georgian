@@ -814,7 +814,7 @@ def index_page(lessons):
     <span class="logo-mark" aria-hidden="true">ა</span>
     <div>
       <span class="masthead-geo">GEO · FL</span>
-      <span class="masthead-issue">issue № 01 — winter · აღმართი</span>
+      <span class="masthead-issue">issue № 01</span>
     </div>
   </div>
   <span class="progress-pill" id="progress-pill">0 / {total}</span>
