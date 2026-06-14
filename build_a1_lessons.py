@@ -139,8 +139,6 @@ A1 = {
             {"ge": "არ მინდა", "en": "I don't want", "ru": "я не хочу", "group": "At the café"},
             {"ge": "გთხოვ", "en": "please", "ru": "пожалуйста", "group": "At the café"},
             {"ge": "ერთი", "en": "one / a", "ru": "один / один", "group": "At the café"},
-            {"ge": "ბორჯომი", "en": "pear", "ru": "груша", "group": "Fruit"},
-            {"ge": "ყველი", "en": "plum", "ru": "слива", "group": "Fruit"},
         ],
     },
     "4": {
